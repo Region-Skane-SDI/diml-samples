@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<graph xmlns="https://github.com/Region-Skane-SDI/diml/graph"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/graph https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/graph.xsd"
+		dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/config/information_objects.graph">
+  
+	<node id="Personobjekt">
+		<names>
+			<name language="sv">Person</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Beskrivning i vanlig text av informationsobjektet person...</description>
+		</descriptions>
+		<nodeLinks>
+			<nodeLink id="Anstallningsobjekt" targetNode="Anstallningsobjekt">
+				<names>
+					<name language="sv">Person-Anställning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Förklaring till relationen här. En person har en anställning...</description>
+				</descriptions>
+			</nodeLink>
+		</nodeLinks>
+	</node>
+
+	<node id="Anstallningsobjekt">
+		<names>
+			<name language="sv">Anställning</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Beskrivning i vanlig text av informationsobjektet anställning...</description>
+		</descriptions>
+	</node>
+</graph>

@@ -1,0 +1,8 @@
+<!-- Exempel på Diml konfiguration -->
+<repo majorVersion="0">
+	<files>
+		<file name="sample_dataproduct_tabular.dimldat" type="DataProduct"/>
+		<file name="sample_datasource_tabular1.dimlsrc" type="DataSource"/>
+		<file name="sample_digital_service.dimlsvc" type="DigitalService"/>
+	</files>
+</repo>

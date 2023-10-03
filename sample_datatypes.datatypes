@@ -1,0 +1,899 @@
+<dataTypes xmlns="https://github.com/Region-Skane-SDI/diml/datatypes"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<dataTypeAttributes>
+		<dataTypeAttribute id="length" type="int"/>
+		<dataTypeAttribute id="format" type="string"/>
+		<dataTypeAttribute id="precision" type="int"/>
+		<dataTypeAttribute id="scale" type="int"/>
+		<dataTypeAttribute id="isFixedLength" type="bool"/>
+		<dataTypeAttribute id="isWideChar" type="bool"/>
+		<dataTypeAttribute id="unsigned" type="bool"/>
+		<dataTypeAttribute id="originalDataType" type="string"/>
+		<dataTypeAttribute id="originalPlatform" type="string"/>
+		<dataTypeAttribute id="isCaseSensitive" type="bool"/>
+		<dataTypeAttribute id="isNullable" type="bool"/>
+		<dataTypeAttribute id="isUtcTime" type="bool"/>
+	</dataTypeAttributes>
+
+	<dimlDataTypeConfigs>
+		<!-- utveckla nedanstående konverteringar (cdm) -->
+		<!-- utveckla nedanstående konverteringar (sparksql) -->
+		<dimlDataTypeConfig id="string">
+		<!-- Lägg till detektion: <dimlDataTypeConfig id="string" detectionPattern=".+" detectionPriority="10">-->
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="length" defaultValue="50"/>
+				<dataTypeAttributeSetting id="format" defaultValue=""/>
+				<dataTypeAttributeSetting id="isFixedLength" defaultValue="false"/>
+				<dataTypeAttributeSetting id="isWideChar" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="nvarchar" condition="isWideChar == true &amp;&amp; isFixedLength == false">
+							<targetParameters>
+								<targetParameter id="length" value="length > 0 ? length.ToString() : &quot;max&quot;"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="char" condition="isWideChar == false &amp;&amp; isFixedLength == true">
+							<targetParameters>
+								<targetParameter id="length" value="length"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="nchar" condition="isWideChar == true &amp;&amp; isFixedLength == true">
+							<targetParameters>
+								<targetParameter id="length" value="length"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="varchar">
+							<targetParameters>
+								<targetParameter id="length" value="length > 0 ? length.ToString() : &quot;max&quot;"/>
+							</targetParameters>
+						</conditionalDataType>
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="parquet" dataType="STRING"/>
+				<targetDataType platform="openapi" dataType="string"/>
+				<targetDataType platform="csharp">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="char" condition="length == 1">
+							<targetParameters>
+								<targetParameter id="length" value="1"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="string" />
+					</conditionalDataTypes>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="boolean">
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="bit"/>
+				<targetDataType platform="parquet" dataType="BOOLEAN"/>
+				<targetDataType platform="openapi" dataType="boolean"/>
+				<targetDataType platform="csharp" dataType="bool"/>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="tinyInteger">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="unsigned" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="tinyint">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</targetDataType>
+				<targetDataType platform="csharp">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="sbyte" condition="unsigned == false"/>
+						<conditionalDataType dataType="byte" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="parquet" dataType="INT(8, + !unsigned +)"/>
+				<targetDataType platform="openapi" dataType="integer">
+					<targetParameters>
+						<targetParameter id="format" value="int32"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="smallInteger">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="unsigned" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="smallint"/>
+				<targetDataType platform="csharp">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="short"  condition="unsigned == false"/>
+						<conditionalDataType dataType="ushort" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="parquet" dataType="INT(16, + !unsigned +)"/>
+				<targetDataType platform="openapi" dataType="integer">
+					<targetParameters>
+						<targetParameter id="format" value="int32"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="integer">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="unsigned" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="int"/>
+				<targetDataType platform="parquet" dataType="INT(32, + !unsigned +)"/>
+				<targetDataType platform="csharp">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="int"  condition="unsigned == false"/>
+						<conditionalDataType dataType="uint" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="openapi" dataType="integer">
+					<targetParameters>
+						<targetParameter id="format" value="int32"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+
+		<dimlDataTypeConfig id="bigInteger">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="unsigned" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="bigint"/>
+				<targetDataType platform="csharp">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="long"  condition="unsigned == false"/>
+						<conditionalDataType dataType="ulong" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="parquet" dataType="INT(64, + !unsigned +)"/>
+				<targetDataType platform="openapi" dataType="integer">
+					<targetParameters>
+						<targetParameter id="format" value="int64"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="float">
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="real"/>
+				<targetDataType platform="csharp" dataType="float"/>
+				<targetDataType platform="parquet" dataType="FLAOT"/>
+				<targetDataType platform="openapi" dataType="number">
+					<targetParameters>
+						<targetParameter id="format" value="float"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="double">
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="float"/>
+				<targetDataType platform="csharp"  dataType="double"/>
+				<targetDataType platform="parquet" dataType="DOUBLE"/>
+				<targetDataType platform="openapi" dataType="number">
+					<targetParameters>
+						<targetParameter id="format" value="double"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="decimal">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="precision" defaultValue="19"/>
+				<dataTypeAttributeSetting id="scale"     defaultValue="4"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="smallmoney" condition="precision == 10 &amp;&amp; scale == 4" >
+							<targetParameters>
+								<targetParameter id="precision" value="precision"/>
+								<targetParameter id="scale" value="scale"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="money" condition="precision == 19 &amp;&amp; scale == 4" >
+							<targetParameters>
+								<targetParameter id="precision" value="precision"/>
+								<targetParameter id="scale" value="scale"/>
+							</targetParameters>
+						</conditionalDataType>
+						<!-- we also have decimal but we take numeric because it does not allow more than we need so better for the performance !! -->
+						<conditionalDataType dataType="numeric" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="csharp"  dataType="decimal"/>
+				<targetDataType platform="parquet" dataType="DECIMAL">
+					<targetParameters>
+						<targetParameter id="precision" value="precision"/>
+						<targetParameter id="scale" value="scale"/>
+					</targetParameters>
+				</targetDataType>
+				<targetDataType platform="openapi" dataType="number" />
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="date">
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="date"/>
+				<targetDataType platform="csharp"  dataType="DateOnly"/>
+				<targetDataType platform="parquet" dataType="DATE"/>
+				<targetDataType platform="openapi" dataType="string">
+					<targetParameters>
+						<targetParameter id="format" value="date"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="dateTime">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="precision" defaultValue="0"/>
+				<dataTypeAttributeSetting id="isUtcTime" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="datetime2">
+							<targetParameters>
+								<targetParameter id="precision" value="precision"/>
+							</targetParameters>
+						</conditionalDataType>
+					</conditionalDataTypes>
+
+				</targetDataType>
+				<targetDataType platform="csharp"  dataType="DateTime"/>
+				<targetDataType platform="parquet">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="TIMESTAMP(+ isUtcTime +, MILLIS)" condition="precision &lt;= 3" />
+						<conditionalDataType dataType="TIMESTAMP(+ isUtcTime +, MICROS)" condition="precision &lt;= 6" />
+						<conditionalDataType dataType="TIMESTAMP(+ isUtcTime +, NANOS)" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="openapi" dataType="string">
+					<targetParameters>
+						<targetParameter id="format" value="date-time"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="dateTimeOffset">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="precision" defaultValue="0"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="datetimeoffset">
+					<targetParameters>
+						<targetParameter id="precision" value="precision"/>
+					</targetParameters>
+				</targetDataType>
+				<targetDataType platform="csharp"  dataType="DateTimeOffset"/>
+				<targetDataType platform="parquet">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="TIME(false, MILLIS)" condition="precision &lt;= 3" />
+						<conditionalDataType dataType="TIME(false, MICROS)" condition="precision &lt;= 6" />
+						<conditionalDataType dataType="TIME(false, NANOS)" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="openapi" dataType="string" />
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="time">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="precision" defaultValue="0"/>
+				<dataTypeAttributeSetting id="isUtcTime" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="time">
+					<targetParameters>
+						<targetParameter id="precision" value="precision"/>
+					</targetParameters>
+				</targetDataType>
+				<targetDataType platform="csharp"  dataType="TimeSpan"/>
+				<targetDataType platform="parquet">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="TIME(+ isUtcTime +, MILLIS)" condition="precision &lt;= 3" />
+						<conditionalDataType dataType="TIME(+ isUtcTime +, MICROS)" condition="precision &lt;= 6" />
+						<conditionalDataType dataType="TIME(+ isUtcTime +, NANOS)" />
+					</conditionalDataTypes>
+				</targetDataType>
+				<targetDataType platform="openapi" dataType="string" />
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="xml">
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="xml"/>
+				<targetDataType platform="csharp" dataType="string"/>
+				<targetDataType platform="parquet" dataType="string"/>
+				<targetDataType platform="openapi" dataType="string"/>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="binary">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="length" defaultValue="32"/>
+				<dataTypeAttributeSetting id="isFixedLength" defaultValue="false"/>
+			</dataTypeAttributeSettings>
+			<targetDataTypes>
+				<targetDataType platform="tsql">
+					<conditionalDataTypes>
+						<conditionalDataType dataType="varbinary" condition="isFixedLength == true" >
+							<targetParameters>
+								<targetParameter id="isFixedLength" value="true"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="binary">
+							<targetParameters>
+								<targetParameter id="isFixedLength" value="false"/>
+							</targetParameters>
+						</conditionalDataType>
+					</conditionalDataTypes>
+
+				</targetDataType>
+				<targetDataType platform="csharp" dataType="byte[]"/>
+				<targetDataType platform="parquet" dataType="BYTE_ARRAY"/>
+				<targetDataType platform="openapi" dataType="string">
+					<targetParameters>
+						<targetParameter id="format" value="byte"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="ssn" baseDataType="string">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="length" defaultValue="12"/>
+				<dataTypeAttributeSetting id="format" defaultValue="\d{12}"/>
+				<dataTypeAttributeSetting id="isFixedLength" defaultValue="true"/>
+			</dataTypeAttributeSettings>
+			<traits>
+				<trait class="pii"/>
+			</traits>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="fullName" baseDataType="string">
+			<traits>
+				<trait class="pii"/>
+			</traits>
+
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="age" baseDataType="integer">
+			<traits>
+				<trait class="pii"/>
+			</traits>
+		</dimlDataTypeConfig>
+
+		<dimlDataTypeConfig id="guid" >
+			<targetDataTypes>
+				<targetDataType platform="tsql" dataType="byte[16]"/>
+				<targetDataType platform="csharp" dataType="Guid"/>
+				<targetDataType platform="parquet" dataType="UUID"/>
+				<targetDataType platform="openapi" dataType="string">
+					<targetParameters>
+						<targetParameter id="format" value="uuid"/>
+					</targetParameters>
+				</targetDataType>
+			</targetDataTypes>
+		</dimlDataTypeConfig>
+
+	</dimlDataTypeConfigs>
+
+	<targetPlatforms>
+
+		<targetPlatform platform="tsql">
+			<platformDataTypeConfigs>
+
+				<platformDataTypeConfig id="varchar" dimlDataType="string" inputFormat="(?i)varchar\s*\((?'length'.*?)\)" outputFormat="&quot;varchar(&quot; + length.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="length" type="int" inputExpression="length == &quot;max&quot; ? -1 : int.Parse(length)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="length" value="length"/>
+						<targetParameter id="isWideChar" value="false"/>
+						<targetParameter id="isFixedLength" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<!-- kommer att föråldras men vi behåller det för bakåtkompatibilitet -->
+				<platformDataTypeConfig id="text" dimlDataType="string" inputFormat="(?i)text\s*\((?'length'.*?)\)" outputFormat="&quot;text(&quot; + length.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="length" type="int" inputExpression="length == &quot;max&quot; ? -1 : int.Parse(length)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="length" value="length"/>
+						<targetParameter id="isWideChar" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="nvarchar" dimlDataType="string" inputFormat="(?i)nvarchar\((?'length'.*?)\)" outputFormat="&quot;nvarchar(&quot; + length.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="length" type="int" inputExpression="length == &quot;max&quot; ? -1 : int.Parse(length)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="length" value="length"/>
+						<targetParameter id="isWideChar" value="true"/>
+						<targetParameter id="isFixedLength" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<!-- kommer att föråldras men vi behåller det för bakåtkompatibilitet -->
+				<platformDataTypeConfig id="ntext" dimlDataType="string" inputFormat="(?i)ntext\s*\((?'length'.*?)\)" outputFormat="&quot;ntext(&quot; + length.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="length" type="int" inputExpression="length == &quot;max&quot; ? -1 : int.Parse(length)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="length" value="length"/>
+						<targetParameter id="isWideChar" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="char" dimlDataType="string" inputFormat="(?i)char\((?'length'.*?)\)" outputFormat="&quot;char(&quot; + length.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="length" type="int" inputExpression="int.Parse(length)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="length" value="length"/>
+						<targetParameter id="isWideChar" value="false"/>
+						<targetParameter id="isFixedLength" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="nchar" dimlDataType="string" inputFormat="(?i)nchar\((?'length'.*?)\)" outputFormat="&quot;nchar(&quot; + length.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="length" type="int" inputExpression="int.Parse(length)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="length" value="length"/>
+						<targetParameter id="isWideChar" value="true"/>
+						<targetParameter id="isFixedLength" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="bit" dimlDataType="boolean" inputFormat="bit" outputFormat="&quot;bit&quot;" />
+
+				<platformDataTypeConfig id="tinyint" dimlDataType="tinyInteger" inputFormat="tinyint" outputFormat="&quot;tinyint&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="smallint" dimlDataType="smallInteger" inputFormat="smallint" outputFormat="&quot;smallint&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="int" dimlDataType="integer" inputFormat="int" outputFormat="&quot;int&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="bigint" dimlDataType="bigInteger" inputFormat="bigint" outputFormat="&quot;bigint&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="real" dimlDataType="float" inputFormat="real" outputFormat="&quot;real&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="float" dimlDataType="double" inputFormat="(?i)float\s*\((?'precision'.*?)\)" outputFormat="&quot;float(&quot; + precision.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+						<targetParameter id="precision" value="precision"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="smallmoney" dimlDataType="decimal" inputFormat="smallmoney" outputFormat="smallmoney">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+						<targetParameter id="precision" value="10"/>
+						<targetParameter id="scale" value="4"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="money" dimlDataType="decimal" inputFormat="smallmoney" outputFormat="smallmoney">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+						<targetParameter id="precision" value="19"/>
+						<targetParameter id="scale" value="4"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="decimal" dimlDataType="decimal" inputFormat="(?i)decimal\s*\((?'precision'.*?),\s*(?'scale'.*?)\)" outputFormat="&quot;decimal(&quot; + precision.ToString() + &quot;, &quot; + scale.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+						<platformDataTypeParameter id="scale" type="int" inputExpression="int.Parse(scale)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+						<targetParameter id="precision" value="precision"/>
+						<targetParameter id="scale" value="scale"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+				byte[16]
+				
+				<platformDataTypeConfig id="numeric" dimlDataType="decimal" inputFormat="(?i)numeric\s*\((?'precision'.*?),\s*(?'scale'.*?)\)" outputFormat="&quot;numeric(&quot; + precision.ToString() + &quot;, &quot; + scale.ToString() + &quot;)&quot;">
+				<platformDataTypeParameters>
+					<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+					<platformDataTypeParameter id="scale" type="int" inputExpression="int.Parse(scale)"/>
+				</platformDataTypeParameters>
+				<targetParameters>
+					<targetParameter id="unsigned" value="true"/>
+					<targetParameter id="precision" value="precision"/>
+					<targetParameter id="scale" value="scale"/>
+				</targetParameters>
+			</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="date" dimlDataType="date" inputFormat="date" outputFormat="&quot;date&quot;" />
+
+
+				<platformDataTypeConfig id="smalldatetime" dimlDataType="dateTime" inputFormat="(?i)smalldatetime\s*\((?'precision'.*?)\)" outputFormat="&quot;smalldatetime(&quot; + precision.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="precision" value="0"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="datetime" dimlDataType="dateTime" inputFormat="(?i)datetime\s*\((?'precision'.*?)\)" outputFormat="&quot;datetime(&quot; + precision.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="precision" value="3"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="datetime2" dimlDataType="dateTime" inputFormat="(?i)datetime2\s*\((?'precision'.*?)\)" outputFormat="&quot;datetime2(&quot; + precision.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="precision" value="precision"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="datetimeoffset" dimlDataType="dateTimeOffset" inputFormat="(?i)datetimeoffset\s*\((?'precision'.*?)\)" outputFormat="&quot;datetimeoffset(&quot; + precision.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="precision" value="precision"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="time" dimlDataType="time" inputFormat="(?i)time\s*\((?'precision'.*?)\)" outputFormat="&quot;time(&quot; + precision.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="precision" type="int" inputExpression="int.Parse(precision)"/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="precision" value="precision"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="binary" dimlDataType="binary" inputFormat="binary" outputFormat="&quot;binary&quot;">
+					<targetParameters>
+						<targetParameter id="isFixedLength" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="varbinary" dimlDataType="binary" inputFormat="varbinary" outputFormat="&quot;varbinary&quot;">
+					<targetParameters>
+						<targetParameter id="isFixedLength" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="xml" dimlDataType="xml" inputFormat="xml" outputFormat="&quot;xml&quot;" />
+
+			</platformDataTypeConfigs>
+		</targetPlatform>
+
+		<targetPlatform platform="csharp">
+			<platformDataTypeConfigs>
+
+				<platformDataTypeConfig id="char" dimlDataType="string" inputFormat="char" outputFormat="&quot;char&quot;">
+					<targetParameters>
+						<targetParameter id="length" value="1"/>
+						<targetParameter id="isFixedLength" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+				<platformDataTypeConfig id="string" dimlDataType="string" inputFormat="string" outputFormat="&quot;string&quot;"/>
+				<platformDataTypeConfig id="bool" dimlDataType="boolean" inputFormat="bool" outputFormat="&quot;bool&quot;"/>
+
+				<platformDataTypeConfig id="sbyte" dimlDataType="tinyInteger" inputFormat="sbyte" outputFormat="&quot;sbyte&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="byte" dimlDataType="tinyInteger" inputFormat="byte" outputFormat="&quot;byte&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="short" dimlDataType="smallInteger" inputFormat="short" outputFormat="&quot;short&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="ushort" dimlDataType="smallInteger" inputFormat="ushort" outputFormat="&quot;ushort&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="int" dimlDataType="integer" inputFormat="int" outputFormat="&quot;int&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="uint" dimlDataType="integer" inputFormat="uint" outputFormat="&quot;uint&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="long" dimlDataType="bigInteger" inputFormat="long" outputFormat="&quot;long&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="ulong" dimlDataType="bigInteger" inputFormat="ulong" outputFormat="&quot;ulong&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="float" dimlDataType="float" inputFormat="float" outputFormat="&quot;float&quot;"/>
+				<platformDataTypeConfig id="double" dimlDataType="double" inputFormat="double" outputFormat="&quot;double&quot;"/>
+				<platformDataTypeConfig id="decimal" dimlDataType="decimal" inputFormat="decimal" outputFormat="&quot;decimal&quot;"/>
+				<platformDataTypeConfig id="DateOnly" dimlDataType="date" inputFormat="DateOnly" outputFormat="&quot;DateOnly&quot;"/>
+
+				<platformDataTypeConfig id="DateTime" dimlDataType="datetime" inputFormat="DateTime" outputFormat="&quot;DateTime&quot;">
+					<targetParameters>
+						<targetParameter id="precision" value="0"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="DateTimeOffset" dimlDataType="dateTimeOffset" inputFormat="DateTimeOffset" outputFormat="&quot;DateTimeOffset&quot;">
+					<targetParameters>
+						<targetParameter id="precision" value="0"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="TimeSpan" dimlDataType="time" inputFormat="TimeSpan" outputFormat="&quot;TimeSpan&quot;">
+					<targetParameters>
+						<targetParameter id="precision" value="0"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="byte[]" dimlDataType="binary" inputFormat="byte[]" outputFormat="&quot;byte[]&quot;" />
+			</platformDataTypeConfigs>
+		</targetPlatform>
+
+		<targetPlatform platform="parquet">
+			<platformDataTypeConfigs>
+
+				<!-- LogicalType  -->
+				<platformDataTypeConfig id="STRING" dimlDataType="string" inputFormat="STRING" outputFormat="&quot;STRING&quot;" />
+				<platformDataTypeConfig id="ENUM" dimlDataType="string" inputFormat="ENUM" outputFormat="&quot;ENUM&quot;" />
+				<platformDataTypeConfig id="UUID" dimlDataType="guid" inputFormat="UUID" outputFormat="&quot;UUID&quot;" />
+				<platformDataTypeConfig id="BOOLEAN" dimlDataType="boolean" inputFormat="BOOLEAN" outputFormat="&quot;BOOLEAN&quot;" />
+				<platformDataTypeConfig id="INT" inputFormat="(?i)INT\s*\((?'bitWidth'.*?),\s*(?'isSigned'.*?)\)" outputFormat="&quot;INT(+ bitWidth.ToString() +, + isSigned.ToString() +)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="bitWidth" type="int" inputExpression="int.Parse(bitWidth)"/>
+						<platformDataTypeParameter id="isSigned" type="bool" inputExpression="bool.Parse(isSigned)"/>
+					</platformDataTypeParameters>
+					<conditionalDataTypes>
+						<conditionalDataType dataType="tinyInteger" condition="bitWidth == 8">
+							<targetParameters>
+								<targetParameter id="unsigned" value="!isSigned"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="smallInteger" condition="bitWidth == 16">
+							<targetParameters>
+								<targetParameter id="unsigned" value="!isSigned"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="integer" condition="bitWidth == 32">
+							<targetParameters>
+								<targetParameter id="unsigned" value="!isSigned"/>
+							</targetParameters>
+						</conditionalDataType>
+						<conditionalDataType dataType="bigInteger" >
+							<targetParameters>
+								<targetParameter id="unsigned" value="!isSigned"/>
+							</targetParameters>
+						</conditionalDataType>
+					</conditionalDataTypes>
+
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="FLOAT" dimlDataType="float" inputFormat="FLOAT" outputFormat="&quot;FLOAT&quot;" />
+				<platformDataTypeConfig id="DOUBLE" dimlDataType="double" inputFormat="DOUBLE" outputFormat="&quot;DOUBLE&quot;" />
+				<platformDataTypeConfig id="DECIMAL" dimlDataType="decimal" inputFormat="DECIMAL" outputFormat="&quot;DECIMAL&quot;" />
+				<platformDataTypeConfig id="DATE" dimlDataType="date" inputFormat="DATE" outputFormat="&quot;DATE&quot;" />
+				<platformDataTypeConfig id="TIME" dimlDataType="time" inputFormat="(?i)TIME\s*\((?'isAdjustedToUTC'.*?),\s*(?'unit'.*?)\)" outputFormat="&quot;TIME(+ isAdjustedToUTC.ToString() +, + unit.ToString() +)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="isAdjustedToUTC" type="bool" inputExpression="bool.Parse(isAdjustedToUTC)"/>
+						<platformDataTypeParameter id="unit" type="string" inputExpression=""/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="isUtcTime" value="isAdjustedToUTC"/>
+						<targetParameter id="precision" value="unit switch {&quot;MILLIS&quot; => 3 ,&quot;MICROS&quot; => 6 ,&quot;NANOS&quot; => 9}"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="TIMESTAMP" dimlDataType="timeStamp" inputFormat="(?i)TIMESTAMP\s*\((?'isAdjustedToUTC'.*?),\s*(?'unit'.*?)\)" outputFormat="&quot;TIMESTAMP(+ isAdjustedToUTC.ToString() +, + unit.ToString() +)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="isAdjustedToUTC" type="bool" inputExpression="bool.Parse(isAdjustedToUTC)"/>
+						<platformDataTypeParameter id="unit" type="string" inputExpression=""/>
+					</platformDataTypeParameters>
+					<targetParameters>
+						<targetParameter id="isUtcTime" value="isAdjustedToUTC"/>
+						<targetParameter id="precision" value="unit switch {&quot;MILLIS&quot; => 3 ,&quot;MICROS&quot; => 6 ,&quot;NANOS&quot; => 9}"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="byte[]" dimlDataType="binary" inputFormat="byte[]" outputFormat="&quot;byte[]&quot;" />
+				<platformDataTypeConfig id="JSON" dimlDataType="string" inputFormat="JSON" outputFormat="&quot;JSON&quot;" />
+
+
+				<!-- ConvertedType: Föråldrades men vi behåller det för bakåtkompatibilitet -->
+				<platformDataTypeConfig id="UTF8" dimlDataType="string" inputFormat="UTF8" outputFormat="&quot;UTF8&quot;" />
+
+				<platformDataTypeConfig id="INT_8" dimlDataType="tinyInteger" inputFormat="INT_8" outputFormat="&quot;INT(8, true)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="INT_16" dimlDataType="smallInteger" inputFormat="INT_16" outputFormat="&quot;INT(16, true)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="INT_32" dimlDataType="integer" inputFormat="INT_32" outputFormat="&quot;INT(32, true)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="INT_64" dimlDataType="bigInteger" inputFormat="INT_64" outputFormat="&quot;INT(64, true)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="false"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="UINT_8" dimlDataType="tinyInteger" inputFormat="UINT_8" outputFormat="&quot;INT(8, false)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="UINT_16" dimlDataType="smallInteger" inputFormat="UINT_16" outputFormat="&quot;INT(16, false)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="UINT_32" dimlDataType="integer" inputFormat="UINT_32" outputFormat="&quot;INT(32, false)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="UINT_64" dimlDataType="bigInteger" inputFormat="UINT_64" outputFormat="&quot;INT(64, false)&quot;">
+					<targetParameters>
+						<targetParameter id="unsigned" value="true"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="TIME_MILLIS" dimlDataType="time" inputFormat="TIME_MILLIS" outputFormat="&quot;TIME(true, MILLIS)&quot;">
+					<targetParameters>
+						<targetParameter id="isUtcTime" value="true"/>
+						<targetParameter id="precision" value="MILLIS"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="TIME_MICROS" dimlDataType="time" inputFormat="TIME_MICROS" outputFormat="&quot;TIME(true, MICROS)&quot;">
+					<targetParameters>
+						<targetParameter id="isUtcTime" value="true"/>
+						<targetParameter id="precision" value="MICROS"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="TIMESTAMP_MILLIS" dimlDataType="timeStamp" inputFormat="TIMESTAMP_MILLIS" outputFormat="&quot;TIMESTAMP(true, MILLIS)&quot;">
+					<targetParameters>
+						<targetParameter id="isUtcTime" value="true"/>
+						<targetParameter id="precision" value="MILLIS"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="TIMESTAMP_MICROS" dimlDataType="timeStamp" inputFormat="TIMESTAMP_MICROS" outputFormat="&quot;TIMESTAMP(true, MICROS)&quot;">
+					<targetParameters>
+						<targetParameter id="isUtcTime" value="true"/>
+						<targetParameter id="precision" value="MICROS"/>
+					</targetParameters>
+				</platformDataTypeConfig>
+
+
+			</platformDataTypeConfigs>
+		</targetPlatform>
+
+		<targetPlatform platform="openapi">
+			<platformDataTypeConfigs>
+				<platformDataTypeConfig id="string" inputFormat="(?i)string\s*\((?'format'.*?)\)" outputFormat="&quot;string(&quot; + format.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="format" type="string" inputExpression=""/>
+					</platformDataTypeParameters>
+					<conditionalDataTypes>
+						<conditionalDataType dataType="date" condition="format == &quot;date&quot;"/>
+						<conditionalDataType dataType="dateTime" condition="format == &quot;date-time&quot;"/>
+						<conditionalDataType dataType="integer" condition="format == &quot;integer&quot;"/>
+						<conditionalDataType dataType="float" condition="format == &quot;float&quot;"/>
+						<conditionalDataType dataType="double" condition="format == &quot;double&quot;"/>
+						<conditionalDataType dataType="guid" condition="format == &quot;uuid&quot;"/>
+						<conditionalDataType dataType="string" />
+					</conditionalDataTypes>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="number" inputFormat="(?i)number\s*\((?'format'.*?)\)"  outputFormat="&quot;integer(&quot; + format.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="format" type="string" inputExpression=""/>
+					</platformDataTypeParameters>
+					<conditionalDataTypes>
+						<conditionalDataType dataType="float" condition="format == &quot;float&quot;"/>
+						<conditionalDataType dataType="double" condition="format == &quot;double&quot;"/>
+						<conditionalDataType dataType="decimal" />
+					</conditionalDataTypes>
+				</platformDataTypeConfig>
+
+
+				<platformDataTypeConfig id="integer" inputFormat="(?i)integer\s*\((?'format'.*?)\)" outputFormat="&quot;integer(&quot; + format.ToString() + &quot;)&quot;">
+					<platformDataTypeParameters>
+						<platformDataTypeParameter id="format" type="string" inputExpression=""/>
+					</platformDataTypeParameters>
+					<conditionalDataTypes>
+						<conditionalDataType dataType="bigInteger" condition="format == &quot;int64&quot;"/>
+						<conditionalDataType dataType="integer" />
+					</conditionalDataTypes>
+				</platformDataTypeConfig>
+
+				<platformDataTypeConfig id="boolean" dimlDataType="boolean" inputFormat="boolean" outputFormat="&quot;boolean&quot;" />
+			</platformDataTypeConfigs>
+		</targetPlatform>
+
+	</targetPlatforms>
+</dataTypes>

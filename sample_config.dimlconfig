@@ -1,0 +1,63 @@
+<!-- 20230721 Diml konfiguration -->
+<config xmlns="https://github.com/Region-Skane-SDI/diml/config"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/dimlconfig.xsd"
+	    defaultLanguage="sv">
+	<traits>
+		<trait class="defaultConfigNamespace">
+			<traitParameter key="value" value="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/config/"/>
+		</trait>
+	</traits>
+
+	<graphs>
+		<graph dimlId="information_objects.graph"/>
+	</graphs>
+
+	<!-- Convert the dcat enums to lists -->
+	<lists>
+		<list dimlId="sample_list.list"/>
+	</lists>
+
+  <hierarchies>
+    <hierarchy dimlId="search_structure.hierarchy"/>
+    <hierarchy dimlId="information_owner.hierarchy"/>
+    <hierarchy dimlId="product_owner.hierarchy"/>
+    <hierarchy dimlId="information_domain.hierarchy"/>
+    <hierarchy dimlId="information_area.hierarchy"/>
+    <hierarchy dimlId="information_object.hierarchy"/> <!-- Exempel ska uppdateras efter hand som de förekommer i en dataprodukt -->
+    <hierarchy dimlId="content_class.hierarchy"/>
+  </hierarchies>
+
+	<!--<dataSystemColumns>
+		<dataSystemColumn id="SDI_{{TableName}}_ID" type="recordid">
+			<dimlDataType id="integer" isNullable="false"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_ExecutionLog_ID" type="executionlogid">
+			<dimlDataType id="integer" isNullable="false"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_Batch_ID" type="batchid">
+			<dimlDataType id="integer" isNullable="false"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_CreateTime_UTC" type="inserttimeutc">
+			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_LastUpdateTime_UTC" type="lastupdateutc">
+			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_IsDeleted" type="deletedflag">
+			<dimlDataType id="boolean" isNullable="false"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_CDC_Action" type="cdcaction">
+			<dimlDataType id="string" length="1" isFixedLength="true" isNullable="false"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_SCD2_IsCurrent" type="scd2iscurrent">
+			<dimlDataType id="boolean" isNullable="false"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_SCD2_StartTime" type="scd2starttime">
+			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="SDI_SCD2_EndTime" type="scd2endtime">
+			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
+		</dataSystemColumn>
+	</dataSystemColumns>-->
+</config>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/hierarchy.xsd"
+			  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/config/information_owner.hierarchy">
+
+  <traits>
+    <trait class="extension" subclass="bki-namespace">
+      <traitParameter key="value" value="http://bki.skane.se/infstyr/id/infag/"/>
+    </trait>
+  </traits>
+
+  <category id="dirhs">
+    <names>
+      <name language="sv">Hälso- och sjukvårdsdirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Hälso- och sjukvårdens högsta tjänsteman och rapporterar till hälso- och sjukvårdsnämnden och dess ordförande samt till regiondirektören. .</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>hs</value>
+          <value>kvalreg</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="diritmt">
+    <names>
+      <name language="sv">Förvaltningschef Digitalisering IT/MT/ IT-direktör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Har ett övergripande ansvar för IT/MT-organisationen och tar strategiska beslut.  Är även systemägare.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>itmt</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="fcmedserv">
+    <names>
+      <name language="sv">Förvaltningschef Medicinsk service </name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Har ett övergripande ansvar för Medicinsk Service och tar strategiska beslut. Är även systemägare.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>medserv</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="dirtrafik">
+    <names>
+      <name language="sv">Förvaltningschef för Skånetrafiken / Trafikdirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Trafikdirektörn har ansvar för utveckling av kollektivtrafiken inom regionen.  Är även systemägare.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>trafIk</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="dirfastighet">
+    <names>
+      <name language="sv">Förvaltningschef för Regionfastigheter / Fastighetsdirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Planerar, leder och samordnar övergripande förvaltningen och skötsel av fastigheter inom förvaltningen.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>fastighet</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="direkonomi">
+    <names>
+      <name language="sv">Ekonomidirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Leder arbetet med att ta fram ekonomiska planer, utredningar och styr- och kontrollsystem för att följa upp verksamheten, samt sätter upp en årsbudget och arbetar med att ta fram olika prognoser.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>ekonomi</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="dirhr">
+    <names>
+      <name language="sv">HR-direktör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Stöttar cheferna i kompetensförsörjning, ledarskapsutveckling, rekrytering, arbetsrätt, fackliga förhandlingar, rehabilitering, policys, lönekartläggning samt försäkringar och pensioner för anställda.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>hr</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="dirkom">
+    <names>
+      <name language="sv">Kommunikationsdirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Arbetar med både intern och extern kommunikation, omvärldsbevakning, film, text och bild, samt med sociala medier och digitala kanaler samt är ansvarig för kriskommunikation.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>kom</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="dirservice">
+    <names>
+      <name language="sv">Förvaltningschef för Regionservice / Servicedirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Ansvarar för serviceområden som lokalvård, måltider, textiltjänster samt administrativa tjänster inom ekonomi och HR, samt ansvarar för utförandet av transporter, både patienttransporter inom våra sjukhusområden och transporter av olika sorters gods och material över hela Skåne.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>service</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="dirkansli">
+    <names>
+      <name language="sv">Kanslidirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Kanslichef ansvarar för att prioritera enhetens övergripande arbete och uppdrag, att driva och samordna verksamhetsutvecklingen inom främst ärendehantering och nämndprocessen, samt att ha det övergripande administrativa ansvaret för och dialogen med stadens förtroendevalda och politiska sekreterare.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>kansli</value>
+          <value>org</value>
+
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="dirutv">
+    <names>
+      <name language="sv">Utvecklingsdirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Ansvarar för regionala tillväxt- och utvecklingsfrågor inom näringslivsutveckling, planering, infrastruktur och miljö.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>utv</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="regarkivarie">
+    <names>
+      <name language="sv">Regionarkivarie</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Regionarkivarie är delaktig i hela kedjan från att besvara och administrera frågor inför leverans av arkivmaterial, ordna och förteckna efter leverans till att slutligen ta fram och förbereda för utlämnande av visst material. Rollen består även av att ge råd och stöd i bevarande- och gallringsfrågor till verksamheterna.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>arkiv</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="cheflakemedel">
+    <names>
+      <name language="sv">Läkemedelschef under Hälso-och sjukvårdsdirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Utvecklar och samordnar läkemedelsfrågor inom Region Skåne. Ansvarar för skånegemensam baslista med rekommenderade läkemedel (Skånelistan), upphandling av läkemedel, följa förskrivningsmönster och kostnader samt utbilda och informera.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>lmtillv</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="chefforskninghs">
+    <names>
+      <name language="sv">Forskningschef under Hälso-och sjukvårdsdirektör</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Planlägger och leder den dagliga verksamheten samt ansvarar för personal på en forsknings- och utvecklingsenhet.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>forskninghs</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+  <category id="infoagare">
+    <names>
+      <name language="sv">Informationsägare ej specifcerad</name>
+    </names>
+    <descriptions>
+      <description type="plain" language="sv">Mest närliggande informationsägare inom Region Skåne. Exempelvis patientuppgifter ansvarar HSS-direktören för, eller personuppgifter ansvarar HR-direktören för.</description>
+    </descriptions>
+    <traits>
+      <trait class="category" subclass="informationDomain">
+        <traitParameter key="value">
+          <value>extern</value>
+          <value>infdom</value>
+        </traitParameter>
+      </trait>
+    </traits>
+  </category>
+
+
+</hierarchy>

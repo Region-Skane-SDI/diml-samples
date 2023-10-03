@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Exempel på tabulär dataprodukt -->
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/dataproduct.xsd" 
+             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/personer_per_enhet.dataproduct">
+  
+	<names>
+		<name language="sv">Personer per enhet</name>
+	</names>
+  
+	<descriptions>
+		<description type="plain" language="sv">Innehåller uppgifter om anställda och konsulter per enhet.</description>
+	</descriptions>
+
+	<dcat
+		dcatDataTheme="gove"
+		dcatAccessRights="restricted"
+		dcatUpdateFrequency="monthly"
+		dcatAvailability="available"
+		dcatStatus="completed" />
+
+	<traits>
+		<trait class="category" subclass="informationOwner">
+			<traitParameter value="HR" />
+		</trait>
+		<trait class="category" subclass="searchStructure">
+			<traitParameter value="1.1"/>
+		</trait>
+		<trait class="category" subclass="productOwner">
+			<traitParameter value="SDI Plattform"/>
+		</trait>
+		<trait class="category" subclass="contentClass">
+			<traitParameter value="standard"/>
+		</trait>
+		<trait class="isVirtual">
+			<traitParameter value="false"/>
+		</trait>
+		<trait class="icon">
+			<traitParameter value="bi-people"/>
+		</trait>
+		<trait class="infoClass">
+			<traitParameter value="K1R1T1"/>
+		</trait>
+		<trait class="tableSchema">
+			<traitParameter value="dbo"/>
+		</trait>
+	</traits>
+
+	<dataInputs>
+		<dataInput id="informationsplattformen" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+	</dataInputs>
+
+	<tables>
+
+		<table id="DP_AnstEnh">
+			<names>
+				<name language="sv">DP_AnstEnh</name>
+			</names>
+			<descriptions>
+				<description type="plain" language="sv">Personer per enhet.</description>
+			</descriptions>
+			<businessKey>
+				<value>Verksamhetsomrade</value>
+			</businessKey>
+			<columns>
+				<column id="Verksamhetsomrade" >
+					<names>
+						<name language="sv">Verksamhetsomrade</name>
+					</names>
+					<dimlDataType id="string" isNullable="false"/>
+					<descriptions>
+						<description type="plain" language="sv">Verksamhetsområdets namn.</description>
+					</descriptions>
+					<traits>
+						<trait class="columnSources">
+							<traitParameter>
+								<value>informationsplattformen/DP_AnstEnh/Verksamhetsomrade</value>
+							</traitParameter>
+						</trait>
+					</traits>
+				</column>
+        <column id="Enhet" >
+          <names>
+            <name language="sv">Enhet</name>
+          </names>
+          <dimlDataType id="string" isNullable="false"/>
+          <descriptions>
+            <description type="plain" language="sv">Enhetens namn.</description>
+          </descriptions>
+          <traits>
+            <trait class="columnSources">
+              <traitParameter>
+                <value>informationsplattformen/DP_AnstEnh/Enhet</value>
+              </traitParameter>
+            </trait>
+          </traits>
+        </column>
+        <column id="Anstallda" >
+          <names>
+            <name language="sv">Anstallda</name>
+          </names>
+          <dimlDataType id="integer" isNullable="false"/>
+          <descriptions>
+            <description type="plain" language="sv">Antal anställda.</description>
+          </descriptions>
+          <traits>
+            <trait class="columnSources">
+              <traitParameter>
+                <value>informationsplattformen/DP_AnstEnh/Anstallda</value>
+              </traitParameter>
+            </trait>
+          </traits>
+        </column>
+        <column id="Konsulter" >
+          <names>
+            <name language="sv">Konsulter</name>
+          </names>
+          <dimlDataType id="integer" isNullable="false"/>
+          <descriptions>
+            <description type="plain" language="sv">Antal konsulter.</description>
+          </descriptions>
+          <traits>
+            <trait class="columnSources">
+              <traitParameter>
+                <value>informationsplattformen/DP_AnstEnh/Konsulter</value>
+              </traitParameter>
+            </trait>
+          </traits>
+        </column>
+        <column id="Period" >
+          <names>
+            <name language="sv">Period</name>
+          </names>
+          <dimlDataType id="string" isNullable="false"/>
+          <descriptions>
+            <description type="plain" language="sv">Per den siste i perioden. I annat fall tomt.</description>
+          </descriptions>
+          <traits>
+            <trait class="columnSources">
+              <traitParameter>
+                <value>informationsplattformen/DP_AnstEnh/Period</value>
+              </traitParameter>
+            </trait>
+          </traits>
+        </column>
+			</columns>
+      <sampleData>
+        <sampleDataRow>
+          <value>VO Utveckling</value>
+          <value>Integration och information</value>
+          <value>10</value>
+          <value>17</value>
+          <value>202303</value>
+        </sampleDataRow>
+        <sampleDataRow>
+          <value>VO Utveckling</value>
+          <value>Informatik</value>
+          <value>12</value>
+          <value>5</value>
+          <value>202303</value>
+        </sampleDataRow>
+        <sampleDataRow>
+          <value>VO Digital transformation</value>
+          <value>Projekt</value>
+          <value>19</value>
+          <value>0</value>
+          <value>202303</value>
+        </sampleDataRow>
+        <sampleDataRow>
+          <value>VO Digital transformation</value>
+          <value>Digitala tjänster och design</value>
+          <value>7</value>
+          <value>9</value>
+          <value>202303</value>
+        </sampleDataRow>
+      </sampleData>
+		</table>
+
+	</tables>
+
+  <dataOutputs>
+    <sqlOutputs>
+      <sqlOutput channelId="sql" sqlOutputType="tsql" />
+    </sqlOutputs>
+  </dataOutputs>
+
+</dataProduct>
