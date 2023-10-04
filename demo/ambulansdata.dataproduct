@@ -1,8 +1,8 @@
 <!-- Exempel på minimalistisk tabulär dataprodukt för demo -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/dataproduct.xsd"
-             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/ambulansdata.dataproduct">
+             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ambulansdata.dataproduct">
 
   <names>
     <name language="sv">Ambulansdata</name>

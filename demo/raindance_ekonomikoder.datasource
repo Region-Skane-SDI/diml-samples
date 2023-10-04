@@ -1,7 +1,7 @@
 <dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/datasource.xsd"
-       dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/raindance_ekonomikoder.datasource">
+       xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd"
+       dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource">
   
   <names>
     <name language="sv">Raindance - Ekonomikoder</name>
@@ -439,4 +439,3 @@
   </dataOutputs>
   
 </dataSource>
-
