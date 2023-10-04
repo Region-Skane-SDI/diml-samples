@@ -2,8 +2,8 @@
 <!-- Exempel på tabulär dataprodukt -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/dataproduct.xsd"
-	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_dataproduct.dataproduct"
+	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct"
 >
 	<names>
 		<name language="sv">Anställningar</name>
@@ -326,8 +326,8 @@ TODO: Add decsription
     </dataStages>
 
     <dataIngests>
-      <dataIngest id="load_job_1" dataInputId="src1">
-		  <!--<tableToTableMappings>
+      <!--<dataIngest id="load_job_1" dataInputId="src1">
+		  <tableToTableMappings>
 			  <tableToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000) {{ColumnList}} FROM {{SourceTable}}" allowSchemaDrift="false">
 				  <columnMappings>
 					  <columnMapping columnId="Personnr" sourceColumnId="Personnr" />
@@ -336,8 +336,8 @@ TODO: Add decsription
 				  </columnMappings>
 			  </tableToTableMapping>
 			<tableToTableMapping tableId="Anstallning" sourceTableId="Anstallning"/>
-		  </tableToTableMappings>-->
-      </dataIngest>
+		  </tableToTableMappings>
+      </dataIngest>-->
     </dataIngests>
   </dataFlow>
   

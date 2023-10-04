@@ -1,7 +1,7 @@
 <!-- 20230721 Diml konfiguration -->
 <config xmlns="https://github.com/Region-Skane-SDI/diml/config"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/dimlconfig.xsd"
+        xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd"
 	    defaultLanguage="sv">
 	<hierarchies> 
 		<hierarchy id="searchStructure">
