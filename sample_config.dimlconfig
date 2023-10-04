@@ -5,7 +5,7 @@
 	    defaultLanguage="sv">
 	<traits>
 		<trait class="defaultConfigNamespace">
-			<traitParameter key="value" value="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/tree/main/config/"/>
+			<traitParameter key="value" value="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/"/>
 		</trait>
 	</traits>
 
