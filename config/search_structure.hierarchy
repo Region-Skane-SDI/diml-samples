@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/search_structure.hierarchy">
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd"
+			  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/search_structure.hierarchy">
 
   <traits>
     <trait class="extension" subclass="bki-namespace">
@@ -16,7 +18,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter som rör ekonomisk information.</description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>direkonomi</value>
         </traitParameter>
@@ -35,7 +37,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter som rör ekonomisk information exkl vårdekonomi.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>direkonomi</value>
             </traitParameter>
@@ -57,7 +59,7 @@
           <description type="plain" language="sv">Delområdet Ekonomi omfattar dataprodukter som rör ekonomisk information.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>direkonomi</value>
               <value>dirhs</value>
@@ -82,7 +84,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter om t.ex.  program, projekt, uppdrag och kommunikation.</description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>dirkom</value>
           <value>infoagare</value>
@@ -102,7 +104,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter om förändringshantering avseende att förflytta individer, grupper och organisationer från nuvarande tillstånd till ett framtida önskat tillstånd genom  t.ex. program, projekt och uppdrag.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>infoagare</value>
             </traitParameter>
@@ -124,7 +126,7 @@
           <description type="plain" language="sv">Området omfattar dataprodukter som rör kommunikation och marknadsföring.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirkom</value>
             </traitParameter>
@@ -148,7 +150,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter som rör om HR, personal och Person.</description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>dirhr</value>
         </traitParameter>
@@ -167,7 +169,7 @@
           <description type="plain" language="sv">Området omfattar dataprodukter avseende personal och organisationsutveckling.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhr</value>
             </traitParameter>
@@ -191,7 +193,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter som är relaterad till patient och styrning av vård och hälsa. Hälsa och vård definieras som den verksamhet som bedrivs enligt Hälso- och sjukvårdslagen (HSL) oberoende av huvudman och organisation.</description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>dirhs</value>
         </traitParameter>
@@ -210,7 +212,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att övervaka och främja befolkningens hälsa.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -232,7 +234,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende invånarens medverkan i sin egen hälsa och vård samt bokning av aktiviteter och resurser som rör den enskilde patienten.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -253,7 +255,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att planera och besluta om behandling och åtgärder, samarbete mellan aktörer inom hälsa och vård.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -274,7 +276,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att samla in, sammanställa och bedöma patientinformation.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -295,7 +297,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att lösa eller minimera ett hälsoproblem genom behandlingar, terapi och invasiva åtgärder samt dataprodukter avseende donationshantering och förskrivning av hjälpmedel.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -316,7 +318,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende styrning av informatik, processer, kunskaps- och beslutsstöd.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -337,7 +339,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende behov, efterfrågan och utbud av hälso- och sjukvårdstjänster och samverkan i enlighet med samhällets och befolkningens behov och krav.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -358,7 +360,7 @@
           <description type="plain" language="sv">Område omfattar dataprodukter avseende patientsäker vård och efterlevnad av lagar, förordningar och föreskrifter samt upprättande av riktlinjer och rutiner.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -379,7 +381,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att generera ny kunskap om hälsa och sjukvård och socialt arbete med hjälp av vetenskaplig metodik samt för att utbilda vårdens medarbetare, studenter, praktikanter och specialister.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -400,7 +402,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att dokumentera och presentera hälso- och vårdinformation.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirhs</value>
             </traitParameter>
@@ -424,7 +426,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter om infrastruktur som hanteras av Region Skåne så som bl.a. kollektivtrafik, IT/MT, datanät,telefoni, fastigheter, vatten och avlopp, avfall och återvinning.</description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>dirtrafik</value>
           <value>diritmt</value>
@@ -445,7 +447,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende hantering av det kommunala ansvaret inom de 4 trafikslagen (vägtrafik, järnvägstrafik, sjöfart och luftfart) samt övrig infrastruktur i form av energi och värme, vatten och avlopp, avfall och återvinning, transporter, datanät och parkförvaltning.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirtrafik</value>
               <value>fastighet</value>
@@ -468,7 +470,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende kollektivtrafik.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirtrafik</value>
             </traitParameter>
@@ -489,7 +491,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende IT-applikationer/-produkter/-tjänster samt gemensam IT såsom nätverk, telefoni, lagrings-, server- och klientplattform.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>diritmt</value>
             </traitParameter>
@@ -510,7 +512,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att hantera system och dess livscykler. System definieras här som en kombination av samverkande element som organiseras för att uppnå ett eller flera angivna mål. Systemelement kan utgöras av såväl tekniska element (hårdvara och mjukvara) som människor.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>infoagare</value>
             </traitParameter>
@@ -531,7 +533,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att livscykelhantera fastighetsbeståndet så att det vidmakthålls och vidareutvecklas ändamålsenligt.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirfastighet</value>
             </traitParameter>
@@ -555,7 +557,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter som rör anskaffning, logistik, materialförsörjning mm.</description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>direkonomi</value>
         </traitParameter>
@@ -574,7 +576,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende resurser och kringtjänster som krävs i förhållande till dels den planerade hälsa, vård och omsorgen och dels tillgänglig kapacitet.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirservice</value>
             </traitParameter>
@@ -596,7 +598,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende materialflöden samt till dessa kopplade resurs-, dataprodukters- och monetära flöden, utifrån ett livscykelperspektiv. </description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirservice</value>
             </traitParameter>
@@ -617,7 +619,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende strategiska upphandlingar och avtal.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>direkonomi</value>
             </traitParameter>
@@ -641,7 +643,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter som rör de kärnverksmheter som Region Skåne har som inte rör hälsa och vård samt kollektivtrafik.</description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>dirutv</value>
         </traitParameter>
@@ -660,7 +662,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende utvecklingsfrågor som har betydelse för medborgarna, t.ex. regionalt tillväxtarbete, länsövergripande bredbandsutbyggnad, EU:s strukturfondsprogram, transportinfrastruktur mm.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirutv</value>
             </traitParameter>
@@ -682,7 +684,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att stödja och främja näringsliv, arbetsmarknad och integration i kommun och region.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirutv</value>
             </traitParameter>
@@ -703,7 +705,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att värna om miljön, människors liv och hälsa och innefattar exempeltvis samhällsskydd och beredskap, miljö och hälsoskydd, räddningstjänsten.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirutv</value>
             </traitParameter>
@@ -724,7 +726,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende det kulturella utbudet, tillgängliggöra offentlig konst, hantering av fysiskt kulturarv och historiska arkiv samt turism.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirutv</value>
             </traitParameter>
@@ -748,7 +750,7 @@
       <description type="plain" language="sv">Omfattar dataprodukter som rör styrning och ledning av Region Skånes verksamheter ur ett koncern och invånareperspektiv, samt det stöd som krävs där det finns lagkrav mm. </description>
     </descriptions>
     <traits>
-      <trait class="category" subclass="information_owner.hierarchy">
+      <trait class="category" subclass="informationOwner">
         <traitParameter key="value">
           <value>dirkansli</value>
         </traitParameter>
@@ -767,7 +769,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende att förebygga och hantera kriser i verksamheten t.ex. omfattas risk- och sårbarhetshantering, kontinuitetsplanering, krisledning, beredskap och civilförsvar, systematiskt brandskyddsarbete, säkerhet och trygghet.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirkansli</value>
             </traitParameter>
@@ -789,7 +791,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende strukturer och ramar för verksamhetstyrning och styrning av produkter och tjänster och dess efterlevnad.  Avser strategisk, taktisk eller operativ nivå som exempelvis hela organisationen, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirkansli</value>
             </traitParameter>
@@ -811,7 +813,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende  exekvering av definerade strukturer och fattade beslut. Avser strategisk, taktisk eller operativ nivå så som hela verksamheten, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt. Exempel: prioritering, flödes- och kapacitetsplanering, rätt nyttjande av de totala resurserna, kompetensförsörjning, finansiell planering, definition av kvalitetsmått och arbete med ständiga förbättringar.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirkansli</value>
             </traitParameter>
@@ -833,7 +835,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende juridiskt stöd till verksamheten för att säkerställa efterlevnad av lagar och förordningar.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirkansli</value>
             </traitParameter>
@@ -855,7 +857,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende organisationens information och data.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>infoagare</value>
             </traitParameter>
@@ -877,7 +879,7 @@
           <description type="plain" language="sv">Omfattar dataprodukter avseende hanteringen av lagkrav som en offentlig organisation måste ta hänsyn till gällande demokrati och insyn som t.ex. Kommunallagen (2017:725), Tryckfrihetsförordningen (1949:105) 2 kap. Allmänna handlingars offentlighet, Offentlighets- och sekretesslagen (2009:400), Vallagen (2005:837) och Valförordningen (2005:874). Exempel är expediering av allmänna handlingar samt sekretessprövning.</description>
         </descriptions>
         <traits>
-          <trait class="category" subclass="information_owner.hierarchy">
+          <trait class="category" subclass="informationOwner">
             <traitParameter key="value">
               <value>dirkansli</value>
             </traitParameter>

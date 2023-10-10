@@ -10,7 +10,7 @@
 	</descriptions>
 	
 	<traits>
-		<trait class="category" subclass="information_owner.hierarchy">
+		<trait class="category" subclass="informationOwner">
 			<traitParameter key="value">
 				<value>Finance</value>
 				<value>HSS</value>

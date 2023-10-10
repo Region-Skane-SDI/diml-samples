@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Exempel på tabulär dataprodukt -->
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/anvandare.dataproduct">
-
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/anvandare.dataproduct">
+  
 	<names>
 		<name language="sv">Användare</name>
 	</names>
-
+  
 	<descriptions>
 		<description type="plain" language="sv">Grunduppgifter om användare som behöver access till våra IT-system.</description>
 	</descriptions>
-
-	<dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly" dcatAvailability="available" dcatStatus="completed" />
-
+  
+	<dcat
+		dcatDataTheme="gove"
+		dcatAccessRights="restricted"
+		dcatUpdateFrequency="monthly"
+		dcatAvailability="available"
+		dcatStatus="completed" />
+  
 	<traits>
-		<trait class="category" subclass="information_owner.hierarchy">
+		<trait class="category" subclass="informationOwner">
 			<traitParameter value="HR-direktör" />
 		</trait>
-		<trait class="category" subclass="content_class.hierarchy">
+		<trait class="category" subclass="contentClass">
 			<traitParameter value="standard" />
 		</trait>
 		<trait class="infoClass">
@@ -33,13 +40,13 @@
 			<traitParameter value="dbo"/>
 		</trait>
 	</traits>
-
+  
 	<dataInputs>
 		<dataInput id="profisee" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
 	</dataInputs>
-
+  
 	<tables>
-
+    
 		<table id="MD_Anvandare">
 			<names>
 				<name language="sv">MD_Anvandare</name>
@@ -51,7 +58,7 @@
 				<value>RSID</value>
 			</businessKey>
 			<columns>
-				<column id="RSID">
+				<column id="RSID" >
 					<names>
 						<name language="sv">RSID</name>
 					</names>
@@ -67,7 +74,7 @@
 						</trait>
 					</traits>
 				</column>
-				<column id="Personnr">
+				<column id="Personnr" >
 					<names>
 						<name language="sv">Personnr</name>
 					</names>
@@ -84,7 +91,7 @@
 						</trait>
 					</traits>
 				</column>
-				<column id="Fornamn">
+				<column id="Fornamn" >
 					<names>
 						<name language="sv">Fornamn</name>
 					</names>
@@ -101,7 +108,7 @@
 						</trait>
 					</traits>
 				</column>
-				<column id="Efternamn">
+				<column id="Efternamn" >
 					<names>
 						<name language="sv">Efternamn</name>
 					</names>
@@ -118,7 +125,7 @@
 						</trait>
 					</traits>
 				</column>
-				<column id="AnstNr">
+				<column id="AnstNr" >
 					<names>
 						<name language="sv">AnstNr</name>
 					</names>
@@ -134,7 +141,7 @@
 						</trait>
 					</traits>
 				</column>
-				<column id="Huvudplacering">
+				<column id="Huvudplacering" >
 					<names>
 						<name language="sv">Huvudplacering</name>
 					</names>
@@ -150,7 +157,7 @@
 						</trait>
 					</traits>
 				</column>
-				<column id="Chef">
+				<column id="Chef" >
 					<names>
 						<name language="sv">Chef</name>
 					</names>
@@ -166,7 +173,7 @@
 						</trait>
 					</traits>
 				</column>
-				<column id="Kategori">
+				<column id="Kategori" >
 					<names>
 						<name language="sv">Kategori</name>
 					</names>
@@ -206,13 +213,13 @@
 				</sampleDataRow>
 			</sampleData>
 		</table>
-
+    
 	</tables>
 
-	<dataOutputs>
-		<sqlOutputs>
-			<sqlOutput channelId="sql" sqlOutputType="tsql" />
-		</sqlOutputs>
-	</dataOutputs>
-
+  <dataOutputs>
+    <sqlOutputs>
+      <sqlOutput channelId="sql" sqlOutputType="tsql" />
+    </sqlOutputs>
+  </dataOutputs>
+  
 </dataProduct>
