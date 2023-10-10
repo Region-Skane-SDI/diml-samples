@@ -1,7 +1,5 @@
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/besoksregistreringar.dataproduct">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/besoksregistreringar.dataproduct">
 
   <names>
     <name language="sv">Besöksregistreringar</name>
@@ -11,26 +9,21 @@
     <description type="plain" language="sv">Innehåller uppgifter om patienter, besök och patientdiagnoser</description>
   </descriptions>
 
-  <dcat
-		dcatDataTheme="heal"
-		dcatAccessRights="restricted"
-		dcatUpdateFrequency="daily"
-		dcatAvailability="available"
-		dcatStatus="completed"/>
+  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed"/>
 
   <traits>
-    <trait class="category" subclass="informationOwner">
+    <trait class="category" subclass="information_owner.hierarchy">
       <traitParameter>
         <value>HSS</value>
       </traitParameter>
     </trait>
-    <trait class="category" subclass="searchStructure">
+    <trait class="category" subclass="search_structure.hierarchy">
       <traitParameter value="1.1"/>
     </trait>
-    <trait class="category" subclass="productOwner">
+    <trait class="category" subclass="product_owner.hierarchy">
       <traitParameter value="SDI Plattform"/>
     </trait>
-    <trait class="category" subclass="contentClass">
+    <trait class="category" subclass="content_class.hierarchy">
       <traitParameter value="Raw"/>
     </trait>
     <trait class="isUnlisted">
@@ -52,11 +45,11 @@
   </traits>
 
   <dataInputs>
-    <dataInput id ="src1"  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    <dataInput id ="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
   </dataInputs>
 
   <tables>
-    
+
     <table id="Patient">
       <names>
         <name language="sv">Patient</name>
@@ -68,7 +61,7 @@
         <value>PatientId</value>
       </businessKey>
       <columns>
-        <column id="PatientId" >
+        <column id="PatientId">
           <names>
             <name language="sv">PatientId</name>
           </names>
@@ -84,7 +77,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Personnr12" >
+        <column id="Personnr12">
           <names>
             <name language="sv">Personnr12</name>
           </names>
@@ -100,7 +93,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Kon" >
+        <column id="Kon">
           <names>
             <name language="sv">Kon</name>
           </names>
@@ -116,7 +109,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Fornamn" >
+        <column id="Fornamn">
           <names>
             <name language="sv">Fornamn</name>
           </names>
@@ -132,7 +125,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Efternamn" >
+        <column id="Efternamn">
           <names>
             <name language="sv">Efternamn</name>
           </names>
@@ -148,7 +141,7 @@
             </trait>
           </traits>
         </column>
-        <column id="PostAdress" >
+        <column id="PostAdress">
           <names>
             <name language="sv">PostAdress</name>
           </names>
@@ -164,7 +157,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Postnr" >
+        <column id="Postnr">
           <names>
             <name language="sv">Postnr</name>
           </names>
@@ -180,7 +173,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Postort" >
+        <column id="Postort">
           <names>
             <name language="sv">Postort</name>
           </names>
@@ -233,7 +226,7 @@
         <value>BesokID</value>
       </businessKey>
       <columns>
-        <column id="PatientId" >
+        <column id="PatientId">
           <names>
             <name language="sv">PatientId</name>
           </names>
@@ -249,7 +242,7 @@
             </trait>
           </traits>
         </column>
-        <column id="BesokID" >
+        <column id="BesokID">
           <names>
             <name language="sv">BesokID</name>
           </names>
@@ -265,7 +258,7 @@
             </trait>
           </traits>
         </column>
-        <column id="BesokStatusId" >
+        <column id="BesokStatusId">
           <names>
             <name language="sv">BesokStatusId</name>
           </names>
@@ -281,7 +274,7 @@
             </trait>
           </traits>
         </column>
-        <column id="AvdelningMottagningId" >
+        <column id="AvdelningMottagningId">
           <names>
             <name language="sv">AvdelningMottagningId</name>
           </names>
@@ -297,7 +290,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Besok_BesokDatum" >
+        <column id="Besok_BesokDatum">
           <names>
             <name language="sv">Besok_BesokDatum</name>
           </names>
@@ -313,7 +306,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Besok_ArAkut" >
+        <column id="Besok_ArAkut">
           <names>
             <name language="sv">Besok_ArAkut</name>
           </names>
@@ -329,7 +322,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Besok_Patientavgift" >
+        <column id="Besok_Patientavgift">
           <names>
             <name language="sv">Besok_Patientavgift</name>
           </names>
@@ -345,43 +338,43 @@
             </trait>
           </traits>
         </column>
-        </columns>
-        <tableRelations>
-          <tableRelation id="BesokPatientId" targetTable="Patient">
-            <relationColumns columnName="PatientId" targetColumnName="PatientId" />
-          </tableRelation>
-        </tableRelations>
-        <sampleData>
-          <sampleDataRow>
-            <value>100047875</value>
-            <value>10</value>
-            <value>4</value>
-            <value>10243</value>
-            <value>2021-10-14 10:00:00</value>
-            <value>N</value>
-            <value>400</value>
-          </sampleDataRow>
-          <sampleDataRow>
-            <value>100047875</value>
-            <value>11</value>
-            <value>4</value>
-            <value>10243</value>
-            <value>2021-11-06 14:00:00</value>
-            <value>N</value>
-            <value>0</value>
-          </sampleDataRow>
-          <sampleDataRow>
-            <value>100047875</value>
-            <value>24</value>
-            <value>7</value>
-            <value>8704</value>
-            <value>2022-04-02 08:00:00</value>
-            <value>N</value>
-            <value>0</value>
-          </sampleDataRow>
-        </sampleData>
-      </table>
-    
+      </columns>
+      <tableRelations>
+        <tableRelation id="BesokPatientId" targetTable="Patient">
+          <relationColumns columnName="PatientId" targetColumnName="PatientId" />
+        </tableRelation>
+      </tableRelations>
+      <sampleData>
+        <sampleDataRow>
+          <value>100047875</value>
+          <value>10</value>
+          <value>4</value>
+          <value>10243</value>
+          <value>2021-10-14 10:00:00</value>
+          <value>N</value>
+          <value>400</value>
+        </sampleDataRow>
+        <sampleDataRow>
+          <value>100047875</value>
+          <value>11</value>
+          <value>4</value>
+          <value>10243</value>
+          <value>2021-11-06 14:00:00</value>
+          <value>N</value>
+          <value>0</value>
+        </sampleDataRow>
+        <sampleDataRow>
+          <value>100047875</value>
+          <value>24</value>
+          <value>7</value>
+          <value>8704</value>
+          <value>2022-04-02 08:00:00</value>
+          <value>N</value>
+          <value>0</value>
+        </sampleDataRow>
+      </sampleData>
+    </table>
+
     <table id="PatientDiagnos">
       <names>
         <name language="sv">PatientDiagnos</name>
@@ -397,7 +390,7 @@
         <value>PatientDiagnosId</value>
       </businessKey>
       <columns>
-        <column id="PatientId" >
+        <column id="PatientId">
           <names>
             <name language="sv">PatientId</name>
           </names>
@@ -414,7 +407,7 @@
             </trait>
           </traits>
         </column>
-        <column id="BesokId" >
+        <column id="BesokId">
           <names>
             <name language="sv">BesokId</name>
           </names>
@@ -431,7 +424,7 @@
             </trait>
           </traits>
         </column>
-        <column id="PatientDiagnosId" >
+        <column id="PatientDiagnosId">
           <names>
             <name language="sv">PatientDiagnosId</name>
           </names>
@@ -448,7 +441,7 @@
             </trait>
           </traits>
         </column>
-        <column id="PatientDiagnos_Diagnoskod" >
+        <column id="PatientDiagnos_Diagnoskod">
           <names>
             <name language="sv">PatientDiagnos_Diagnoskod</name>
           </names>
@@ -465,7 +458,7 @@
             </trait>
           </traits>
         </column>
-        <column id="PatientDiagnos_DiagnosDatum" >
+        <column id="PatientDiagnos_DiagnosDatum">
           <names>
             <name language="sv">PatientDiagnos_DiagnosDatum</name>
           </names>
@@ -482,7 +475,7 @@
             </trait>
           </traits>
         </column>
-        <column id="PatientDiagnos_HuvudEllerBidiagnos" >
+        <column id="PatientDiagnos_HuvudEllerBidiagnos">
           <names>
             <name language="sv">PatientDiagnos_HuvudEllerBidiagnos</name>
           </names>

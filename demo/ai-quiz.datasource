@@ -12,7 +12,7 @@
   </descriptions>
 
   <traits>
-    <trait class="category" subclass="informationOwner">
+    <trait class="category" subclass="information_owner.hierarchy">
       <traitParameter value="IT/MT" />
     </trait>
     <trait class="infoClass">

@@ -1,8 +1,6 @@
 <!-- Exempel på minimalistisk tabulär dataprodukt för demo -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ambulansdata.dataproduct">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ambulansdata.dataproduct">
 
   <names>
     <name language="sv">Ambulansdata</name>
@@ -12,24 +10,19 @@
     <description type="plain" language="sv">Innehåller uppgifter om stationer, fordon, uppdrag och patienter</description>
   </descriptions>
 
-  <dcat
-    dcatDataTheme="heal"
-    dcatAccessRights="restricted"
-		dcatUpdateFrequency="daily"
-    dcatAvailability="available"
-    dcatStatus="completed" />
+  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
-    <trait class="category" subclass="informationOwner">
+    <trait class="category" subclass="information_owner.hierarchy">
       <traitParameter value="HSS" />
     </trait>
-    <trait class="category" subclass="searchStructure">
+    <trait class="category" subclass="search_structure.hierarchy">
       <traitParameter value="1.1"/>
     </trait>
-    <trait class="category" subclass="productOwner">
+    <trait class="category" subclass="product_owner.hierarchy">
       <traitParameter value="SDI Plattform"/>
     </trait>
-    <trait class="category" subclass="contentClass">
+    <trait class="category" subclass="content_class.hierarchy">
       <traitParameter value="Raw"/>
     </trait>
     <trait class="isUnlisted">

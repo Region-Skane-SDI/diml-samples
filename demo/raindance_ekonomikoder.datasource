@@ -14,7 +14,7 @@
   </descriptions>
 
   <traits>
-    <trait class="category" subclass="informationOwner">
+    <trait class="category" subclass="information_owner.hierarchy">
       <traitParameter value="Finance" />
     </trait>
     <trait class="infoClass">
