@@ -15,7 +15,7 @@
 
   <traits>
     <trait class="category" subclass="informationOwner">
-      <traitParameter value="Finance" />
+      <traitParameter value="direkonomi" />
     </trait>
     <trait class="infoClass">
       <traitParameter value="K1R1T1"/>
