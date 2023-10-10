@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Exempel på tabulär dataprodukt -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ekonomikoder.dataproduct">
-  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ekonomikoder.dataproduct">
+
   <names>
     <name language="sv">Ekonomikoder</name>
   </names>
-  
+
   <descriptions>
     <description type="plain" language="sv">Innehåller ansvarskoder, förvaltningskoder och motparter.</description>
   </descriptions>
 
-  <dcat dcatDataTheme="econ"
-		    dcatAccessRights="public"
-		    dcatUpdateFrequency="daily"
-		    dcatAvailability="available"
-		    dcatStatus="completed" />
+  <dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
-      <traitParameter value="Finance" />
+      <traitParameter value="direkonomi" />
     </trait>
     <trait class="category" subclass="contentClass">
       <traitParameter value="application" />
@@ -58,7 +52,7 @@
         <value>FVK_TEXT</value>
       </businessKey>
       <columns>
-        <column id="FTG_ID" >
+        <column id="FTG_ID">
           <names>
             <name language="sv">FTG_ID</name>
           </names>
@@ -74,7 +68,7 @@
             </trait>
           </traits>
         </column>
-        <column id="FVK_ID" >
+        <column id="FVK_ID">
           <names>
             <name language="sv">FVK_ID</name>
           </names>
@@ -90,7 +84,7 @@
             </trait>
           </traits>
         </column>
-        <column id="FVK_TEXT" >
+        <column id="FVK_TEXT">
           <names>
             <name language="sv">FVK_TEXT</name>
           </names>
@@ -106,7 +100,7 @@
             </trait>
           </traits>
         </column>
-        <column id="FVK_GILTIG_FOM" >
+        <column id="FVK_GILTIG_FOM">
           <names>
             <name language="sv">FVK_GILTIG_FOM</name>
           </names>
@@ -122,7 +116,7 @@
             </trait>
           </traits>
         </column>
-        <column id="FVK_GILTIG_TOM" >
+        <column id="FVK_GILTIG_TOM">
           <names>
             <name language="sv">FVK_GILTIG_TOM</name>
           </names>
@@ -141,7 +135,7 @@
             </trait>
           </traits>
         </column>
-        <column id="FVK_PASSIV" >
+        <column id="FVK_PASSIV">
           <names>
             <name language="sv">FVK_PASSIV</name>
           </names>
@@ -222,7 +216,7 @@
         <value>ANSVAR_ID</value>
       </businessKey>
       <columns>
-        <column id="FTG_ID" >
+        <column id="FTG_ID">
           <names>
             <name language="sv">FTG_ID</name>
           </names>
@@ -238,7 +232,7 @@
             </trait>
           </traits>
         </column>
-        <column id="ANSVAR_ID" >
+        <column id="ANSVAR_ID">
           <names>
             <name language="sv">ANSVAR_ID</name>
           </names>
@@ -254,7 +248,7 @@
             </trait>
           </traits>
         </column>
-        <column id="ANSVAR_TEXT" >
+        <column id="ANSVAR_TEXT">
           <names>
             <name language="sv">ANSVAR_TEXT</name>
           </names>
@@ -270,7 +264,7 @@
             </trait>
           </traits>
         </column>
-        <column id="ANSVAR_GILTIG_FOM" >
+        <column id="ANSVAR_GILTIG_FOM">
           <names>
             <name language="sv">ANSVAR_GILTIG_FOM</name>
           </names>
@@ -286,7 +280,7 @@
             </trait>
           </traits>
         </column>
-        <column id="ANSVAR_GILTIG_TOM" >
+        <column id="ANSVAR_GILTIG_TOM">
           <names>
             <name language="sv">ANSVAR_GILTIG_TOM</name>
           </names>
@@ -305,7 +299,7 @@
             </trait>
           </traits>
         </column>
-        <column id="ANSVAR_PASSIV" >
+        <column id="ANSVAR_PASSIV">
           <names>
             <name language="sv">ANSVAR_PASSIV</name>
           </names>
@@ -402,7 +396,7 @@
         <value>MOTP_ID</value>
       </businessKey>
       <columns>
-        <column id="FTG_ID" >
+        <column id="FTG_ID">
           <names>
             <name language="sv">FTG_ID</name>
           </names>
@@ -418,7 +412,7 @@
             </trait>
           </traits>
         </column>
-        <column id="MOTP_ID" >
+        <column id="MOTP_ID">
           <names>
             <name language="sv">MOTP_ID</name>
           </names>
@@ -434,7 +428,7 @@
             </trait>
           </traits>
         </column>
-        <column id="MOTP_TEXT" >
+        <column id="MOTP_TEXT">
           <names>
             <name language="sv">MOTP_TEXT</name>
           </names>
@@ -450,7 +444,7 @@
             </trait>
           </traits>
         </column>
-        <column id="MOTP_GILTIG_FOM" >
+        <column id="MOTP_GILTIG_FOM">
           <names>
             <name language="sv">MOTP_GILTIG_FOM</name>
           </names>
@@ -466,7 +460,7 @@
             </trait>
           </traits>
         </column>
-        <column id="MOTP_GILTIG_TOM" >
+        <column id="MOTP_GILTIG_TOM">
           <names>
             <name language="sv">MOTP_GILTIG_TOM</name>
           </names>
@@ -485,7 +479,7 @@
             </trait>
           </traits>
         </column>
-        <column id="MOTP_PASSIV" >
+        <column id="MOTP_PASSIV">
           <names>
             <name language="sv">MOTP_PASSIV</name>
           </names>
@@ -569,5 +563,5 @@
       <sqlOutput channelId="sql" sqlOutputType="tsql" />
     </sqlOutputs>
   </dataOutputs>
-  
+
 </dataProduct>
