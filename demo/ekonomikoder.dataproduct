@@ -35,7 +35,7 @@
   </traits>
 
   <dataInputs>
-    <dataInput id="raindance_ekonomikoder" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/raindance_ekonomikoder.datasource" channelId="sql" />
+    <dataInput id="raindance_ekonomikoder" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource" channelId="sql" />
   </dataInputs>
 
   <tables>
