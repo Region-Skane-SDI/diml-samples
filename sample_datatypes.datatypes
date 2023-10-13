@@ -19,7 +19,7 @@
 	<dimlDataTypeConfigs>
 		<!-- utveckla nedanstående konverteringar (cdm) -->
 		<!-- utveckla nedanstående konverteringar (sparksql) -->
-		<dimlDataTypeConfig id="string" detectionPattern=".+" detectionPriority="10">
+		<dimlDataTypeConfig id="string" detectionPattern=".+" detectionPriority="8">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="length" defaultValue="50" />
 				<dataTypeAttributeSetting id="format" defaultValue="" />
@@ -80,7 +80,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="tinyInteger" detectionPattern="^-?[0-9]*$" detectionPriority="2">
+		<dimlDataTypeConfig id="tinyInteger">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
 			</dataTypeAttributeSettings>
@@ -105,7 +105,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="smallInteger" detectionPattern="^-?[0-9]*$" detectionPriority="3">
+		<dimlDataTypeConfig id="smallInteger">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
 			</dataTypeAttributeSettings>
@@ -126,7 +126,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="integer" detectionPattern="^-?[0-9]*$" detectionPriority="4">
+		<dimlDataTypeConfig id="integer" detectionPattern="^-?[0-9]*$" detectionPriority="2">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
 			</dataTypeAttributeSettings>
@@ -147,7 +147,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="bigInteger" detectionPattern="^-?[0-9]*$" detectionPriority="5">
+		<dimlDataTypeConfig id="bigInteger" detectionPattern="^-?[0-9]*$" detectionPriority="3">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
 			</dataTypeAttributeSettings>
@@ -168,7 +168,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="float" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="6">
+		<dimlDataTypeConfig id="float" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="4">
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="real" />
 				<targetDataType platform="csharp" dataType="float" />
@@ -181,7 +181,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="double" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="7">
+		<dimlDataTypeConfig id="double" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="5">
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="float" />
 				<targetDataType platform="csharp" dataType="double" />
@@ -194,7 +194,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="decimal" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="8">
+		<dimlDataTypeConfig id="decimal" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="6">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="precision" defaultValue="19" />
 				<dataTypeAttributeSetting id="scale" defaultValue="4" />
@@ -360,7 +360,7 @@
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
-		<dimlDataTypeConfig id="guid" detectionPattern="^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$" detectionPriority="9">
+		<dimlDataTypeConfig id="guid" detectionPattern="^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$" detectionPriority="7">
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="binary">
 					<targetParameters>
