@@ -183,7 +183,11 @@
 
 		<dimlDataTypeConfig id="double" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="5">
 			<targetDataTypes>
-				<targetDataType platform="tsql" dataType="float" />
+				<targetDataType platform="tsql" dataType="float">
+					<targetParameters>
+						<targetParameter id="precision" value="precision" />
+					</targetParameters>
+				</targetDataType>
 				<targetDataType platform="csharp" dataType="double" />
 				<targetDataType platform="parquet" dataType="DOUBLE" />
 				<targetDataType platform="openapi" dataType="number">
@@ -216,7 +220,12 @@
 						</conditionalDataType>
 						<!-- we also have decimal but we take numeric because it does not allow more
 						than we need so better for the performance !! -->
-						<conditionalDataType dataType="numeric" />
+						<conditionalDataType dataType="numeric">
+							<targetParameters>
+								<targetParameter id="precision" value="precision" />
+								<targetParameter id="scale" value="scale" />
+							</targetParameters>
+						</conditionalDataType>
 					</conditionalDataTypes>
 				</targetDataType>
 				<targetDataType platform="csharp" dataType="decimal" />
