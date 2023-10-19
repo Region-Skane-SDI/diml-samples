@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config xmlns="https://github.com/Region-Skane-SDI/diml/config"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd" defaultLanguage="sv">
-
+  
 	<traits>
 		<trait class="defaultConfigNamespace">
 			<traitParameter key="value" value="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/"/>
@@ -31,7 +31,7 @@
 		<hierarchy dimlId="content_class.hierarchy"/>
 	</hierarchies>
 
-	<!--<dataSystemColumns>
+	<dataSystemColumns>
 		<dataSystemColumn id="SDI_{{TableName}}_ID" type="recordid">
 			<dimlDataType id="integer" isNullable="false"/>
 		</dataSystemColumn>
@@ -62,5 +62,5 @@
 		<dataSystemColumn id="SDI_SCD2_EndTime" type="scd2endtime">
 			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
 		</dataSystemColumn>
-	</dataSystemColumns>-->
+	</dataSystemColumns>
 </config>
