@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!-- Exempel på tabulär dataprodukt -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ekonomikoder.dataproduct">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+    dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ekonomikoder.dataproduct"
+    dcatDataTheme="econ" 
+    dcatAccessRights="public" 
+    dcatUpdateFrequency="daily"
+    dcatAvailability="available" 
+    dcatStatus="completed">
 
   <names>
     <name language="sv">Ekonomikoder</name>
@@ -10,8 +16,6 @@
   <descriptions>
     <description type="plain" language="sv">Innehåller ansvarskoder, förvaltningskoder och motparter.</description>
   </descriptions>
-
-  <dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">

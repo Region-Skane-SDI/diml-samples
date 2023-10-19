@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<list xmlns="https://github.com/Region-Skane-SDI/diml/list"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd"
+	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_update_frequency.list">
+
+	<listItem id="other">
+		<names>
+			<name language="sv">Annat</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras med en annan typ av regelbundenhet (till exempel varje skottår).</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="daily">
+		<names>
+			<name language="sv">Daglig</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras en gång om dagen.</description>
+		</descriptions>
+	</listItem>
+
+      <listItem id="annual2">
+		<names>
+			<name language="sv">Halvårlig</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras två gånger om året.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="continuous">
+		<names>
+			<name language="sv">Kontinuerlig</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras oftare än dagligen.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="quarterly">
+		<names>
+			<name language="sv">Kvartalsvis</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras var tredje månad.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="monthly">
+		<names>
+			<name language="sv">Månatligen</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras en gång i månaden.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="unknown">
+		<names>
+			<name language="sv">Okänd</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras med okänd regelbundenhet.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="irregular">
+		<names>
+			<name language="sv">Oregelbundet</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras med ojämna intervall.</description>
+		</descriptions>
+	</listItem> 	
+
+    <listItem id="monthly3">
+		<names>
+			<name language="sv">Tre gånger per månad</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras tre gånger i månaden.</description>
+		</descriptions>
+	</listItem>
+
+     <listItem id="weekly3">
+		<names>
+			<name language="sv">Tre gånger per vecka</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras tre gånger i veckan.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="weekly2">
+		<names>
+			<name language="sv">Två gånger per vecka</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras två gånger i veckan.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="daily2">
+		<names>
+			<name language="sv">Två gånger per dag</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras två gånger om dagen.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="monthly2">
+		<names>
+			<name language="sv">Två gånger per månad</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras två gånger i månaden.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="update_continuously">
+		<names>
+			<name language="sv">Uppdateras kontinuerligt</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras upprepningsvis utan avbrott.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="biweekly">
+		<names>
+			<name language="sv">Varannan vecka</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras varannan vecka.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="bimonthly">
+		<names>
+			<name language="sv">Varannan månad</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras varannan månad.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="triennial">
+		<names>
+			<name language="sv">Vart tredje år</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras vart tredje år.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="biennial">
+		<names>
+			<name language="sv">Vartannat år</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras vartannat år.</description>
+		</descriptions>
+	</listItem>
+	
+    <listItem id="weekly">
+		<names>
+			<name language="sv">Veckovis</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras en gång i veckan.</description>
+		</descriptions>
+	</listItem>
+
+    <listItem id="annual">
+		<names>
+			<name language="sv">Årlig</name>
+		</names>
+		<descriptions>
+			<description type="plain" language="sv">Uppdateras en gång om året.</description>
+		</descriptions>
+	</listItem>
+
+</list>
+
+
+
+    

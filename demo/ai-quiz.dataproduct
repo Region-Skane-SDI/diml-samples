@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Exempel på tabulär dataprodukt -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.dataproduct">
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+              dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.dataproduct"
+              dcatDataTheme="tech"
+              dcatAccessRights="public"
+              dcatUpdateFrequency="unknown"
+              dcatAvailability="available"
+              dcatStatus="completed">
 
   <names>
     <name language="sv">AI-enkät</name>
@@ -12,13 +17,6 @@
   <descriptions>
     <description type="plain" language="sv">Innehåller uppgifter som har skickats in via AI-enkäten.</description>
   </descriptions>
-
-  <dcat
-		dcatDataTheme="tech"
-		dcatAccessRights="public"
-		dcatUpdateFrequency="unknown"
-		dcatAvailability="available"
-		dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">

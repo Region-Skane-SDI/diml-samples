@@ -4,7 +4,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
 	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct"
->
+	dcatDataTheme="econ"
+	dcatAccessRights="public"
+	dcatUpdateFrequency="daily"
+	dcatAvailability="available"
+	dcatStatus="completed">
+	
 	<names>
 		<name language="sv">Anställningar</name>
 	</names>
@@ -23,14 +28,6 @@ TODO: Add decsription
 | dcatUpdateFrequency | [dcatUpdateFrequencyType](#dcatUpdateFrequencyType) | Ja |  |  | Anger dataproduktens uppdateringsfrekvens i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.4 |
 		</description>
 	</descriptions>
-
-	<dcat
-		dcatDataTheme="econ"
-		dcatAccessRights="public"
-		dcatUpdateFrequency="daily"
-		dcatAvailability="available"
-		dcatStatus="completed"
-	/>
 
 	<traits>
 		<trait class="category" subclass="informationOwner.hierarchy">
@@ -326,7 +323,7 @@ TODO: Add decsription
     </dataStages>
 
     <dataIngests>
-      <!--<dataIngest id="load_job_1" dataInputId="src1">
+			<!--<dataIngest id="load_job_1" dataInputId="src1">
 		  <tableToTableMappings>
 			  <tableToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000) {{ColumnList}} FROM {{SourceTable}}" allowSchemaDrift="false">
 				  <columnMappings>

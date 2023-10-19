@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <dataTypes xmlns="https://github.com/Region-Skane-SDI/diml/datatypes"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
@@ -25,6 +26,7 @@
 				<dataTypeAttributeSetting id="format" defaultValue="" />
 				<dataTypeAttributeSetting id="isFixedLength" defaultValue="false" />
 				<dataTypeAttributeSetting id="isWideChar" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql">
@@ -72,6 +74,9 @@
 		</dimlDataTypeConfig>
 
 		<dimlDataTypeConfig id="boolean" detectionPattern="^([1]|[0]|true|false){1}$" detectionPriority="1">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
+			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="bit" />
 				<targetDataType platform="parquet" dataType="BOOLEAN" />
@@ -83,6 +88,7 @@
 		<dimlDataTypeConfig id="tinyInteger">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="tinyint">
@@ -108,6 +114,7 @@
 		<dimlDataTypeConfig id="smallInteger">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="smallint" />
@@ -129,6 +136,7 @@
 		<dimlDataTypeConfig id="integer" detectionPattern="^-?[0-9]*$" detectionPriority="2">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="int" />
@@ -150,6 +158,7 @@
 		<dimlDataTypeConfig id="bigInteger" detectionPattern="^-?[0-9]*$" detectionPriority="3">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="unsigned" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="bigint" />
@@ -169,6 +178,9 @@
 		</dimlDataTypeConfig>
 
 		<dimlDataTypeConfig id="float" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="4">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
+			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="real" />
 				<targetDataType platform="csharp" dataType="float" />
@@ -182,6 +194,9 @@
 		</dimlDataTypeConfig>
 
 		<dimlDataTypeConfig id="double" detectionPattern="^-?[0-9]+[,|.][0-9]+$" detectionPriority="5">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
+			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="float">
 					<targetParameters>
@@ -202,6 +217,7 @@
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="precision" defaultValue="19" />
 				<dataTypeAttributeSetting id="scale" defaultValue="4" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql">
@@ -240,6 +256,9 @@
 		</dimlDataTypeConfig>
 
 		<dimlDataTypeConfig id="date">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
+			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="date" />
 				<targetDataType platform="csharp" dataType="DateOnly" />
@@ -256,6 +275,7 @@
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="precision" defaultValue="0" />
 				<dataTypeAttributeSetting id="isUtcTime" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql">
@@ -287,6 +307,7 @@
 		<dimlDataTypeConfig id="dateTimeOffset">
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="precision" defaultValue="0" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="datetimeoffset">
@@ -310,6 +331,7 @@
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="precision" defaultValue="0" />
 				<dataTypeAttributeSetting id="isUtcTime" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="time">
@@ -330,6 +352,9 @@
 		</dimlDataTypeConfig>
 
 		<dimlDataTypeConfig id="xml">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
+			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="xml" />
 				<targetDataType platform="csharp" dataType="string" />
@@ -342,6 +367,7 @@
 			<dataTypeAttributeSettings>
 				<dataTypeAttributeSetting id="length" defaultValue="32" />
 				<dataTypeAttributeSetting id="isFixedLength" defaultValue="false" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql">
@@ -370,6 +396,9 @@
 		</dimlDataTypeConfig>
 
 		<dimlDataTypeConfig id="guid" detectionPattern="^[{]?[0-9a-fA-F]{8}-([0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}[}]?$" detectionPriority="7">
+			<dataTypeAttributeSettings>
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
+			</dataTypeAttributeSettings>
 			<targetDataTypes>
 				<targetDataType platform="tsql" dataType="binary">
 					<targetParameters>
@@ -391,6 +420,7 @@
 				<dataTypeAttributeSetting id="length" defaultValue="12" />
 				<dataTypeAttributeSetting id="format" defaultValue="\d{12}" />
 				<dataTypeAttributeSetting id="isFixedLength" defaultValue="true" />
+				<dataTypeAttributeSetting id="isNullable" defaultValue="false" />
 			</dataTypeAttributeSettings>
 			<traits>
 				<trait class="pii" />
@@ -401,7 +431,6 @@
 			<traits>
 				<trait class="pii" />
 			</traits>
-
 		</dimlDataTypeConfig>
 
 		<dimlDataTypeConfig id="age" baseDataType="integer">

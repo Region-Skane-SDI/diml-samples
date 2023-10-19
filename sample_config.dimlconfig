@@ -1,8 +1,9 @@
-<!-- 20230721 Diml konfiguration -->
+<?xml version="1.0" encoding="utf-8"?>
 <config xmlns="https://github.com/Region-Skane-SDI/diml/config"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd"
 	    defaultLanguage="sv">
+		
 	<traits>
 		<trait class="defaultConfigNamespace">
 			<traitParameter key="value" value="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/"/>
@@ -13,9 +14,12 @@
 		<graph dimlId="information_objects.graph"/>
 	</graphs>
 
-	<!-- Convert the dcat enums to lists -->
 	<lists>
-		<list dimlId="sample_list.list"/>
+		<list dimlId="dcat_access_rights.list"/>
+		<list dimlId="dcat_availability.list"/>
+		<list dimlId="dcat_data_theme.list"/>
+		<list dimlId="dcat_status.list"/>
+		<list dimlId="dcat_update_frequency.list"/>
 	</lists>
 
   <hierarchies>
