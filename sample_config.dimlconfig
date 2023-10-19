@@ -1,8 +1,6 @@
 <!-- 20230721 Diml konfiguration -->
 <config xmlns="https://github.com/Region-Skane-SDI/diml/config"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd"
-	    defaultLanguage="sv">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd" defaultLanguage="sv">
 	<traits>
 		<trait class="defaultConfigNamespace">
 			<traitParameter key="value" value="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/"/>
@@ -18,17 +16,18 @@
 		<list dimlId="sample_list.list"/>
 	</lists>
 
-  <hierarchies>
-    <hierarchy dimlId="search_structure.hierarchy"/>
-    <hierarchy dimlId="information_owner.hierarchy"/>
-    <hierarchy dimlId="product_owner.hierarchy"/>
-    <hierarchy dimlId="information_domain.hierarchy"/>
-    <hierarchy dimlId="information_area.hierarchy"/>
-    <hierarchy dimlId="information_object.hierarchy"/> <!-- Exempel ska uppdateras efter hand som de förekommer i en dataprodukt -->
-    <hierarchy dimlId="content_class.hierarchy"/>
-  </hierarchies>
+	<hierarchies>
+		<hierarchy dimlId="search_structure.hierarchy"/>
+		<hierarchy dimlId="information_owner.hierarchy"/>
+		<hierarchy dimlId="product_owner.hierarchy"/>
+		<hierarchy dimlId="information_domain.hierarchy"/>
+		<hierarchy dimlId="information_area.hierarchy"/>
+		<hierarchy dimlId="information_object.hierarchy"/>
+		<!-- Exempel ska uppdateras efter hand som de förekommer i en dataprodukt -->
+		<hierarchy dimlId="content_class.hierarchy"/>
+	</hierarchies>
 
-	<!--<dataSystemColumns>
+	<dataSystemColumns>
 		<dataSystemColumn id="SDI_{{TableName}}_ID" type="recordid">
 			<dimlDataType id="integer" isNullable="false"/>
 		</dataSystemColumn>
@@ -59,5 +58,5 @@
 		<dataSystemColumn id="SDI_SCD2_EndTime" type="scd2endtime">
 			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
 		</dataSystemColumn>
-	</dataSystemColumns>-->
+	</dataSystemColumns>
 </config>
