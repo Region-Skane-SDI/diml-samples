@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd"
-            dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.datasource">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.datasource">
 
   <names>
     <name language="sv">AI-enkät</name>
@@ -30,7 +29,7 @@
         <description type="plain" language="sv">En tabell som beskriver svaren från AI-enkäten.</description>
       </descriptions>
       <columns>
-        <column id="erfarenhet" >
+        <column id="erfarenhet">
           <names>
             <name language="sv">Erfarenhet</name>
           </names>
@@ -39,7 +38,7 @@
             <description type="plain" language="sv">Hur mycket erfarenhet har du av AI?</description>
           </descriptions>
         </column>
-        <column id="medgivande" >
+        <column id="medgivande">
           <names>
             <name language="sv">Medgivande</name>
           </names>
@@ -48,7 +47,7 @@
             <description type="plain" language="sv">Skall det krävas medgivande av patienter för sekundäranvändning av deras patientdata (för exempelvis forskning)?</description>
           </descriptions>
         </column>
-        <column id="Beslut" >
+        <column id="Beslut">
           <names>
             <name language="sv">Beslut</name>
           </names>
@@ -57,7 +56,7 @@
             <description type="plain" language="sv">Bör AI kunna fatta beslut som rör människors liv och hälsa?</description>
           </descriptions>
         </column>
-        <column id="Arbetsmarknad" >
+        <column id="Arbetsmarknad">
           <names>
             <name language="sv">Arbetsmarknad</name>
           </names>
@@ -66,7 +65,7 @@
             <description type="plain" language="sv">Hur tror du AI kommer att påverka arbetsmarknaden i Sverige närmaste åren?</description>
           </descriptions>
         </column>
-        <column id="Manskligheten" >
+        <column id="Manskligheten">
           <names>
             <name language="sv">Manskligheten</name>
           </names>

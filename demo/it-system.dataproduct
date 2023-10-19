@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-             dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/it-system.dataproduct">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/it-system.dataproduct">
 
   <names>
     <name language="sv">IT-system</name>
@@ -12,12 +10,7 @@
     <description type="plain" language="sv">Grunduppgifter om Region Skånes centrala IT-system.</description>
   </descriptions>
 
-  <dcat
-		dcatDataTheme="gove"
-		dcatAccessRights="restricted"
-		dcatUpdateFrequency="monthly"
-		dcatAvailability="available"
-		dcatStatus="completed" />
+  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly" dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
@@ -63,7 +56,7 @@
         <value>ID</value>
       </businessKey>
       <columns>
-        <column id="ID" >
+        <column id="ID">
           <names>
             <name language="sv">ID</name>
           </names>
@@ -79,7 +72,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Namn" >
+        <column id="Namn">
           <names>
             <name language="sv">Namn</name>
           </names>
@@ -95,7 +88,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Beskrivning" >
+        <column id="Beskrivning">
           <names>
             <name language="sv">Beskrivning</name>
           </names>
@@ -111,7 +104,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Kategori" >
+        <column id="Kategori">
           <names>
             <name language="sv">Kategori</name>
           </names>
@@ -127,7 +120,7 @@
             </trait>
           </traits>
         </column>
-        <column id="SAO" >
+        <column id="SAO">
           <names>
             <name language="sv">SAO</name>
           </names>
@@ -143,7 +136,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Riskanalyserat" >
+        <column id="Riskanalyserat">
           <names>
             <name language="sv">Riskanalyserat</name>
           </names>

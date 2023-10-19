@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <traitClasses xmlns="https://github.com/Region-Skane-SDI/diml/traits"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	    xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/traits https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/traits.xsd">
-	<traitClass class="category" requireSubclass="true" customParameters="false"> 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/traits https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/traits.xsd">
+	<traitClass class="category" requireSubclass="true" customParameters="false">
 		<!-- subclass is optional for many trait classes, but in this case it is required because it points to the hierarchy -->
 		<!-- customParameters determines if parameters that aren't mentioned under traitClassParameters are allowed -->
 		<!-- Traits have only descriptions, no need to have names in multiple languages. Assume name = id. -->
@@ -10,7 +9,7 @@
 			<description type="plain" language="sv">Category-traits hänvisar till hierarkier i dimlconfig-filen. Ange hierarki som subclass.</description>
 		</descriptions>
 		<traitClassParameters>
-			<traitClassParameter key="value" required="true" multiValue="true"> <!-- This parameter will be required and it is allowed to put an array of values into it. -->
+			<traitClassParameter key="value" required="true" multiValue="true">				<!-- This parameter will be required and it is allowed to put an array of values into it. -->
 				<descriptions>
 					<description type="plain" language="sv">Kategorins DimlId</description>
 				</descriptions>

@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Exempel på digital tjänst -->
-<service name="" dimlId="" version="" description="" productOwner="" informationOwner="" 
-		    domain="" subDomain="" dataTheme="" accessRights="" infoClass="K1R3T3" 
-            availability="" status="" publishToCatalog="true">
+<service name="" dimlId="" version="" description="" productOwner="" informationOwner="" domain="" subDomain="" dataTheme="" accessRights="" infoClass="K1R3T3" availability="" status="" publishToCatalog="true">
 	<apis>
 		<api id="" type="openapi" manifestLocation="..." />
 	</apis>

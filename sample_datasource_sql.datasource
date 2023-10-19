@@ -1,14 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd"
-       dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datasource_sql.datasource">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datasource_sql.datasource">
 	<names>
 		<name language="sv">Exempel på datakälla</name>
 	</names>
 	<descriptions>
 		<description type="plain" language="sv">Kort sammanfattande beskrivning...</description>
 	</descriptions>
-	
+
 	<traits>
 		<trait class="category" subclass="informationOwner">
 			<traitParameter key="value">
@@ -40,7 +39,7 @@
 				<value>Personnr</value>
 			</businessKey>
 			<columns>
-				<column id="Personnr" >
+				<column id="Personnr">
 					<names>
 						<name language="sv">Personnr</name>
 					</names>
@@ -53,7 +52,7 @@
 						<trait class="pii"/>
 					</traits>
 				</column>
-				<column id="Namn" >
+				<column id="Namn">
 					<names>
 						<name language="sv">Namn</name>
 					</names>
@@ -92,7 +91,7 @@
 				<value>Anstallningsnr</value>
 			</businessKey>
 			<columns>
-				<column id="Personnr" >
+				<column id="Personnr">
 					<names>
 						<name language="sv">Personnr</name>
 					</names>
@@ -105,7 +104,7 @@
 						<trait class="pii"/>
 					</traits>
 				</column>
-				<column id="Anstallningsnr" >
+				<column id="Anstallningsnr">
 					<names>
 						<name language="sv">Anstallningsnr</name>
 					</names>
