@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Exempel på tabulär dataprodukt -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-              xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-              dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.dataproduct"
-              dcatDataTheme="tech"
-              dcatAccessRights="public"
-              dcatUpdateFrequency="unknown"
-              dcatAvailability="available"
-              dcatStatus="completed">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.dataproduct">
 
   <names>
     <name language="sv">AI-enkät</name>
@@ -17,6 +10,8 @@
   <descriptions>
     <description type="plain" language="sv">Innehåller uppgifter som har skickats in via AI-enkäten.</description>
   </descriptions>
+
+  <dcat dcatDataTheme="tech" dcatAccessRights="public" dcatUpdateFrequency="unknown" dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
@@ -56,7 +51,7 @@
         <description type="plain" language="sv">En tabell som beskriver svaren från AI-enkäten.</description>
       </descriptions>
       <columns>
-        <column id="Erfarenhet" >
+        <column id="Erfarenhet">
           <names>
             <name language="sv">Erfarenhet</name>
           </names>
@@ -72,7 +67,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Medgivande" >
+        <column id="Medgivande">
           <names>
             <name language="sv">Medgivande</name>
           </names>
@@ -88,7 +83,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Beslut" >
+        <column id="Beslut">
           <names>
             <name language="sv">Beslut</name>
           </names>
@@ -104,7 +99,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Arbetsmarknad" >
+        <column id="Arbetsmarknad">
           <names>
             <name language="sv">Arbetsmarknad</name>
           </names>
@@ -120,7 +115,7 @@
             </trait>
           </traits>
         </column>
-        <column id="Manskligheten" >
+        <column id="Manskligheten">
           <names>
             <name language="sv">Manskligheten</name>
           </names>

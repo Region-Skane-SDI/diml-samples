@@ -1,9 +1,7 @@
 <!-- 20230721 Diml konfiguration -->
 <config xmlns="https://github.com/Region-Skane-SDI/diml/config"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd"
-	    defaultLanguage="sv">
-	<hierarchies> 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd" defaultLanguage="sv">
+	<hierarchies>
 		<hierarchy id="searchStructure">
 			<traits>
 				<trait class="extension" subclass="bki-namespace">
@@ -185,7 +183,7 @@
 					</category>
 				</subcategories>
 			</category>
-						
+
 			<category id="hs1">
 				<names>
 					<name language="sv">Hälsa och vård</name>
@@ -418,7 +416,7 @@
 					</category>
 				</subcategories>
 			</category>
-						
+
 			<category id="infra1">
 				<names>
 					<name language="sv">Infrastruktur</name>
@@ -484,7 +482,7 @@
 							</trait>
 						</traits>
 					</category>
-				<category id="itmtlev2">
+					<category id="itmtlev2">
 						<names>
 							<name language="sv">IT/MT leverans</name>
 						</names>
@@ -549,7 +547,7 @@
 					</category>
 				</subcategories>
 			</category>
-				
+
 			<category id="inkologist1">
 				<names>
 					<name language="sv">Inköp och hantering varor och tjänster</name>
@@ -590,7 +588,7 @@
 							</trait>
 						</traits>
 					</category>
-					
+
 					<category id="logistik2">
 						<names>
 							<name language="sv">Logistik</name>
@@ -635,7 +633,7 @@
 					</category>
 				</subcategories>
 			</category>
-			
+
 			<category id="reguppd1">
 				<names>
 					<name language="sv">Regionalt uppdrag</name>
@@ -741,8 +739,8 @@
 						</traits>
 					</category>
 				</subcategories>
-			</category>			
-			
+			</category>
+
 			<category id="styrled1">
 				<names>
 					<name language="sv">Styrning och ledning Region Skåne</name>
@@ -805,7 +803,7 @@
 							</trait>
 						</traits>
 					</category>
-					
+
 					<category id="ledning2">
 						<names>
 							<name language="sv">Ledning</name>
@@ -827,7 +825,7 @@
 							</trait>
 						</traits>
 					</category>
-					
+
 					<category id="juridik2">
 						<names>
 							<name language="sv">Juridikhantering</name>
@@ -849,7 +847,7 @@
 							</trait>
 						</traits>
 					</category>
-					
+
 					<category id="infohant2">
 						<names>
 							<name language="sv">Informationshantering</name>
@@ -871,7 +869,7 @@
 							</trait>
 						</traits>
 					</category>
-					
+
 					<category id="demokrati2">
 						<names>
 							<name language="sv">Demokrati</name>
@@ -903,7 +901,7 @@
 					<traitParameter key="value" value="http://bki.skane.se/infstyr/id/infag/"/>
 				</trait>
 			</traits>
-			
+
 			<category id="dirhs">
 				<names>
 					<name language="sv">Hälso- och sjukvårdsdirektör</name>
@@ -920,7 +918,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="diritmt">
 				<names>
 					<name language="sv">Förvaltningschef Digitalisering IT/MT/ IT-direktör</name>
@@ -936,7 +934,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="fcmedserv">
 				<names>
 					<name language="sv">Förvaltningschef Medicinsk service </name>
@@ -952,7 +950,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="dirtrafik">
 				<names>
 					<name language="sv">Förvaltningschef för Skånetrafiken / Trafikdirektör</name>
@@ -968,7 +966,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="dirfastighet">
 				<names>
 					<name language="sv">Förvaltningschef för Regionfastigheter / Fastighetsdirektör</name>
@@ -984,7 +982,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="direkonomi">
 				<names>
 					<name language="sv">Ekonomidirektör</name>
@@ -1000,7 +998,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="dirhr">
 				<names>
 					<name language="sv">HR-direktör</name>
@@ -1016,7 +1014,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="dirkom">
 				<names>
 					<name language="sv">Kommunikationsdirektör</name>
@@ -1032,7 +1030,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="dirservice">
 				<names>
 					<name language="sv">Förvaltningschef för Regionservice / Servicedirektör</name>
@@ -1048,7 +1046,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="dirkansli">
 				<names>
 					<name language="sv">Kanslidirektör</name>
@@ -1061,12 +1059,12 @@
 						<traitParameter key="value">
 							<value>kansli</value>
 							<value>org</value>
-							
+
 						</traitParameter>
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="dirutv">
 				<names>
 					<name language="sv">Utvecklingsdirektör</name>
@@ -1082,7 +1080,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="regarkivarie">
 				<names>
 					<name language="sv">Regionarkivarie</name>
@@ -1098,7 +1096,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="cheflakemedel">
 				<names>
 					<name language="sv">Läkemedelschef under Hälso-och sjukvårdsdirektör</name>
@@ -1114,7 +1112,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="chefforskninghs">
 				<names>
 					<name language="sv">Forskningschef under Hälso-och sjukvårdsdirektör</name>
@@ -1130,7 +1128,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="infoagare">
 				<names>
 					<name language="sv">Informationsägare ej specifcerad</name>
@@ -1172,7 +1170,7 @@
 					<traitParameter key="value" value="http://bki.skane.se/infstyr/id/infdom/"/>
 				</trait>
 			</traits>
-			
+
 			<category id="hs">
 				<names>
 					<name language="sv">Hälso- och sjukvårdsinformation</name>
@@ -1188,7 +1186,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="kvalreg">
 				<names>
 					<name language="sv">Kvalitetsregister information</name>
@@ -1204,7 +1202,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="itmt">
 				<names>
 					<name language="sv">IT- och MTsystem information</name>
@@ -1220,7 +1218,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="medserv">
 				<names>
 					<name language="sv">Medicinsk service information</name>
@@ -1236,7 +1234,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="trafik">
 				<names>
 					<name language="sv">Trafik information</name>
@@ -1252,7 +1250,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="fastighet">
 				<names>
 					<name language="sv">Fastighetsinformation</name>
@@ -1268,7 +1266,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="ekonomi">
 				<names>
 					<name language="sv">Ekonomi- och inköpsinformation</name>
@@ -1284,7 +1282,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="hr">
 				<names>
 					<name language="sv">HR information</name>
@@ -1300,7 +1298,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="kom">
 				<names>
 					<name language="sv">Kommunikation (webbplats) information</name>
@@ -1316,7 +1314,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="service">
 				<names>
 					<name language="sv">Serviceprocess information</name>
@@ -1332,7 +1330,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="kansli">
 				<names>
 					<name language="sv">Kansliprocess information</name>
@@ -1363,7 +1361,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="utv">
 				<names>
 					<name language="sv">Regional utvecklingsprocess information</name>
@@ -1379,7 +1377,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="arkiv">
 				<names>
 					<name language="sv">Arkiverad information</name>
@@ -1395,7 +1393,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="lmtillv">
 				<names>
 					<name language="sv">Läkemedels-tillverkningsinformation</name>
@@ -1411,7 +1409,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="forskninghs">
 				<names>
 					<name language="sv">Forskningsdata (anonymiserad / aggregerad data)</name>
@@ -1427,7 +1425,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="extern">
 				<names>
 					<name language="sv">Externinformation</name>
@@ -1443,7 +1441,7 @@
 					</trait>
 				</traits>
 			</category>
-			
+
 			<category id="infodom">
 				<names>
 					<name language="sv">Informationsdomän ospecificerad</name>
@@ -1459,9 +1457,9 @@
 					</trait>
 				</traits>
 			</category>
-						
+
 		</hierarchy>
-		
+
 		<hierarchy id="informationArea">
 			<traits>
 				<trait class="extension" subclass="bki-namespace">
@@ -1469,122 +1467,122 @@
 				</trait>
 			</traits>
 
-					<category id="ekonomi">
-						<names>
-							<name language="sv">Ekonomihantering</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar ekonomisk information exkl ekonomisk informtion som är direkt relaterad till vård av patient.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>ekonomi</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
+			<category id="ekonomi">
+				<names>
+					<name language="sv">Ekonomihantering</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar ekonomisk information exkl ekonomisk informtion som är direkt relaterad till vård av patient.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>ekonomi</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
 
-					<category id="debiteringhs">
-						<names>
-							<name language="sv">Debitering hälsa och vård</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar ekonomisk information som är kopplad till utförande av vård av patient.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>ekonomi</value>
-									<value>hs</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="dokhs">
-						<names>
-							<name language="sv">Dokumentation hälsa och vård</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information som är kopplad till utförande av vård av patient avseende att dokumentera och presentera hälso- och vårdinformation.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-									
-					<category id="forandr">
-						<names>
-							<name language="sv">Förändringshantering</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information om förändringshantering avseende att förflytta individer, grupper och organisationer från nuvarande tillstånd till ett framtida önskat tillstånd genom  t.ex. program, projekt och uppdrag.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>infodom</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
+			<category id="debiteringhs">
+				<names>
+					<name language="sv">Debitering hälsa och vård</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar ekonomisk information som är kopplad till utförande av vård av patient.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>ekonomi</value>
+							<value>hs</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
 
-					<category id="komomark">
-						<names>
-							<name language="sv">Kommunikation och marknadsföring</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information som rör kommunikation och marknadsföring.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>kom</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-			
-					<category id="hr">
-						<names>
-							<name language="sv">HR</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende personal och organisationsutveckling.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hr</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-								
-					<category id="befhalsa">
+			<category id="dokhs">
+				<names>
+					<name language="sv">Dokumentation hälsa och vård</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information som är kopplad till utförande av vård av patient avseende att dokumentera och presentera hälso- och vårdinformation.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="forandr">
+				<names>
+					<name language="sv">Förändringshantering</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information om förändringshantering avseende att förflytta individer, grupper och organisationer från nuvarande tillstånd till ett framtida önskat tillstånd genom  t.ex. program, projekt och uppdrag.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>infodom</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="komomark">
+				<names>
+					<name language="sv">Kommunikation och marknadsföring</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information som rör kommunikation och marknadsföring.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>kom</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="hr">
+				<names>
+					<name language="sv">HR</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende personal och organisationsutveckling.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hr</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="befhalsa">
 				<names>
 					<name language="sv">Befolkningshälsa</name>
 				</names>
@@ -1602,634 +1600,634 @@
 					</trait>
 				</traits>
 			</category>
-			
-					<category id="delaktinv">
-						<names>
-							<name language="sv">Delaktighet invånare</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende invånarens medverkan i sin egen hälsa och vård samt bokning av aktiviteter och resurser som rör den enskilde patienten.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-									<value>medserv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="samhov">
-						<names>
-							<name language="sv">Samordning av hälsa och vård</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att planera och besluta om behandling och åtgärder, samarbete mellan aktörer inom hälsa och vård.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-									<value>medserv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="undobed">
-						<names>
-							<name language="sv">Undersökning och bedömning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att samla in, sammanställa och bedöma patientinformation.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-									<value>medserv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="vardatg">
-						<names>
-							<name language="sv">Vårdåtgärder</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området Vårdåtgärder omfattar avseende att lösa eller minimera ett hälsoproblem genom behandlingar, terapi och invasiva åtgärder samt dataprodukter avseende donationshantering och förskrivning av hjälpmedel.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="kunstyr">
-						<names>
-							<name language="sv">Kunskapsstyrning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende styrning av informatik, processer, kunskaps- och beslutsstöd.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="samoutbud">
-						<names>
-							<name language="sv">Strategisk samverkan och utbudsstyrning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende behov, efterfrågan och utbud av hälso- och sjukvårdstjänster och samverkan i enlighet med samhällets och befolkningens behov och krav.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="sakolag">
-						<names>
-							<name language="sv">Säkerhet, lagefterlevnad och tillsyn</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende patientsäker vård och efterlevnad av lagar, förordningar och föreskrifter samt upprättande av riktlinjer och rutiner.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>hs</value>
-									<value>kansli</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="forskoutb">
-						<names>
-							<name language="sv">Stöd till forskning och utbildning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att generera ny kunskap om hälsa och sjukvård och socialt arbete med hjälp av vetenskaplig metodik samt för att utbilda vårdens medarbetare, studenter, praktikanter och specialister.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>forskninghs</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-											
-					<category id="trafikoinfra">
-						<names>
-							<name language="sv">Trafik och infrastruktur</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende hantering av det kommunala ansvaret inom de 4 trafikslagen (vägtrafik, järnvägstrafik, sjöfart och luftfart) samt övrig infrastruktur i form av energi och värme, vatten och avlopp, avfall och återvinning, transporter, datanät och parkförvaltning.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>trafik</value>
-									<value>fastighet</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-										
-					<category id="kollektiv">
-						<names>
-							<name language="sv">Kollektivtrafik</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende kollektivtrafik.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>trafik</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="itmtlev">
-						<names>
-							<name language="sv">IT/MT leverans</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende IT-applikationer/-produkter/-tjänster samt gemensam IT såsom nätverk, telefoni, lagrings-, server- och klientplattform.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>itmt</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="syslivscyk">
-						<names>
-							<name language="sv">System livscykelhantering</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att hantera system och dess livscykler. System definieras här som en kombination av samverkande element som organiseras för att uppnå ett eller flera angivna mål. Systemelement kan utgöras av såväl tekniska element (hårdvara och mjukvara) som människor.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>infodom</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="lokofast">
-						<names>
-							<name language="sv">Lokalförsörjning och fastighetsförvaltning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att livscykelhantera fastighetsbeståndet så att det vidmakthålls och vidareutvecklas ändamålsenligt. </description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>fastighet</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-				
-					<category id="resurshant">
-						<names>
-							<name language="sv">Resurshantering</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende resurser och kringtjänster som krävs i förhållande till dels den planerade hälsa, vård och omsorgen och dels tillgänglig kapacitet.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>service</value>
-									<value>hs</value>
-									<value>medserv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="logistik">
-						<names>
-							<name language="sv">Logistik</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende materialflöden samt till dessa kopplade resurs-, informations- och monetära flöden, utifrån ett livscykelperspektiv. </description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>service</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="inkop">
-						<names>
-							<name language="sv">Införskaffning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende strategiska upphandlingar och avtal. </description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>ekonomi</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-										
-					<category id="regutv">
-						<names>
-							<name language="sv">Regional utveckling</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende utvecklingsfrågor som har betydelse för medborgarna, t.ex. regionalt tillväxtarbete, länsövergripande bredbandsutbyggnad, EU:s strukturfondsprogram, transportinfrastruktur mm. </description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>utv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-walalet"/>
-							</trait>
-						</traits>
-					</category>
 
-					<category id="narlivoarboint">
-						<names>
-							<name language="sv">Näringsliv, arbete och integration</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att stödja och främja näringsliv, arbetsmarknad och integration i kommun och region.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>utv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="miljoosam">
-						<names>
-							<name language="sv">Miljö och samhällsskydd</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att värna om miljön, människors liv och hälsa och innefattar exempeltvis samhällsskydd och beredskap, miljö och hälsoskydd, räddningstjänsten.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>utv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="kultoturism">
-						<names>
-							<name language="sv">Kultur och turism</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende det kulturella utbudet, tillgängliggöra offentlig konst, hantering av fysiskt kulturarv och historiska arkiv samt turism.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>utv</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-							
-					<category id="krisosak">
-						<names>
-							<name language="sv">Krishantering och säkerhet</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende att förebygga och hantera kriser i verksamheten t.ex. omfattas risk- och sårbarhetshantering, kontinuitetsplanering, krisledning, beredskap och civilförsvar, systematiskt brandskyddsarbete, säkerhet och trygghet.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>kansli</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
+			<category id="delaktinv">
+				<names>
+					<name language="sv">Delaktighet invånare</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende invånarens medverkan i sin egen hälsa och vård samt bokning av aktiviteter och resurser som rör den enskilde patienten.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+							<value>medserv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
 
-					<category id="styr">
-						<names>
-							<name language="sv">Styrning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende strukturer och ramar för verksamhetstyrning och styrning av produkter och tjänster och dess efterlevnad.  Avser strategisk, taktisk eller operativ nivå som exempelvis hela organisationen, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>kansli</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="ledning">
-						<names>
-							<name language="sv">Ledning</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende  exekvering av definerade strukturer och fattade beslut. Avser strategisk, taktisk eller operativ nivå så som hela verksamheten, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt. Exempel: prioritering, flödes- och kapacitetsplanering, rätt nyttjande av de totala resurserna, kompetensförsörjning, finansiell planering, definition av kvalitetsmått och arbete med ständiga förbättringar.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>kansli</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="juridik">
-						<names>
-							<name language="sv">Juridikhantering</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende juridiskt stöd till verksamheten för att säkerställa efterlevnad av lagar och förordningar.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>kansli</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="infohant">
-						<names>
-							<name language="sv">Informationshantering</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende organisationens information och data.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>kansli</value>
-									<value>infdom</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
-					
-					<category id="demokrati">
-						<names>
-							<name language="sv">Demokrati</name>
-						</names>
-						<descriptions>
-							<description type="plain" language="sv">Området omfattar information avseende hanteringen av lagkrav som en offentlig organisation måste ta hänsyn till gällande demokrati och insyn som t.ex. Kommunallagen (2017:725), Tryckfrihetsförordningen (1949:105) 2 kap. Allmänna handlingars offentlighet, Offentlighets- och sekretesslagen (2009:400), Vallagen (2005:837) och Valförordningen (2005:874). Exempel är expediering av allmänna handlingar samt sekretessprövning.</description>
-						</descriptions>
-						<traits>
-							<trait class="category" subclass="informationDomain">
-								<traitParameter key="value">
-									<value>kansli</value>
-								</traitParameter>
-							</trait>
-							<trait class="icon">
-								<traitParameter key="value" value="bi-wallet"/>
-							</trait>
-						</traits>
-					</category>
+			<category id="samhov">
+				<names>
+					<name language="sv">Samordning av hälsa och vård</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att planera och besluta om behandling och åtgärder, samarbete mellan aktörer inom hälsa och vård.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+							<value>medserv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="undobed">
+				<names>
+					<name language="sv">Undersökning och bedömning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att samla in, sammanställa och bedöma patientinformation.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+							<value>medserv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="vardatg">
+				<names>
+					<name language="sv">Vårdåtgärder</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området Vårdåtgärder omfattar avseende att lösa eller minimera ett hälsoproblem genom behandlingar, terapi och invasiva åtgärder samt dataprodukter avseende donationshantering och förskrivning av hjälpmedel.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="kunstyr">
+				<names>
+					<name language="sv">Kunskapsstyrning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende styrning av informatik, processer, kunskaps- och beslutsstöd.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="samoutbud">
+				<names>
+					<name language="sv">Strategisk samverkan och utbudsstyrning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende behov, efterfrågan och utbud av hälso- och sjukvårdstjänster och samverkan i enlighet med samhällets och befolkningens behov och krav.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="sakolag">
+				<names>
+					<name language="sv">Säkerhet, lagefterlevnad och tillsyn</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende patientsäker vård och efterlevnad av lagar, förordningar och föreskrifter samt upprättande av riktlinjer och rutiner.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>hs</value>
+							<value>kansli</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="forskoutb">
+				<names>
+					<name language="sv">Stöd till forskning och utbildning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att generera ny kunskap om hälsa och sjukvård och socialt arbete med hjälp av vetenskaplig metodik samt för att utbilda vårdens medarbetare, studenter, praktikanter och specialister.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>forskninghs</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="trafikoinfra">
+				<names>
+					<name language="sv">Trafik och infrastruktur</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende hantering av det kommunala ansvaret inom de 4 trafikslagen (vägtrafik, järnvägstrafik, sjöfart och luftfart) samt övrig infrastruktur i form av energi och värme, vatten och avlopp, avfall och återvinning, transporter, datanät och parkförvaltning.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>trafik</value>
+							<value>fastighet</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="kollektiv">
+				<names>
+					<name language="sv">Kollektivtrafik</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende kollektivtrafik.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>trafik</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="itmtlev">
+				<names>
+					<name language="sv">IT/MT leverans</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende IT-applikationer/-produkter/-tjänster samt gemensam IT såsom nätverk, telefoni, lagrings-, server- och klientplattform.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>itmt</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="syslivscyk">
+				<names>
+					<name language="sv">System livscykelhantering</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att hantera system och dess livscykler. System definieras här som en kombination av samverkande element som organiseras för att uppnå ett eller flera angivna mål. Systemelement kan utgöras av såväl tekniska element (hårdvara och mjukvara) som människor.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>infodom</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="lokofast">
+				<names>
+					<name language="sv">Lokalförsörjning och fastighetsförvaltning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att livscykelhantera fastighetsbeståndet så att det vidmakthålls och vidareutvecklas ändamålsenligt. </description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>fastighet</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="resurshant">
+				<names>
+					<name language="sv">Resurshantering</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende resurser och kringtjänster som krävs i förhållande till dels den planerade hälsa, vård och omsorgen och dels tillgänglig kapacitet.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>service</value>
+							<value>hs</value>
+							<value>medserv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="logistik">
+				<names>
+					<name language="sv">Logistik</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende materialflöden samt till dessa kopplade resurs-, informations- och monetära flöden, utifrån ett livscykelperspektiv. </description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>service</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="inkop">
+				<names>
+					<name language="sv">Införskaffning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende strategiska upphandlingar och avtal. </description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>ekonomi</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="regutv">
+				<names>
+					<name language="sv">Regional utveckling</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende utvecklingsfrågor som har betydelse för medborgarna, t.ex. regionalt tillväxtarbete, länsövergripande bredbandsutbyggnad, EU:s strukturfondsprogram, transportinfrastruktur mm. </description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>utv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-walalet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="narlivoarboint">
+				<names>
+					<name language="sv">Näringsliv, arbete och integration</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att stödja och främja näringsliv, arbetsmarknad och integration i kommun och region.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>utv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="miljoosam">
+				<names>
+					<name language="sv">Miljö och samhällsskydd</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att värna om miljön, människors liv och hälsa och innefattar exempeltvis samhällsskydd och beredskap, miljö och hälsoskydd, räddningstjänsten.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>utv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="kultoturism">
+				<names>
+					<name language="sv">Kultur och turism</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende det kulturella utbudet, tillgängliggöra offentlig konst, hantering av fysiskt kulturarv och historiska arkiv samt turism.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>utv</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="krisosak">
+				<names>
+					<name language="sv">Krishantering och säkerhet</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende att förebygga och hantera kriser i verksamheten t.ex. omfattas risk- och sårbarhetshantering, kontinuitetsplanering, krisledning, beredskap och civilförsvar, systematiskt brandskyddsarbete, säkerhet och trygghet.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>kansli</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="styr">
+				<names>
+					<name language="sv">Styrning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende strukturer och ramar för verksamhetstyrning och styrning av produkter och tjänster och dess efterlevnad.  Avser strategisk, taktisk eller operativ nivå som exempelvis hela organisationen, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>kansli</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="ledning">
+				<names>
+					<name language="sv">Ledning</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende  exekvering av definerade strukturer och fattade beslut. Avser strategisk, taktisk eller operativ nivå så som hela verksamheten, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt. Exempel: prioritering, flödes- och kapacitetsplanering, rätt nyttjande av de totala resurserna, kompetensförsörjning, finansiell planering, definition av kvalitetsmått och arbete med ständiga förbättringar.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>kansli</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="juridik">
+				<names>
+					<name language="sv">Juridikhantering</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende juridiskt stöd till verksamheten för att säkerställa efterlevnad av lagar och förordningar.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>kansli</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="infohant">
+				<names>
+					<name language="sv">Informationshantering</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende organisationens information och data.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>kansli</value>
+							<value>infdom</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
+
+			<category id="demokrati">
+				<names>
+					<name language="sv">Demokrati</name>
+				</names>
+				<descriptions>
+					<description type="plain" language="sv">Området omfattar information avseende hanteringen av lagkrav som en offentlig organisation måste ta hänsyn till gällande demokrati och insyn som t.ex. Kommunallagen (2017:725), Tryckfrihetsförordningen (1949:105) 2 kap. Allmänna handlingars offentlighet, Offentlighets- och sekretesslagen (2009:400), Vallagen (2005:837) och Valförordningen (2005:874). Exempel är expediering av allmänna handlingar samt sekretessprövning.</description>
+				</descriptions>
+				<traits>
+					<trait class="category" subclass="informationDomain">
+						<traitParameter key="value">
+							<value>kansli</value>
+						</traitParameter>
+					</trait>
+					<trait class="icon">
+						<traitParameter key="value" value="bi-wallet"/>
+					</trait>
+				</traits>
+			</category>
 		</hierarchy>
-		
+
 		<hierarchy id="informationObject">
-		<!-- Exempel ska uppdateras efter hand som de förekommer i en dataprodukt -->
+			<!-- Exempel ska uppdateras efter hand som de förekommer i en dataprodukt -->
 			<traits>
 				<trait class="extension" subclass="bki-namespace">
 					<traitParameter key="value" value="http://bki.skane.se/infstyr/id/infobj"/>
 				</trait>
 			</traits>
-			
+
 			<category id="samhovIO">
 				<names>
 					<name language="sv">Samordning av hälsa och vård</name>
 				</names>
-        <descriptions>
-          <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-        </descriptions>
+				<descriptions>
+					<description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+				</descriptions>
 				<traits>
 					<trait class="category" subclass="informationArea">
 						<traitParameter key="value">
 							<value>samhov</value>
 						</traitParameter>
 					</trait>
-					
+
 				</traits>
 
 				<subcategories>
-				<category id="vardkontakt">
-				<names>
-					<name language="sv">Vårdkontakt</name>
-				</names>
-				<descriptions>
-					<description type="plain" language="sv">Kontakt mellan patient och hälso- och sjukvårdspersonal då hälso- och sjukvåd utförs.</description>
-				</descriptions>
-				<traits>
-					<trait class="infomr">
-						<traitParameter key="value" value="samhov"/>
-					</trait>
-					<trait class="infdom">
-						<traitParameter key="value" value="hs"/>
-					</trait>
-					<trait class="guid">
-						<traitParameter key="value" value="{66544D2B-FD49-4cac-81E8-BA90C1007EAA}"/>
-					</trait>
-					<trait class="icon">
-						<traitParameter key="value" value="bi-wallet"/>
-					</trait>
-				</traits>
+					<category id="vardkontakt">
+						<names>
+							<name language="sv">Vårdkontakt</name>
+						</names>
+						<descriptions>
+							<description type="plain" language="sv">Kontakt mellan patient och hälso- och sjukvårdspersonal då hälso- och sjukvåd utförs.</description>
+						</descriptions>
+						<traits>
+							<trait class="infomr">
+								<traitParameter key="value" value="samhov"/>
+							</trait>
+							<trait class="infdom">
+								<traitParameter key="value" value="hs"/>
+							</trait>
+							<trait class="guid">
+								<traitParameter key="value" value="{66544D2B-FD49-4cac-81E8-BA90C1007EAA}"/>
+							</trait>
+							<trait class="icon">
+								<traitParameter key="value" value="bi-wallet"/>
+							</trait>
+						</traits>
+					</category>
+
+					<category id="bokningkontakt">
+						<names>
+							<name language="sv">Bokning vårdkontakt</name>
+						</names>
+						<descriptions>
+							<description type="plain" language="sv">Avtal om tid och sammanhang för en vårdkontakt.</description>
+						</descriptions>
+						<traits>
+							<trait class="infomr">
+								<traitParameter key="value" value="samhov"/>
+							</trait>
+							<trait class="infdom">
+								<traitParameter key="value" value="hs"/>
+							</trait>
+							<trait class="guid">
+								<traitParameter key="value" value="{048C696F-5397-4bea-8A65-8D25BBE123AE}"/>
+							</trait>
+							<trait class="icon">
+								<traitParameter key="value" value="bi-wallet"/>
+							</trait>
+						</traits>
+					</category>
+				</subcategories>
 			</category>
 
-			<category id="bokningkontakt">
-				<names>
-					<name language="sv">Bokning vårdkontakt</name>
-				</names>
-				<descriptions>
-					<description type="plain" language="sv">Avtal om tid och sammanhang för en vårdkontakt.</description>
-				</descriptions>
-				<traits>
-					<trait class="infomr">
-						<traitParameter key="value" value="samhov"/>
-					</trait>
-					<trait class="infdom">
-						<traitParameter key="value" value="hs"/>
-					</trait>
-					<trait class="guid">
-						<traitParameter key="value" value="{048C696F-5397-4bea-8A65-8D25BBE123AE}"/>
-					</trait>
-					<trait class="icon">
-						<traitParameter key="value" value="bi-wallet"/>
-					</trait>
-				</traits>
-			</category>
-			</subcategories>
-			</category>
-								
 			<category id="infhantIO">
 				<names>
 					<name language="sv">Samordning av hälsa och vård</name>
 				</names>
-        <descriptions>
-          <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-        </descriptions>
+				<descriptions>
+					<description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+				</descriptions>
 				<traits>
 					<trait class="category" subclass="informationArea">
 						<traitParameter key="value">
 							<value>samhov</value>
 						</traitParameter>
 					</trait>
-					
+
 				</traits>
 
 				<subcategories>
-			
-			<category id="patient">
-				<names>
-					<name language="sv">Patient</name>
-				</names>
-				<descriptions>
-					<description type="plain" language="sv">Demografisk information om person som erhåller eller är registrerad för att erhålla hälso- och sjukvård.</description>
-				</descriptions>
-				<traits>
-					<trait class="infomr">
-						<traitParameter key="value" value="inthant"/>
-					</trait>
-					<trait class="infdom">
-						<traitParameter key="value" value="hs"/>
-					</trait>
-					<trait class="guid">
-						<traitParameter key="value" value="{2294E9F9-E48A-4453-9432-01FDB401EEA3}"/>
-					</trait>
-					<trait class="icon">
-						<traitParameter key="value" value="bi-wallet"/>
-					</trait>
-				</traits>
+
+					<category id="patient">
+						<names>
+							<name language="sv">Patient</name>
+						</names>
+						<descriptions>
+							<description type="plain" language="sv">Demografisk information om person som erhåller eller är registrerad för att erhålla hälso- och sjukvård.</description>
+						</descriptions>
+						<traits>
+							<trait class="infomr">
+								<traitParameter key="value" value="inthant"/>
+							</trait>
+							<trait class="infdom">
+								<traitParameter key="value" value="hs"/>
+							</trait>
+							<trait class="guid">
+								<traitParameter key="value" value="{2294E9F9-E48A-4453-9432-01FDB401EEA3}"/>
+							</trait>
+							<trait class="icon">
+								<traitParameter key="value" value="bi-wallet"/>
+							</trait>
+						</traits>
+					</category>
+
+				</subcategories>
 			</category>
-			
-			</subcategories>
-			</category>
-			
+
 			<category id="undobedIO">
 				<names>
 					<name language="sv">Undersökning och bedömning</name>
 				</names>
-        <descriptions>
-          <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-        </descriptions>
+				<descriptions>
+					<description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+				</descriptions>
 				<traits>
 					<trait class="category" subclass="informationArea">
 						<traitParameter key="value">
@@ -2237,40 +2235,40 @@
 						</traitParameter>
 					</trait>
 				</traits>
-				
-		<subcategories>
-			<category id="bedhalstills">
-				<names>
-					<name language="sv">Bedömt hälsotillstånd</name>
-				</names>
-				<descriptions>
-					<description type="plain" language="sv">En patients bedömda hälsotillstånd.</description>
-				</descriptions>
-				<traits>
-					<trait class="infomr">
-						<traitParameter key="value" value="undobed"/>
-					</trait>
-					<trait class="infdom">
-						<traitParameter key="value" value="hs"/>
-					</trait>
-					<trait class="guid">
-						<traitParameter key="value" value="{C022C323-320A-4ad5-A5E8-84E02F8C9E88}"/>
-					</trait>
-					<trait class="icon">
-						<traitParameter key="value" value="bi-wallet"/>
-					</trait>
-				</traits>
+
+				<subcategories>
+					<category id="bedhalstills">
+						<names>
+							<name language="sv">Bedömt hälsotillstånd</name>
+						</names>
+						<descriptions>
+							<description type="plain" language="sv">En patients bedömda hälsotillstånd.</description>
+						</descriptions>
+						<traits>
+							<trait class="infomr">
+								<traitParameter key="value" value="undobed"/>
+							</trait>
+							<trait class="infdom">
+								<traitParameter key="value" value="hs"/>
+							</trait>
+							<trait class="guid">
+								<traitParameter key="value" value="{C022C323-320A-4ad5-A5E8-84E02F8C9E88}"/>
+							</trait>
+							<trait class="icon">
+								<traitParameter key="value" value="bi-wallet"/>
+							</trait>
+						</traits>
+					</category>
+				</subcategories>
 			</category>
-			</subcategories>
-			</category>
-						
+
 			<category id="debiteringhsIO">
 				<names>
 					<name language="sv">Debitering hälsa och vård</name>
 				</names>
-        <descriptions>
-          <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-        </descriptions>
+				<descriptions>
+					<description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+				</descriptions>
 				<traits>
 					<trait class="category" subclass="informationArea">
 						<traitParameter key="value">
@@ -2278,66 +2276,66 @@
 						</traitParameter>
 					</trait>
 				</traits>
-			<subcategories>
-		
-		<category id="diagnospatienters">
-				<names>
-					<name language="sv">Diagnoskod patient</name>
-				</names>
-				<descriptions>
-					<description type="plain" language="sv">Diagnoskod relaterad till en patient i syfte debitera för utförd vård.</description>
-				</descriptions>
-				<traits>
-					<trait class="infomr">
-						<traitParameter key="value" value="debiteringhs"/>
-					</trait>
-					<trait class="infdom">
-						<traitParameter key="value" value="hs"/>
-					</trait>
-					<trait class="guid">
-						<traitParameter key="value" value="{1382FAA1-0F89-4dd8-B6BE-89F40397687A}"/>
-					</trait>
-					<trait class="icon">
-						<traitParameter key="value" value="bi-wallet"/>
-					</trait>
-				</traits>
-			</category>	
-			
-						
-			<category id="undutfordvard">
-				<names>
-					<name language="sv">Underlag debitering vård och hälsa</name>
-				</names>
-				<descriptions>
-					<description type="plain" language="sv">Underlag för att beräkna kostnad för utförd vård.</description>
-				</descriptions>
-				<traits>
-					<trait class="infomr">
-						<traitParameter key="value" value="debiteringhs"/>
-					</trait>
-					<trait class="infdom">
-						<traitParameter key="value" value="ekonomi"/>
-					</trait>
-					<trait class="guid">
-						<traitParameter key="value" value="{C09644AB-014D-44b6-BFC1-762ADB7D915F}"/>
-					</trait>
-					<trait class="icon">
-						<traitParameter key="value" value="bi-wallet"/>
-					</trait>
-				</traits>
-			</category>	
-			</subcategories>
+				<subcategories>
+
+					<category id="diagnospatienters">
+						<names>
+							<name language="sv">Diagnoskod patient</name>
+						</names>
+						<descriptions>
+							<description type="plain" language="sv">Diagnoskod relaterad till en patient i syfte debitera för utförd vård.</description>
+						</descriptions>
+						<traits>
+							<trait class="infomr">
+								<traitParameter key="value" value="debiteringhs"/>
+							</trait>
+							<trait class="infdom">
+								<traitParameter key="value" value="hs"/>
+							</trait>
+							<trait class="guid">
+								<traitParameter key="value" value="{1382FAA1-0F89-4dd8-B6BE-89F40397687A}"/>
+							</trait>
+							<trait class="icon">
+								<traitParameter key="value" value="bi-wallet"/>
+							</trait>
+						</traits>
+					</category>
+
+
+					<category id="undutfordvard">
+						<names>
+							<name language="sv">Underlag debitering vård och hälsa</name>
+						</names>
+						<descriptions>
+							<description type="plain" language="sv">Underlag för att beräkna kostnad för utförd vård.</description>
+						</descriptions>
+						<traits>
+							<trait class="infomr">
+								<traitParameter key="value" value="debiteringhs"/>
+							</trait>
+							<trait class="infdom">
+								<traitParameter key="value" value="ekonomi"/>
+							</trait>
+							<trait class="guid">
+								<traitParameter key="value" value="{C09644AB-014D-44b6-BFC1-762ADB7D915F}"/>
+							</trait>
+							<trait class="icon">
+								<traitParameter key="value" value="bi-wallet"/>
+							</trait>
+						</traits>
+					</category>
+				</subcategories>
 			</category>
-			
+
 		</hierarchy>
-				
+
 		<hierarchy id="contentClass">
 			<traits>
 				<trait class="extension" subclass="bki-namespace">
 					<traitParameter key="value" value="http://bki.skane.se/sdi/id/cs/contentclass"/>
 				</trait>
 			</traits>
-			
+
 			<category id="Raw">
 				<names>
 					<name language="sv">Rådata</name>

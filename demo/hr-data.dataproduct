@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-    dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/hr-data.dataproduct"
-    dcatDataTheme="gove" 
-    dcatAccessRights="restricted" 
-    dcatUpdateFrequency="daily"
-    dcatAvailability="available" 
-    dcatStatus="completed">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/hr-data.dataproduct">
 
   <names>
     <name language="sv">HR-data</name>
@@ -16,7 +9,9 @@
   <descriptions>
     <description type="plain" language="sv">Uppgifter om personer, anställningar och semestrar.</description>
   </descriptions>
-  
+
+  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+
   <traits>
     <trait class="category" subclass="informationOwner">
       <traitParameter value="hr" />

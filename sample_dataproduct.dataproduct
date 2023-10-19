@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Exempel på tabulär dataprodukt -->
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct"
-	dcatDataTheme="econ"
-	dcatAccessRights="public"
-	dcatUpdateFrequency="daily"
-	dcatAvailability="available"
-	dcatStatus="completed">
-	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct">
+
 	<names>
 		<name language="sv">Anställningar</name>
 	</names>
@@ -28,6 +21,8 @@ TODO: Add decsription
 | dcatUpdateFrequency | [dcatUpdateFrequencyType](#dcatUpdateFrequencyType) | Ja |  |  | Anger dataproduktens uppdateringsfrekvens i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.4 |
 		</description>
 	</descriptions>
+
+	<dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
 
 	<traits>
 		<trait class="category" subclass="informationOwner.hierarchy">
@@ -70,12 +65,8 @@ TODO: Add decsription
 	</traits>
 
 	<dataInputs>
-		<dataInput id="src1"
-			dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource"
-			channelId="sql" />
-		<dataInput id="src2"
-			dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource"
-			channelId="sql" />
+		<dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="sql" />
+		<dataInput id="src2" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="sql" />
 	</dataInputs>
 
 	<tables>
@@ -267,8 +258,7 @@ TODO: Add decsription
 
 	<dataOutputs>
 		<fileOutputs>
-			<fileOutput channelId="csvfiles" fileFormat="csv" path="csv" encoding="utf8"
-				columnSeparator="tab" rowSeparator="crlf">
+			<fileOutput channelId="csvfiles" fileFormat="csv" path="csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf">
 				<singleTableFileOutput path="person_{{timestamp}}.csv" table="Person" />
 				<singleTableFileOutput path="anstallning_{{timestamp}}.csv" table="Anstallning" />
 			</fileOutput>
@@ -279,12 +269,9 @@ TODO: Add decsription
 				</multiTableFileOutput>
 			</fileOutput>
 
-			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata"
-				path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
-			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata"
-				path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
-			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata"
-				path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
+			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata" path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
+			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
+			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
 		</fileOutputs>
 
 		<sqlOutputs>
@@ -297,32 +284,32 @@ TODO: Add decsription
 		</apiOutputs>
 	</dataOutputs>
 
-  <dataFlow>
-    <dataStages>
-      <dataStage id="Raw" order="1" role="input" materialization="table">
-      </dataStage>
-      <dataStage id="Control" order="2" materialization="view">
-        <traits>
-          <trait class="generateKeyHash">
-            <traitParameter key="value" value="true"/>
-          </trait>
-          <trait class="generateRowHash">
-            <traitParameter key="value" value="true"/>
-          </trait>
-        </traits>
-      </dataStage>
-      <dataStage id="PreStorage" order="3" materialization="table">
-      </dataStage>
-      <dataStage id="Storage" order="4" role="output" materialization="table">
-        <traits>
-          <trait class="tableUpdateType">
-            <traitParameter key="type" value="cdc"/>
-          </trait>
-        </traits>
-      </dataStage>
-    </dataStages>
+	<dataFlow>
+		<dataStages>
+			<dataStage id="Raw" order="1" role="input" materialization="table">
+			</dataStage>
+			<dataStage id="Control" order="2" materialization="view">
+				<traits>
+					<trait class="generateKeyHash">
+						<traitParameter key="value" value="true"/>
+					</trait>
+					<trait class="generateRowHash">
+						<traitParameter key="value" value="true"/>
+					</trait>
+				</traits>
+			</dataStage>
+			<dataStage id="PreStorage" order="3" materialization="table">
+			</dataStage>
+			<dataStage id="Storage" order="4" role="output" materialization="table">
+				<traits>
+					<trait class="tableUpdateType">
+						<traitParameter key="type" value="cdc"/>
+					</trait>
+				</traits>
+			</dataStage>
+		</dataStages>
 
-    <dataIngests>
+		<dataIngests>
 			<!--<dataIngest id="load_job_1" dataInputId="src1">
 		  <tableToTableMappings>
 			  <tableToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000) {{ColumnList}} FROM {{SourceTable}}" allowSchemaDrift="false">
@@ -335,7 +322,7 @@ TODO: Add decsription
 			<tableToTableMapping tableId="Anstallning" sourceTableId="Anstallning"/>
 		  </tableToTableMappings>
       </dataIngest>-->
-    </dataIngests>
-  </dataFlow>
-  
+		</dataIngests>
+	</dataFlow>
+
 </dataProduct>

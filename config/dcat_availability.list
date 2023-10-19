@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <list xmlns="https://github.com/Region-Skane-SDI/diml/list"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd"
-	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_availability.list">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_availability.list">
 
 	<listItem id="experimental">
 		<names>
@@ -31,7 +29,7 @@
 		</descriptions>
 	</listItem>
 
-    <listItem id="available">
+	<listItem id="available">
 		<names>
 			<name language="sv">Tillgänglig</name>
 		</names>
@@ -39,5 +37,5 @@
 			<description type="plain" language="sv">Data finns tillgänglig för några år, planering på medellång sikt.</description>
 		</descriptions>
 	</listItem>
-	
+
 </list>

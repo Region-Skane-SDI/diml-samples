@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd"
-       dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource">
-  
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource">
+
   <names>
     <name language="sv">Raindance - Ekonomikoder</name>
   </names>
-  
+
   <descriptions>
     <description type="plain" language="sv">
       Innehåller förvaltningskoder, ansvarskoder och motparter från Raindance.
@@ -40,7 +38,7 @@
         <value>FVK_TEXT</value>
       </businessKey>
       <columns>
-        <column id="FTG_ID" >
+        <column id="FTG_ID">
           <names>
             <name language="sv">FTG_ID</name>
           </names>
@@ -49,7 +47,7 @@
             <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
           </descriptions>
         </column>
-        <column id="FVK_ID" >
+        <column id="FVK_ID">
           <names>
             <name language="sv">FVK_ID</name>
           </names>
@@ -58,7 +56,7 @@
             <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en förvaltning.</description>
           </descriptions>
         </column>
-        <column id="FVK_TEXT" >
+        <column id="FVK_TEXT">
           <names>
             <name language="sv">FVK_TEXT</name>
           </names>
@@ -67,7 +65,7 @@
             <description type="plain" language="sv">En text som beskriver förvaltningen.</description>
           </descriptions>
         </column>
-        <column id="FVK_GILTIG_FOM" >
+        <column id="FVK_GILTIG_FOM">
           <names>
             <name language="sv">FVK_GILTIG_FOM</name>
           </names>
@@ -76,7 +74,7 @@
             <description type="plain" language="sv">Anger från och med när förvaltningen är giltig, med datum och tid.</description>
           </descriptions>
         </column>
-        <column id="FVK_GILTIG_TOM" >
+        <column id="FVK_GILTIG_TOM">
           <names>
             <name language="sv">FVK_GILTIG_TOM</name>
           </names>
@@ -90,7 +88,7 @@
             </trait>
           </traits>
         </column>
-        <column id="FVK_PASSIV" >
+        <column id="FVK_PASSIV">
           <names>
             <name language="sv">FVK_PASSIV</name>
           </names>
@@ -164,7 +162,7 @@
         <value>ANSVAR_ID</value>
       </businessKey>
       <columns>
-        <column id="FTG_ID" >
+        <column id="FTG_ID">
           <names>
             <name language="sv">FTG_ID</name>
           </names>
@@ -180,7 +178,7 @@
             </trait>
           </traits>
         </column>
-        <column id="ANSVAR_ID" >
+        <column id="ANSVAR_ID">
           <names>
             <name language="sv">ANSVAR_ID</name>
           </names>
@@ -189,7 +187,7 @@
             <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar ett ansvar.</description>
           </descriptions>
         </column>
-        <column id="ANSVAR_TEXT" >
+        <column id="ANSVAR_TEXT">
           <names>
             <name language="sv">ANSVAR_TEXT</name>
           </names>
@@ -198,7 +196,7 @@
             <description type="plain" language="sv">En text som beskriver ansvaret.</description>
           </descriptions>
         </column>
-        <column id="ANSVAR_GILTIG_FOM" >
+        <column id="ANSVAR_GILTIG_FOM">
           <names>
             <name language="sv">ANSVAR_GILTIG_FOM</name>
           </names>
@@ -207,7 +205,7 @@
             <description type="plain" language="sv">Anger från och med när ansvaret är giltigt, med datum och tid.</description>
           </descriptions>
         </column>
-        <column id="ANSVAR_GILTIG_TOM" >
+        <column id="ANSVAR_GILTIG_TOM">
           <names>
             <name language="sv">ANSVAR_GILTIG_TOM</name>
           </names>
@@ -221,7 +219,7 @@
             </trait>
           </traits>
         </column>
-        <column id="ANSVAR_PASSIV" >
+        <column id="ANSVAR_PASSIV">
           <names>
             <name language="sv">ANSVAR_PASSIV</name>
           </names>
@@ -311,7 +309,7 @@
         <value>MOTP_ID</value>
       </businessKey>
       <columns>
-        <column id="FTG_ID" >
+        <column id="FTG_ID">
           <names>
             <name language="sv">FTG_ID</name>
           </names>
@@ -320,7 +318,7 @@
             <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
           </descriptions>
         </column>
-        <column id="MOTP_ID" >
+        <column id="MOTP_ID">
           <names>
             <name language="sv">MOTP_ID</name>
           </names>
@@ -329,7 +327,7 @@
             <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en motpart.</description>
           </descriptions>
         </column>
-        <column id="MOTP_TEXT" >
+        <column id="MOTP_TEXT">
           <names>
             <name language="sv">MOTP_TEXT</name>
           </names>
@@ -338,7 +336,7 @@
             <description type="plain" language="sv">En text som beskriver motparten.</description>
           </descriptions>
         </column>
-        <column id="MOTP_GILTIG_FOM" >
+        <column id="MOTP_GILTIG_FOM">
           <names>
             <name language="sv">MOTP_GILTIG_FOM</name>
           </names>
@@ -347,7 +345,7 @@
             <description type="plain" language="sv">Anger från och med när motparten är giltig, med datum och tid.</description>
           </descriptions>
         </column>
-        <column id="MOTP_GILTIG_TOM" >
+        <column id="MOTP_GILTIG_TOM">
           <names>
             <name language="sv">MOTP_GILTIG_TOM</name>
           </names>
@@ -361,7 +359,7 @@
             </trait>
           </traits>
         </column>
-        <column id="MOTP_PASSIV" >
+        <column id="MOTP_PASSIV">
           <names>
             <name language="sv">MOTP_PASSIV</name>
           </names>
@@ -438,5 +436,5 @@
       <sqlOutput channelId="sql" sqlOutputType="tsql" />
     </sqlOutputs>
   </dataOutputs>
-  
+
 </dataSource>

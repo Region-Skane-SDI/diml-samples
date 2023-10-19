@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <list xmlns="https://github.com/Region-Skane-SDI/diml/list"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd"
-	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_data_theme.list">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_data_theme.list">
 
 	<listItem id="econ">
 		<names>
@@ -13,7 +11,7 @@
 		</descriptions>
 	</listItem>
 
-    <listItem id="educ">
+	<listItem id="educ">
 		<names>
 			<name language="sv">Utbildning, kultur och sport</name>
 		</names>
@@ -22,7 +20,7 @@
 		</descriptions>
 	</listItem>
 
-    <listItem id="ener">
+	<listItem id="ener">
 		<names>
 			<name language="sv">Energi</name>
 		</names>
@@ -31,7 +29,7 @@
 		</descriptions>
 	</listItem>
 
-    <listItem id="envi">
+	<listItem id="envi">
 		<names>
 			<name language="sv">Miljö</name>
 		</names>
@@ -39,8 +37,8 @@
 			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domänen miljö. Den naturliga miljön omfattar samspelet mellan alla levande arter, klimat, väder och naturresurser som påverkar människans överlevnad och ekonomisk aktivitet. Exempel på dataset: EU-medborgarnas attityder till miljön; Föroreningsutsläpp från transporter.</description>
 		</descriptions>
 	</listItem>
-    
-    <listItem id="gove">
+
+	<listItem id="gove">
 		<names>
 			<name language="sv">Regeringen och den offentliga sektorn</name>
 		</names>
@@ -58,7 +56,7 @@
 		</descriptions>
 	</listItem>
 
-    <listItem id="intr">
+	<listItem id="intr">
 		<names>
 			<name language="sv">Internationella frågor</name>
 		</names>
@@ -67,7 +65,7 @@
 		</descriptions>
 	</listItem>
 
-     <listItem id="just">
+	<listItem id="just">
 		<names>
 			<name language="sv">Rättvisa, rättsliga system och allmän säkerhet</name>
 		</names>
@@ -76,7 +74,7 @@
 		</descriptions>
 	</listItem>
 
-     <listItem id="op_datpro">
+	<listItem id="op_datpro">
 		<names>
 			<name language="sv">Tillfälliga uppgifter</name>
 		</names>
@@ -85,7 +83,7 @@
 		</descriptions>
 	</listItem>
 
-     <listItem id="regi">
+	<listItem id="regi">
 		<names>
 			<name language="sv">Regioner och städer</name>
 		</names>
@@ -94,7 +92,7 @@
 		</descriptions>
 	</listItem>
 
-      <listItem id="soci">
+	<listItem id="soci">
 		<names>
 			<name language="sv">Befolkning och samhälle</name>
 		</names>
@@ -103,7 +101,7 @@
 		</descriptions>
 	</listItem>
 
-      <listItem id="tech">
+	<listItem id="tech">
 		<names>
 			<name language="sv">Vetenskap och teknik</name>
 		</names>
@@ -112,7 +110,7 @@
 		</descriptions>
 	</listItem>
 
-      <listItem id="tran">
+	<listItem id="tran">
 		<names>
 			<name language="sv">Transport</name>
 		</names>
@@ -120,7 +118,7 @@
 			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker transportdomänen. Transport är förflyttning av människor, djur och varor från en plats till en annan. Transportsätt inkluderar luft, land (järnväg och väg), vatten, kabel, rörledning och rymd. Exempel på dataset: Total längd på motorvägar; Flygplatstrafikdata genom att rapportera flygplats och flygbolag.</description>
 		</descriptions>
 	</listItem>
-	
+
 </list>
 
 
