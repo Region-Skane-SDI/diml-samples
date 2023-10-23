@@ -561,7 +561,7 @@
 
 				<platformDataTypeConfig id="float"
 					inputFormat="(?i)float\s*\((?'precision'.*?)\)"
-					outputFormat="precision &lt; 8 ? &quot;float(&quot;24&quot;)&quot; : &quot;float(&quot;53&quot;)&quot;">
+					outputFormat="precision &lt; 8 ? &quot;float(24)&quot; : &quot;float(53)&quot;">
 					<platformDataTypeParameters>
 						<platformDataTypeParameter id="precision" type="int"
 							inputExpression="int.Parse(precision) &lt; 25 ? 7 : 15" />
