@@ -560,11 +560,11 @@
 				</platformDataTypeConfig>
 
 				<platformDataTypeConfig id="float"
-					inputFormat="(?i)float\s*\((?'size'.*?)\)"
+					inputFormat="(?i)float\s*\((?'precision'.*?)\)"
 					outputFormat="precision &lt; 8 ? &quot;float(&quot;24&quot;)&quot; : &quot;float(&quot;53&quot;)&quot;">
 					<platformDataTypeParameters>
 						<platformDataTypeParameter id="precision" type="int"
-							inputExpression="int.Parse(size) &lt; 25 ? 7 : 15" />
+							inputExpression="int.Parse(precision) &lt; 25 ? 7 : 15" />
 					</platformDataTypeParameters>
 					<conditionalDataTypes>
 						<conditionalDataType dataType="float" condition="precision == 7">
