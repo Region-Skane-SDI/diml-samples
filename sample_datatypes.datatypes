@@ -556,6 +556,7 @@
 					outputFormat="&quot;real&quot;">
 					<targetParameters>
 						<targetParameter id="unsigned" value="true" />
+						<targetParameter id="precision" value="7" />
 					</targetParameters>
 				</platformDataTypeConfig>
 
