@@ -363,7 +363,7 @@
 			</dataIngest>-->
 			<dataIngest id="load_job_2" dataInputId="src2">
 				<mappings>
-					<fileMapping sourceFileId="*" dataStageFileId="parquetfile" />
+					<parquetToFileMapping sourceFileId="*" dataStageFileId="parquetfile" />
 				</mappings>
 			</dataIngest>
 		</dataIngests>
