@@ -299,25 +299,34 @@
 		<dataStages>
 			<dataStage id="Landing" order="0" role="input" materialization="file">
 				<dataStageFiles>
-					<dataStageFile id="parquetfile" path="src1/file{{YYYYMMDD}}" fileFormat="parquet"/>
+					<dataStageFile id="parquet_person" path="src2/person{{YYYYMMDD}}" fileFormat="parquet"/>
+					<dataStageFile id="parquet_anstallning" path="src2/anstallning{{YYYYMMDD}}" fileFormat="parquet"/>
 				</dataStageFiles>
 			</dataStage>
-			<dataStage id="Input" order="1" materialization="table" isFullyNullable="true">
+			<dataStage id="Input" order="1" materialization="table">
 				<traits>
 					<trait class="dataStageOperations.generateRowIds">
 						<traitParameter key="seed" value="1" />
 						<traitParameter key="increment" value="1" />
 					</trait>
+					<trait class="dataStageOperations.isAllNullable">
+						<traitParameter key="value" value="true" />
+					</trait>
+					<trait class="dataStageOperations.isAllVarchar">
+						<traitParameter key="value" value="true" />
+						<traitParameter key="length" value="500" />
+					</trait>
 				</traits>
 				<dataStageTables>
-					<dataStageTable tableId="Person" sourceTableId="Person">
+					<dataStageTable tableId="Person" sourceTableId="Person" dataStageFileId="parquet_person" transformMethod="sql">
 						<columnMappings>
-							<columnMapping columnId="Personnr" sourceColumnId="Personnr" />
+							<columnMapping columnId="Personnr" sourceColumnId="Personnr" customSqlExpression="LEFT(Personnr, 12)" />
 							<columnMapping columnId="Namn" sourceColumnId="Namn" />
 							<columnMapping columnId="Alder" sourceColumnId="Alder" />
 						</columnMappings>
+					<!--<logicBlocks></logicBlocks>-->
 					</dataStageTable>
-					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"/>
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning" dataStageFileId="parquet_anstallning" transformMethod="python"/>
 				</dataStageTables>
 			</dataStage>
 			<dataStage id="Control" order="2" materialization="view">
@@ -363,7 +372,8 @@
 			</dataIngest>-->
 			<dataIngest id="load_job_2" dataInputId="src2">
 				<mappings>
-					<parquetToFileMapping sourceFileId="*" dataStageFileId="parquetfile" />
+					<parquetToFileMapping sourceFileId="parquet_person" dataStageFileId="parquet_person" />
+					<parquetToFileMapping sourceFileId="parquet_anstallning" dataStageFileId="parquet_anstallning" />
 				</mappings>
 			</dataIngest>
 		</dataIngests>
