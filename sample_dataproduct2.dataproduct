@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
 	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct"
-	targetPlatform="sqlserver"
-	isVirtual="false"
+	targetPlatform="msfabric"
 	>
 
 	<names>
@@ -12,16 +11,16 @@
 	<descriptions>
 		<description type="plain" language="sv">Kort sammanfattande beskrivning av dataprodukten</description>
 		<description type="md" language="sv">
-## dcat
-TODO: Add decsription
+			## dcat
+			TODO: Add decsription
 
-| Namn | Typ | Krävs | Defaultvärde | Ärvs från | Beskrivning |
-| ---- | --- | ----- | ------------ | --------- | ----------- |
-| dcatAccessRights | [dcatAccessRightsType](#dcatAccessRightsType) | Ja |  |  | Anger vilka åtkomsträttigheter som finns för dataprodukten i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.5 |
-| dcatAvailability | [dcatAvailabilityType](#dcatAvailabilityType) | Ja |  |  | Anger dataproduktens tillgänglighet i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.9 |
-| dcatDataTheme | [dcatDataThemeType](#dcatDataThemeType) | Ja |  |  | Anger vilket datatema dataprodukten tillhör i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.2 |
-| dcatStatus | [dcatStatusType](#dcatStatusType) | Ja |  |  | Anger dataproduktens status i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.8 |
-| dcatUpdateFrequency | [dcatUpdateFrequencyType](#dcatUpdateFrequencyType) | Ja |  |  | Anger dataproduktens uppdateringsfrekvens i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.4 |
+			| Namn | Typ | Krävs | Defaultvärde | Ärvs från | Beskrivning |
+			| ---- | --- | ----- | ------------ | --------- | ----------- |
+			| dcatAccessRights | [dcatAccessRightsType](#dcatAccessRightsType) | Ja |  |  | Anger vilka åtkomsträttigheter som finns för dataprodukten i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.5 |
+			| dcatAvailability | [dcatAvailabilityType](#dcatAvailabilityType) | Ja |  |  | Anger dataproduktens tillgänglighet i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.9 |
+			| dcatDataTheme | [dcatDataThemeType](#dcatDataThemeType) | Ja |  |  | Anger vilket datatema dataprodukten tillhör i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.2 |
+			| dcatStatus | [dcatStatusType](#dcatStatusType) | Ja |  |  | Anger dataproduktens status i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.8 |
+			| dcatUpdateFrequency | [dcatUpdateFrequencyType](#dcatUpdateFrequencyType) | Ja |  |  | Anger dataproduktens uppdateringsfrekvens i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.4 |
 		</description>
 	</descriptions>
 
@@ -69,7 +68,7 @@ TODO: Add decsription
 
 	<dataInputs>
 		<dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="sql" />
-		<dataInput id="src2" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="sql" />
+		<dataInput id="src2" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="parquetfile" />
 	</dataInputs>
 
 	<tables>
@@ -86,6 +85,9 @@ TODO: Add decsription
 			<businessKey>
 				<value>Personnr</value>
 			</businessKey>
+			<tableAliases>
+				<tableAlias stageId="PreStorage" alias="PersonPreStorage"/>
+			</tableAliases>
 			<columns>
 				<column id="Personnr">
 					<names>
@@ -96,6 +98,11 @@ TODO: Add decsription
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
 					</descriptions>
+					<columnAliases>
+						<columnAlias stageId="PreStorage" alias="PersonnrPreStorage">
+							<dimlDataType id="ssn" isNullable="true" />
+						</columnAlias>
+					</columnAliases>
 					<traits>
 						<trait class="pii" />
 						<trait class="columnSources">
@@ -104,7 +111,8 @@ TODO: Add decsription
 							</traitParameter>
 						</trait>
 					</traits>
-				</column>
+				
+			</column>
 				<column id="Namn">
 					<names>
 						<name language="sv">Namn</name>
@@ -289,42 +297,75 @@ TODO: Add decsription
 
 	<dataFlow>
 		<dataStages>
-			<dataStage id="Raw" order="1" role="input" materialization="table">
+			<dataStage id="Landing" order="0" role="input" materialization="file">
+				<dataStageFiles>
+					<dataStageFile id="parquetfile" path="src1/file{{YYYYMMDD}}" fileFormat="parquet"/>
+				</dataStageFiles>
+			</dataStage>
+			<dataStage id="Input" order="1" materialization="table" isFullyNullable="true">
+				<traits>
+					<trait class="dataStageOperations.generateRowIds">
+						<traitParameter key="seed" value="1" />
+						<traitParameter key="increment" value="1" />
+					</trait>
+				</traits>
+				<dataStageTables>
+					<dataStageTable tableId="Person" sourceTableId="Person">
+						<columnMappings>
+							<columnMapping columnId="Personnr" sourceColumnId="Personnr" />
+							<columnMapping columnId="Namn" sourceColumnId="Namn" />
+							<columnMapping columnId="Alder" sourceColumnId="Alder" />
+						</columnMappings>
+					</dataStageTable>
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"/>
+				</dataStageTables>
 			</dataStage>
 			<dataStage id="Control" order="2" materialization="view">
-				<traits>
-					<trait class="generateKeyHash">
-						<traitParameter key="value" value="true"/>
-					</trait>
-					<trait class="generateRowHash">
-						<traitParameter key="value" value="true"/>
-					</trait>
-				</traits>
+				<dataStageTables>
+					<dataStageTable tableId="Person" sourceTableId="Person"/>
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"/>
+				</dataStageTables>
 			</dataStage>
 			<dataStage id="PreStorage" order="3" materialization="table">
-			</dataStage>
-			<dataStage id="Storage" order="4" role="output" materialization="table">
 				<traits>
-					<trait class="tableUpdateType">
-						<traitParameter key="type" value="cdc"/>
+					<trait class="dataStageOperations.generateKeyHash">
+						<traitParameter key="value" value="true" />
+					</trait>
+					<trait class="dataStageOperations.generateRowHash">
+						<traitParameter key="value" value="true" />
 					</trait>
 				</traits>
+				<dataStageTables>
+					<dataStageTable tableId="Person" sourceTableId="Person"/>
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"/>
+				</dataStageTables>
+			</dataStage>
+			<dataStage id="Storage" order="4" role="output" materialization="table" tableUpdateType="upsert">
+				<dataStageTables>
+					<dataStageTable tableId="Person" sourceTableId="Person"/>
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"/>
+				</dataStageTables>
 			</dataStage>
 		</dataStages>
 
 		<dataIngests>
 			<!--<dataIngest id="load_job_1" dataInputId="src1">
-		  <tableToTableMappings>
-			  <tableToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000) {{ColumnList}} FROM {{SourceTable}}" allowSchemaDrift="false">
-				  <columnMappings>
-					  <columnMapping columnId="Personnr" sourceColumnId="Personnr" />
-					  <columnMapping columnId="Namn" sourceColumnId="Namn" />
-					  <columnMapping columnId="Alder" sourceColumnId="Alder" />
-				  </columnMappings>
-			  </tableToTableMapping>
-			<tableToTableMapping tableId="Anstallning" sourceTableId="Anstallning"/>
-		  </tableToTableMappings>
-      </dataIngest>-->
+				<mappings>
+					<sqlToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000) {{ColumnList}} FROM {{SourceTable}}" >
+						<columnMappings>
+							<columnMapping columnId="Personnr" sourceColumnId="Personnr" />
+							<columnMapping columnId="Namn" sourceColumnId="Namn" />
+							<columnMapping columnId="Alder" sourceColumnId="Alder" />
+						</columnMappings>
+					</sqlToTableMapping>
+					<sqlToTableMapping tableId="Anstallning" sourceTableId="Anstallning"/>
+				</mappings>
+			</dataIngest>-->
+			<dataIngest id="load_job_2" dataInputId="src2">
+				<mappings>
+					<fileMapping sourceFileId="*" dataStageFileId="parquetfile" />
+				</mappings>
+			</dataIngest>
 		</dataIngests>
 	</dataFlow>
 
