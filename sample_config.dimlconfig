@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config xmlns="https://github.com/Region-Skane-SDI/diml/config"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd" defaultLanguage="sv">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd"
+	defaultLanguage="sv"
+	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_config.dimlconfig">
   
 	<traits>
 		<trait class="defaultConfigNamespace">

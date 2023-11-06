@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dataTypes xmlns="https://github.com/Region-Skane-SDI/diml/datatypes"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datatypes.datatypes">
 
 	<dataTypeAttributes>
 		<dataTypeAttribute id="length" type="int" />
