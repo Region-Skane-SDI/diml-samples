@@ -5,11 +5,11 @@
   dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/covid19_sverige_per_dag_och_region.dataproduct" targetPlatform="msfabric">
 
   <names>
-    <name language="sv">Antal fall av covid-19 i Sverige per dag och region</name>
+    <name language="sv">Antal rapporterade covid-19-fall i Sverige per dag och region</name>
   </names>
 
   <descriptions>
-    <description type="Plain" language="sv">Historisk utveckling av nya rapporterade bekräftade sjukdomsfall av Covid-19 per dag sedan första positiva fallet identifierades i Sverige. Antalet fall per dag anges per region samt totalt antal och kumulativt antal per dag för Sverige.</description>
+    <description type="Plain" language="sv">Utvecklingen av dagliga bekräftade Covid-19-fall i Sverige presenteras historiskt per region samt som totalt och kumulativt för hela landet.</description>
   </descriptions>
 
   <dcat dcatDataTheme="heal" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
@@ -40,9 +40,9 @@
   </dataInputs>
 
   <tables>
-    <table id="Covid19Statistik">
+    <table id="Covid19_Statistik">
       <names>
-        <name language="sv">Covid-19-statistik</name>
+        <name language="sv">Covid19_Statistik</name>
       </names>
       <descriptions>
         <description type="Plain" language="sv">En tabell över antal fall av covid-19 i Sverige per dag och region.</description>
@@ -50,7 +50,7 @@
       <columns>
         <column id="Totalt_antal_fall">
           <names>
-            <name language="sv">Totalt antal fall</name>
+            <name language="sv">Totalt_antal_fall</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -58,7 +58,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Totalt_antal_fall" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Totalt_antal_fall" />
             </trait>
           </traits>
         </column>
@@ -72,7 +72,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kumulativa_fall" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Kumulativa_fall" />
             </trait>
           </traits>
         </column>
@@ -86,7 +86,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Blekinge" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Blekinge" />
             </trait>
           </traits>
         </column>
@@ -100,7 +100,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Dalarna" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Dalarna" />
             </trait>
           </traits>
         </column>
@@ -114,13 +114,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Gotland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Gotland" />
             </trait>
           </traits>
         </column>
         <column id="Gavleborg">
           <names>
-            <name language="sv">Gävleborg</name>
+            <name language="sv">Gavleborg</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -128,7 +128,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Gavleborg" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Gavleborg" />
             </trait>
           </traits>
         </column>
@@ -142,13 +142,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Halland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Halland" />
             </trait>
           </traits>
         </column>
         <column id="Jamtland">
           <names>
-            <name language="sv">Jämtland</name>
+            <name language="sv">Jamtland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -156,13 +156,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Jamtland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Jamtland" />
             </trait>
           </traits>
         </column>
         <column id="Jonkoping">
           <names>
-            <name language="sv">Jönköping</name>
+            <name language="sv">Jonkoping</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -170,7 +170,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Jonkoping" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Jonkoping" />
             </trait>
           </traits>
         </column>
@@ -184,7 +184,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kalmar" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Kalmar" />
             </trait>
           </traits>
         </column>
@@ -198,7 +198,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kronoberg" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Kronoberg" />
             </trait>
           </traits>
         </column>
@@ -212,13 +212,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Norrbotten" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Norrbotten" />
             </trait>
           </traits>
         </column>
         <column id="Skane">
           <names>
-            <name language="sv">Skåne</name>
+            <name language="sv">Skane</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -226,7 +226,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Skane" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Skane" />
             </trait>
           </traits>
         </column>
@@ -240,13 +240,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Stockholm" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Stockholm" />
             </trait>
           </traits>
         </column>
         <column id="Sodermanland">
           <names>
-            <name language="sv">Södermanland</name>
+            <name language="sv">Sodermanland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -254,7 +254,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Sodermanland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Sodermanland" />
             </trait>
           </traits>
         </column>
@@ -268,13 +268,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Uppsala" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Uppsala" />
             </trait>
           </traits>
         </column>
         <column id="Varmland">
           <names>
-            <name language="sv">Värmland</name>
+            <name language="sv">Varmland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -282,13 +282,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Varmland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Varmland" />
             </trait>
           </traits>
         </column>
         <column id="Vasterbotten">
           <names>
-            <name language="sv">Västerbotten</name>
+            <name language="sv">Vasterbotten</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -296,13 +296,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vasterbotten" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Vasterbotten" />
             </trait>
           </traits>
         </column>
         <column id="Vasternorrland">
           <names>
-            <name language="sv">Västernorrland</name>
+            <name language="sv">Vasternorrland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -310,13 +310,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vasternorrland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Vasternorrland" />
             </trait>
           </traits>
         </column>
         <column id="Vastmanland">
           <names>
-            <name language="sv">Västmanland</name>
+            <name language="sv">Vastmanland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -324,13 +324,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vastmanland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Vastmanland" />
             </trait>
           </traits>
         </column>
         <column id="Vastra_Gotaland">
           <names>
-            <name language="sv">Västra Götaland</name>
+            <name language="sv">Vastra Gotaland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -338,13 +338,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vastra_Gotaland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Vastra_Gotaland" />
             </trait>
           </traits>
         </column>
         <column id="Orebro">
           <names>
-            <name language="sv">Örebro</name>
+            <name language="sv">Orebro</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -352,13 +352,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Orebro" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Orebro" />
             </trait>
           </traits>
         </column>
         <column id="Ostergotland">
           <names>
-            <name language="sv">Östergötland</name>
+            <name language="sv">Ostergotland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -366,13 +366,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Ostergotland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Ostergotland" />
             </trait>
           </traits>
         </column>
         <column id="Antal_avlidna">
           <names>
-            <name language="sv">Antal avlidna</name>
+            <name language="sv">Antal_avlidna</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -380,13 +380,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Antal_avlidna" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Antal_avlidna" />
             </trait>
           </traits>
         </column>
         <column id="Kumulativa_avlidna">
           <names>
-            <name language="sv">Kumulativa avlidna</name>
+            <name language="sv">Kumulativa_avlidna</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -394,13 +394,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kumulativa_avlidna" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Kumulativa_avlidna" />
             </trait>
           </traits>
         </column>
         <column id="Antal_intensivvardade">
           <names>
-            <name language="sv">Antal intensivvårdade</name>
+            <name language="sv">Antal_intensivvardade</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -408,13 +408,13 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Antal_intensivvardade" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Antal_intensivvardade" />
             </trait>
           </traits>
         </column>
         <column id="Kumulativa_intensivvardade">
           <names>
-            <name language="sv">Kumulativa intensivvårdade</name>
+            <name language="sv">Kumulativa_intensivvardade</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -422,7 +422,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kumulativa_intensivvardade" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Kumulativa_intensivvardade" />
             </trait>
           </traits>
         </column>
@@ -436,7 +436,7 @@
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Statistikdatum" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19_Statistik/Statistikdatum" />
             </trait>
           </traits>
         </column>
@@ -447,7 +447,7 @@
   <dataOutputs>
     <fileOutputs>
       <fileOutput channelId="csvfiles" fileFormat="Csv" path="csv" encoding="utf8" columnSeparator="," rowSeparator="crlf">
-        <singleTableFileOutput path="Covid19Statistik_20231115T133448.csv" table="Covid19Statistik" />
+        <singleTableFileOutput path="Covid19_Statistik_20231115T133448.csv" table="Covid19_Statistik" />
       </fileOutput>
     </fileOutputs>
   </dataOutputs>
