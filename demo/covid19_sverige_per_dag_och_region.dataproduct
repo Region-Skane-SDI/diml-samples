@@ -5,11 +5,11 @@
   dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/covid19_sverige_per_dag_och_region.dataproduct" targetPlatform="msfabric">
 
   <names>
-    <name language="sv">Covid-19 i Sverige per dag och region</name>
+    <name language="sv">Covid-19 i Sverige</name>
   </names>
 
   <descriptions>
-    <description type="Plain" language="sv">Utvecklingen av dagliga bekräftade Covid-19-fall i Sverige presenteras historiskt per region samt som totalt och kumulativt för hela landet.</description>
+    <description type="Plain" language="sv">Innehåller statistik på antal bekräftade Covid-19-fall i Sverige per dag och region.</description>
   </descriptions>
 
   <dcat dcatDataTheme="heal" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
@@ -447,7 +447,7 @@
   <dataOutputs>
     <fileOutputs>
       <fileOutput channelId="csvfiles" fileFormat="Csv" path="csv" encoding="utf8" columnSeparator="," rowSeparator="crlf">
-        <singleTableFileOutput path="Covid19_Statistik_20231115T133448.csv" table="Covid19_Statistik" />
+        <singleTableFileOutput path="covid19_statistik_20231115T133448.csv" table="Covid19_Statistik" />
       </fileOutput>
     </fileOutputs>
   </dataOutputs>
