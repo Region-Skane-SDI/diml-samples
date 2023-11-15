@@ -2,7 +2,7 @@
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" 
-  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/covid19_sverige_per_dag_och_region.dataproduct" targetPlatform="msfabric">
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/covid19_i_sverige.dataproduct" targetPlatform="msfabric">
 
   <names>
     <name language="sv">Covid-19 i Sverige</name>
@@ -453,8 +453,19 @@
   </dataOutputs>
 
   <dataFlow>
-    <dataStages />
-    <dataIngests />
+    <dataStages>
+      <dataStage id="Raw" order="1" role="input" materialization="table" />
+      <dataStage id="Control" order="2" materialization="view" />
+      <dataStage id="PreStorage" order="3" materialization="table" />
+      <dataStage id="Storage" order="4" role="output" materialization="table" />
+    </dataStages>
+    
+    <dataIngests>
+      <dataIngest dataInputId="sveriges_dataportal" id="csv-pipeline1">
+        <tableToTableMappings>
+          <tableToTableMapping sourceTableId="Covid19_Statistik" tableId="Covid19_Statistik" />
+        </tableToTableMappings>
+      </dataIngest>
+    </dataIngests>
   </dataFlow>
-
 </dataProduct>
