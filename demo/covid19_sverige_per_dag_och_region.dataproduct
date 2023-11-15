@@ -36,7 +36,7 @@
   </traits>
 
   <dataInputs>
-    <dataInput id="sveriges_dataportal" dimlId="[PLACEHOLDER]" channelId="csv" />
+    <dataInput id="sveriges_dataportal" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/sveriges_dataportal.datasource" channelId="csv" />
   </dataInputs>
 
   <tables>
