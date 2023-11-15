@@ -5,7 +5,7 @@
   dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/covid19_sverige_per_dag_och_region.dataproduct" targetPlatform="msfabric">
 
   <names>
-    <name language="sv">Antal rapporterade covid-19-fall i Sverige per dag och region</name>
+    <name language="sv">Covid-19 i Sverige per dag och region</name>
   </names>
 
   <descriptions>
