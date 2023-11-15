@@ -16,7 +16,7 @@
 
   <traits>
     <trait class="category" subclass="informationOwner">
-      <traitParameter value="dirhs" />
+      <traitParameter value="Hälso-och sjukvårdsdirektör" />
     </trait>
     <trait class="category" subclass="searchStructure">
       <traitParameter value="1.1"/>
@@ -64,7 +64,7 @@
         </column>
         <column id="Kumulativa_fall">
           <names>
-            <name language="sv">Kumulativa fall</name>
+            <name language="sv">Kumulativa_fall</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
@@ -330,7 +330,7 @@
         </column>
         <column id="Vastra_Gotaland">
           <names>
-            <name language="sv">Vastra Gotaland</name>
+            <name language="sv">Vastra_Gotaland</name>
           </names>
           <dimlDataType id="integer" unsigned="false" isNullable="true" />
           <descriptions>
