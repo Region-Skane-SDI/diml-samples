@@ -9,10 +9,7 @@
   </names>
 
   <descriptions>
-    <description type="Plain" language="sv">Historisk utveckling av nya rapporterade bekräftade sjukdomsfall av Covid-19
-per dag sedan första positiva fallet identifierades i Sverige. Antalet fall per
-dag anges per region samt totalt antal och kumulativt antal per dag för
-Sverige.</description>
+    <description type="Plain" language="sv">Historisk utveckling av nya rapporterade bekräftade sjukdomsfall av Covid-19 per dag sedan första positiva fallet identifierades i Sverige. Antalet fall per dag anges per region samt totalt antal och kumulativt antal per dag för Sverige.</description>
   </descriptions>
 
   <dcat dcatDataTheme="heal" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
