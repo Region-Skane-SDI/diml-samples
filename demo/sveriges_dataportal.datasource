@@ -289,7 +289,7 @@
   <dataOutputs>
     <fileOutputs>
       <fileOutput channelId="csvfiles" fileFormat="Csv" path="csv" encoding="utf8" columnSeparator="," rowSeparator="crlf">
-        <singleTableFileOutput path="Covid19Statistik_20231115T133448.csv" table="Covid19Statistik" />
+        <singleTableFileOutput path="covid19_statistik_20231115T133448.csv" table="Covid19_Statistik" />
       </fileOutput>
     </fileOutputs>
   </dataOutputs>
