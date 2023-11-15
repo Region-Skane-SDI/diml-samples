@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" 
@@ -42,7 +43,7 @@ Sverige.</description>
   </dataInputs>
 
   <tables>
-    <table id="Covid19Statistics">
+    <table id="Covid19Statistik">
       <names>
         <name language="sv">Covid-19-statistik</name>
       </names>
@@ -60,7 +61,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Totalt_antal_fall" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Totalt_antal_fall" />
             </trait>
           </traits>
         </column>
@@ -74,7 +75,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Kumulativa_fall" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kumulativa_fall" />
             </trait>
           </traits>
         </column>
@@ -88,7 +89,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Blekinge" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Blekinge" />
             </trait>
           </traits>
         </column>
@@ -102,7 +103,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Dalarna" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Dalarna" />
             </trait>
           </traits>
         </column>
@@ -116,7 +117,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Gotland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Gotland" />
             </trait>
           </traits>
         </column>
@@ -130,7 +131,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Gavleborg" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Gavleborg" />
             </trait>
           </traits>
         </column>
@@ -144,7 +145,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Halland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Halland" />
             </trait>
           </traits>
         </column>
@@ -158,7 +159,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Jamtland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Jamtland" />
             </trait>
           </traits>
         </column>
@@ -172,7 +173,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Jonkoping" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Jonkoping" />
             </trait>
           </traits>
         </column>
@@ -186,7 +187,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Kalmar" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kalmar" />
             </trait>
           </traits>
         </column>
@@ -200,7 +201,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Kronoberg" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kronoberg" />
             </trait>
           </traits>
         </column>
@@ -214,7 +215,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Norrbotten" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Norrbotten" />
             </trait>
           </traits>
         </column>
@@ -228,7 +229,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Skane" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Skane" />
             </trait>
           </traits>
         </column>
@@ -242,7 +243,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Stockholm" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Stockholm" />
             </trait>
           </traits>
         </column>
@@ -256,7 +257,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Sodermanland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Sodermanland" />
             </trait>
           </traits>
         </column>
@@ -270,7 +271,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Uppsala" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Uppsala" />
             </trait>
           </traits>
         </column>
@@ -284,7 +285,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Varmland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Varmland" />
             </trait>
           </traits>
         </column>
@@ -298,7 +299,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Vasterbotten" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vasterbotten" />
             </trait>
           </traits>
         </column>
@@ -312,7 +313,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Vasternorrland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vasternorrland" />
             </trait>
           </traits>
         </column>
@@ -326,7 +327,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Vastmanland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vastmanland" />
             </trait>
           </traits>
         </column>
@@ -340,7 +341,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Vastra_Gotaland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Vastra_Gotaland" />
             </trait>
           </traits>
         </column>
@@ -354,7 +355,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Orebro" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Orebro" />
             </trait>
           </traits>
         </column>
@@ -368,7 +369,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Ostergotland" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Ostergotland" />
             </trait>
           </traits>
         </column>
@@ -382,7 +383,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Antal_avlidna" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Antal_avlidna" />
             </trait>
           </traits>
         </column>
@@ -396,7 +397,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Kumulativa_avlidna" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kumulativa_avlidna" />
             </trait>
           </traits>
         </column>
@@ -410,7 +411,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Antal_intensivvardade" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Antal_intensivvardade" />
             </trait>
           </traits>
         </column>
@@ -424,7 +425,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Kumulativa_intensivvardade" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Kumulativa_intensivvardade" />
             </trait>
           </traits>
         </column>
@@ -438,7 +439,7 @@ Sverige.</description>
           </descriptions>
           <traits>
             <trait class="ColumnSources">
-              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistics/Statistikdatum" />
+              <traitParameter key="value" value="sveriges_dataportal/Covid19Statistik/Statistikdatum" />
             </trait>
           </traits>
         </column>
@@ -449,7 +450,7 @@ Sverige.</description>
   <dataOutputs>
     <fileOutputs>
       <fileOutput channelId="csvfiles" fileFormat="Csv" path="csv" encoding="utf8" columnSeparator="," rowSeparator="crlf">
-        <singleTableFileOutput path="covid19statistics_20231115T133448.csv" table="Covid19Statistics" />
+        <singleTableFileOutput path="Covid19Statistik_20231115T133448.csv" table="Covid19Statistik" />
       </fileOutput>
     </fileOutputs>
   </dataOutputs>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" 
@@ -21,7 +22,7 @@
   </traits>
 
   <tables>
-    <table id="Covid19Statistics">
+    <table id="Covid19Statistik">
       <names>
         <name language="sv">Covid-19-statistik</name>
       </names>
@@ -288,7 +289,7 @@
   <dataOutputs>
     <fileOutputs>
       <fileOutput channelId="csvfiles" fileFormat="Csv" path="csv" encoding="utf8" columnSeparator="," rowSeparator="crlf">
-        <singleTableFileOutput path="covid19statistics_20231115T133448.csv" table="Covid19Statistics" />
+        <singleTableFileOutput path="Covid19Statistik_20231115T133448.csv" table="Covid19Statistik" />
       </fileOutput>
     </fileOutputs>
   </dataOutputs>
