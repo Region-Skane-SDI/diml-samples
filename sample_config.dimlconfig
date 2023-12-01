@@ -35,34 +35,40 @@
 	</hierarchies>
 
 	<dataSystemColumns>
-		<dataSystemColumn id="SDI_{{TableName}}_ID" type="recordid">
+		<dataSystemColumn id="DIML_{{TableName}}_ID" type="recordid">
 			<dimlDataType id="integer" isNullable="false"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_ExecutionLog_ID" type="executionlogid">
+		<dataSystemColumn id="DIML_ExecutionLog_ID" type="executionlogid">
 			<dimlDataType id="integer" isNullable="false"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_Batch_ID" type="batchid">
+		<dataSystemColumn id="DIML_Batch_ID" type="batchid">
 			<dimlDataType id="integer" isNullable="false"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_CreateTime_UTC" type="inserttimeutc">
+		<dataSystemColumn id="DIML_KeyHash" type="keyhash">
+			<dimlDataType id="binary" isNullable="false" length="32"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="DIML_RowHash" type="rowhash">
+			<dimlDataType id="binary" isNullable="false" length="32"/>
+		</dataSystemColumn>
+		<dataSystemColumn id="DIML_CreateTime_UTC" type="inserttimeutc">
 			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_LastUpdateTime_UTC" type="lastupdateutc">
+		<dataSystemColumn id="DIML_LastUpdateTime_UTC" type="lastupdateutc">
 			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_IsDeleted" type="deletedflag">
+		<dataSystemColumn id="DIML_IsDeleted" type="deletedflag">
 			<dimlDataType id="boolean" isNullable="false"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_CDC_Action" type="cdcaction">
+		<dataSystemColumn id="DIML_CDC_Action" type="cdcaction">
 			<dimlDataType id="string" length="1" isFixedLength="true" isNullable="false"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_SCD2_IsCurrent" type="scd2iscurrent">
+		<dataSystemColumn id="DIML_SCD2_IsCurrent" type="scd2iscurrent">
 			<dimlDataType id="boolean" isNullable="false"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_SCD2_StartTime" type="scd2starttime">
+		<dataSystemColumn id="DIML_SCD2_StartTime" type="scd2starttime">
 			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
 		</dataSystemColumn>
-		<dataSystemColumn id="SDI_SCD2_EndTime" type="scd2endtime">
+		<dataSystemColumn id="DIML_SCD2_EndTime" type="scd2endtime">
 			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
 		</dataSystemColumn>
 	</dataSystemColumns>
