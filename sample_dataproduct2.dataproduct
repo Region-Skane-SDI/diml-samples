@@ -85,9 +85,9 @@
 			<businessKey>
 				<value>Personnr</value>
 			</businessKey>
-			<tableAliases>
-				<tableAlias stageId="PreStorage" alias="PersonPreStorage"/>
-			</tableAliases>
+			<tableInstances>
+				<tableInstance stageId="PreStorage" alias="PersonPreStorage"/>
+			</tableInstances>
 			<columns>
 				<column id="Personnr">
 					<names>
@@ -98,11 +98,11 @@
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
 					</descriptions>
-					<columnAliases>
-						<columnAlias stageId="PreStorage" alias="PersonnrPreStorage">
+					<columnInstances>
+						<columnInstance stageId="PreStorage" alias="PersonnrPreStorage">
 							<dimlDataType id="ssn" isNullable="true" />
-						</columnAlias>
-					</columnAliases>
+						</columnInstance>
+					</columnInstances>
 					<traits>
 						<trait class="pii" />
 						<trait class="columnSources">
