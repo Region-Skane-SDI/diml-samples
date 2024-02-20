@@ -170,6 +170,9 @@
 				<value>Personnr</value>
 				<value>Anstallningsnr</value>
 			</businessKey>
+			<commonColumns>
+				<commonColumn id="verksamhetsomrade" />
+			</commonColumns>
 			<columns>
 				<column id="Personnr">
 					<names>

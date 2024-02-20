@@ -72,4 +72,16 @@
 			<dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0"/>
 		</dataSystemColumn>
 	</dataSystemColumns>
+
+	<commonColumnDefinitions>
+		<commonColumnDefinition id="verksamhetsomrade" >
+			<names>
+				<name language="sv">Verksamhetsområde</name>
+			</names>
+			<dimlDataType id="string" isNullable="false" />
+			<descriptions>
+				<description type="plain" language="sv">Verksamhetens område.</description>
+			</descriptions>
+		</commonColumnDefinition>
+	</commonColumnDefinitions>
 </config>
