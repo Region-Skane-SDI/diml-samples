@@ -371,6 +371,7 @@
 					</conditionalDataTypes>
 				</targetDataType>
 				<targetDataType platform="openapi" dataType="string" />
+				<targetDataType platform="sparksql" dataType="timestampOffset" />
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
@@ -397,6 +398,7 @@
 					</conditionalDataTypes>
 				</targetDataType>
 				<targetDataType platform="openapi" dataType="string" />
+				<targetDataType platform="sparksql" dataType="string" />
 			</targetDataTypes>
 		</dimlDataTypeConfig>
 
@@ -1198,10 +1200,14 @@
 				<!-- As of Spark 3.4 there's support for timestamps with timezone, but not including here as it's new and only in public preview in e.g. AZ Databricks -->
 				<platformDataTypeConfig id="timestamp" dimlDataType="dateTime"
 										inputFormat="timestamp"
-										outputFormat="&quot;timestamp&quot;">
-				</platformDataTypeConfig>
+										outputFormat="&quot;timestamp&quot;" />
+				<platformDataTypeConfig id="timestampOffset" dimlDataType="dateTimeOffset"
+										inputFormat="string"
+										outputFormat="&quot;string&quot;" />
 				<platformDataTypeConfig id="binary" dimlDataType="binary" inputFormat="binary"
 										outputFormat="&quot;binary&quot;" />
+				<platformDataTypeConfig id="time" dimlDataType="time" inputFormat="string"
+										outputFormat="&quot;string&quot;" />
 			</platformDataTypeConfigs>
 		</targetPlatform>
 	</targetPlatforms>
