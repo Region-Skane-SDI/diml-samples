@@ -1180,7 +1180,7 @@
 				<platformDataTypeConfig id="double" dimlDataType="double" inputFormat="double"
 										outputFormat="&quot;double&quot;" />
 				<platformDataTypeConfig id="decimal" dimlDataType="decimal"
-										inputFormat="(?i)decimal\s*(\((?'precision'[0-9]{1,2}),\s*(?'scale'[0-9]{1,2})\))?"
+										inputFormat="(?i)decimal\s*\((?'precision'[0-9]{1,2}),\s*(?'scale'[0-9]{1,2})\)"
 										outputFormat="&quot;decimal(&quot; + precision.ToString() + &quot;, &quot; + scale.ToString() + &quot;)&quot;">
 					<platformDataTypeParameters>
 						<platformDataTypeParameter id="precision" type="int"
