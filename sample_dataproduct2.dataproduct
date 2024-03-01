@@ -85,6 +85,18 @@
 			<businessKey>
 				<value>Personnr</value>
 			</businessKey>
+			<traits>
+				<trait class="quality.businessKey.duplicate">
+					<traitParameter key="flag" value="false" />
+					<traitParameter key="block" value="true" />
+					<traitParameter key="report" value="false" />
+				</trait>
+				<trait class="quality.businessKey.null">
+					<traitParameter key="report" value="false" />
+					<traitParameter key="flag" value="false" />
+					<traitParameter key="block" value="true" />
+				</trait>
+			</traits>
 			<tableInstances>
 				<tableInstance stageId="PreStorage" alias="PersonPreStorage"/>
 			</tableInstances>
