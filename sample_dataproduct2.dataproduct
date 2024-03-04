@@ -87,14 +87,12 @@
 			</businessKey>
 			<traits>
 				<trait class="quality.businessKey.duplicate">
-					<traitParameter key="flag" value="false" />
-					<traitParameter key="block" value="true" />
-					<traitParameter key="report" value="false" />
+					<traitParameter key="action" value="[block/eliminate]" />
+					<traitParameter key="eliminateExpression" value="[SQL statement here]" />
 				</trait>
 				<trait class="quality.businessKey.null">
-					<traitParameter key="report" value="false" />
-					<traitParameter key="flag" value="false" />
-					<traitParameter key="block" value="true" />
+					<traitParameter key="action" value="[block/default]" />
+					<traitParameter key="defaultExpression" value="[SQL statement here]" />
 				</trait>
 			</traits>
 			<tableInstances>
@@ -331,6 +329,7 @@
 						<traitParameter key="value" value="true" />
 						<traitParameter key="length" value="500" />
 					</trait>
+					<trait class="dataStageOperations.applyDataQualityRules" />
 				</traits>
 				<dataStageTables>
 					<dataStageTable tableId="Person" sourceTableId="Person" dataStageFileId="parquet_person">
