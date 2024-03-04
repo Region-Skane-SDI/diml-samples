@@ -88,11 +88,11 @@
 			<traits>
 				<trait class="quality.businessKey.duplicate">
 					<traitParameter key="action" value="[block/eliminate]" />
-					<traitParameter key="eliminateExpression" value="[SQL statement here]" />
+					<traitParameter key="eliminateSqlExpression" value="[SQL statement here]" />
 				</trait>
 				<trait class="quality.businessKey.null">
 					<traitParameter key="action" value="[block/default]" />
-					<traitParameter key="defaultExpression" value="[SQL statement here]" />
+					<traitParameter key="defaultSqlExpression" value="[SQL statement here]" />
 				</trait>
 			</traits>
 			<tableInstances>
