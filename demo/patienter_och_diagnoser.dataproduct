@@ -27,7 +27,7 @@
         </trait>
     </traits>
     <dataInputs>
-        <dataInput id="system_x" dimlId="https://bki.skane.se/diml/id/datasource/82501823" channelId="sql" />
+        <dataInput id="system_x" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/system_x.datasource" channelId="sql" />
     </dataInputs>
     <tables>
         <table id="diagnosis">
