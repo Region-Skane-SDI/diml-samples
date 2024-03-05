@@ -3,7 +3,7 @@
         <name language="sv">Patienter och diagnoser</name>
     </names>
     <descriptions>
-        <description type="Plain" language="sv">En dataprodukt som innehåller information om patienter och diagnoser.</description>
+        <description type="plain" language="sv">En dataprodukt som innehåller information om patienter och diagnoser.</description>
     </descriptions>
     <dcat dcatDataTheme="heal" dcatAccessRights="nonPublic" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
     <traits>
@@ -25,6 +25,9 @@
         <trait class="icon">
             <traitParameter key="value" value="bi-activity" />
         </trait>
+        <trait class="tableSchema">
+            <traitParameter key="value" value="dbo" />
+        </trait>
     </traits>
     <dataInputs>
         <dataInput id="system_x" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/system_x.datasource" channelId="sql" />
@@ -35,7 +38,7 @@
                 <name language="sv">diagnoser</name>
             </names>
             <descriptions>
-                <description type="Plain" language="sv">En tabell över diagnoser.</description>
+                <description type="plain" language="sv">En tabell över diagnoser.</description>
             </descriptions>
             <columns>
                 <column id="diagnosis_id">
@@ -44,11 +47,11 @@
                     </names>
                     <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik identifierare för diagnosen.</description>
+                        <description type="plain" language="sv">En unik identifierare för diagnosen.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/diagnosis_id" />
+                            <traitParameter key="value" value="system_x/diagnosis/diagnosis_id" />
                         </trait>
                     </traits>
                 </column>
@@ -58,11 +61,11 @@
                     </names>
                     <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik kategorikod för diagnosen.</description>
+                        <description type="plain" language="sv">En unik kategorikod för diagnosen.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/diagnosis_category_code" />
+                            <traitParameter key="value" value="system_x/diagnosis/diagnosis_category_code" />
                         </trait>
                     </traits>
                 </column>
@@ -72,11 +75,11 @@
                     </names>
                     <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik kod för diagnosen i förkortat format.</description>
+                        <description type="plain" language="sv">En unik kod för diagnosen i förkortat format.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/diagnosis_code" />
+                            <traitParameter key="value" value="system_x/diagnosis/diagnosis_code" />
                         </trait>
                     </traits>
                 </column>
@@ -86,11 +89,11 @@
                     </names>
                     <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik kod för diagnosen i fullständigt format.</description>
+                        <description type="plain" language="sv">En unik kod för diagnosen i fullständigt format.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/diagnosis_full_code" />
+                            <traitParameter key="value" value="system_x/diagnosis/diagnosis_full_code" />
                         </trait>
                     </traits>
                 </column>
@@ -100,11 +103,11 @@
                     </names>
                     <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En kort beskrivning av diagnosen.</description>
+                        <description type="plain" language="sv">En kort beskrivning av diagnosen.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/abbreviated_description" />
+                            <traitParameter key="value" value="system_x/diagnosis/abbreviated_description" />
                         </trait>
                     </traits>
                 </column>
@@ -114,11 +117,11 @@
                     </names>
                     <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En fullständig beskrivning av diagnosen.</description>
+                        <description type="plain" language="sv">En fullständig beskrivning av diagnosen.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/full_description" />
+                            <traitParameter key="value" value="system_x/diagnosis/full_description" />
                         </trait>
                     </traits>
                 </column>
@@ -128,11 +131,11 @@
                     </names>
                     <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En titel för diagnosens kategori.</description>
+                        <description type="plain" language="sv">En titel för diagnosens kategori.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/category_title" />
+                            <traitParameter key="value" value="system_x/diagnosis/category_title" />
                         </trait>
                     </traits>
                 </column>
@@ -142,11 +145,11 @@
                     </names>
                     <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Datum och tid som beskriver när diagnosen skapades.</description>
+                        <description type="plain" language="sv">Datum och tid som beskriver när diagnosen skapades.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/create_date" />
+                            <traitParameter key="value" value="system_x/diagnosis/create_date" />
                         </trait>
                     </traits>
                 </column>
@@ -156,11 +159,11 @@
                     </names>
                     <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Datum och tid som beskriver när diagnosen uppdaterades.</description>
+                        <description type="plain" language="sv">Datum och tid som beskriver när diagnosen uppdaterades.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/diagnosis/update_date" />
+                            <traitParameter key="value" value="system_x/diagnosis/update_date" />
                         </trait>
                     </traits>
                 </column>
@@ -171,7 +174,7 @@
                 <name language="sv">patient_diagnos</name>
             </names>
             <descriptions>
-                <description type="Plain" language="sv">En mappningstabell för patienter och diagnoser.</description>
+                <description type="plain" language="sv">En mappningstabell för patienter och diagnoser.</description>
             </descriptions>
             <columns>
                 <column id="patient_diagnosis_id">
@@ -180,11 +183,11 @@
                     </names>
                     <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik identifierare för mappningen mellan patient och diagnos.</description>
+                        <description type="plain" language="sv">En unik identifierare för mappningen mellan patient och diagnos.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patient_diagnosis/patient_diagnosis_id" />
+                            <traitParameter key="value" value="system_x/patient_diagnosis/patient_diagnosis_id" />
                         </trait>
                     </traits>
                 </column>
@@ -194,11 +197,11 @@
                     </names>
                     <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik identifierare för patienten.</description>
+                        <description type="plain" language="sv">En unik identifierare för patienten.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patient_diagnosis/patient_id" />
+                            <traitParameter key="value" value="system_x/patient_diagnosis/patient_id" />
                         </trait>
                     </traits>
                 </column>
@@ -208,11 +211,11 @@
                     </names>
                     <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik identifierare för diagnosen.</description>
+                        <description type="plain" language="sv">En unik identifierare för diagnosen.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patient_diagnosis/diagnosis_id" />
+                            <traitParameter key="value" value="system_x/patient_diagnosis/diagnosis_id" />
                         </trait>
                     </traits>
                 </column>
@@ -222,11 +225,11 @@
                     </names>
                     <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Datum och tid som beskriver när mappningen mellan patienten och diagnosen skapades.</description>
+                        <description type="plain" language="sv">Datum och tid som beskriver när mappningen mellan patienten och diagnosen skapades.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patient_diagnosis/create_date" />
+                            <traitParameter key="value" value="system_x/patient_diagnosis/create_date" />
                         </trait>
                     </traits>
                 </column>
@@ -236,11 +239,11 @@
                     </names>
                     <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Datum och tid som beskriver när mappningen mellan patienten och diagnosen uppdaterades.</description>
+                        <description type="plain" language="sv">Datum och tid som beskriver när mappningen mellan patienten och diagnosen uppdaterades.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patient_diagnosis/update_date" />
+                            <traitParameter key="value" value="system_x/patient_diagnosis/update_date" />
                         </trait>
                     </traits>
                 </column>
@@ -251,7 +254,7 @@
                 <name language="sv">patienter</name>
             </names>
             <descriptions>
-                <description type="Plain" language="sv">En tabell över patienter.</description>
+                <description type="plain" language="sv">En tabell över patienter.</description>
             </descriptions>
             <businessKey>
                 <value>patient_id</value>
@@ -263,11 +266,11 @@
                     </names>
                     <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">En unik identifierare för patienten.</description>
+                        <description type="plain" language="sv">En unik identifierare för patienten.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/patient_id" />
+                            <traitParameter key="value" value="system_x/patients/patient_id" />
                         </trait>
                     </traits>
                 </column>
@@ -277,11 +280,11 @@
                     </names>
                     <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Patientens förnamn.</description>
+                        <description type="plain" language="sv">Patientens förnamn.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/first_name" />
+                            <traitParameter key="value" value="system_x/patients/first_name" />
                         </trait>
                     </traits>
                 </column>
@@ -291,11 +294,11 @@
                     </names>
                     <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Patientens efternamn.</description>
+                        <description type="plain" language="sv">Patientens efternamn.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/last_name" />
+                            <traitParameter key="value" value="system_x/patients/last_name" />
                         </trait>
                     </traits>
                 </column>
@@ -305,11 +308,11 @@
                     </names>
                     <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">Patientens telefonnummer.</description>
+                        <description type="plain" language="sv">Patientens telefonnummer.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/phone" />
+                            <traitParameter key="value" value="system_x/patients/phone" />
                         </trait>
                     </traits>
                 </column>
@@ -319,11 +322,11 @@
                     </names>
                     <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Patientens e-postadress.</description>
+                        <description type="plain" language="sv">Patientens e-postadress.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/email" />
+                            <traitParameter key="value" value="system_x/patients/email" />
                         </trait>
                     </traits>
                 </column>
@@ -333,11 +336,11 @@
                     </names>
                     <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">Gatunamnet i patientens adress.</description>
+                        <description type="plain" language="sv">Gatunamnet i patientens adress.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/street" />
+                            <traitParameter key="value" value="system_x/patients/street" />
                         </trait>
                     </traits>
                 </column>
@@ -347,11 +350,11 @@
                     </names>
                     <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">Staden som patienten bor i.</description>
+                        <description type="plain" language="sv">Staden som patienten bor i.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/city" />
+                            <traitParameter key="value" value="system_x/patients/city" />
                         </trait>
                     </traits>
                 </column>
@@ -361,11 +364,11 @@
                     </names>
                     <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">Regionen som patienten bor i.</description>
+                        <description type="plain" language="sv">Regionen som patienten bor i.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/state" />
+                            <traitParameter key="value" value="system_x/patients/state" />
                         </trait>
                     </traits>
                 </column>
@@ -375,11 +378,11 @@
                     </names>
                     <dimlDataType id="string" length="5" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">Patientens postnummer.</description>
+                        <description type="plain" language="sv">Patientens postnummer.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/zip_code" />
+                            <traitParameter key="value" value="system_x/patients/zip_code" />
                         </trait>
                     </traits>
                 </column>
@@ -389,11 +392,11 @@
                     </names>
                     <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
                     <descriptions>
-                        <description type="Plain" language="sv">Patientens personnummer i ett 12-siffrigt format utan bindestreck. </description>
+                        <description type="plain" language="sv">Patientens personnummer i ett 12-siffrigt format utan bindestreck. </description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/social_security_number" />
+                            <traitParameter key="value" value="system_x/patients/social_security_number" />
                         </trait>
                     </traits>
                 </column>
@@ -403,11 +406,11 @@
                     </names>
                     <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Datum och tid som beskriver när patienten registrerades i systemet.</description>
+                        <description type="plain" language="sv">Datum och tid som beskriver när patienten registrerades i systemet.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/create_date" />
+                            <traitParameter key="value" value="system_x/patients/create_date" />
                         </trait>
                     </traits>
                 </column>
@@ -417,11 +420,11 @@
                     </names>
                     <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
                     <descriptions>
-                        <description type="Plain" language="sv">Datum och tid som beskriver när patienten uppdaterades i systemet.</description>
+                        <description type="plain" language="sv">Datum och tid som beskriver när patienten uppdaterades i systemet.</description>
                     </descriptions>
                     <traits>
                         <trait class="columnSources">
-                            <traitParameter key="value" value="system_x/hospital/patients/update_date" />
+                            <traitParameter key="value" value="system_x/patients/update_date" />
                         </trait>
                     </traits>
                 </column>
@@ -443,9 +446,9 @@
         <dataIngests>
             <dataIngest dataInputId="system_x" id="ingest-pipeline">
                 <tableToTableMappings>
-                    <tableToTableMapping sourceTableId="hopsital/diagnosis" tableId="diagnosis" />
-                    <tableToTableMapping sourceTableId="hopsital/patients" tableId="patients" />
-                    <tableToTableMapping sourceTableId="hopsital/patient_diagnosis" tableId="patient_diagnosis" />
+                    <tableToTableMapping sourceTableId="diagnosis" tableId="diagnosis" />
+                    <tableToTableMapping sourceTableId="patients" tableId="patients" />
+                    <tableToTableMapping sourceTableId="patient_diagnosis" tableId="patient_diagnosis" />
                 </tableToTableMappings>
             </dataIngest>
         </dataIngests>
