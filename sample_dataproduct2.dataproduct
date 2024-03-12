@@ -110,6 +110,11 @@ Test</description>
                                 <value>src1/Person/Personnr</value>
                             </traitParameter>
                         </trait>
+                        <trait class="quality.dataType.conversion">
+                            <traitParameter key="action" value="[block/default]" />
+                            <!--If action = default: -->
+                            <traitParameter key="defaultSqlExpression" value="[SQL statement here]" />
+                        </trait>
                     </traits>
                 </column>
                 <column id="Namn">
