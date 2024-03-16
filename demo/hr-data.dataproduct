@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/hr-data.dataproduct" targetPlatform="msfabric">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/hr-data.dataproduct"
+  targetPlatform="msfabric">
 
   <names>
     <name language="sv">HR-data</name>
@@ -10,7 +13,8 @@
     <description type="plain" language="sv">Uppgifter om personer, anställningar och semestrar.</description>
   </descriptions>
 
-  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="daily"
+    dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
@@ -23,18 +27,20 @@
       <traitParameter value="K1R1T1" />
     </trait>
     <trait class="isVirtual">
-      <traitParameter value="false"/>
+      <traitParameter value="false" />
     </trait>
     <trait class="icon">
-      <traitParameter value="bi-people"/>
+      <traitParameter value="bi-people" />
     </trait>
     <trait class="tableSchema">
-      <traitParameter value="dbo"/>
+      <traitParameter value="dbo" />
     </trait>
   </traits>
 
   <dataInputs>
-    <dataInput id="personec" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    <dataInput id="personec"
+      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource"
+      channelId="sql" />
   </dataInputs>
 
   <tables>
@@ -54,12 +60,12 @@
           <names>
             <name language="sv">Personnr10</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Personnr 10 siffror</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Person/Personnr10</value>
@@ -71,7 +77,7 @@
           <names>
             <name language="sv">Kon</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Kön</description>
           </descriptions>
@@ -87,12 +93,12 @@
           <names>
             <name language="sv">Fornamn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Förnamn</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Person/Fornamn</value>
@@ -104,12 +110,12 @@
           <names>
             <name language="sv">Efternamn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Efternamn</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Person/Efternamn</value>
@@ -121,12 +127,12 @@
           <names>
             <name language="sv">PostAdress</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">PostAdress</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Person/PostAdress</value>
@@ -138,12 +144,12 @@
           <names>
             <name language="sv">Postnr</name>
           </names>
-          <dimlDataType id="integer" isNullable="false"/>
+          <dimlDataType id="integer" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Postnr</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Person/Postnr</value>
@@ -155,12 +161,12 @@
           <names>
             <name language="sv">Postort</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Postort</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Person/Postort</value>
@@ -208,12 +214,12 @@
           <names>
             <name language="sv">Personnr10</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Personnr 10 siffror</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Anstallning/Personnr10</value>
@@ -225,7 +231,7 @@
           <names>
             <name language="sv">AnstNr</name>
           </names>
-          <dimlDataType id="integer" isNullable="false"/>
+          <dimlDataType id="integer" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anställningsnr</description>
           </descriptions>
@@ -241,7 +247,7 @@
           <names>
             <name language="sv">Anstallningsdatum</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anställningens start</description>
           </descriptions>
@@ -257,13 +263,13 @@
           <names>
             <name language="sv">AnstallningTom</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anställning upphör om tidsbegräsning finns</description>
           </descriptions>
           <traits>
             <trait class="isGreaterThan">
-              <traitParameter key="column" value="Anstallningsdatum"/>
+              <traitParameter key="column" value="Anstallningsdatum" />
             </trait>
             <trait class="columnSources">
               <traitParameter>
@@ -276,7 +282,7 @@
           <names>
             <name language="sv">GiltigFrom</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Giltighet från och med</description>
           </descriptions>
@@ -292,13 +298,13 @@
           <names>
             <name language="sv">GiltigTom</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Giltighet till och med</description>
           </descriptions>
           <traits>
             <trait class="isGreaterThan">
-              <traitParameter key="column" value="GiltigFrom"/>
+              <traitParameter key="column" value="GiltigFrom" />
             </trait>
             <trait class="columnSources">
               <traitParameter>
@@ -311,7 +317,7 @@
           <names>
             <name language="sv">ManadsBelopp</name>
           </names>
-          <dimlDataType id="decimal" isNullable="false"/>
+          <dimlDataType id="decimal" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Lön</description>
           </descriptions>
@@ -370,12 +376,12 @@
           <names>
             <name language="sv">Personnr10</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Personnr 10 siffror</description>
           </descriptions>
           <traits>
-            <trait class="pii"/>
+            <trait class="pii" />
             <trait class="columnSources">
               <traitParameter>
                 <value>personec/Semester/Personnr10</value>
@@ -387,7 +393,7 @@
           <names>
             <name language="sv">AnstNr</name>
           </names>
-          <dimlDataType id="integer" isNullable="false"/>
+          <dimlDataType id="integer" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anställningsnr</description>
           </descriptions>
@@ -403,7 +409,7 @@
           <names>
             <name language="sv">SemFrom</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Semester start</description>
           </descriptions>
@@ -419,13 +425,13 @@
           <names>
             <name language="sv">SemTom</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Semester slut</description>
           </descriptions>
           <traits>
             <trait class="isGreaterThan">
-              <traitParameter key="column" value="SemFrom"/>
+              <traitParameter key="column" value="SemFrom" />
             </trait>
             <trait class="columnSources">
               <traitParameter>

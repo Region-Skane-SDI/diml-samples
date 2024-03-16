@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/anvandare.dataproduct" targetPlatform="msfabric">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/anvandare.dataproduct"
+	targetPlatform="msfabric">
 
 	<names>
 		<name language="sv">Användare</name>
@@ -10,7 +13,8 @@
 		<description type="plain" language="sv">Grunduppgifter om användare som behöver access till våra IT-system.</description>
 	</descriptions>
 
-	<dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly" dcatAvailability="available" dcatStatus="completed" />
+	<dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly"
+		dcatAvailability="available" dcatStatus="completed" />
 
 	<traits>
 		<trait class="category" subclass="informationOwner">
@@ -23,18 +27,20 @@
 			<traitParameter value="K1R1T1" />
 		</trait>
 		<trait class="isVirtual">
-			<traitParameter value="false"/>
+			<traitParameter value="false" />
 		</trait>
 		<trait class="icon">
-			<traitParameter value="bi-people"/>
+			<traitParameter value="bi-people" />
 		</trait>
 		<trait class="tableSchema">
-			<traitParameter value="dbo"/>
+			<traitParameter value="dbo" />
 		</trait>
 	</traits>
 
 	<dataInputs>
-		<dataInput id="profisee" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+		<dataInput id="profisee"
+			dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource"
+			channelId="sql" />
 	</dataInputs>
 
 	<tables>
@@ -54,7 +60,7 @@
 					<names>
 						<name language="sv">RSID</name>
 					</names>
-					<dimlDataType id="integer" isNullable="false"/>
+					<dimlDataType id="integer" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">RSID 6 siffror</description>
 					</descriptions>
@@ -70,12 +76,12 @@
 					<names>
 						<name language="sv">Personnr</name>
 					</names>
-					<dimlDataType id="ssn" isNullable="false"/>
+					<dimlDataType id="ssn" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Personnummer 10 siffror</description>
 					</descriptions>
 					<traits>
-						<trait class="pii"/>
+						<trait class="pii" />
 						<trait class="columnSources">
 							<traitParameter>
 								<value>profisee/MD_Anvandare/Personnr</value>
@@ -87,12 +93,12 @@
 					<names>
 						<name language="sv">Fornamn</name>
 					</names>
-					<dimlDataType id="string" isNullable="false"/>
+					<dimlDataType id="string" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Förnamn</description>
 					</descriptions>
 					<traits>
-						<trait class="pii"/>
+						<trait class="pii" />
 						<trait class="columnSources">
 							<traitParameter>
 								<value>profisee/MD_Anvandare/Fornamn</value>
@@ -104,12 +110,12 @@
 					<names>
 						<name language="sv">Efternamn</name>
 					</names>
-					<dimlDataType id="string" isNullable="false"/>
+					<dimlDataType id="string" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Efternamn</description>
 					</descriptions>
 					<traits>
-						<trait class="pii"/>
+						<trait class="pii" />
 						<trait class="columnSources">
 							<traitParameter>
 								<value>profisee/MD_Anvandare/Efternamn</value>
@@ -121,7 +127,7 @@
 					<names>
 						<name language="sv">AnstNr</name>
 					</names>
-					<dimlDataType id="integer" isNullable="true"/>
+					<dimlDataType id="integer" isNullable="true" />
 					<descriptions>
 						<description type="plain" language="sv">Anställningsnummer för anställda. I annat fall tomt</description>
 					</descriptions>
@@ -137,7 +143,7 @@
 					<names>
 						<name language="sv">Huvudplacering</name>
 					</names>
-					<dimlDataType id="integer" isNullable="false"/>
+					<dimlDataType id="integer" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Huvudplacering RSID 6 siffror</description>
 					</descriptions>
@@ -153,7 +159,7 @@
 					<names>
 						<name language="sv">Chef</name>
 					</names>
-					<dimlDataType id="integer" isNullable="false"/>
+					<dimlDataType id="integer" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Närmsta chef RSID 6 siffror</description>
 					</descriptions>
@@ -169,7 +175,7 @@
 					<names>
 						<name language="sv">Kategori</name>
 					</names>
-					<dimlDataType id="string" isNullable="false"/>
+					<dimlDataType id="string" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Om det avser Anställd, Konsult, Student, Övrigt</description>
 					</descriptions>

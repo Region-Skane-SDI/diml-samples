@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/besoksregistreringar.dataproduct" targetPlatform="msfabric">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/besoksregistreringar.dataproduct"
+  targetPlatform="msfabric">
 
   <names>
     <name language="sv">Besöksregistreringar</name>
@@ -10,7 +13,8 @@
     <description type="plain" language="sv">Innehåller uppgifter om patienter, besök och patientdiagnoser</description>
   </descriptions>
 
-  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily"
+    dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
@@ -19,34 +23,36 @@
       </traitParameter>
     </trait>
     <trait class="category" subclass="searchStructure">
-      <traitParameter value="1.1"/>
+      <traitParameter value="1.1" />
     </trait>
     <trait class="category" subclass="productOwner">
-      <traitParameter value="SDI Plattform"/>
+      <traitParameter value="SDI Plattform" />
     </trait>
     <trait class="category" subclass="contentClass">
-      <traitParameter value="Raw"/>
+      <traitParameter value="Raw" />
     </trait>
     <trait class="isUnlisted">
-      <traitParameter value="false"/>
+      <traitParameter value="false" />
     </trait>
     <trait class="isVirtual">
-      <traitParameter value="false"/>
+      <traitParameter value="false" />
     </trait>
     <trait class="icon">
-      <traitParameter value="bi-activity"/>
+      <traitParameter value="bi-activity" />
     </trait>
     <trait class="infoClass">
-      <traitParameter value="K1R1T1"/>
+      <traitParameter value="K1R1T1" />
     </trait>
     <trait class="tableSchema">
-      <traitParameter value="dbo"/>
+      <traitParameter value="dbo" />
     </trait>
-    <trait class="pii"/>
+    <trait class="pii" />
   </traits>
 
   <dataInputs>
-    <dataInput id ="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    <dataInput id="src1"
+      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource"
+      channelId="sql" />
   </dataInputs>
 
   <tables>
@@ -66,7 +72,7 @@
           <names>
             <name language="sv">PatientId</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Personnr 12 siffror</description>
           </descriptions>
@@ -82,7 +88,7 @@
           <names>
             <name language="sv">Personnr12</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Personnr 12 siffror</description>
           </descriptions>
@@ -98,7 +104,7 @@
           <names>
             <name language="sv">Kon</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Kön</description>
           </descriptions>
@@ -114,7 +120,7 @@
           <names>
             <name language="sv">Fornamn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Förnamn</description>
           </descriptions>
@@ -130,7 +136,7 @@
           <names>
             <name language="sv">Efternamn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Efternamn</description>
           </descriptions>
@@ -146,7 +152,7 @@
           <names>
             <name language="sv">PostAdress</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">PostAdress</description>
           </descriptions>
@@ -162,7 +168,7 @@
           <names>
             <name language="sv">Postnr</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Postnr</description>
           </descriptions>
@@ -178,7 +184,7 @@
           <names>
             <name language="sv">Postort</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Postort</description>
           </descriptions>
@@ -231,7 +237,7 @@
           <names>
             <name language="sv">PatientId</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Koppling till Patient tabell</description>
           </descriptions>
@@ -247,7 +253,7 @@
           <names>
             <name language="sv">BesokID</name>
           </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
+          <dimlDataType id="bigInteger" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Unikt id för besök/patient</description>
           </descriptions>
@@ -263,7 +269,7 @@
           <names>
             <name language="sv">BesokStatusId</name>
           </names>
-          <dimlDataType id="integer" isNullable="false"/>
+          <dimlDataType id="integer" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Koppling till besökstatus dimensionstabell</description>
           </descriptions>
@@ -279,7 +285,7 @@
           <names>
             <name language="sv">AvdelningMottagningId</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Koppling till avdelning/mottagnings dimentsions tabell. Anger var besöket ägde rum</description>
           </descriptions>
@@ -295,7 +301,7 @@
           <names>
             <name language="sv">Besok_BesokDatum</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">När besöket gjordes</description>
           </descriptions>
@@ -311,7 +317,7 @@
           <names>
             <name language="sv">Besok_ArAkut</name>
           </names>
-          <dimlDataType id="boolean" isNullable="false"/>
+          <dimlDataType id="boolean" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Akut J/N</description>
           </descriptions>
@@ -327,7 +333,7 @@
           <names>
             <name language="sv">Besok_Patientavgift</name>
           </names>
-          <dimlDataType id="integer" isNullable="false"/>
+          <dimlDataType id="integer" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Patientavvgift</description>
           </descriptions>
@@ -395,7 +401,7 @@
           <names>
             <name language="sv">PatientId</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Koppling till Patient-tabell</description>
             <description type="md" language="sv">Koppling till Patient-tabell</description>
@@ -412,7 +418,7 @@
           <names>
             <name language="sv">BesokId</name>
           </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
+          <dimlDataType id="bigInteger" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Koppling till Besök</description>
             <description type="md" language="sv">Koppling till Besök</description>
@@ -429,7 +435,7 @@
           <names>
             <name language="sv">PatientDiagnosId</name>
           </names>
-          <dimlDataType id="integer" isNullable="false"/>
+          <dimlDataType id="integer" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Löpnr för diagnos kopplade till patient/besök 1-15</description>
             <description type="md" language="sv">Löpnr för diagnos kopplade till patient/besök 1-15</description>
@@ -446,7 +452,7 @@
           <names>
             <name language="sv">PatientDiagnos_Diagnoskod</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Diagnoskod</description>
             <description type="md" language="sv">Diagnoskod</description>
@@ -463,7 +469,7 @@
           <names>
             <name language="sv">PatientDiagnos_DiagnosDatum</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Datum när diagnos sattes</description>
             <description type="md" language="sv">Datum när diagnos sattes</description>
@@ -480,7 +486,7 @@
           <names>
             <name language="sv">PatientDiagnos_HuvudEllerBidiagnos</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">"Är diagnos (H)uvuddiagnos eller (B)idiagnos</description>
             <description type="md" language="sv">"Är diagnos (H)uvuddiagnos eller (B)idiagnos</description>

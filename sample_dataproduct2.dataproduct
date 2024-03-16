@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
 	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct"
-	targetPlatform="msfabric"
-	>
+	targetPlatform="msfabric">
 
 	<names>
 		<name language="sv">Anställningar</name>
@@ -24,7 +24,8 @@
 		</description>
 	</descriptions>
 
-	<dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+	<dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily"
+		dcatAvailability="available" dcatStatus="completed" />
 
 	<traits>
 		<trait class="category" subclass="informationOwner.hierarchy">
@@ -67,8 +68,12 @@
 	</traits>
 
 	<dataInputs>
-		<dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="sql" />
-		<dataInput id="src2" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="parquetfile" />
+		<dataInput id="src1"
+			dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource"
+			channelId="sql" />
+		<dataInput id="src2"
+			dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource"
+			channelId="parquetfile" />
 	</dataInputs>
 
 	<tables>
@@ -86,7 +91,7 @@
 				<value>Personnr</value>
 			</businessKey>
 			<tableInstances>
-				<tableInstance stageId="PreStorage" alias="PersonPreStorage"/>
+				<tableInstance stageId="PreStorage" alias="PersonPreStorage" />
 			</tableInstances>
 			<columns>
 				<column id="Personnr">
@@ -111,8 +116,8 @@
 							</traitParameter>
 						</trait>
 					</traits>
-				
-			</column>
+
+				</column>
 				<column id="Namn">
 					<names>
 						<name language="sv">Namn</name>
@@ -272,20 +277,21 @@
 
 	<dataOutputs>
 		<fileOutputs>
-			<fileOutput channelId="csvfiles" fileFormat="csv" path="csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf">
-				<singleTableFileOutput path="person_{{timestamp}}.csv" table="Person" />
-				<singleTableFileOutput path="anstallning_{{timestamp}}.csv" table="Anstallning" />
-			</fileOutput>
-			<fileOutput channelId="parquetfile" fileFormat="parquet" path="utdata">
-				<multiTableFileOutput>
-					<includeTable id="Person" />
-					<includeTable id="Anstallning" />
-				</multiTableFileOutput>
-			</fileOutput>
-
-			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata" path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
-			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
-			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
+			<fileOutput channelId="csvfiles" fileFormat="csv" table="Person"
+				path="csv/person_{{timestamp}}.csv"
+				encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
+			<fileOutput channelId="csvfiles" fileFormat="csv" table="Anstallning"
+				path="csv/anstallning_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab"
+				rowSeparator="crlf" />
+			<fileOutput channelId="parquetfile" fileFormat="parquet" table="Person" path="utdata" />
+			<fileOutput channelId="parquetfile" fileFormat="parquet" table="Anstallning"
+				path="utdata" />
+			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata"
+				path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
+			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata"
+				path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
+			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata"
+				path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
 		</fileOutputs>
 
 		<sqlOutputs>
@@ -302,8 +308,10 @@
 		<dataStages>
 			<dataStage id="Landing" order="0" role="input" materialization="file">
 				<dataStageFiles>
-					<dataStageFile id="parquet_person" path="src2/person{{YYYYMMDD}}" fileFormat="parquet"/>
-					<dataStageFile id="parquet_anstallning" path="src2/anstallning{{YYYYMMDD}}" fileFormat="parquet"/>
+					<dataStageFile id="parquet_person" path="src2/person{{YYYYMMDD}}"
+						fileFormat="parquet" />
+					<dataStageFile id="parquet_anstallning" path="src2/anstallning{{YYYYMMDD}}"
+						fileFormat="parquet" />
 				</dataStageFiles>
 			</dataStage>
 			<dataStage id="Input" order="1" materialization="table">
@@ -321,26 +329,30 @@
 					</trait>
 				</traits>
 				<dataStageTables>
-					<dataStageTable tableId="Person" sourceTableId="Person" dataStageFileId="parquet_person">
+					<dataStageTable tableId="Person" sourceTableId="Person"
+						dataStageFileId="parquet_person">
 						<columnMappings>
 							<columnMapping columnId="Personnr" sourceColumnId="Personnr" />
 							<columnMapping columnId="Namn" sourceColumnId="Namn" />
 							<columnMapping columnId="Alder" sourceColumnId="Alder" />
 						</columnMappings>
 					</dataStageTable>
-					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning" dataStageFileId="parquet_anstallning"/>
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"
+						dataStageFileId="parquet_anstallning" />
 				</dataStageTables>
 			</dataStage>
 			<dataStage id="Control" order="2" materialization="view">
 				<dataStageTable tableId="Person" sourceTableId="Person" transformMethod="sql">
 					<columnMappings>
-						<columnMapping columnId="Personnr" sourceColumnId="Personnr" customSqlExpression="LEFT(Personnr, 12)" />
+						<columnMapping columnId="Personnr" sourceColumnId="Personnr"
+							customSqlExpression="LEFT(Personnr, 12)" />
 						<columnMapping columnId="Namn" sourceColumnId="Namn" />
 						<columnMapping columnId="Alder" sourceColumnId="Alder" />
 					</columnMappings>
 					<!--<logicBlocks></logicBlocks>-->
 				</dataStageTable>
-				<dataStageTable tableId="Anstallning" sourceTableId="Anstallning" dataStageFileId="parquet_anstallning" transformMethod="python"/>
+				<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"
+					dataStageFileId="parquet_anstallning" transformMethod="python" />
 			</dataStage>
 			<dataStage id="PreStorage" order="3" materialization="table">
 				<traits>
@@ -352,22 +364,25 @@
 					</trait>
 				</traits>
 				<dataStageTables>
-					<dataStageTable tableId="Person" sourceTableId="Person"/>
-					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"/>
+					<dataStageTable tableId="Person" sourceTableId="Person" />
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning" />
 				</dataStageTables>
 			</dataStage>
-			<dataStage id="Storage" order="4" role="output" materialization="table" tableUpdateType="upsert">
+			<dataStage id="Storage" order="4" role="output" materialization="table"
+				tableUpdateType="upsert">
 				<dataStageTables>
-					<dataStageTable tableId="Person" sourceTableId="Person"/>
-					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning"/>
+					<dataStageTable tableId="Person" sourceTableId="Person" />
+					<dataStageTable tableId="Anstallning" sourceTableId="Anstallning" />
 				</dataStageTables>
 			</dataStage>
 		</dataStages>
 
 		<dataIngests>
-			<!--<dataIngest id="load_job_1" dataInputId="src1">
+			<!--<dataIngest
+			id="load_job_1" dataInputId="src1">
 				<mappings>
-					<sqlToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000) {{ColumnList}} FROM {{SourceTable}}" >
+					<sqlToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000)
+			{{ColumnList}} FROM {{SourceTable}}" >
 						<columnMappings>
 							<columnMapping columnId="Personnr" sourceColumnId="Personnr" />
 							<columnMapping columnId="Namn" sourceColumnId="Namn" />
@@ -379,8 +394,10 @@
 			</dataIngest>-->
 			<dataIngest id="load_job_2" dataInputId="src2">
 				<mappings>
-					<parquetToFileMapping sourceFileId="parquet_person" dataStageFileId="parquet_person" />
-					<parquetToFileMapping sourceFileId="parquet_anstallning" dataStageFileId="parquet_anstallning" />
+					<parquetToFileMapping sourceFileId="parquet_person"
+						dataStageFileId="parquet_person" />
+					<parquetToFileMapping sourceFileId="parquet_anstallning"
+						dataStageFileId="parquet_anstallning" />
 				</mappings>
 			</dataIngest>
 		</dataIngests>

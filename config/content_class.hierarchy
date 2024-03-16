@@ -1,47 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/content_class.hierarchy">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/content_class.hierarchy">
 
   <traits>
     <trait class="extension" subclass="bki-namespace">
-      <traitParameter key="value" value="http://bki.skane.se/sdi/id/cs/contentclass"/>
+      <traitParameter key="value" value="http://bki.skane.se/sdi/id/cs/contentclass" />
     </trait>
   </traits>
 
-  <category id="Raw">
-    <names>
-      <name language="sv">Rådata</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Beskrivning...</description>
-    </descriptions>
-  </category>
+  <categories>
+    <category id="Raw">
+      <names>
+        <name language="sv">Rådata</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Beskrivning...</description>
+      </descriptions>
+    </category>
 
-  <category id="Std">
-    <names>
-      <name language="sv">Standardiserad data</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Beskrivning...</description>
-    </descriptions>
-  </category>
+    <category id="Std">
+      <names>
+        <name language="sv">Standardiserad data</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Beskrivning...</description>
+      </descriptions>
+    </category>
 
-  <category id="App">
-    <names>
-      <name language="sv">Applikationsanpassad data</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Beskrivning...</description>
-    </descriptions>
-  </category>
+    <category id="App">
+      <names>
+        <name language="sv">Applikationsanpassad data</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Beskrivning...</description>
+      </descriptions>
+    </category>
 
-  <category id="Syn">
-    <names>
-      <name language="sv">Syntetisk data</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Beskrivning...</description>
-    </descriptions>
-  </category>
+    <category id="Syn">
+      <names>
+        <name language="sv">Syntetisk data</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Beskrivning...</description>
+      </descriptions>
+    </category>
+  </categories>
 
 </hierarchy>

@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <traitClasses xmlns="https://github.com/Region-Skane-SDI/diml/traits"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/traits https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/traits.xsd">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/traits https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/schemas/v0/traits.xsd">
 	<traitClass class="category" requireSubclass="true" customParameters="false">
-		<!-- subclass is optional for many trait classes, but in this case it is required because it points to the hierarchy -->
-		<!-- customParameters determines if parameters that aren't mentioned under traitClassParameters are allowed -->
-		<!-- Traits have only descriptions, no need to have names in multiple languages. Assume name = id. -->
+		<!-- subclass is optional for many trait classes, but in this case it is required because it
+		points to the hierarchy -->
+		<!-- customParameters determines if parameters that aren't mentioned under
+		traitClassParameters are allowed -->
+		<!-- Traits have only descriptions, no need to have names in multiple languages. Assume name
+		= id. -->
 		<descriptions>
-			<description type="plain" language="sv">Category-traits hänvisar till hierarkier i dimlconfig-filen. Ange hierarki som subclass.</description>
+			<description type="plain" language="sv">Category-traits hänvisar till hierarkier i
+				dimlconfig-filen. Ange hierarki som subclass.</description>
 		</descriptions>
 		<traitClassParameters>
-			<traitClassParameter key="value" required="true" multiValue="true">				<!-- This parameter will be required and it is allowed to put an array of values into it. -->
+			<traitClassParameter key="value" required="true" multiValue="true">				<!-- This parameter
+				will be required and it is allowed to put an array of values into it. -->
 				<descriptions>
 					<description type="plain" language="sv">Kategorins DimlId</description>
 				</descriptions>
@@ -19,11 +25,13 @@
 
 	<traitClass class="icon" requireSubclass="false">
 		<descriptions>
-			<description type="plain" language="sv">Anger ikon för objektet, exempelvis "bi-wallet". Ikonerna är definierade här: https://icons.getbootstrap.com/</description>
+			<description type="plain" language="sv">Anger ikon för objektet, exempelvis "bi-wallet".
+				Ikonerna är definierade här: https://icons.getbootstrap.com/</description>
 		</descriptions>
 		<traitClassParameters>
 			<traitClassParameter key="value" required="true" multiValue="false">
-				<!-- This parameter will be required and it needs to have a single value (not a list of icons). -->
+				<!-- This parameter will be required and it needs to have a single value (not a list
+				of icons). -->
 				<descriptions>
 					<description type="plain" language="sv">Namn på ikonen</description>
 				</descriptions>
@@ -33,7 +41,8 @@
 
 	<traitClass class="infoClass">
 		<descriptions>
-			<description type="plain" language="sv">Anger informationsklass för objektet, exempelvis K3R3T1.</description>
+			<description type="plain" language="sv">Anger informationsklass för objektet, exempelvis
+				K3R3T1.</description>
 		</descriptions>
 		<traitClassParameters>
 			<traitClassParameter key="value" required="true" multiValue="false">
@@ -46,13 +55,15 @@
 
 	<traitClass class="pii">
 		<descriptions>
-			<description type="plain" language="sv">Anger att ett objekt innehåller Personligt Identifierbar Information.</description>
+			<description type="plain" language="sv">Anger att ett objekt innehåller Personligt
+				Identifierbar Information.</description>
 		</descriptions>
 	</traitClass>
 
 	<traitClass class="extension" requireSubclass="true" customParameters="true">
 		<descriptions>
-			<description type="plain" language="sv">Extensions är generella traits som är till för valfria utökningar av Diml.</description>
+			<description type="plain" language="sv">Extensions är generella traits som är till för
+				valfria utökningar av Diml.</description>
 		</descriptions>
 	</traitClass>
 </traitClasses>

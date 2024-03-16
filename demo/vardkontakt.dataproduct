@@ -50,7 +50,9 @@
   </traits>
 
   <dataInputs>
-    <dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    <dataInput id="src1"
+      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource"
+      channelId="sql" />
   </dataInputs>
 
   <tables>

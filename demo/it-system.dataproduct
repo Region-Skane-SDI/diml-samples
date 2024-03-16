@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/it-system.dataproduct" targetPlatform="msfabric">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/it-system.dataproduct"
+  targetPlatform="msfabric">
 
   <names>
     <name language="sv">IT-system</name>
@@ -10,37 +13,40 @@
     <description type="plain" language="sv">Grunduppgifter om Region Skånes centrala IT-system.</description>
   </descriptions>
 
-  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly" dcatAvailability="available" dcatStatus="completed" />
+  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly"
+    dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
       <traitParameter value="IT" />
     </trait>
     <trait class="category" subclass="searchStructure">
-      <traitParameter value="1.1"/>
+      <traitParameter value="1.1" />
     </trait>
     <trait class="category" subclass="productOwner">
-      <traitParameter value="SDI Plattform"/>
+      <traitParameter value="SDI Plattform" />
     </trait>
     <trait class="category" subclass="contentClass">
-      <traitParameter value="standard"/>
+      <traitParameter value="standard" />
     </trait>
     <trait class="isVirtual">
-      <traitParameter value="false"/>
+      <traitParameter value="false" />
     </trait>
     <trait class="icon">
-      <traitParameter value="bi-laptop"/>
+      <traitParameter value="bi-laptop" />
     </trait>
     <trait class="infoClass">
-      <traitParameter value="K1R1T1"/>
+      <traitParameter value="K1R1T1" />
     </trait>
     <trait class="tableSchema">
-      <traitParameter value="dbo"/>
+      <traitParameter value="dbo" />
     </trait>
   </traits>
 
   <dataInputs>
-    <dataInput id="profisee" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    <dataInput id="profisee"
+      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource"
+      channelId="sql" />
   </dataInputs>
 
   <tables>
@@ -60,7 +66,7 @@
           <names>
             <name language="sv">ID</name>
           </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
+          <dimlDataType id="bigInteger" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">ID 6 siffror.</description>
           </descriptions>
@@ -76,7 +82,7 @@
           <names>
             <name language="sv">Namn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Namn på IT-systemet.</description>
           </descriptions>
@@ -92,7 +98,7 @@
           <names>
             <name language="sv">Beskrivning</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">En beskrivning av IT-systemet.</description>
           </descriptions>
@@ -108,7 +114,7 @@
           <names>
             <name language="sv">Kategori</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger vilken kategori IT-systemet tillhör.</description>
           </descriptions>
@@ -124,7 +130,7 @@
           <names>
             <name language="sv">SAO</name>
           </names>
-          <dimlDataType id="string" isNullable="true"/>
+          <dimlDataType id="string" isNullable="true" />
           <descriptions>
             <description type="plain" language="sv">SAO. I annat fall null.</description>
           </descriptions>
@@ -140,7 +146,7 @@
           <names>
             <name language="sv">Riskanalyserat</name>
           </names>
-          <dimlDataType id="date" isNullable="false"/>
+          <dimlDataType id="date" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Datum för senaste riskanalys.</description>
           </descriptions>

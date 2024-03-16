@@ -1,895 +1,973 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/search_structure.hierarchy">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/search_structure.hierarchy">
 
   <traits>
     <trait class="extension" subclass="bki-namespace">
-      <traitParameter key="value" value="http://bki.skane.se/sdi/id/ss/"/>
+      <traitParameter key="value" value="http://bki.skane.se/sdi/id/ss/" />
     </trait>
   </traits>
 
-  <category id="ekonomi1">
-    <names>
-      <name language="sv">Ekonomi</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter som rör ekonomisk information.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>direkonomi</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+  <categories>
+    <category id="ekonomi1">
+      <names>
+        <name language="sv">Ekonomi</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter som rör ekonomisk
+          information.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>direkonomi</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="ekonomi2">
-        <names>
-          <name language="sv">Ekonomi</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter som rör ekonomisk information exkl vårdekonomi.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>direkonomi</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="ekonomi"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+      <subcategories>
+        <category id="ekonomi2">
+          <names>
+            <name language="sv">Ekonomi</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter som rör ekonomisk
+              information exkl vårdekonomi.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>direkonomi</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="ekonomi" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="vardekonomi2">
-        <names>
-          <name language="sv">Vårdekonomi</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Delområdet Ekonomi omfattar dataprodukter som rör ekonomisk information.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>direkonomi</value>
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="debiteringhs"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+        <category id="vardekonomi2">
+          <names>
+            <name language="sv">Vårdekonomi</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Delområdet Ekonomi omfattar dataprodukter som
+              rör ekonomisk information.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>direkonomi</value>
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="debiteringhs" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
 
-  <category id="forkom1">
-    <names>
-      <name language="sv">Förändring och kommunikation</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter om t.ex.  program, projekt, uppdrag och kommunikation.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirkom</value>
-          <value>infoagare</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+    <category id="forkom1">
+      <names>
+        <name language="sv">Förändring och kommunikation</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter om t.ex. program, projekt,
+          uppdrag och kommunikation.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirkom</value>
+            <value>infoagare</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="forandr2">
-        <names>
-          <name language="sv">Program, projekt och uppdrag</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter om förändringshantering avseende att förflytta individer, grupper och organisationer från nuvarande tillstånd till ett framtida önskat tillstånd genom  t.ex. program, projekt och uppdrag.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>infoagare</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="forandr"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+      <subcategories>
+        <category id="forandr2">
+          <names>
+            <name language="sv">Program, projekt och uppdrag</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter om förändringshantering
+              avseende att förflytta individer, grupper och organisationer från nuvarande tillstånd
+              till ett framtida önskat tillstånd genom t.ex. program, projekt och uppdrag.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>infoagare</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="forandr" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="komomark2">
-        <names>
-          <name language="sv">Kommunikation</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Området omfattar dataprodukter som rör kommunikation och marknadsföring.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirkom</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="komomark"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+        <category id="komomark2">
+          <names>
+            <name language="sv">Kommunikation</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Området omfattar dataprodukter som rör
+              kommunikation och marknadsföring.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirkom</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="komomark" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
 
-  <category id="hrorg1">
-    <names>
-      <name language="sv">HR, organisation och person</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter som rör om HR, personal och Person.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirhr</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+    <category id="hrorg1">
+      <names>
+        <name language="sv">HR, organisation och person</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter som rör om HR, personal och
+          Person.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirhr</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="hr2">
-        <names>
-          <name language="sv">HR</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Området omfattar dataprodukter avseende personal och organisationsutveckling.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhr</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="hr"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+      <subcategories>
+        <category id="hr2">
+          <names>
+            <name language="sv">HR</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Området omfattar dataprodukter avseende personal
+              och organisationsutveckling.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhr</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="hr" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
 
-  <category id="hs1">
-    <names>
-      <name language="sv">Hälsa och vård</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter som är relaterad till patient och styrning av vård och hälsa. Hälsa och vård definieras som den verksamhet som bedrivs enligt Hälso- och sjukvårdslagen (HSL) oberoende av huvudman och organisation.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirhs</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+    <category id="hs1">
+      <names>
+        <name language="sv">Hälsa och vård</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter som är relaterad till patient
+          och styrning av vård och hälsa. Hälsa och vård definieras som den verksamhet som bedrivs
+          enligt Hälso- och sjukvårdslagen (HSL) oberoende av huvudman och organisation.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirhs</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="befhalsa2">
-        <names>
-          <name language="sv">Befolkningshälsa</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att övervaka och främja befolkningens hälsa.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="befhals"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+      <subcategories>
+        <category id="befhalsa2">
+          <names>
+            <name language="sv">Befolkningshälsa</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att övervaka och
+              främja befolkningens hälsa.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="befhals" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="delaktinv2">
-        <names>
-          <name language="sv">Delaktighet invånare</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende invånarens medverkan i sin egen hälsa och vård samt bokning av aktiviteter och resurser som rör den enskilde patienten.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="befhalsa"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="samhov2">
-        <names>
-          <name language="sv">Samordning av hälsa och vård</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att planera och besluta om behandling och åtgärder, samarbete mellan aktörer inom hälsa och vård.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="samhov"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="undobed2">
-        <names>
-          <name language="sv">Undersökning och bedömning</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att samla in, sammanställa och bedöma patientinformation.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="undobed"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="vardatg2">
-        <names>
-          <name language="sv">Vårdåtgärder</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att lösa eller minimera ett hälsoproblem genom behandlingar, terapi och invasiva åtgärder samt dataprodukter avseende donationshantering och förskrivning av hjälpmedel.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="vardatg"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="kunstyr2">
-        <names>
-          <name language="sv">Kunskapsstyrning</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende styrning av informatik, processer, kunskaps- och beslutsstöd.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="kunstyr"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="samoutbud2">
-        <names>
-          <name language="sv">Strategisk samverkan och utbudsstyrning</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende behov, efterfrågan och utbud av hälso- och sjukvårdstjänster och samverkan i enlighet med samhällets och befolkningens behov och krav.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="samoutbud"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="sakolag2">
-        <names>
-          <name language="sv">Säkerhet, lagefterlevnad och tillsyn</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Område omfattar dataprodukter avseende patientsäker vård och efterlevnad av lagar, förordningar och föreskrifter samt upprättande av riktlinjer och rutiner.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="sakolag"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="forskoutb2">
-        <names>
-          <name language="sv">Forskning och utbildning</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att generera ny kunskap om hälsa och sjukvård och socialt arbete med hjälp av vetenskaplig metodik samt för att utbilda vårdens medarbetare, studenter, praktikanter och specialister.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="forskoutb"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="dokumentation2">
-        <names>
-          <name language="sv">Dokumentation</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att dokumentera och presentera hälso- och vårdinformation.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirhs</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="dokhs"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+        <category id="delaktinv2">
+          <names>
+            <name language="sv">Delaktighet invånare</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende invånarens
+              medverkan i sin egen hälsa och vård samt bokning av aktiviteter och resurser som rör
+              den enskilde patienten.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="befhalsa" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="samhov2">
+          <names>
+            <name language="sv">Samordning av hälsa och vård</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att planera och
+              besluta om behandling och åtgärder, samarbete mellan aktörer inom hälsa och vård.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="samhov" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="undobed2">
+          <names>
+            <name language="sv">Undersökning och bedömning</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att samla in,
+              sammanställa och bedöma patientinformation.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="undobed" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="vardatg2">
+          <names>
+            <name language="sv">Vårdåtgärder</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att lösa eller
+              minimera ett hälsoproblem genom behandlingar, terapi och invasiva åtgärder samt
+              dataprodukter avseende donationshantering och förskrivning av hjälpmedel.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="vardatg" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="kunstyr2">
+          <names>
+            <name language="sv">Kunskapsstyrning</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende styrning av
+              informatik, processer, kunskaps- och beslutsstöd.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="kunstyr" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="samoutbud2">
+          <names>
+            <name language="sv">Strategisk samverkan och utbudsstyrning</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende behov,
+              efterfrågan och utbud av hälso- och sjukvårdstjänster och samverkan i enlighet med
+              samhällets och befolkningens behov och krav.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="samoutbud" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="sakolag2">
+          <names>
+            <name language="sv">Säkerhet, lagefterlevnad och tillsyn</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Område omfattar dataprodukter avseende
+              patientsäker vård och efterlevnad av lagar, förordningar och föreskrifter samt
+              upprättande av riktlinjer och rutiner.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="sakolag" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="forskoutb2">
+          <names>
+            <name language="sv">Forskning och utbildning</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att generera ny
+              kunskap om hälsa och sjukvård och socialt arbete med hjälp av vetenskaplig metodik
+              samt för att utbilda vårdens medarbetare, studenter, praktikanter och specialister.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="forskoutb" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="dokumentation2">
+          <names>
+            <name language="sv">Dokumentation</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att dokumentera
+              och presentera hälso- och vårdinformation.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirhs</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="dokhs" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
 
-  <category id="infra1">
-    <names>
-      <name language="sv">Infrastruktur</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter om infrastruktur som hanteras av Region Skåne så som bl.a. kollektivtrafik, IT/MT, datanät,telefoni, fastigheter, vatten och avlopp, avfall och återvinning.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirtrafik</value>
-          <value>diritmt</value>
-          <value>dirfastighet</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+    <category id="infra1">
+      <names>
+        <name language="sv">Infrastruktur</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter om infrastruktur som hanteras
+          av Region Skåne så som bl.a. kollektivtrafik, IT/MT, datanät,telefoni, fastigheter, vatten
+          och avlopp, avfall och återvinning.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirtrafik</value>
+            <value>diritmt</value>
+            <value>dirfastighet</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="trafikoinfra2">
-        <names>
-          <name language="sv">Trafik och infrastruktur</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende hantering av det kommunala ansvaret inom de 4 trafikslagen (vägtrafik, järnvägstrafik, sjöfart och luftfart) samt övrig infrastruktur i form av energi och värme, vatten och avlopp, avfall och återvinning, transporter, datanät och parkförvaltning.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirtrafik</value>
-              <value>fastighet</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="trafikoinfra"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+      <subcategories>
+        <category id="trafikoinfra2">
+          <names>
+            <name language="sv">Trafik och infrastruktur</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende hantering av det
+              kommunala ansvaret inom de 4 trafikslagen (vägtrafik, järnvägstrafik, sjöfart och
+              luftfart) samt övrig infrastruktur i form av energi och värme, vatten och avlopp,
+              avfall och återvinning, transporter, datanät och parkförvaltning.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirtrafik</value>
+                <value>fastighet</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="trafikoinfra" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="kollektiv2">
-        <names>
-          <name language="sv">Kollektivtrafik</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende kollektivtrafik.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirtrafik</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="kollektiv"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="itmtlev2">
-        <names>
-          <name language="sv">IT/MT leverans</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende IT-applikationer/-produkter/-tjänster samt gemensam IT såsom nätverk, telefoni, lagrings-, server- och klientplattform.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>diritmt</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="itmtlev"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="syslivscyk2">
-        <names>
-          <name language="sv">System livscykelhantering</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att hantera system och dess livscykler. System definieras här som en kombination av samverkande element som organiseras för att uppnå ett eller flera angivna mål. Systemelement kan utgöras av såväl tekniska element (hårdvara och mjukvara) som människor.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>infoagare</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="syslivscyk"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="lokofast2">
-        <names>
-          <name language="sv">Fastighet</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att livscykelhantera fastighetsbeståndet så att det vidmakthålls och vidareutvecklas ändamålsenligt.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirfastighet</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="lokofast"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+        <category id="kollektiv2">
+          <names>
+            <name language="sv">Kollektivtrafik</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende kollektivtrafik.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirtrafik</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="kollektiv" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="itmtlev2">
+          <names>
+            <name language="sv">IT/MT leverans</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende
+              IT-applikationer/-produkter/-tjänster samt gemensam IT såsom nätverk, telefoni,
+              lagrings-, server- och klientplattform.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>diritmt</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="itmtlev" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="syslivscyk2">
+          <names>
+            <name language="sv">System livscykelhantering</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att hantera
+              system och dess livscykler. System definieras här som en kombination av samverkande
+              element som organiseras för att uppnå ett eller flera angivna mål. Systemelement kan
+              utgöras av såväl tekniska element (hårdvara och mjukvara) som människor.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>infoagare</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="syslivscyk" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="lokofast2">
+          <names>
+            <name language="sv">Fastighet</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att
+              livscykelhantera fastighetsbeståndet så att det vidmakthålls och vidareutvecklas
+              ändamålsenligt.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirfastighet</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="lokofast" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
 
-  <category id="inkologist1">
-    <names>
-      <name language="sv">Inköp och hantering varor och tjänster</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter som rör anskaffning, logistik, materialförsörjning mm.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>direkonomi</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+    <category id="inkologist1">
+      <names>
+        <name language="sv">Inköp och hantering varor och tjänster</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter som rör anskaffning,
+          logistik, materialförsörjning mm.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>direkonomi</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="resurshant2">
-        <names>
-          <name language="sv">Resurs</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende resurser och kringtjänster som krävs i förhållande till dels den planerade hälsa, vård och omsorgen och dels tillgänglig kapacitet.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirservice</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="resurshant"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+      <subcategories>
+        <category id="resurshant2">
+          <names>
+            <name language="sv">Resurs</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende resurser och
+              kringtjänster som krävs i förhållande till dels den planerade hälsa, vård och omsorgen
+              och dels tillgänglig kapacitet.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirservice</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="resurshant" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="logistik2">
-        <names>
-          <name language="sv">Logistik</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende materialflöden samt till dessa kopplade resurs-, dataprodukters- och monetära flöden, utifrån ett livscykelperspektiv. </description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirservice</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="logistik"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="inkop2">
-        <names>
-          <name language="sv">Inköp</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende strategiska upphandlingar och avtal.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>direkonomi</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="inkop"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+        <category id="logistik2">
+          <names>
+            <name language="sv">Logistik</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende materialflöden
+              samt till dessa kopplade resurs-, dataprodukters- och monetära flöden, utifrån ett
+              livscykelperspektiv. </description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirservice</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="logistik" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="inkop2">
+          <names>
+            <name language="sv">Inköp</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende strategiska
+              upphandlingar och avtal.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>direkonomi</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="inkop" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
 
-  <category id="reguppd1">
-    <names>
-      <name language="sv">Regionalt uppdrag</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter som rör de kärnverksmheter som Region Skåne har som inte rör hälsa och vård samt kollektivtrafik.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirutv</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+    <category id="reguppd1">
+      <names>
+        <name language="sv">Regionalt uppdrag</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter som rör de kärnverksmheter
+          som Region Skåne har som inte rör hälsa och vård samt kollektivtrafik.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirutv</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="regutv2">
-        <names>
-          <name language="sv">Regional utveckling</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende utvecklingsfrågor som har betydelse för medborgarna, t.ex. regionalt tillväxtarbete, länsövergripande bredbandsutbyggnad, EU:s strukturfondsprogram, transportinfrastruktur mm.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirutv</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="regutv"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-walalet"/>
-          </trait>
-        </traits>
-      </category>
+      <subcategories>
+        <category id="regutv2">
+          <names>
+            <name language="sv">Regional utveckling</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende
+              utvecklingsfrågor som har betydelse för medborgarna, t.ex. regionalt tillväxtarbete,
+              länsövergripande bredbandsutbyggnad, EU:s strukturfondsprogram, transportinfrastruktur
+              mm.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirutv</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="regutv" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-walalet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="narlivoarboint2">
-        <names>
-          <name language="sv">Näringsliv, arbete och integration</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att stödja och främja näringsliv, arbetsmarknad och integration i kommun och region.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirutv</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="narlivoarboint"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="miljoosam2">
-        <names>
-          <name language="sv">Miljö och samhällsskydd</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att värna om miljön, människors liv och hälsa och innefattar exempeltvis samhällsskydd och beredskap, miljö och hälsoskydd, räddningstjänsten.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirutv</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="miljoosam"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-      <category id="kultoturism2">
-        <names>
-          <name language="sv">Kultur och turism</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende det kulturella utbudet, tillgängliggöra offentlig konst, hantering av fysiskt kulturarv och historiska arkiv samt turism.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirutv</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="kultoturism"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+        <category id="narlivoarboint2">
+          <names>
+            <name language="sv">Näringsliv, arbete och integration</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att stödja och
+              främja näringsliv, arbetsmarknad och integration i kommun och region.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirutv</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="narlivoarboint" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="miljoosam2">
+          <names>
+            <name language="sv">Miljö och samhällsskydd</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att värna om
+              miljön, människors liv och hälsa och innefattar exempeltvis samhällsskydd och
+              beredskap, miljö och hälsoskydd, räddningstjänsten.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirutv</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="miljoosam" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+        <category id="kultoturism2">
+          <names>
+            <name language="sv">Kultur och turism</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende det kulturella
+              utbudet, tillgängliggöra offentlig konst, hantering av fysiskt kulturarv och
+              historiska arkiv samt turism.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirutv</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="kultoturism" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
 
-  <category id="styrled1">
-    <names>
-      <name language="sv">Styrning och ledning Region Skåne</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Omfattar dataprodukter som rör styrning och ledning av Region Skånes verksamheter ur ett koncern och invånareperspektiv, samt det stöd som krävs där det finns lagkrav mm. </description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirkansli</value>
-        </traitParameter>
-      </trait>
-      <trait class="icon">
-        <traitParameter key="value" value="bi-wallet"/>
-      </trait>
-    </traits>
+    <category id="styrled1">
+      <names>
+        <name language="sv">Styrning och ledning Region Skåne</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Omfattar dataprodukter som rör styrning och ledning
+          av Region Skånes verksamheter ur ett koncern och invånareperspektiv, samt det stöd som
+          krävs där det finns lagkrav mm. </description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirkansli</value>
+          </traitParameter>
+        </trait>
+        <trait class="icon">
+          <traitParameter key="value" value="bi-wallet" />
+        </trait>
+      </traits>
 
-    <subcategories>
-      <category id="krisosak2">
-        <names>
-          <name language="sv">Krishantering och säkerhet</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende att förebygga och hantera kriser i verksamheten t.ex. omfattas risk- och sårbarhetshantering, kontinuitetsplanering, krisledning, beredskap och civilförsvar, systematiskt brandskyddsarbete, säkerhet och trygghet.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirkansli</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="krisosak"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+      <subcategories>
+        <category id="krisosak2">
+          <names>
+            <name language="sv">Krishantering och säkerhet</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende att förebygga
+              och hantera kriser i verksamheten t.ex. omfattas risk- och sårbarhetshantering,
+              kontinuitetsplanering, krisledning, beredskap och civilförsvar, systematiskt
+              brandskyddsarbete, säkerhet och trygghet.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirkansli</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="krisosak" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="styr2">
-        <names>
-          <name language="sv">Styrning</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende strukturer och ramar för verksamhetstyrning och styrning av produkter och tjänster och dess efterlevnad.  Avser strategisk, taktisk eller operativ nivå som exempelvis hela organisationen, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirkansli</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="styr"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+        <category id="styr2">
+          <names>
+            <name language="sv">Styrning</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende strukturer och
+              ramar för verksamhetstyrning och styrning av produkter och tjänster och dess
+              efterlevnad. Avser strategisk, taktisk eller operativ nivå som exempelvis hela
+              organisationen, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirkansli</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="styr" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="ledning2">
-        <names>
-          <name language="sv">Ledning</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende  exekvering av definerade strukturer och fattade beslut. Avser strategisk, taktisk eller operativ nivå så som hela verksamheten, en förvaltning, ett verksamhetsområde, en enhet eller ett projekt. Exempel: prioritering, flödes- och kapacitetsplanering, rätt nyttjande av de totala resurserna, kompetensförsörjning, finansiell planering, definition av kvalitetsmått och arbete med ständiga förbättringar.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirkansli</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="ledning"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+        <category id="ledning2">
+          <names>
+            <name language="sv">Ledning</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende exekvering av
+              definerade strukturer och fattade beslut. Avser strategisk, taktisk eller operativ
+              nivå så som hela verksamheten, en förvaltning, ett verksamhetsområde, en enhet eller
+              ett projekt. Exempel: prioritering, flödes- och kapacitetsplanering, rätt nyttjande av
+              de totala resurserna, kompetensförsörjning, finansiell planering, definition av
+              kvalitetsmått och arbete med ständiga förbättringar.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirkansli</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="ledning" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="juridik2">
-        <names>
-          <name language="sv">Juridikhantering</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende juridiskt stöd till verksamheten för att säkerställa efterlevnad av lagar och förordningar.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirkansli</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="juridik"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+        <category id="juridik2">
+          <names>
+            <name language="sv">Juridikhantering</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende juridiskt stöd
+              till verksamheten för att säkerställa efterlevnad av lagar och förordningar.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirkansli</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="juridik" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="infohant2">
-        <names>
-          <name language="sv">Informationshantering</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende organisationens information och data.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>infoagare</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="infohant"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
+        <category id="infohant2">
+          <names>
+            <name language="sv">Informationshantering</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende organisationens
+              information och data.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>infoagare</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="infohant" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
 
-      <category id="demokrati2">
-        <names>
-          <name language="sv">Demokrati</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Omfattar dataprodukter avseende hanteringen av lagkrav som en offentlig organisation måste ta hänsyn till gällande demokrati och insyn som t.ex. Kommunallagen (2017:725), Tryckfrihetsförordningen (1949:105) 2 kap. Allmänna handlingars offentlighet, Offentlighets- och sekretesslagen (2009:400), Vallagen (2005:837) och Valförordningen (2005:874). Exempel är expediering av allmänna handlingar samt sekretessprövning.</description>
-        </descriptions>
-        <traits>
-          <trait class="category" subclass="informationOwner">
-            <traitParameter key="value">
-              <value>dirkansli</value>
-            </traitParameter>
-          </trait>
-          <trait class="category" subclass="informationArea">
-            <traitParameter key="value" value="demokrati"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
+        <category id="demokrati2">
+          <names>
+            <name language="sv">Demokrati</name>
+          </names>
+          <descriptions>
+            <description type="plain" language="sv">Omfattar dataprodukter avseende hanteringen av
+              lagkrav som en offentlig organisation måste ta hänsyn till gällande demokrati och
+              insyn som t.ex. Kommunallagen (2017:725), Tryckfrihetsförordningen (1949:105) 2 kap.
+              Allmänna handlingars offentlighet, Offentlighets- och sekretesslagen (2009:400),
+              Vallagen (2005:837) och Valförordningen (2005:874). Exempel är expediering av allmänna
+              handlingar samt sekretessprövning.</description>
+          </descriptions>
+          <traits>
+            <trait class="category" subclass="informationOwner">
+              <traitParameter key="value">
+                <value>dirkansli</value>
+              </traitParameter>
+            </trait>
+            <trait class="category" subclass="informationArea">
+              <traitParameter key="value" value="demokrati" />
+            </trait>
+            <trait class="icon">
+              <traitParameter key="value" value="bi-wallet" />
+            </trait>
+          </traits>
+        </category>
+      </subcategories>
+    </category>
+  </categories>
+
 </hierarchy>

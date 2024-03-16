@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ambulansdata.dataproduct" targetPlatform="msfabric">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ambulansdata.dataproduct"
+  targetPlatform="msfabric">
 
   <names>
     <name language="sv">Ambulansdata</name>
@@ -10,41 +13,44 @@
     <description type="plain" language="sv">Innehåller uppgifter om stationer, fordon, uppdrag och patienter</description>
   </descriptions>
 
-  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily"
+    dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
       <traitParameter value="dirhs" />
     </trait>
     <trait class="category" subclass="searchStructure">
-      <traitParameter value="1.1"/>
+      <traitParameter value="1.1" />
     </trait>
     <trait class="category" subclass="productOwner">
-      <traitParameter value="SDI Plattform"/>
+      <traitParameter value="SDI Plattform" />
     </trait>
     <trait class="category" subclass="contentClass">
-      <traitParameter value="Raw"/>
+      <traitParameter value="Raw" />
     </trait>
     <trait class="isUnlisted">
-      <traitParameter value="false"/>
+      <traitParameter value="false" />
     </trait>
     <trait class="isVirtual">
-      <traitParameter value="false"/>
+      <traitParameter value="false" />
     </trait>
     <trait class="icon">
-      <traitParameter value="bi-activity"/>
+      <traitParameter value="bi-activity" />
     </trait>
     <trait class="infoClass">
-      <traitParameter value="K1R1T1"/>
+      <traitParameter value="K1R1T1" />
     </trait>
     <trait class="tableSchema">
-      <traitParameter value="dbo"/>
+      <traitParameter value="dbo" />
     </trait>
-    <trait class="pii"/>
+    <trait class="pii" />
   </traits>
 
   <dataInputs>
-    <dataInput id ="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    <dataInput id="src1"
+      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource"
+      channelId="sql" />
   </dataInputs>
 
   <tables>
@@ -64,7 +70,7 @@
           <names>
             <name language="sv">StationId</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Löpnummer som identifierar station</description>
           </descriptions>
@@ -80,7 +86,7 @@
           <names>
             <name language="sv">Stationsnamn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Stationsnamn</description>
           </descriptions>
@@ -96,7 +102,7 @@
           <names>
             <name language="sv">Omrade</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Område</description>
           </descriptions>
@@ -148,7 +154,7 @@
           <names>
             <name language="sv">RegNr</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Registreringsnummer fordon</description>
           </descriptions>
@@ -164,7 +170,7 @@
           <names>
             <name language="sv">Tillverkare</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Beskrivning...</description>
           </descriptions>
@@ -180,7 +186,7 @@
           <names>
             <name language="sv">StationId</name>
           </names>
-          <dimlDataType id="integer" isNullable="false"/>
+          <dimlDataType id="integer" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Beskrivning...</description>
           </descriptions>
@@ -232,7 +238,7 @@
           <names>
             <name language="sv">UtryckningNr</name>
           </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
+          <dimlDataType id="bigInteger" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Löpnummer på utryckning</description>
           </descriptions>
@@ -248,7 +254,7 @@
           <names>
             <name language="sv">RegNr</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Registreringsnummer fordon</description>
           </descriptions>
@@ -264,7 +270,7 @@
           <names>
             <name language="sv">StationId</name>
           </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
+          <dimlDataType id="bigInteger" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Station som fick larmetr</description>
           </descriptions>
@@ -280,7 +286,7 @@
           <names>
             <name language="sv">PatientPersonnr</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Personnummer på patient</description>
           </descriptions>
@@ -296,7 +302,7 @@
           <names>
             <name language="sv">Prio</name>
           </names>
-          <dimlDataType id="smallInteger" isNullable="false"/>
+          <dimlDataType id="smallInteger" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Prioritet på uppdraget</description>
             <description type="md" language="sv">Prioritet på uppdraget</description>
@@ -313,7 +319,7 @@
           <names>
             <name language="sv">Tid</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Larm inkommit tid</description>
             <description type="md" language="sv">Larm inkommit tid</description>
@@ -373,7 +379,7 @@
           <names>
             <name language="sv">Personnr10</name>
           </names>
-          <dimlDataType id="ssn" isNullable="false"/>
+          <dimlDataType id="ssn" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Personnr 10 siffror</description>
           </descriptions>
@@ -389,7 +395,7 @@
           <names>
             <name language="sv">Kon</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Kön</description>
             <description type="md" language="sv">Kön</description>
@@ -406,7 +412,7 @@
           <names>
             <name language="sv">Fornamn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Förnamn</description>
           </descriptions>
@@ -422,7 +428,7 @@
           <names>
             <name language="sv">Efternamn</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Efternamn</description>
           </descriptions>
@@ -438,7 +444,7 @@
           <names>
             <name language="sv">Namn</name>
           </names>
-          <dimlDataType id="fullName" isNullable="false"/>
+          <dimlDataType id="fullName" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Förnamn och efternamn</description>
           </descriptions>
@@ -454,7 +460,7 @@
           <names>
             <name language="sv">PostAdress</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Postadress</description>
           </descriptions>
@@ -470,7 +476,7 @@
           <names>
             <name language="sv">PostNr</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">PostNr</description>
           </descriptions>
@@ -486,7 +492,7 @@
           <names>
             <name language="sv">Postort</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Postort</description>
           </descriptions>

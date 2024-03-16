@@ -1,20 +1,25 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/product_owner.hierarchy">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/product_owner.hierarchy">
 
   <traits>
     <trait class="extension" subclass="bki-namespace">
-      <traitParameter key="value" value="http://bki.skane.se/sdi/id/prodOwner/"/>
+      <traitParameter key="value" value="http://bki.skane.se/sdi/id/prodOwner/" />
     </trait>
   </traits>
 
-  <category id="SDI Plattform">
-    <names>
-      <name language="sv">Produktägare SDI Plattform</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Förvaltar PBC-produkter som finns på SDI plattformen.</description>
-    </descriptions>
-  </category>
+  <categories>
+    <category id="SDI Plattform">
+      <names>
+        <name language="sv">Produktägare SDI Plattform</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Förvaltar PBC-produkter som finns på SDI
+          plattformen.</description>
+      </descriptions>
+    </category>
+  </categories>
 
 </hierarchy>

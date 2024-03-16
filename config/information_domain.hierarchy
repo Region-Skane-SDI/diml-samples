@@ -1,298 +1,331 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/information_domain.hierarchy">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/information_domain.hierarchy">
 
   <traits>
     <trait class="extension" subclass="bki-namespace">
-      <traitParameter key="value" value="http://bki.skane.se/infstyr/id/infdom/"/>
+      <traitParameter key="value" value="http://bki.skane.se/infstyr/id/infdom/" />
     </trait>
   </traits>
 
-  <category id="hs">
-    <names>
-      <name language="sv">Hälso- och sjukvårdsinformation</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information inom hälso- och sjukvård som rör patienter (personuppgifter inom hälso- och sjukvård)</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirhs</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+  <categories>
+    <category id="hs">
+      <names>
+        <name language="sv">Hälso- och sjukvårdsinformation</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information inom hälso- och sjukvård som rör
+          patienter (personuppgifter inom hälso- och sjukvård)</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirhs</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="kvalreg">
-    <names>
-      <name language="sv">Kvalitetsregister information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information i regionala och nationella kvalitetsregister där Region Skåne är centralt personuppgiftsansvarig</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirhs</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="kvalreg">
+      <names>
+        <name language="sv">Kvalitetsregister information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information i regionala och nationella
+          kvalitetsregister där Region Skåne är centralt personuppgiftsansvarig</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirhs</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="itmt">
-    <names>
-      <name language="sv">IT- och MTsystem information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Informationstillgångar avseende IT- och MT-system, som inte omfattas av annans informationsägarskap</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>diritmt</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="itmt">
+      <names>
+        <name language="sv">IT- och MTsystem information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Informationstillgångar avseende IT- och MT-system,
+          som inte omfattas av annans informationsägarskap</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>diritmt</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="medserv">
-    <names>
-      <name language="sv">Medicinsk service information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Informationstillgångar avseende MT-system inom området bild- och funktionsteknik samt labb-teknik, som inte omfattas av annans informationsägarskap.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>fcMedserv</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="medserv">
+      <names>
+        <name language="sv">Medicinsk service information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Informationstillgångar avseende MT-system inom
+          området bild- och funktionsteknik samt labb-teknik, som inte omfattas av annans
+          informationsägarskap.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>fcMedserv</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="trafik">
-    <names>
-      <name language="sv">Trafik information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Informationstillgångar inom förvaltningen Skånetrafiken som inte omfattas av annans informationsägarskap.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirTrafik</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="trafik">
+      <names>
+        <name language="sv">Trafik information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Informationstillgångar inom förvaltningen
+          Skånetrafiken som inte omfattas av annans informationsägarskap.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirTrafik</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="fastighet">
-    <names>
-      <name language="sv">Fastighetsinformation</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information inom fastighetsförvaltning, fastighetsdrift, fastighetsunderhåll, lokalförsörjning samt byggprojekt.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirFastighet</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="fastighet">
+      <names>
+        <name language="sv">Fastighetsinformation</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information inom fastighetsförvaltning,
+          fastighetsdrift, fastighetsunderhåll, lokalförsörjning samt byggprojekt.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirFastighet</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="ekonomi">
-    <names>
-      <name language="sv">Ekonomi- och inköpsinformation</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information inom ekonomiprocesser samt inköpsprocesser som inte omfattas av annans informationsägareskap.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirEkonomi</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="ekonomi">
+      <names>
+        <name language="sv">Ekonomi- och inköpsinformation</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information inom ekonomiprocesser samt
+          inköpsprocesser som inte omfattas av annans informationsägareskap.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirEkonomi</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="hr">
-    <names>
-      <name language="sv">HR information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information inom HR-processen som inte omfattas av annans informationsägareskap.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirhr</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="hr">
+      <names>
+        <name language="sv">HR information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information inom HR-processen som inte omfattas av
+          annans informationsägareskap.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirhr</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="kom">
-    <names>
-      <name language="sv">Kommunikation (webbplats) information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information inom Region Skånes interna och externa kommunikationskanaler, så som webbplatser, digitala tjänster och kommunikationsinnehåll som inte omfattas av annans informationsägarskap.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirkom</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="kom">
+      <names>
+        <name language="sv">Kommunikation (webbplats) information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information inom Region Skånes interna och externa
+          kommunikationskanaler, så som webbplatser, digitala tjänster och kommunikationsinnehåll
+          som inte omfattas av annans informationsägarskap.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirkom</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="service">
-    <names>
-      <name language="sv">Serviceprocess information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information inom de processer som förvaltningen Regionservice ansvarar för och som inte omfattas av annans informationsägarskap </description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirService</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="service">
+      <names>
+        <name language="sv">Serviceprocess information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information inom de processer som förvaltningen
+          Regionservice ansvarar för och som inte omfattas av annans informationsägarskap </description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirService</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="kansli">
-    <names>
-      <name language="sv">Kansliprocess information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information i de processer som Koncernstab kansli ansvarar för som inte omfattas av annans informationsägarskap </description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirKansli</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
-  <category id="org">
-    <names>
-      <name language="sv">Tjänstemanna organisationsstruktur information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information om och styrande dokument för tjänstemannaorganisationens (organisation, förvaltning, enheter och arbetsplatskod) struktur</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirKansli</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="kansli">
+      <names>
+        <name language="sv">Kansliprocess information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information i de processer som Koncernstab kansli
+          ansvarar för som inte omfattas av annans informationsägarskap </description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirKansli</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
+    <category id="org">
+      <names>
+        <name language="sv">Tjänstemanna organisationsstruktur information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information om och styrande dokument för
+          tjänstemannaorganisationens (organisation, förvaltning, enheter och arbetsplatskod)
+          struktur</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirKansli</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="utv">
-    <names>
-      <name language="sv">Regional utvecklingsprocess information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information i processer inom regional utveckling som inte omfattas av annans informationsägarskap som t.ex. fastigheter </description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>dirUtv</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="utv">
+      <names>
+        <name language="sv">Regional utvecklingsprocess information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information i processer inom regional utveckling som
+          inte omfattas av annans informationsägarskap som t.ex. fastigheter </description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>dirUtv</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="arkiv">
-    <names>
-      <name language="sv">Arkiverad information</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information som överlämnats till Arkivmyndigheten (regionarkivet). Regionarkivet äger och ansvarar för överlämnat material som förvaras i något av magasinen eller i det digitala systemet RS eArkiv.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>regArkivarie</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="arkiv">
+      <names>
+        <name language="sv">Arkiverad information</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information som överlämnats till Arkivmyndigheten
+          (regionarkivet). Regionarkivet äger och ansvarar för överlämnat material som förvaras i
+          något av magasinen eller i det digitala systemet RS eArkiv.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>regArkivarie</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="lmtillv">
-    <names>
-      <name language="sv">Läkemedels-tillverkningsinformation</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Information avseende process för tillverkning av läkemedel som inte omfattas av annans informationsägarskap. Data rörande tillgångar, tillverkare, substanser och andra aktuella grunduppgifter som behöver finnas tillgänglig för t.ex. kunna göra uppföljning inom läkemedelsområdet. Det kan också omfatta information vid upphandling av läkemedel och vid beställning, produktion och lagerhållning av läkemedel.  Det kan gälla information om läkemedel som rör patienter t ex patientens läkemedel, ordinationer, läkemedelsöverkänslighet etc.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>chefLakemedel</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="lmtillv">
+      <names>
+        <name language="sv">Läkemedels-tillverkningsinformation</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Information avseende process för tillverkning av
+          läkemedel som inte omfattas av annans informationsägarskap. Data rörande tillgångar,
+          tillverkare, substanser och andra aktuella grunduppgifter som behöver finnas tillgänglig
+          för t.ex. kunna göra uppföljning inom läkemedelsområdet. Det kan också omfatta information
+          vid upphandling av läkemedel och vid beställning, produktion och lagerhållning av
+          läkemedel. Det kan gälla information om läkemedel som rör patienter t ex patientens
+          läkemedel, ordinationer, läkemedelsöverkänslighet etc.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>chefLakemedel</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="forskninghs">
-    <names>
-      <name language="sv">Forskningsdata (anonymiserad / aggregerad data)</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Forskningsdata inom hälso- och sjukvård som bedrivs med Region Skåne som huvudman</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>chefForskningHS</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="forskninghs">
+      <names>
+        <name language="sv">Forskningsdata (anonymiserad / aggregerad data)</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Forskningsdata inom hälso- och sjukvård som bedrivs
+          med Region Skåne som huvudman</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>chefForskningHS</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="extern">
-    <names>
-      <name language="sv">Externinformation</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Externa intressenters information som är likvärdig Region Skånes interna information, men där RS går in som kravställar.  I syfte att ställa krav på hantering och skydd av informationen, det kan t.ex. vara personuppgifter, patientdata etc.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>InfoOwner</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="extern">
+      <names>
+        <name language="sv">Externinformation</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Externa intressenters information som är likvärdig
+          Region Skånes interna information, men där RS går in som kravställar. I syfte att ställa
+          krav på hantering och skydd av informationen, det kan t.ex. vara personuppgifter,
+          patientdata etc.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>InfoOwner</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
 
-  <category id="infodom">
-    <names>
-      <name language="sv">Informationsdomän ospecificerad</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Informationsdomän ej specificerad, informationsdomän bestäms baserat på det faktiska innehållet i en specifik informationsmängd.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationOwner">
-        <traitParameter key="value">
-          <value>InfoOwner</value>
-        </traitParameter>
-      </trait>
-    </traits>
-  </category>
+    <category id="infodom">
+      <names>
+        <name language="sv">Informationsdomän ospecificerad</name>
+      </names>
+      <descriptions>
+        <description type="plain" language="sv">Informationsdomän ej specificerad, informationsdomän
+          bestäms baserat på det faktiska innehållet i en specifik informationsmängd.</description>
+      </descriptions>
+      <traits>
+        <trait class="category" subclass="informationOwner">
+          <traitParameter key="value">
+            <value>InfoOwner</value>
+          </traitParameter>
+        </trait>
+      </traits>
+    </category>
+  </categories>
 
 </hierarchy>

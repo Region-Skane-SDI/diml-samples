@@ -1148,45 +1148,47 @@
 		<targetPlatform platform="sparksql">
 			<platformDataTypeConfigs>
 				<platformDataTypeConfig id="string" dimlDataType="string" inputFormat="string"
-										outputFormat="&quot;string&quot;" />
+					outputFormat="&quot;string&quot;" />
 				<platformDataTypeConfig id="boolean" dimlDataType="boolean" inputFormat="boolean"
-										outputFormat="&quot;boolean&quot;" />
-				<platformDataTypeConfig id="tinyint" dimlDataType="tinyInteger" inputFormat="tinyint"
-										outputFormat="&quot;tinyint&quot;">
+					outputFormat="&quot;boolean&quot;" />
+				<platformDataTypeConfig id="tinyint" dimlDataType="tinyInteger"
+					inputFormat="tinyint"
+					outputFormat="&quot;tinyint&quot;">
 					<targetParameters>
 						<targetParameter id="unsigned" value="false" />
 					</targetParameters>
 				</platformDataTypeConfig>
-				<platformDataTypeConfig id="smallint" dimlDataType="smallInteger" inputFormat="smallint"
-										outputFormat="&quot;smallint&quot;">
+				<platformDataTypeConfig id="smallint" dimlDataType="smallInteger"
+					inputFormat="smallint"
+					outputFormat="&quot;smallint&quot;">
 					<targetParameters>
 						<targetParameter id="unsigned" value="false" />
 					</targetParameters>
 				</platformDataTypeConfig>
 				<platformDataTypeConfig id="int" dimlDataType="integer" inputFormat="int"
-										outputFormat="&quot;int&quot;">
+					outputFormat="&quot;int&quot;">
 					<targetParameters>
 						<targetParameter id="unsigned" value="false" />
 					</targetParameters>
 				</platformDataTypeConfig>
 				<platformDataTypeConfig id="bigint" dimlDataType="bigInteger" inputFormat="bigint"
-										outputFormat="&quot;bigint&quot;">
+					outputFormat="&quot;bigint&quot;">
 					<targetParameters>
 						<targetParameter id="unsigned" value="false" />
 					</targetParameters>
 				</platformDataTypeConfig>
 				<platformDataTypeConfig id="float" dimlDataType="float" inputFormat="float"
-										outputFormat="&quot;float&quot;" />
+					outputFormat="&quot;float&quot;" />
 				<platformDataTypeConfig id="double" dimlDataType="double" inputFormat="double"
-										outputFormat="&quot;double&quot;" />
+					outputFormat="&quot;double&quot;" />
 				<platformDataTypeConfig id="decimal" dimlDataType="decimal"
-										inputFormat="(?i)decimal\s*\((?'precision'[0-9]{1,2}),\s*(?'scale'[0-9]{1,2})\)"
-										outputFormat="&quot;decimal(&quot; + precision.ToString() + &quot;, &quot; + scale.ToString() + &quot;)&quot;">
+					inputFormat="(?i)decimal\s*\((?'precision'[0-9]{1,2}),\s*(?'scale'[0-9]{1,2})\)"
+					outputFormat="&quot;decimal(&quot; + precision.ToString() + &quot;, &quot; + scale.ToString() + &quot;)&quot;">
 					<platformDataTypeParameters>
 						<platformDataTypeParameter id="precision" type="int"
-												   inputExpression="int.Parse(precision)" />
+							inputExpression="int.Parse(precision)" />
 						<platformDataTypeParameter id="scale" type="int"
-												   inputExpression="int.Parse(scale)" />
+							inputExpression="int.Parse(scale)" />
 					</platformDataTypeParameters>
 					<targetParameters>
 						<targetParameter id="unsigned" value="false" />
@@ -1194,20 +1196,22 @@
 						<targetParameter id="scale" value="scale" />
 					</targetParameters>
 				</platformDataTypeConfig>
-				<!-- Supports positive dates, up to year 9999 according to SparkSQL data type source code -->
+				<!-- Supports positive dates, up to year 9999 according to SparkSQL data type source
+				code -->
 				<platformDataTypeConfig id="date" dimlDataType="date" inputFormat="date"
-										outputFormat="&quot;date&quot;" />
-				<!-- As of Spark 3.4 there's support for timestamps with timezone, but not including here as it's new and only in public preview in e.g. AZ Databricks -->
+					outputFormat="&quot;date&quot;" />
+				<!-- As of Spark 3.4 there's support for timestamps with timezone, but not including
+				here as it's new and only in public preview in e.g. AZ Databricks -->
 				<platformDataTypeConfig id="timestamp" dimlDataType="dateTime"
-										inputFormat="timestamp"
-										outputFormat="&quot;timestamp&quot;" />
+					inputFormat="timestamp"
+					outputFormat="&quot;timestamp&quot;" />
 				<platformDataTypeConfig id="timestampOffset" dimlDataType="dateTimeOffset"
-										inputFormat="string"
-										outputFormat="&quot;string&quot;" />
+					inputFormat="string"
+					outputFormat="&quot;string&quot;" />
 				<platformDataTypeConfig id="binary" dimlDataType="binary" inputFormat="binary"
-										outputFormat="&quot;binary&quot;" />
+					outputFormat="&quot;binary&quot;" />
 				<platformDataTypeConfig id="time" dimlDataType="time" inputFormat="string"
-										outputFormat="&quot;string&quot;" />
+					outputFormat="&quot;string&quot;" />
 			</platformDataTypeConfigs>
 		</targetPlatform>
 	</targetPlatforms>

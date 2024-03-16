@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ekonomikoder.dataproduct" targetPlatform="msfabric">
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ekonomikoder.dataproduct"
+  targetPlatform="msfabric">
 
   <names>
     <name language="sv">Ekonomikoder</name>
@@ -10,7 +13,8 @@
     <description type="plain" language="sv">Innehåller ansvarskoder, förvaltningskoder och motparter.</description>
   </descriptions>
 
-  <dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+  <dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily"
+    dcatAvailability="available" dcatStatus="completed" />
 
   <traits>
     <trait class="category" subclass="informationOwner">
@@ -23,18 +27,20 @@
       <traitParameter value="K1R1T1" />
     </trait>
     <trait class="isVirtual">
-      <traitParameter value="false"/>
+      <traitParameter value="false" />
     </trait>
     <trait class="icon">
-      <traitParameter value="bi-wallet"/>
+      <traitParameter value="bi-wallet" />
     </trait>
     <trait class="tableSchema">
-      <traitParameter value="dbo"/>
+      <traitParameter value="dbo" />
     </trait>
   </traits>
 
   <dataInputs>
-    <dataInput id="raindance_ekonomikoder" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource" channelId="sql" />
+    <dataInput id="raindance_ekonomikoder"
+      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource"
+      channelId="sql" />
   </dataInputs>
 
   <tables>
@@ -55,7 +61,7 @@
           <names>
             <name language="sv">FTG_ID</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
           </descriptions>
@@ -71,7 +77,7 @@
           <names>
             <name language="sv">FVK_ID</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en förvaltning.</description>
           </descriptions>
@@ -87,7 +93,7 @@
           <names>
             <name language="sv">FVK_TEXT</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">En text som beskriver förvaltningen.</description>
           </descriptions>
@@ -103,7 +109,7 @@
           <names>
             <name language="sv">FVK_GILTIG_FOM</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger från och med när förvaltningen är giltig, med datum och tid.</description>
           </descriptions>
@@ -119,13 +125,13 @@
           <names>
             <name language="sv">FVK_GILTIG_TOM</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger till och med när förvaltningen är giltig, med datum och tid. Måste vara längre fram i tiden än FVK_GILTIG_FOM.</description>
           </descriptions>
           <traits>
             <trait class="isGreaterThan">
-              <traitParameter key="column" value="FVK_GILTIG_FOM"/>
+              <traitParameter key="column" value="FVK_GILTIG_FOM" />
             </trait>
             <trait class="columnSources">
               <traitParameter>
@@ -138,7 +144,7 @@
           <names>
             <name language="sv">FVK_PASSIV</name>
           </names>
-          <dimlDataType id="boolean" isNullable="false"/>
+          <dimlDataType id="boolean" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger, i kombination med FVK_GILTIG_FOM och FVK_GILTIG_TOM, huruvida förvaltningen är aktiv eller passiv.</description>
           </descriptions>
@@ -219,7 +225,7 @@
           <names>
             <name language="sv">FTG_ID</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
           </descriptions>
@@ -235,7 +241,7 @@
           <names>
             <name language="sv">ANSVAR_ID</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar ett ansvar.</description>
           </descriptions>
@@ -251,7 +257,7 @@
           <names>
             <name language="sv">ANSVAR_TEXT</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">En text som beskriver ansvaret.</description>
           </descriptions>
@@ -267,7 +273,7 @@
           <names>
             <name language="sv">ANSVAR_GILTIG_FOM</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger från och med när ansvaret är giltigt, med datum och tid.</description>
           </descriptions>
@@ -283,13 +289,13 @@
           <names>
             <name language="sv">ANSVAR_GILTIG_TOM</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger till och med när ansvaret är giltigt, med datum och tid. Måste vara längre fram i tiden än ANSVAR_GILTIG_FOM.</description>
           </descriptions>
           <traits>
             <trait class="isGreaterThan">
-              <traitParameter key="column" value="ANSVAR_GILTIG_FOM"/>
+              <traitParameter key="column" value="ANSVAR_GILTIG_FOM" />
             </trait>
             <trait class="columnSources">
               <traitParameter>
@@ -302,7 +308,7 @@
           <names>
             <name language="sv">ANSVAR_PASSIV</name>
           </names>
-          <dimlDataType id="boolean" isNullable="false"/>
+          <dimlDataType id="boolean" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger, i kombination med ANSVAR_GILTIG_FOM och ANSVAR_GILTIG_TOM, huruvida ansvaret är aktivt eller passivt.</description>
           </descriptions>
@@ -399,7 +405,7 @@
           <names>
             <name language="sv">FTG_ID</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
           </descriptions>
@@ -415,7 +421,7 @@
           <names>
             <name language="sv">MOTP_ID</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en motpart.</description>
           </descriptions>
@@ -431,7 +437,7 @@
           <names>
             <name language="sv">MOTP_TEXT</name>
           </names>
-          <dimlDataType id="string" isNullable="false"/>
+          <dimlDataType id="string" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">En text som beskriver motparten.</description>
           </descriptions>
@@ -447,7 +453,7 @@
           <names>
             <name language="sv">MOTP_GILTIG_FOM</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger från och med när motparten är giltig, med datum och tid.</description>
           </descriptions>
@@ -463,13 +469,13 @@
           <names>
             <name language="sv">MOTP_GILTIG_TOM</name>
           </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
+          <dimlDataType id="dateTime" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger till och med när motparten är giltig, med datum och tid. Måste vara längre fram i tiden än MOTP_GILTIG_FOM.</description>
           </descriptions>
           <traits>
             <trait class="isGreaterThan">
-              <traitParameter key="column" value="MOTP_GILTIG_FOM"/>
+              <traitParameter key="column" value="MOTP_GILTIG_FOM" />
             </trait>
             <trait class="columnSources">
               <traitParameter>
@@ -482,7 +488,7 @@
           <names>
             <name language="sv">MOTP_PASSIV</name>
           </names>
-          <dimlDataType id="boolean" isNullable="false"/>
+          <dimlDataType id="boolean" isNullable="false" />
           <descriptions>
             <description type="plain" language="sv">Anger, i kombination med MOTP_GILTIG_FOM och MOTP_GILTIG_TOM, huruvida motparten är aktiv eller passiv.</description>
           </descriptions>

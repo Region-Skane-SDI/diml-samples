@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datasource_sql.datasource">
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd"
+	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datasource_sql.datasource">
 	<names>
 		<name language="sv">Exempel på datakälla</name>
 	</names>
@@ -16,11 +18,11 @@
 			</traitParameter>
 		</trait>
 		<trait class="infoClass">
-			<traitParameter key="value" value="K1R1T1"/>
+			<traitParameter key="value" value="K1R1T1" />
 		</trait>
-		<trait class="pii"/>
+		<trait class="pii" />
 		<trait class="tableSchema">
-			<traitParameter key="value" value="dbo"/>
+			<traitParameter key="value" value="dbo" />
 		</trait>
 	</traits>
 
@@ -43,33 +45,33 @@
 					<names>
 						<name language="sv">Personnr</name>
 					</names>
-					<dimlDataType id="ssn" isNullable="false"/>
+					<dimlDataType id="ssn" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
 					</descriptions>
 					<traits>
-						<trait class="pii"/>
+						<trait class="pii" />
 					</traits>
 				</column>
 				<column id="Namn">
 					<names>
 						<name language="sv">Namn</name>
 					</names>
-					<dimlDataType id="fullName" isNullable="false"/>
+					<dimlDataType id="fullName" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
 					</descriptions>
 					<traits>
-						<trait class="pii"/>
+						<trait class="pii" />
 					</traits>
 				</column>
 				<column id="Alder">
 					<names>
 						<name language="sv">Alder</name>
 					</names>
-					<dimlDataType id="age" isNullable="false"/>
+					<dimlDataType id="age" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
@@ -95,20 +97,20 @@
 					<names>
 						<name language="sv">Personnr</name>
 					</names>
-					<dimlDataType id="ssn" isNullable="false"/>
+					<dimlDataType id="ssn" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
 					</descriptions>
 					<traits>
-						<trait class="pii"/>
+						<trait class="pii" />
 					</traits>
 				</column>
 				<column id="Anstallningsnr">
 					<names>
 						<name language="sv">Anstallningsnr</name>
 					</names>
-					<dimlDataType id="integer" isNullable="false"/>
+					<dimlDataType id="integer" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
@@ -118,7 +120,7 @@
 					<names>
 						<name language="sv">Startdatum</name>
 					</names>
-					<dimlDataType id="date" isNullable="false"/>
+					<dimlDataType id="date" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
@@ -128,7 +130,7 @@
 					<names>
 						<name language="sv">Slutdatum</name>
 					</names>
-					<dimlDataType id="date" isNullable="false"/>
+					<dimlDataType id="date" isNullable="false" />
 					<descriptions>
 						<description type="plain" language="sv">Beskrivning...</description>
 						<description type="md" language="sv">Beskrivning...</description>
@@ -145,26 +147,28 @@
 	</tables>
 
 	<customFormats>
-		<customFormat customFormatId="jsondata" formatType="json" schemaLocation="https://..."/>
-		<customFormat customFormatId="xmldata" formatType="xml" schemaLocation="https://..."/>
-		<customFormat customFormatId="binarydata" formatType="binary" mimeType="img/tiff"/>
+		<customFormat customFormatId="jsondata" formatType="json" schemaLocation="https://..." />
+		<customFormat customFormatId="xmldata" formatType="xml" schemaLocation="https://..." />
+		<customFormat customFormatId="binarydata" formatType="binary" mimeType="img/tiff" />
 	</customFormats>
 
 	<dataOutputs>
 		<fileOutputs>
-			<fileOutput channelId="csvfiles" fileFormat="csv" path="csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf">
-				<singleTableFileOutput path="person_{{timestamp}}.csv" table="Person" />
-				<singleTableFileOutput path="anstallning_{{timestamp}}.csv" table="Anstallning" />
-			</fileOutput>
-			<fileOutput channelId="parquetfile" fileFormat="parquet" path="utdata">
-				<multiTableFileOutput>
-					<includeTable id="Person"/>
-					<includeTable id="Anstallning"/>
-				</multiTableFileOutput>
-			</fileOutput>
-			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata" path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json"/>
-			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml"/>
-			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff"/>
+			<fileOutput channelId="csvfiles" fileFormat="csv" table="Person"
+				path="csv/person_{{timestamp}}.csv"
+				encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
+			<fileOutput channelId="csvfiles" fileFormat="csv" table="Anstallning"
+				path="csv/anstallning_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab"
+				rowSeparator="crlf" />
+			<fileOutput channelId="parquetfile" fileFormat="parquet" table="Person" path="utdata" />
+			<fileOutput channelId="parquetfile" fileFormat="parquet" table="Anstallning"
+				path="utdata" />
+			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata"
+				path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
+			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata"
+				path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
+			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata"
+				path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
 		</fileOutputs>
 
 		<sqlOutputs>
