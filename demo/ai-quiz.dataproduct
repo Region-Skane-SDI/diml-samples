@@ -182,8 +182,7 @@
   <dataOutputs>
     <fileOutputs>
       <fileOutput channelId="csv" fileFormat="csv" table="AI_Quiz_Answers"
-        path="csv/ai-quiz_{{timestamp}}.csv"
-        encoding="utf8" columnSeparator=";" rowSeparator="crlf" />
+        path="csv/ai-quiz_{{timestamp}}.csv" encoding="utf8" columnSeparator=";" rowSeparator="crlf" />
     </fileOutputs>
   </dataOutputs>
 

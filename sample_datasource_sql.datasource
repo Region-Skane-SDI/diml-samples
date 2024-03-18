@@ -154,14 +154,14 @@
 
 	<dataOutputs>
 		<fileOutputs>
-			<fileOutput channelId="csvfiles" fileFormat="csv" table="Person"
+			<fileOutput channelId="csvfile1" fileFormat="csv" table="Person"
 				path="csv/person_{{timestamp}}.csv"
 				encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
-			<fileOutput channelId="csvfiles" fileFormat="csv" table="Anstallning"
+			<fileOutput channelId="csvfile2" fileFormat="csv" table="Anstallning"
 				path="csv/anstallning_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab"
 				rowSeparator="crlf" />
-			<fileOutput channelId="parquetfile" fileFormat="parquet" table="Person" path="utdata" />
-			<fileOutput channelId="parquetfile" fileFormat="parquet" table="Anstallning"
+			<fileOutput channelId="parquetfile1" fileFormat="parquet" table="Person" path="utdata" />
+			<fileOutput channelId="parquetfile2" fileFormat="parquet" table="Anstallning"
 				path="utdata" />
 			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata"
 				path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
