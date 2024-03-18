@@ -1,17 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Exempel på tabulär dataprodukt -->
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-	dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct"
-	targetPlatform="msfabric">
-
-	<names>
-		<name language="sv">Anställningar</name>
-	</names>
-	<descriptions>
-		<description type="plain" language="sv">Kort sammanfattande beskrivning av dataprodukten</description>
-		<description type="md" language="sv">
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_dataproduct.dataproduct" targetPlatform="msfabric">
+    <names>
+        <name language="sv">Anställningar</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Kort sammanfattande beskrivning av dataprodukten</description>
+        <description type="md" language="sv">
 ## dcat
 TODO: Add decsription
 
@@ -23,301 +16,274 @@ TODO: Add decsription
 | dcatStatus | [dcatStatusType](#dcatStatusType) | Ja |  |  | Anger dataproduktens status i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.8 |
 | dcatUpdateFrequency | [dcatUpdateFrequencyType](#dcatUpdateFrequencyType) | Ja |  |  | Anger dataproduktens uppdateringsfrekvens i datakatalogen. Följer standarden DCAT-AP, mer information finns här: https://docs.dataportal.se/dcat/en/#5.4 |
 		</description>
-	</descriptions>
-
-	<dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily"
-		dcatAvailability="available" dcatStatus="completed" />
-
-	<traits>
-		<trait class="category" subclass="informationOwner.hierarchy">
-			<traitParameter key="value">
-				<value>dirhr</value>
-				<value>direkonomi</value>
-			</traitParameter>
-		</trait>
-		<trait class="category" subclass="searchStructure.hierarchy">
-			<traitParameter key="value" value="hr2" />
-		</trait>
-		<!-- The remaining category traits should be updated in similar manner to the above -->
-		<trait class="category" subclass="productOwner">
-			<traitParameter key="value" value="SDI Plattform" />
-		</trait>
-		<trait class="category" subclass="contentClass">
-			<traitParameter key="value" value="Raw" />
-		</trait>
-		<trait class="icon">
-			<traitParameter key="value" value="bi-wallet" />
-		</trait>
-		<trait class="infoClass">
-			<traitParameter key="value" value="K1R1T1" />
-		</trait>
-		<trait class="targetUptimePercent">
-			<traitParameter key="value" value="99.9" />
-		</trait>
-
-		<trait class="tableNamePrefix">
-			<traitParameter key="value" value="sampleprefix" />
-		</trait>
-		<trait class="tableNameSuffix">
-			<traitParameter key="value" value="samplesuffix" />
-		</trait>
-		<trait class="tableSchema">
-			<traitParameter key="value" value="dbo" />
-		</trait>
-
-		<trait class="pii" />
-	</traits>
-
-	<dataInputs>
-		<dataInput id="src1"
-			dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource"
-			channelId="sql" />
-		<dataInput id="src2"
-			dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource"
-			channelId="sql" />
-	</dataInputs>
-
-	<tables>
-
-		<table id="Person">
-			<names>
-				<name language="sv">Person</name>
-			</names>
-			<descriptions>
-				<description type="plain" language="sv">Beskrivning i vanlig text...</description>
-				<description type="md" language="sv">##Beskrivning i markdown...&#xD;&#xA;Test</description>
-				<description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
-			</descriptions>
-			<businessKey>
-				<value>Personnr</value>
-			</businessKey>
-			<columns>
-				<column id="Personnr">
-					<names>
-						<name language="sv">Personnr</name>
-					</names>
-					<dimlDataType id="ssn" isNullable="false" />
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="pii" />
-						<trait class="columnSources">
-							<traitParameter key="value">
-								<value>src1/Person/Personnr</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Namn">
-					<names>
-						<name language="sv">Namn</name>
-					</names>
-					<dimlDataType id="fullName" isNullable="false" />
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="pii" />
-						<trait class="columnSources">
-							<traitParameter key="value">
-								<value>src1/Person/Namn</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Alder">
-					<names>
-						<name language="sv">Alder</name>
-					</names>
-					<dimlDataType id="age" isNullable="false" />
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter key="value">
-								<value>src1/Person/Alder</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-			</columns>
-			<sampleData>
-				<sampleDataRow>
-					<value>1234567890</value>
-					<value>Asdfgh</value>
-					<value>23</value>
-				</sampleDataRow>
-			</sampleData>
-		</table>
-
-		<table id="Anstallning">
-			<names>
-				<name language="sv">Anstallning</name>
-			</names>
-			<descriptions>
-				<description type="plain" language="sv">Beskrivning...</description>
-				<description type="md" language="sv">Beskrivning...</description>
-			</descriptions>
-			<businessKey>
-				<value>Personnr</value>
-				<value>Anstallningsnr</value>
-			</businessKey>
-			<columns>
-				<column id="Personnr">
-					<names>
-						<name language="sv">Personnr</name>
-					</names>
-					<dimlDataType id="ssn" isNullable="false" />
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="pii" />
-						<trait class="columnSources">
-							<traitParameter key="value">
-								<value>src1/Anstallning/Personnr</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Anstallningsnr">
-					<names>
-						<name language="sv">Anstallningsnr</name>
-					</names>
-					<dimlDataType id="integer" isNullable="false" />
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter key="value">
-								<value>src1/Anstallning/Anstallningsnr</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Startdatum">
-					<names>
-						<name language="sv">Startdatum</name>
-					</names>
-					<dimlDataType id="date" isNullable="false" />
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter key="value">
-								<value>src1/Anstallning/Startdatum</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Slutdatum">
-					<names>
-						<name language="sv">Slutdatum</name>
-					</names>
-					<dimlDataType id="date" isNullable="false" />
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="isGreaterThan">
-							<traitParameter key="column" value="Startdatum" />
-						</trait>
-						<trait class="columnSources">
-							<traitParameter key="value">
-								<value>src1/Anstallning/Slutdatum</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-			</columns>
-			<tableRelations>
-				<tableRelation id="tableRelation1" targetTable="Person">
-					<relationColumns columnName="Personnr" targetColumnName="Personnr" />
-				</tableRelation>
-			</tableRelations>
-			<sampleData>
-				<sampleDataRow>
-					<value>1234567890</value>
-					<value>1</value>
-					<value>2020-01-01</value>
-					<value>2020-12-31</value>
-				</sampleDataRow>
-			</sampleData>
-		</table>
-
-	</tables>
-
-	<customFormats>
-		<customFormat customFormatId="jsondata" formatType="json" schemaLocation="https://..." />
-		<customFormat customFormatId="xmldata" formatType="xml" schemaLocation="https://..." />
-		<customFormat customFormatId="binarydata" formatType="binary" mimeType="img/tiff" />
-	</customFormats>
-
-	<dataOutputs>
-		<fileOutputs>
-			<fileOutput channelId="csvfile1" fileFormat="csv" table="Person"
-				path="csv/person_{{timestamp}}.csv"
-				encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
-			<fileOutput channelId="csvfile2" fileFormat="csv" table="Anstallning"
-				path="csv/anstallning_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab"
-				rowSeparator="crlf" />
-			<fileOutput channelId="parquetfile1" fileFormat="parquet" table="Person" path="utdata" />
-			<fileOutput channelId="parquetfile2" fileFormat="parquet" table="Anstallning"
-				path="utdata" />
-			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata"
-				path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
-			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata"
-				path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
-			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata"
-				path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
-		</fileOutputs>
-
-		<sqlOutputs>
-			<sqlOutput channelId="sql1" sqlOutputType="tsql" />
-			<sqlOutput channelId="sql2" sqlOutputType="sparql" />
-		</sqlOutputs>
-
-		<apiOutputs>
-			<apiOutput channelId="api1" apiOutputType="odata" />
-		</apiOutputs>
-	</dataOutputs>
-
-	<dataFlow>
-		<dataStages>
-			<dataStage id="Raw" order="1" role="input" materialization="table" />
-			<dataStage id="Control" order="2" materialization="view">
-				<traits>
-					<trait class="generateKeyHash">
-						<traitParameter key="value" value="true" />
-					</trait>
-					<trait class="generateRowHash">
-						<traitParameter key="value" value="true" />
-					</trait>
-				</traits>
-			</dataStage>
-			<dataStage id="PreStorage" order="3" materialization="table" />
-			<dataStage id="Storage" order="4" role="output" materialization="table">
-				<traits>
-					<trait class="tableUpdateType">
-						<traitParameter key="type" value="cdc" />
-					</trait>
-				</traits>
-			</dataStage>
-		</dataStages>
-
-		<dataIngests>
-			<!--<dataIngest
+    </descriptions>
+    <dcat dcatDataTheme="econ" dcatAccessRights="public" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+    <traits>
+        <trait class="category" subclass="informationOwner.hierarchy">
+            <traitParameter key="value">
+                <value>dirhr</value>
+                <value>direkonomi</value>
+            </traitParameter>
+        </trait>
+        <trait class="category" subclass="searchStructure.hierarchy">
+            <traitParameter key="value" value="hr2" />
+        </trait>
+        <!-- The remaining category traits should be updated in similar manner to the above -->
+        <trait class="category" subclass="productOwner">
+            <traitParameter key="value" value="SDI Plattform" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter key="value" value="Raw" />
+        </trait>
+        <trait class="icon">
+            <traitParameter key="value" value="bi-wallet" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter key="value" value="K1R1T1" />
+        </trait>
+        <trait class="targetUptimePercent">
+            <traitParameter key="value" value="99.9" />
+        </trait>
+        <trait class="tableNamePrefix">
+            <traitParameter key="value" value="sampleprefix" />
+        </trait>
+        <trait class="tableNameSuffix">
+            <traitParameter key="value" value="samplesuffix" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter key="value" value="dbo" />
+        </trait>
+        <trait class="pii" />
+    </traits>
+    <dataInputs>
+        <dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="sql" />
+        <dataInput id="src2" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/sample_datasource_sql.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="Person">
+            <names>
+                <name language="sv">Person</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Beskrivning i vanlig text...</description>
+                <description type="md" language="sv">##Beskrivning i markdown...
+Test</description>
+                <description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr">
+                    <names>
+                        <name language="sv">Personnr</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Person/Personnr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Namn">
+                    <names>
+                        <name language="sv">Namn</name>
+                    </names>
+                    <dimlDataType id="fullName" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Person/Namn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Alder">
+                    <names>
+                        <name language="sv">Alder</name>
+                    </names>
+                    <dimlDataType id="age" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Person/Alder</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1234567890</value>
+                    <value>Asdfgh</value>
+                    <value>23</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Anstallning">
+            <names>
+                <name language="sv">Anstallning</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Beskrivning...</description>
+                <description type="md" language="sv">Beskrivning...</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr</value>
+                <value>Anstallningsnr</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr">
+                    <names>
+                        <name language="sv">Personnr</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Anstallning/Personnr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Anstallningsnr">
+                    <names>
+                        <name language="sv">Anstallningsnr</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Anstallning/Anstallningsnr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Startdatum">
+                    <names>
+                        <name language="sv">Startdatum</name>
+                    </names>
+                    <dimlDataType id="date" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Anstallning/Startdatum</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Slutdatum">
+                    <names>
+                        <name language="sv">Slutdatum</name>
+                    </names>
+                    <dimlDataType id="date" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="isGreaterThan">
+                            <traitParameter key="column" value="Startdatum" />
+                        </trait>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Anstallning/Slutdatum</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="tableRelation1" targetTable="Person">
+                    <relationColumns columnName="Personnr" targetColumnName="Personnr" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1234567890</value>
+                    <value>1</value>
+                    <value>2020-01-01</value>
+                    <value>2020-12-31</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <customFormats>
+        <customFormat customFormatId="jsondata" formatType="json" schemaLocation="https://..." />
+        <customFormat customFormatId="xmldata" formatType="xml" schemaLocation="https://..." />
+        <customFormat customFormatId="binarydata" formatType="binary" mimeType="img/tiff" />
+    </customFormats>
+    <dataOutputs>
+        <fileOutputs>
+            <fileOutput channelId="csvfile1" fileFormat="csv" table="Person" path="csv/person_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
+            <fileOutput channelId="csvfile2" fileFormat="csv" table="Anstallning" path="csv/anstallning_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
+            <fileOutput channelId="parquetfile1" fileFormat="parquet" table="Person" path="utdata" />
+            <fileOutput channelId="parquetfile2" fileFormat="parquet" table="Anstallning" path="utdata" />
+            <fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata" path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
+            <fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
+            <fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
+        </fileOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql1" sqlOutputType="tsql" />
+            <sqlOutput channelId="sql2" sqlOutputType="sparql" />
+        </sqlOutputs>
+        <apiOutputs>
+            <apiOutput channelId="api1" apiOutputType="odata" />
+        </apiOutputs>
+    </dataOutputs>
+    <dataFlow>
+        <dataStages>
+            <dataStage id="Raw" order="1" role="input" materialization="table" />
+            <dataStage id="Control" order="2" materialization="view">
+                <traits>
+                    <trait class="generateKeyHash">
+                        <traitParameter key="value" value="true" />
+                    </trait>
+                    <trait class="generateRowHash">
+                        <traitParameter key="value" value="true" />
+                    </trait>
+                </traits>
+            </dataStage>
+            <dataStage id="PreStorage" order="3" materialization="table" />
+            <dataStage id="Storage" order="4" role="output" materialization="table">
+                <traits>
+                    <trait class="tableUpdateType">
+                        <traitParameter key="type" value="cdc" />
+                    </trait>
+                </traits>
+            </dataStage>
+        </dataStages>
+        <dataIngests>
+            <!--<dataIngest
 			id="load_job_1" dataInputId="src1">
 		  <tableToTableMappings>
 			  <tableToTableMapping tableId="Person" sourceTableId="Person" customSqlExpression="SELECT TOP (1000)
@@ -331,7 +297,6 @@ TODO: Add decsription
 			<tableToTableMapping tableId="Anstallning" sourceTableId="Anstallning"/>
 		  </tableToTableMappings>
       </dataIngest>-->
-		</dataIngests>
-	</dataFlow>
-
+        </dataIngests>
+    </dataFlow>
 </dataProduct>
