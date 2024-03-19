@@ -1,214 +1,196 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/it-system.dataproduct"
-  targetPlatform="msfabric">
-
-  <names>
-    <name language="sv">IT-system</name>
-  </names>
-
-  <descriptions>
-    <description type="plain" language="sv">Grunduppgifter om Region Skånes centrala IT-system.</description>
-  </descriptions>
-
-  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly"
-    dcatAvailability="available" dcatStatus="completed" />
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter value="IT" />
-    </trait>
-    <trait class="category" subclass="searchStructure">
-      <traitParameter value="1.1" />
-    </trait>
-    <trait class="category" subclass="productOwner">
-      <traitParameter value="SDI Plattform" />
-    </trait>
-    <trait class="category" subclass="contentClass">
-      <traitParameter value="standard" />
-    </trait>
-    <trait class="isVirtual">
-      <traitParameter value="false" />
-    </trait>
-    <trait class="icon">
-      <traitParameter value="bi-laptop" />
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K1R1T1" />
-    </trait>
-    <trait class="tableSchema">
-      <traitParameter value="dbo" />
-    </trait>
-  </traits>
-
-  <dataInputs>
-    <dataInput id="profisee"
-      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource"
-      channelId="sql" />
-  </dataInputs>
-
-  <tables>
-
-    <table id="MD_Anvandare">
-      <names>
-        <name language="sv">MD_Användare</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Grunduppgifter om Region Skånes IT-system.</description>
-      </descriptions>
-      <businessKey>
-        <value>ID</value>
-      </businessKey>
-      <columns>
-        <column id="ID">
-          <names>
-            <name language="sv">ID</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">ID 6 siffror.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>profisee/MD_Anvandare/ID</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Namn">
-          <names>
-            <name language="sv">Namn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Namn på IT-systemet.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>profisee/MD_Anvandare/Namn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Beskrivning">
-          <names>
-            <name language="sv">Beskrivning</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">En beskrivning av IT-systemet.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>profisee/MD_Anvandare/Beskrivning</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Kategori">
-          <names>
-            <name language="sv">Kategori</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger vilken kategori IT-systemet tillhör.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>profisee/MD_Anvandare/Kategori</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="SAO">
-          <names>
-            <name language="sv">SAO</name>
-          </names>
-          <dimlDataType id="string" isNullable="true" />
-          <descriptions>
-            <description type="plain" language="sv">SAO. I annat fall null.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>profisee/MD_Anvandare/SAO</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Riskanalyserat">
-          <names>
-            <name language="sv">Riskanalyserat</name>
-          </names>
-          <dimlDataType id="date" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Datum för senaste riskanalys.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>profisee/MD_Anvandare/Riskanalyserat</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>123456</value>
-          <value>Pasis</value>
-          <value>Patientadministrativt system</value>
-          <value>Patientadminitration</value>
-          <value>Vård- och patientadministration</value>
-          <value>2019-03-02</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>123457</value>
-          <value>Raindance</value>
-          <value>Ekonomisystem</value>
-          <value>Administration</value>
-          <value>Ekonomi, HR, verksamhetsuppföljning, datalager</value>
-          <value>2020-11-23</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>133457</value>
-          <value>Melior</value>
-          <value>Journalsystem</value>
-          <value>Klinisk verksamhet</value>
-          <value>Vårddokumentation och läkemedel</value>
-          <value>2020-09-03</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>123458</value>
-          <value>Informationsplattformen</value>
-          <value>Enterprise Data Warehouse</value>
-          <value>Beslutsstöd</value>
-          <value>Ekonomi, HR, verksamhetsuppföljning, datalager</value>
-          <value>2022-09-13</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>123958</value>
-          <value>Profisee</value>
-          <value>Masterdataplattformen</value>
-          <value>Masterdata</value>
-          <value>Ekonomi, HR, verksamhetsuppföljning, datalager</value>
-          <value>2021-09-03</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-  </tables>
-
-  <dataOutputs>
-    <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="tsql" />
-    </sqlOutputs>
-  </dataOutputs>
-
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/it-system.dataproduct" targetPlatform="msfabric">
+    <names>
+        <name language="sv">IT-system</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Grunduppgifter om Region Skånes centrala IT-system.</description>
+    </descriptions>
+    <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly" dcatAvailability="available" dcatStatus="completed" />
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter value="IT" />
+        </trait>
+        <trait class="category" subclass="searchStructure">
+            <traitParameter value="1.1" />
+        </trait>
+        <trait class="category" subclass="productOwner">
+            <traitParameter value="SDI Plattform" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter value="standard" />
+        </trait>
+        <trait class="isVirtual">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="icon">
+            <traitParameter value="bi-laptop" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter value="dbo" />
+        </trait>
+    </traits>
+    <dataInputs>
+        <dataInput id="profisee" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="MD_Anvandare">
+            <names>
+                <name language="sv">MD_Användare</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Grunduppgifter om Region Skånes IT-system.</description>
+            </descriptions>
+            <businessKey>
+                <value>ID</value>
+            </businessKey>
+            <columns>
+                <column id="ID">
+                    <names>
+                        <name language="sv">ID</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">ID 6 siffror.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>profisee/MD_Anvandare/ID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Namn">
+                    <names>
+                        <name language="sv">Namn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Namn på IT-systemet.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>profisee/MD_Anvandare/Namn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Beskrivning">
+                    <names>
+                        <name language="sv">Beskrivning</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">En beskrivning av IT-systemet.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>profisee/MD_Anvandare/Beskrivning</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Kategori">
+                    <names>
+                        <name language="sv">Kategori</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger vilken kategori IT-systemet tillhör.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>profisee/MD_Anvandare/Kategori</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="SAO">
+                    <names>
+                        <name language="sv">SAO</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">SAO. I annat fall null.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>profisee/MD_Anvandare/SAO</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Riskanalyserat">
+                    <names>
+                        <name language="sv">Riskanalyserat</name>
+                    </names>
+                    <dimlDataType id="date" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum för senaste riskanalys.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>profisee/MD_Anvandare/Riskanalyserat</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>123456</value>
+                    <value>Pasis</value>
+                    <value>Patientadministrativt system</value>
+                    <value>Patientadminitration</value>
+                    <value>Vård- och patientadministration</value>
+                    <value>2019-03-02</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>123457</value>
+                    <value>Raindance</value>
+                    <value>Ekonomisystem</value>
+                    <value>Administration</value>
+                    <value>Ekonomi, HR, verksamhetsuppföljning, datalager</value>
+                    <value>2020-11-23</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>133457</value>
+                    <value>Melior</value>
+                    <value>Journalsystem</value>
+                    <value>Klinisk verksamhet</value>
+                    <value>Vårddokumentation och läkemedel</value>
+                    <value>2020-09-03</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>123458</value>
+                    <value>Informationsplattformen</value>
+                    <value>Enterprise Data Warehouse</value>
+                    <value>Beslutsstöd</value>
+                    <value>Ekonomi, HR, verksamhetsuppföljning, datalager</value>
+                    <value>2022-09-13</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>123958</value>
+                    <value>Profisee</value>
+                    <value>Masterdataplattformen</value>
+                    <value>Masterdata</value>
+                    <value>Ekonomi, HR, verksamhetsuppföljning, datalager</value>
+                    <value>2021-09-03</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataProduct>

@@ -1,442 +1,428 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd"
-  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource">
-
-  <names>
-    <name language="sv">Raindance - Ekonomikoder</name>
-  </names>
-
-  <descriptions>
-    <description type="plain" language="sv">
+<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/raindance_ekonomikoder.datasource">
+    <names>
+        <name language="sv">Raindance - Ekonomikoder</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">
       Innehåller förvaltningskoder, ansvarskoder och motparter från Raindance.
     </description>
-  </descriptions>
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter value="direkonomi" />
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K1R1T1" />
-    </trait>
-    <trait class="tableSchema">
-      <traitParameter value="dbo" />
-    </trait>
-  </traits>
-
-  <tables>
-
-    <table id="Forvaltningskoder">
-      <names>
-        <name language="sv">Forvaltningskoder</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">En tabell över förvaltningskoder.</description>
-      </descriptions>
-      <businessKey>
-        <value>FVK_ID</value>
-        <value>FVK_TEXT</value>
-      </businessKey>
-      <columns>
-        <column id="FTG_ID">
-          <names>
-            <name language="sv">FTG_ID</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
-          </descriptions>
-        </column>
-        <column id="FVK_ID">
-          <names>
-            <name language="sv">FVK_ID</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en förvaltning.</description>
-          </descriptions>
-        </column>
-        <column id="FVK_TEXT">
-          <names>
-            <name language="sv">FVK_TEXT</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">En text som beskriver förvaltningen.</description>
-          </descriptions>
-        </column>
-        <column id="FVK_GILTIG_FOM">
-          <names>
-            <name language="sv">FVK_GILTIG_FOM</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger från och med när förvaltningen är giltig, med datum och tid.</description>
-          </descriptions>
-        </column>
-        <column id="FVK_GILTIG_TOM">
-          <names>
-            <name language="sv">FVK_GILTIG_TOM</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger till och med när förvaltningen är giltig, med datum och tid. Måste vara längre fram i tiden än FVK_GILTIG_FOM.</description>
-          </descriptions>
-          <traits>
-            <trait class="isGreaterThan">
-              <traitParameter key="column" value="FVK_GILTIG_FOM" />
-            </trait>
-          </traits>
-        </column>
-        <column id="FVK_PASSIV">
-          <names>
-            <name language="sv">FVK_PASSIV</name>
-          </names>
-          <dimlDataType id="boolean" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger, i kombination med FVK_GILTIG_FOM och FVK_GILTIG_TOM, huruvida förvaltningen är aktiv eller passiv.</description>
-          </descriptions>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>207</value>
-          <value>207</value>
-          <value>Folktandvården Skåne AB</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>043</value>
-          <value>430</value>
-          <value>Skånetrafiken</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>063</value>
-          <value>630</value>
-          <value>Regionservice</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>065</value>
-          <value>680</value>
-          <value>Regionfastigheter</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>710</value>
-          <value>Regionstyrelsen</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>720</value>
-          <value>Digitalisering IT och MT</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Ansvarskoder">
-      <names>
-        <name language="sv">Ansvarskoder</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">En tabell över ansvarskoder.</description>
-      </descriptions>
-      <businessKey>
-        <value>FTG_ID</value>
-        <value>ANSVAR_ID</value>
-      </businessKey>
-      <columns>
-        <column id="FTG_ID">
-          <names>
-            <name language="sv">FTG_ID</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>raindance_ekonomikoder/ansvarskoder/FTG_ID</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="ANSVAR_ID">
-          <names>
-            <name language="sv">ANSVAR_ID</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar ett ansvar.</description>
-          </descriptions>
-        </column>
-        <column id="ANSVAR_TEXT">
-          <names>
-            <name language="sv">ANSVAR_TEXT</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">En text som beskriver ansvaret.</description>
-          </descriptions>
-        </column>
-        <column id="ANSVAR_GILTIG_FOM">
-          <names>
-            <name language="sv">ANSVAR_GILTIG_FOM</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger från och med när ansvaret är giltigt, med datum och tid.</description>
-          </descriptions>
-        </column>
-        <column id="ANSVAR_GILTIG_TOM">
-          <names>
-            <name language="sv">ANSVAR_GILTIG_TOM</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger till och med när ansvaret är giltigt, med datum och tid. Måste vara längre fram i tiden än ANSVAR_GILTIG_FOM.</description>
-          </descriptions>
-          <traits>
-            <trait class="isGreaterThan">
-              <traitParameter key="column" value="ANSVAR_GILTIG_FOM" />
-            </trait>
-          </traits>
-        </column>
-        <column id="ANSVAR_PASSIV">
-          <names>
-            <name language="sv">ANSVAR_PASSIV</name>
-          </names>
-          <dimlDataType id="boolean" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger, i kombination med ANSVAR_GILTIG_FOM och ANSVAR_GILTIG_TOM, huruvida ansvaret är aktivt eller passivt.</description>
-          </descriptions>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>071</value>
-          <value>61041</value>
-          <value>Digitala tjänster och design</value>
-          <value>2021-12-01 00:00:00</value>
-          <value>2035-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>62317</value>
-          <value>WS Kvalitetsuppföljning</value>
-          <value>2018-06-19 00:00:00</value>
-          <value>2035-12-31 00:00:00</value>
-          <value>1</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>62704</value>
-          <value>Utv plattform för Vård i hemmet</value>
-          <value>2022-01-01 00:00:00</value>
-          <value>2035-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>63041</value>
-          <value>DARC Analys</value>
-          <value>2020-03-01 00:00:00</value>
-          <value>2022-01-01 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>64070</value>
-          <value>Projekt</value>
-          <value>2017-08-01 00:00:00</value>
-          <value>2035-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>64080</value>
-          <value>Mjukvaruutveckling</value>
-          <value>2017-08-01 00:00:00</value>
-          <value>2035-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>64081</value>
-          <value>Integration och Information</value>
-          <value>2020-03-01 00:00:00</value>
-          <value>2025-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>64082</value>
-          <value>Testcenter</value>
-          <value>2020-03-01 00:00:00</value>
-          <value>2025-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Motparter">
-      <names>
-        <name language="sv">Motparter</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">En tabell över motparter.</description>
-      </descriptions>
-      <businessKey>
-        <value>FTG_ID</value>
-        <value>MOTP_ID</value>
-      </businessKey>
-      <columns>
-        <column id="FTG_ID">
-          <names>
-            <name language="sv">FTG_ID</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
-          </descriptions>
-        </column>
-        <column id="MOTP_ID">
-          <names>
-            <name language="sv">MOTP_ID</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en motpart.</description>
-          </descriptions>
-        </column>
-        <column id="MOTP_TEXT">
-          <names>
-            <name language="sv">MOTP_TEXT</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">En text som beskriver motparten.</description>
-          </descriptions>
-        </column>
-        <column id="MOTP_GILTIG_FOM">
-          <names>
-            <name language="sv">MOTP_GILTIG_FOM</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger från och med när motparten är giltig, med datum och tid.</description>
-          </descriptions>
-        </column>
-        <column id="MOTP_GILTIG_TOM">
-          <names>
-            <name language="sv">MOTP_GILTIG_TOM</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger till och med när motparten är giltig, med datum och tid. Måste vara längre fram i tiden än MOTP_GILTIG_FOM.</description>
-          </descriptions>
-          <traits>
-            <trait class="isGreaterThan">
-              <traitParameter key="column" value="MOTP_GILTIG_FOM" />
-            </trait>
-          </traits>
-        </column>
-        <column id="MOTP_PASSIV">
-          <names>
-            <name language="sv">MOTP_PASSIV</name>
-          </names>
-          <dimlDataType id="boolean" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger, i kombination med MOTP_GILTIG_FOM och MOTP_GILTIG_TOM, huruvida motparten är aktiv eller passiv.</description>
-          </descriptions>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>071</value>
-          <value>1099</value>
-          <value>Sv kommuner och landsting</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2010-05-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>1150</value>
-          <value>SKR/Kommunal-/samordnförbund</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>194070</value>
-          <value>BVC, Flyinge</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>194087</value>
-          <value>Capio Citykl BVC Malmö ÖST</value>
-          <value>2009-05-01 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>464230</value>
-          <value>S L A</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>464300</value>
-          <value>Leveransomr Gemensam Service 1</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>1</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>071</value>
-          <value>464450</value>
-          <value>System och Integration</value>
-          <value>1799-12-31 00:00:00</value>
-          <value>2999-12-31 00:00:00</value>
-          <value>0</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-  </tables>
-
-  <dataOutputs>
-    <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="tsql" />
-    </sqlOutputs>
-  </dataOutputs>
-
+    </descriptions>
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter value="direkonomi" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter value="dbo" />
+        </trait>
+    </traits>
+    <tables>
+        <table id="Forvaltningskoder">
+            <names>
+                <name language="sv">Forvaltningskoder</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">En tabell över förvaltningskoder.</description>
+            </descriptions>
+            <businessKey>
+                <value>FVK_ID</value>
+                <value>FVK_TEXT</value>
+            </businessKey>
+            <columns>
+                <column id="FTG_ID">
+                    <names>
+                        <name language="sv">FTG_ID</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
+                    </descriptions>
+                </column>
+                <column id="FVK_ID">
+                    <names>
+                        <name language="sv">FVK_ID</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en förvaltning.</description>
+                    </descriptions>
+                </column>
+                <column id="FVK_TEXT">
+                    <names>
+                        <name language="sv">FVK_TEXT</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">En text som beskriver förvaltningen.</description>
+                    </descriptions>
+                </column>
+                <column id="FVK_GILTIG_FOM">
+                    <names>
+                        <name language="sv">FVK_GILTIG_FOM</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger från och med när förvaltningen är giltig, med datum och tid.</description>
+                    </descriptions>
+                </column>
+                <column id="FVK_GILTIG_TOM">
+                    <names>
+                        <name language="sv">FVK_GILTIG_TOM</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger till och med när förvaltningen är giltig, med datum och tid. Måste vara längre fram i tiden än FVK_GILTIG_FOM.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="isGreaterThan">
+                            <traitParameter key="column" value="FVK_GILTIG_FOM" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="FVK_PASSIV">
+                    <names>
+                        <name language="sv">FVK_PASSIV</name>
+                    </names>
+                    <dimlDataType id="boolean" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger, i kombination med FVK_GILTIG_FOM och FVK_GILTIG_TOM, huruvida förvaltningen är aktiv eller passiv.</description>
+                    </descriptions>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>207</value>
+                    <value>207</value>
+                    <value>Folktandvården Skåne AB</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>043</value>
+                    <value>430</value>
+                    <value>Skånetrafiken</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>063</value>
+                    <value>630</value>
+                    <value>Regionservice</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>065</value>
+                    <value>680</value>
+                    <value>Regionfastigheter</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>710</value>
+                    <value>Regionstyrelsen</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>720</value>
+                    <value>Digitalisering IT och MT</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Ansvarskoder">
+            <names>
+                <name language="sv">Ansvarskoder</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">En tabell över ansvarskoder.</description>
+            </descriptions>
+            <businessKey>
+                <value>FTG_ID</value>
+                <value>ANSVAR_ID</value>
+            </businessKey>
+            <columns>
+                <column id="FTG_ID">
+                    <names>
+                        <name language="sv">FTG_ID</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>raindance_ekonomikoder/ansvarskoder/FTG_ID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="ANSVAR_ID">
+                    <names>
+                        <name language="sv">ANSVAR_ID</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar ett ansvar.</description>
+                    </descriptions>
+                </column>
+                <column id="ANSVAR_TEXT">
+                    <names>
+                        <name language="sv">ANSVAR_TEXT</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">En text som beskriver ansvaret.</description>
+                    </descriptions>
+                </column>
+                <column id="ANSVAR_GILTIG_FOM">
+                    <names>
+                        <name language="sv">ANSVAR_GILTIG_FOM</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger från och med när ansvaret är giltigt, med datum och tid.</description>
+                    </descriptions>
+                </column>
+                <column id="ANSVAR_GILTIG_TOM">
+                    <names>
+                        <name language="sv">ANSVAR_GILTIG_TOM</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger till och med när ansvaret är giltigt, med datum och tid. Måste vara längre fram i tiden än ANSVAR_GILTIG_FOM.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="isGreaterThan">
+                            <traitParameter key="column" value="ANSVAR_GILTIG_FOM" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="ANSVAR_PASSIV">
+                    <names>
+                        <name language="sv">ANSVAR_PASSIV</name>
+                    </names>
+                    <dimlDataType id="boolean" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger, i kombination med ANSVAR_GILTIG_FOM och ANSVAR_GILTIG_TOM, huruvida ansvaret är aktivt eller passivt.</description>
+                    </descriptions>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>61041</value>
+                    <value>Digitala tjänster och design</value>
+                    <value>2021-12-01 00:00:00</value>
+                    <value>2035-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>62317</value>
+                    <value>WS Kvalitetsuppföljning</value>
+                    <value>2018-06-19 00:00:00</value>
+                    <value>2035-12-31 00:00:00</value>
+                    <value>1</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>62704</value>
+                    <value>Utv plattform för Vård i hemmet</value>
+                    <value>2022-01-01 00:00:00</value>
+                    <value>2035-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>63041</value>
+                    <value>DARC Analys</value>
+                    <value>2020-03-01 00:00:00</value>
+                    <value>2022-01-01 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>64070</value>
+                    <value>Projekt</value>
+                    <value>2017-08-01 00:00:00</value>
+                    <value>2035-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>64080</value>
+                    <value>Mjukvaruutveckling</value>
+                    <value>2017-08-01 00:00:00</value>
+                    <value>2035-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>64081</value>
+                    <value>Integration och Information</value>
+                    <value>2020-03-01 00:00:00</value>
+                    <value>2025-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>64082</value>
+                    <value>Testcenter</value>
+                    <value>2020-03-01 00:00:00</value>
+                    <value>2025-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Motparter">
+            <names>
+                <name language="sv">Motparter</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">En tabell över motparter.</description>
+            </descriptions>
+            <businessKey>
+                <value>FTG_ID</value>
+                <value>MOTP_ID</value>
+            </businessKey>
+            <columns>
+                <column id="FTG_ID">
+                    <names>
+                        <name language="sv">FTG_ID</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Ett unikt ID som representerar ett företag.</description>
+                    </descriptions>
+                </column>
+                <column id="MOTP_ID">
+                    <names>
+                        <name language="sv">MOTP_ID</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Ett ID som är unikt inom varje företag, som representerar en motpart.</description>
+                    </descriptions>
+                </column>
+                <column id="MOTP_TEXT">
+                    <names>
+                        <name language="sv">MOTP_TEXT</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">En text som beskriver motparten.</description>
+                    </descriptions>
+                </column>
+                <column id="MOTP_GILTIG_FOM">
+                    <names>
+                        <name language="sv">MOTP_GILTIG_FOM</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger från och med när motparten är giltig, med datum och tid.</description>
+                    </descriptions>
+                </column>
+                <column id="MOTP_GILTIG_TOM">
+                    <names>
+                        <name language="sv">MOTP_GILTIG_TOM</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger till och med när motparten är giltig, med datum och tid. Måste vara längre fram i tiden än MOTP_GILTIG_FOM.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="isGreaterThan">
+                            <traitParameter key="column" value="MOTP_GILTIG_FOM" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="MOTP_PASSIV">
+                    <names>
+                        <name language="sv">MOTP_PASSIV</name>
+                    </names>
+                    <dimlDataType id="boolean" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger, i kombination med MOTP_GILTIG_FOM och MOTP_GILTIG_TOM, huruvida motparten är aktiv eller passiv.</description>
+                    </descriptions>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>1099</value>
+                    <value>Sv kommuner och landsting</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2010-05-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>1150</value>
+                    <value>SKR/Kommunal-/samordnförbund</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>194070</value>
+                    <value>BVC, Flyinge</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>194087</value>
+                    <value>Capio Citykl BVC Malmö ÖST</value>
+                    <value>2009-05-01 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>464230</value>
+                    <value>S L A</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>464300</value>
+                    <value>Leveransomr Gemensam Service 1</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>1</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>071</value>
+                    <value>464450</value>
+                    <value>System och Integration</value>
+                    <value>1799-12-31 00:00:00</value>
+                    <value>2999-12-31 00:00:00</value>
+                    <value>0</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataSource>

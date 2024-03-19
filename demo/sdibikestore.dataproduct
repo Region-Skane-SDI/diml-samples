@@ -1,1665 +1,1565 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/SdiBikeStore.dataproduct"
-  targetPlatform="msfabric">
-  <names>
-    <name language="sv">SdiBikeStore</name>
-  </names>
-  <descriptions>
-    <description type="Plain" language="sv">[placeholder]</description>
-  </descriptions>
-  <dcat dcatDataTheme="heal" dcatAccessRights="nonPublic" dcatUpdateFrequency="other"
-    dcatAvailability="experimental" dcatStatus="underDevelopment" />
-  <traits>
-    <trait class="Category" subclass="informationOwner">
-      <traitParameter key="value">
-        <value>[placeholder]</value>
-        <value>[placeholder]</value>
-      </traitParameter>
-    </trait>
-    <trait class="Category" subclass="searchStructure">
-      <traitParameter key="value" value="[placeholder]" />
-    </trait>
-    <trait class="Category" subclass="productOwner">
-      <traitParameter key="value" value="[placeholder]" />
-    </trait>
-    <trait class="Category" subclass="contentClass">
-      <traitParameter key="value" value="[placeholder]" />
-    </trait>
-    <trait class="Icon">
-      <traitParameter key="value" value="bi-image" />
-    </trait>
-    <trait class="InfoClass">
-      <traitParameter key="value" value="[placeholder]" />
-    </trait>
-  </traits>
-  <dataInputs>
-    <dataInput id="src1"
-      dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/SdiBikeStore.datasource"
-      channelId="sql" />
-  </dataInputs>
-  <tables>
-    <table id="dbo/__scenario">
-      <names>
-        <name language="sv">__scenario</name>
-      </names>
-      <descriptions>
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/SdiBikeStore.dataproduct" targetPlatform="msfabric">
+    <names>
+        <name language="sv">SdiBikeStore</name>
+    </names>
+    <descriptions>
         <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <columns>
-        <column id="scenario_id">
-          <names>
-            <name language="sv">scenario_id</name>
-          </names>
-          <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint"
-            originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/dbo/__scenario/scenario_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="scenario_name">
-          <names>
-            <name language="sv">scenario_name</name>
-          </names>
-          <dimlDataType id="string" length="100" format="" isFixedLength="true" isWideChar="true"
-            originalDataType="nchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/dbo/__scenario/scenario_name" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-    <table id="production/brands">
-      <names>
-        <name language="sv">brands</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>brand_id</value>
-      </businessKey>
-      <columns>
-        <column id="brand_id">
-          <names>
-            <name language="sv">brand_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/brands/brand_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="brand_name">
-          <names>
-            <name language="sv">brand_name</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/brands/brand_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/brands/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/brands/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-    <table id="production/categories">
-      <names>
-        <name language="sv">categories</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>category_id</value>
-      </businessKey>
-      <columns>
-        <column id="category_id">
-          <names>
-            <name language="sv">category_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/categories/category_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="category_name">
-          <names>
-            <name language="sv">category_name</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/categories/category_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/categories/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/categories/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-    <table id="production/products">
-      <names>
-        <name language="sv">products</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>product_id</value>
-      </businessKey>
-      <columns>
-        <column id="product_id">
-          <names>
-            <name language="sv">product_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/product_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="product_name">
-          <names>
-            <name language="sv">product_name</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/product_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="brand_id">
-          <names>
-            <name language="sv">brand_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/brand_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="category_id">
-          <names>
-            <name language="sv">category_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/category_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="model_year">
-          <names>
-            <name language="sv">model_year</name>
-          </names>
-          <dimlDataType id="smallInteger" unsigned="true" originalDataType="smallint"
-            originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/model_year" />
-            </trait>
-          </traits>
-        </column>
-        <column id="list_price">
-          <names>
-            <name language="sv">list_price</name>
-          </names>
-          <dimlDataType id="decimal" precision="10" scale="2" unsigned="true"
-            originalDataType="decimal" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/list_price" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/products/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="relation1" targetTable="production/brands">
-          <relationColumns columnName="brand_id" targetColumnName="brand_id" />
-        </tableRelation>
-        <tableRelation id="relation2" targetTable="production/categories">
-          <relationColumns columnName="category_id" targetColumnName="brand_id" />
-        </tableRelation>
-      </tableRelations>
-    </table>
-    <table id="production/stocks">
-      <names>
-        <name language="sv">stocks</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>store_id</value>
-        <value>product_id</value>
-      </businessKey>
-      <columns>
-        <column id="store_id">
-          <names>
-            <name language="sv">store_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/stocks/store_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="product_id">
-          <names>
-            <name language="sv">product_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/stocks/product_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="quantity">
-          <names>
-            <name language="sv">quantity</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/stocks/quantity" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/stocks/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/production/stocks/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="relation1" targetTable="sales/stores">
-          <relationColumns columnName="store_id" targetColumnName="store_id" />
-        </tableRelation>
-        <tableRelation id="relation2" targetTable="production/products">
-          <relationColumns columnName="product_id" targetColumnName="store_id" />
-        </tableRelation>
-      </tableRelations>
-    </table>
-    <table id="sales/customer_diagnosis">
-      <names>
-        <name language="sv">customer_diagnosis</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <columns>
-        <column id="customer_diagnosis_id">
-          <names>
-            <name language="sv">customer_diagnosis_id</name>
-          </names>
-          <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint"
-            originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value"
-                value="src1/sales/customer_diagnosis/customer_diagnosis_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="customer_id">
-          <names>
-            <name language="sv">customer_id</name>
-          </names>
-          <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint"
-            originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customer_diagnosis/customer_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="diagnosis_id">
-          <names>
-            <name language="sv">diagnosis_id</name>
-          </names>
-          <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint"
-            originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customer_diagnosis/diagnosis_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customer_diagnosis/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customer_diagnosis/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-    <table id="sales/customers">
-      <names>
-        <name language="sv">customers</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>customer_id</value>
-      </businessKey>
-      <columns>
-        <column id="customer_id">
-          <names>
-            <name language="sv">customer_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/customer_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="first_name">
-          <names>
-            <name language="sv">first_name</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/first_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="last_name">
-          <names>
-            <name language="sv">last_name</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/last_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="phone">
-          <names>
-            <name language="sv">phone</name>
-          </names>
-          <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/phone" />
-            </trait>
-          </traits>
-        </column>
-        <column id="email">
-          <names>
-            <name language="sv">email</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/email" />
-            </trait>
-          </traits>
-        </column>
-        <column id="street">
-          <names>
-            <name language="sv">street</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/street" />
-            </trait>
-          </traits>
-        </column>
-        <column id="city">
-          <names>
-            <name language="sv">city</name>
-          </names>
-          <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/city" />
-            </trait>
-          </traits>
-        </column>
-        <column id="state">
-          <names>
-            <name language="sv">state</name>
-          </names>
-          <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/state" />
-            </trait>
-          </traits>
-        </column>
-        <column id="zip_code">
-          <names>
-            <name language="sv">zip_code</name>
-          </names>
-          <dimlDataType id="string" length="5" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/zip_code" />
-            </trait>
-          </traits>
-        </column>
-        <column id="social_security_number">
-          <names>
-            <name language="sv">social_security_number</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/social_security_number" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/customers/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-    <table id="sales/diagnosis">
-      <names>
-        <name language="sv">diagnosis</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <columns>
-        <column id="diagnosis_id">
-          <names>
-            <name language="sv">diagnosis_id</name>
-          </names>
-          <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint"
-            originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="diagnosis_category_code">
-          <names>
-            <name language="sv">diagnosis_category_code</name>
-          </names>
-          <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_category_code" />
-            </trait>
-          </traits>
-        </column>
-        <column id="diagnosis_code">
-          <names>
-            <name language="sv">diagnosis_code</name>
-          </names>
-          <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_code" />
-            </trait>
-          </traits>
-        </column>
-        <column id="diagnosis_full_code">
-          <names>
-            <name language="sv">diagnosis_full_code</name>
-          </names>
-          <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_full_code" />
-            </trait>
-          </traits>
-        </column>
-        <column id="abbreviated_description">
-          <names>
-            <name language="sv">abbreviated_description</name>
-          </names>
-          <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/abbreviated_description" />
-            </trait>
-          </traits>
-        </column>
-        <column id="full description">
-          <names>
-            <name language="sv">full description</name>
-          </names>
-          <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/full description" />
-            </trait>
-          </traits>
-        </column>
-        <column id="category title">
-          <names>
-            <name language="sv">category title</name>
-          </names>
-          <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/category title" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/diagnosis/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-    <table id="sales/order_items">
-      <names>
-        <name language="sv">order_items</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>order_id</value>
-        <value>item_id</value>
-      </businessKey>
-      <columns>
-        <column id="order_id">
-          <names>
-            <name language="sv">order_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/order_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="item_id">
-          <names>
-            <name language="sv">item_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/item_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="product_id">
-          <names>
-            <name language="sv">product_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/product_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="quantity">
-          <names>
-            <name language="sv">quantity</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/quantity" />
-            </trait>
-          </traits>
-        </column>
-        <column id="list_price">
-          <names>
-            <name language="sv">list_price</name>
-          </names>
-          <dimlDataType id="decimal" precision="10" scale="2" unsigned="true"
-            originalDataType="decimal" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/list_price" />
-            </trait>
-          </traits>
-        </column>
-        <column id="discount">
-          <names>
-            <name language="sv">discount</name>
-          </names>
-          <dimlDataType id="decimal" precision="4" scale="2" unsigned="true"
-            originalDataType="decimal" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/discount" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/order_items/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="relation1" targetTable="sales/orders">
-          <relationColumns columnName="order_id" targetColumnName="order_id" />
-        </tableRelation>
-        <tableRelation id="relation2" targetTable="production/products">
-          <relationColumns columnName="product_id" targetColumnName="order_id" />
-        </tableRelation>
-      </tableRelations>
-    </table>
-    <table id="sales/orders">
-      <names>
-        <name language="sv">orders</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>order_id</value>
-      </businessKey>
-      <columns>
-        <column id="order_id">
-          <names>
-            <name language="sv">order_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/order_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="customer_id">
-          <names>
-            <name language="sv">customer_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/customer_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="order_status">
-          <names>
-            <name language="sv">order_status</name>
-          </names>
-          <dimlDataType id="tinyInteger" unsigned="true" originalDataType="tinyint"
-            originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/order_status" />
-            </trait>
-          </traits>
-        </column>
-        <column id="order_date">
-          <names>
-            <name language="sv">order_date</name>
-          </names>
-          <dimlDataType id="date" originalDataType="date" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/order_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="required_date">
-          <names>
-            <name language="sv">required_date</name>
-          </names>
-          <dimlDataType id="date" originalDataType="date" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/required_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="shipped_date">
-          <names>
-            <name language="sv">shipped_date</name>
-          </names>
-          <dimlDataType id="date" originalDataType="date" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/shipped_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="store_id">
-          <names>
-            <name language="sv">store_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/store_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="staff_id">
-          <names>
-            <name language="sv">staff_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/staff_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/orders/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="relation1" targetTable="sales/customers">
-          <relationColumns columnName="customer_id" targetColumnName="customer_id" />
-        </tableRelation>
-        <tableRelation id="relation2" targetTable="sales/stores">
-          <relationColumns columnName="store_id" targetColumnName="customer_id" />
-        </tableRelation>
-        <tableRelation id="relation3" targetTable="sales/staffs">
-          <relationColumns columnName="staff_id" targetColumnName="customer_id" />
-        </tableRelation>
-      </tableRelations>
-    </table>
-    <table id="sales/staffs">
-      <names>
-        <name language="sv">staffs</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>staff_id</value>
-        <value>email</value>
-      </businessKey>
-      <columns>
-        <column id="staff_id">
-          <names>
-            <name language="sv">staff_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/staff_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="first_name">
-          <names>
-            <name language="sv">first_name</name>
-          </names>
-          <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/first_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="last_name">
-          <names>
-            <name language="sv">last_name</name>
-          </names>
-          <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/last_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="email">
-          <names>
-            <name language="sv">email</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/email" />
-            </trait>
-          </traits>
-        </column>
-        <column id="phone">
-          <names>
-            <name language="sv">phone</name>
-          </names>
-          <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/phone" />
-            </trait>
-          </traits>
-        </column>
-        <column id="active">
-          <names>
-            <name language="sv">active</name>
-          </names>
-          <dimlDataType id="tinyInteger" unsigned="true" originalDataType="tinyint"
-            originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/active" />
-            </trait>
-          </traits>
-        </column>
-        <column id="store_id">
-          <names>
-            <name language="sv">store_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/store_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="manager_id">
-          <names>
-            <name language="sv">manager_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/manager_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="social_security_number">
-          <names>
-            <name language="sv">social_security_number</name>
-          </names>
-          <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint"
-            originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/social_security_number" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/staffs/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="relation1" targetTable="sales/stores">
-          <relationColumns columnName="store_id" targetColumnName="store_id" />
-        </tableRelation>
-        <tableRelation id="relation2" targetTable="sales/staffs">
-          <relationColumns columnName="staff_id" targetColumnName="store_id" />
-        </tableRelation>
-      </tableRelations>
-    </table>
-    <table id="sales/stores">
-      <names>
-        <name language="sv">stores</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <businessKey>
-        <value>store_id</value>
-      </businessKey>
-      <columns>
-        <column id="store_id">
-          <names>
-            <name language="sv">store_id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/store_id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="store_name">
-          <names>
-            <name language="sv">store_name</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/store_name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="phone">
-          <names>
-            <name language="sv">phone</name>
-          </names>
-          <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/phone" />
-            </trait>
-          </traits>
-        </column>
-        <column id="email">
-          <names>
-            <name language="sv">email</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/email" />
-            </trait>
-          </traits>
-        </column>
-        <column id="street">
-          <names>
-            <name language="sv">street</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/street" />
-            </trait>
-          </traits>
-        </column>
-        <column id="city">
-          <names>
-            <name language="sv">city</name>
-          </names>
-          <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/city" />
-            </trait>
-          </traits>
-        </column>
-        <column id="state">
-          <names>
-            <name language="sv">state</name>
-          </names>
-          <dimlDataType id="string" length="10" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/state" />
-            </trait>
-          </traits>
-        </column>
-        <column id="zip_code">
-          <names>
-            <name language="sv">zip_code</name>
-          </names>
-          <dimlDataType id="string" length="5" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/zip_code" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="update_date">
-          <names>
-            <name language="sv">update_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="7" originalDataType="datetime2"
-            originalPlatform="tsql" isNullable="true" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sales/stores/update_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-    <table id="sys/database_firewall_rules">
-      <names>
-        <name language="sv">database_firewall_rules</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">[placeholder]</description>
-      </descriptions>
-      <columns>
-        <column id="id">
-          <names>
-            <name language="sv">id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
-            isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sys/database_firewall_rules/id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="name">
-          <names>
-            <name language="sv">name</name>
-          </names>
-          <dimlDataType id="string" length="128" format="" isFixedLength="false" isWideChar="true"
-            originalDataType="nvarchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sys/database_firewall_rules/name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="start_ip_address">
-          <names>
-            <name language="sv">start_ip_address</name>
-          </names>
-          <dimlDataType id="string" length="45" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sys/database_firewall_rules/start_ip_address" />
-            </trait>
-          </traits>
-        </column>
-        <column id="end_ip_address">
-          <names>
-            <name language="sv">end_ip_address</name>
-          </names>
-          <dimlDataType id="string" length="45" format="" isFixedLength="false" isWideChar="false"
-            originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sys/database_firewall_rules/end_ip_address" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="3" originalDataType="datetime"
-            originalPlatform="tsql" isNullable="false" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sys/database_firewall_rules/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="modify_date">
-          <names>
-            <name language="sv">modify_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="3" originalDataType="datetime"
-            originalPlatform="tsql" isNullable="false" isUtcTime="false" />
-          <descriptions>
-            <description type="Plain" language="sv">[placeholder]</description>
-          </descriptions>
-          <traits>
-            <trait class="ColumnSources">
-              <traitParameter key="value" value="src1/sys/database_firewall_rules/modify_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
-  </tables>
-  <dataOutputs>
-    <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="Tsql" />
-    </sqlOutputs>
-  </dataOutputs>
-  <dataFlow>
-    <dataStages />
-    <dataIngests />
-  </dataFlow>
+    </descriptions>
+    <dcat dcatDataTheme="heal" dcatAccessRights="nonPublic" dcatUpdateFrequency="other" dcatAvailability="experimental" dcatStatus="underDevelopment" />
+    <traits>
+        <trait class="Category" subclass="informationOwner">
+            <traitParameter key="value">
+                <value>[placeholder]</value>
+                <value>[placeholder]</value>
+            </traitParameter>
+        </trait>
+        <trait class="Category" subclass="searchStructure">
+            <traitParameter key="value" value="[placeholder]" />
+        </trait>
+        <trait class="Category" subclass="productOwner">
+            <traitParameter key="value" value="[placeholder]" />
+        </trait>
+        <trait class="Category" subclass="contentClass">
+            <traitParameter key="value" value="[placeholder]" />
+        </trait>
+        <trait class="Icon">
+            <traitParameter key="value" value="bi-image" />
+        </trait>
+        <trait class="InfoClass">
+            <traitParameter key="value" value="[placeholder]" />
+        </trait>
+    </traits>
+    <dataInputs>
+        <dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/SdiBikeStore.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="dbo/__scenario">
+            <names>
+                <name language="sv">__scenario</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <columns>
+                <column id="scenario_id">
+                    <names>
+                        <name language="sv">scenario_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/dbo/__scenario/scenario_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="scenario_name">
+                    <names>
+                        <name language="sv">scenario_name</name>
+                    </names>
+                    <dimlDataType id="string" length="100" format="" isFixedLength="true" isWideChar="true" originalDataType="nchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/dbo/__scenario/scenario_name" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+        <table id="production/brands">
+            <names>
+                <name language="sv">brands</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>brand_id</value>
+            </businessKey>
+            <columns>
+                <column id="brand_id">
+                    <names>
+                        <name language="sv">brand_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/brands/brand_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="brand_name">
+                    <names>
+                        <name language="sv">brand_name</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/brands/brand_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/brands/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/brands/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+        <table id="production/categories">
+            <names>
+                <name language="sv">categories</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>category_id</value>
+            </businessKey>
+            <columns>
+                <column id="category_id">
+                    <names>
+                        <name language="sv">category_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/categories/category_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="category_name">
+                    <names>
+                        <name language="sv">category_name</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/categories/category_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/categories/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/categories/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+        <table id="production/products">
+            <names>
+                <name language="sv">products</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>product_id</value>
+            </businessKey>
+            <columns>
+                <column id="product_id">
+                    <names>
+                        <name language="sv">product_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/product_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="product_name">
+                    <names>
+                        <name language="sv">product_name</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/product_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="brand_id">
+                    <names>
+                        <name language="sv">brand_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/brand_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="category_id">
+                    <names>
+                        <name language="sv">category_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/category_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="model_year">
+                    <names>
+                        <name language="sv">model_year</name>
+                    </names>
+                    <dimlDataType id="smallInteger" unsigned="true" originalDataType="smallint" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/model_year" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="list_price">
+                    <names>
+                        <name language="sv">list_price</name>
+                    </names>
+                    <dimlDataType id="decimal" precision="10" scale="2" unsigned="true" originalDataType="decimal" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/list_price" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/products/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="relation1" targetTable="production/brands">
+                    <relationColumns columnName="brand_id" targetColumnName="brand_id" />
+                </tableRelation>
+                <tableRelation id="relation2" targetTable="production/categories">
+                    <relationColumns columnName="category_id" targetColumnName="brand_id" />
+                </tableRelation>
+            </tableRelations>
+        </table>
+        <table id="production/stocks">
+            <names>
+                <name language="sv">stocks</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>store_id</value>
+                <value>product_id</value>
+            </businessKey>
+            <columns>
+                <column id="store_id">
+                    <names>
+                        <name language="sv">store_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/stocks/store_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="product_id">
+                    <names>
+                        <name language="sv">product_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/stocks/product_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="quantity">
+                    <names>
+                        <name language="sv">quantity</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/stocks/quantity" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/stocks/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/production/stocks/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="relation1" targetTable="sales/stores">
+                    <relationColumns columnName="store_id" targetColumnName="store_id" />
+                </tableRelation>
+                <tableRelation id="relation2" targetTable="production/products">
+                    <relationColumns columnName="product_id" targetColumnName="store_id" />
+                </tableRelation>
+            </tableRelations>
+        </table>
+        <table id="sales/customer_diagnosis">
+            <names>
+                <name language="sv">customer_diagnosis</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <columns>
+                <column id="customer_diagnosis_id">
+                    <names>
+                        <name language="sv">customer_diagnosis_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customer_diagnosis/customer_diagnosis_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="customer_id">
+                    <names>
+                        <name language="sv">customer_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customer_diagnosis/customer_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="diagnosis_id">
+                    <names>
+                        <name language="sv">diagnosis_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customer_diagnosis/diagnosis_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customer_diagnosis/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customer_diagnosis/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+        <table id="sales/customers">
+            <names>
+                <name language="sv">customers</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>customer_id</value>
+            </businessKey>
+            <columns>
+                <column id="customer_id">
+                    <names>
+                        <name language="sv">customer_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/customer_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="first_name">
+                    <names>
+                        <name language="sv">first_name</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/first_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="last_name">
+                    <names>
+                        <name language="sv">last_name</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/last_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="phone">
+                    <names>
+                        <name language="sv">phone</name>
+                    </names>
+                    <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/phone" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="email">
+                    <names>
+                        <name language="sv">email</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/email" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="street">
+                    <names>
+                        <name language="sv">street</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/street" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="city">
+                    <names>
+                        <name language="sv">city</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/city" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="state">
+                    <names>
+                        <name language="sv">state</name>
+                    </names>
+                    <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/state" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="zip_code">
+                    <names>
+                        <name language="sv">zip_code</name>
+                    </names>
+                    <dimlDataType id="string" length="5" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/zip_code" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="social_security_number">
+                    <names>
+                        <name language="sv">social_security_number</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/social_security_number" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/customers/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+        <table id="sales/diagnosis">
+            <names>
+                <name language="sv">diagnosis</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <columns>
+                <column id="diagnosis_id">
+                    <names>
+                        <name language="sv">diagnosis_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="diagnosis_category_code">
+                    <names>
+                        <name language="sv">diagnosis_category_code</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_category_code" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="diagnosis_code">
+                    <names>
+                        <name language="sv">diagnosis_code</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_code" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="diagnosis_full_code">
+                    <names>
+                        <name language="sv">diagnosis_full_code</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/diagnosis_full_code" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="abbreviated_description">
+                    <names>
+                        <name language="sv">abbreviated_description</name>
+                    </names>
+                    <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/abbreviated_description" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="full description">
+                    <names>
+                        <name language="sv">full description</name>
+                    </names>
+                    <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/full description" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="category title">
+                    <names>
+                        <name language="sv">category title</name>
+                    </names>
+                    <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/category title" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/diagnosis/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+        <table id="sales/order_items">
+            <names>
+                <name language="sv">order_items</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>order_id</value>
+                <value>item_id</value>
+            </businessKey>
+            <columns>
+                <column id="order_id">
+                    <names>
+                        <name language="sv">order_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/order_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="item_id">
+                    <names>
+                        <name language="sv">item_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/item_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="product_id">
+                    <names>
+                        <name language="sv">product_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/product_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="quantity">
+                    <names>
+                        <name language="sv">quantity</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/quantity" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="list_price">
+                    <names>
+                        <name language="sv">list_price</name>
+                    </names>
+                    <dimlDataType id="decimal" precision="10" scale="2" unsigned="true" originalDataType="decimal" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/list_price" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="discount">
+                    <names>
+                        <name language="sv">discount</name>
+                    </names>
+                    <dimlDataType id="decimal" precision="4" scale="2" unsigned="true" originalDataType="decimal" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/discount" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/order_items/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="relation1" targetTable="sales/orders">
+                    <relationColumns columnName="order_id" targetColumnName="order_id" />
+                </tableRelation>
+                <tableRelation id="relation2" targetTable="production/products">
+                    <relationColumns columnName="product_id" targetColumnName="order_id" />
+                </tableRelation>
+            </tableRelations>
+        </table>
+        <table id="sales/orders">
+            <names>
+                <name language="sv">orders</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>order_id</value>
+            </businessKey>
+            <columns>
+                <column id="order_id">
+                    <names>
+                        <name language="sv">order_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/order_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="customer_id">
+                    <names>
+                        <name language="sv">customer_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/customer_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="order_status">
+                    <names>
+                        <name language="sv">order_status</name>
+                    </names>
+                    <dimlDataType id="tinyInteger" unsigned="true" originalDataType="tinyint" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/order_status" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="order_date">
+                    <names>
+                        <name language="sv">order_date</name>
+                    </names>
+                    <dimlDataType id="date" originalDataType="date" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/order_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="required_date">
+                    <names>
+                        <name language="sv">required_date</name>
+                    </names>
+                    <dimlDataType id="date" originalDataType="date" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/required_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="shipped_date">
+                    <names>
+                        <name language="sv">shipped_date</name>
+                    </names>
+                    <dimlDataType id="date" originalDataType="date" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/shipped_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="store_id">
+                    <names>
+                        <name language="sv">store_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/store_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="staff_id">
+                    <names>
+                        <name language="sv">staff_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/staff_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/orders/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="relation1" targetTable="sales/customers">
+                    <relationColumns columnName="customer_id" targetColumnName="customer_id" />
+                </tableRelation>
+                <tableRelation id="relation2" targetTable="sales/stores">
+                    <relationColumns columnName="store_id" targetColumnName="customer_id" />
+                </tableRelation>
+                <tableRelation id="relation3" targetTable="sales/staffs">
+                    <relationColumns columnName="staff_id" targetColumnName="customer_id" />
+                </tableRelation>
+            </tableRelations>
+        </table>
+        <table id="sales/staffs">
+            <names>
+                <name language="sv">staffs</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>staff_id</value>
+                <value>email</value>
+            </businessKey>
+            <columns>
+                <column id="staff_id">
+                    <names>
+                        <name language="sv">staff_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/staff_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="first_name">
+                    <names>
+                        <name language="sv">first_name</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/first_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="last_name">
+                    <names>
+                        <name language="sv">last_name</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/last_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="email">
+                    <names>
+                        <name language="sv">email</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/email" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="phone">
+                    <names>
+                        <name language="sv">phone</name>
+                    </names>
+                    <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/phone" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="active">
+                    <names>
+                        <name language="sv">active</name>
+                    </names>
+                    <dimlDataType id="tinyInteger" unsigned="true" originalDataType="tinyint" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/active" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="store_id">
+                    <names>
+                        <name language="sv">store_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/store_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="manager_id">
+                    <names>
+                        <name language="sv">manager_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/manager_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="social_security_number">
+                    <names>
+                        <name language="sv">social_security_number</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/social_security_number" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/staffs/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="relation1" targetTable="sales/stores">
+                    <relationColumns columnName="store_id" targetColumnName="store_id" />
+                </tableRelation>
+                <tableRelation id="relation2" targetTable="sales/staffs">
+                    <relationColumns columnName="staff_id" targetColumnName="store_id" />
+                </tableRelation>
+            </tableRelations>
+        </table>
+        <table id="sales/stores">
+            <names>
+                <name language="sv">stores</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <businessKey>
+                <value>store_id</value>
+            </businessKey>
+            <columns>
+                <column id="store_id">
+                    <names>
+                        <name language="sv">store_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/store_id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="store_name">
+                    <names>
+                        <name language="sv">store_name</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/store_name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="phone">
+                    <names>
+                        <name language="sv">phone</name>
+                    </names>
+                    <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/phone" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="email">
+                    <names>
+                        <name language="sv">email</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/email" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="street">
+                    <names>
+                        <name language="sv">street</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/street" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="city">
+                    <names>
+                        <name language="sv">city</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/city" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="state">
+                    <names>
+                        <name language="sv">state</name>
+                    </names>
+                    <dimlDataType id="string" length="10" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/state" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="zip_code">
+                    <names>
+                        <name language="sv">zip_code</name>
+                    </names>
+                    <dimlDataType id="string" length="5" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/zip_code" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">update_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sales/stores/update_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+        <table id="sys/database_firewall_rules">
+            <names>
+                <name language="sv">database_firewall_rules</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">[placeholder]</description>
+            </descriptions>
+            <columns>
+                <column id="id">
+                    <names>
+                        <name language="sv">id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sys/database_firewall_rules/id" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="name">
+                    <names>
+                        <name language="sv">name</name>
+                    </names>
+                    <dimlDataType id="string" length="128" format="" isFixedLength="false" isWideChar="true" originalDataType="nvarchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sys/database_firewall_rules/name" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="start_ip_address">
+                    <names>
+                        <name language="sv">start_ip_address</name>
+                    </names>
+                    <dimlDataType id="string" length="45" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sys/database_firewall_rules/start_ip_address" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="end_ip_address">
+                    <names>
+                        <name language="sv">end_ip_address</name>
+                    </names>
+                    <dimlDataType id="string" length="45" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sys/database_firewall_rules/end_ip_address" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">create_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="3" originalDataType="datetime" originalPlatform="tsql" isNullable="false" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sys/database_firewall_rules/create_date" />
+                        </trait>
+                    </traits>
+                </column>
+                <column id="modify_date">
+                    <names>
+                        <name language="sv">modify_date</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="3" originalDataType="datetime" originalPlatform="tsql" isNullable="false" isUtcTime="false" />
+                    <descriptions>
+                        <description type="Plain" language="sv">[placeholder]</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="ColumnSources">
+                            <traitParameter key="value" value="src1/sys/database_firewall_rules/modify_date" />
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="Tsql" />
+        </sqlOutputs>
+    </dataOutputs>
+    <dataFlow>
+        <dataStages />
+        <dataIngests />
+    </dataFlow>
 </dataProduct>
