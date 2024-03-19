@@ -1,217 +1,205 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/anvandare.dataproduct" targetPlatform="msfabric">
-
-	<names>
-		<name language="sv">Användare</name>
-	</names>
-
-	<descriptions>
-		<description type="plain" language="sv">Grunduppgifter om användare som behöver access till våra IT-system.</description>
-	</descriptions>
-
-	<dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly" dcatAvailability="available" dcatStatus="completed" />
-
-	<traits>
-		<trait class="category" subclass="informationOwner">
-			<traitParameter value="hr" />
-		</trait>
-		<trait class="category" subclass="contentClass">
-			<traitParameter value="standard" />
-		</trait>
-		<trait class="infoClass">
-			<traitParameter value="K1R1T1" />
-		</trait>
-		<trait class="isVirtual">
-			<traitParameter value="false"/>
-		</trait>
-		<trait class="icon">
-			<traitParameter value="bi-people"/>
-		</trait>
-		<trait class="tableSchema">
-			<traitParameter value="dbo"/>
-		</trait>
-	</traits>
-
-	<dataInputs>
-		<dataInput id="profisee" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
-	</dataInputs>
-
-	<tables>
-
-		<table id="MD_Anvandare">
-			<names>
-				<name language="sv">MD_Anvandare</name>
-			</names>
-			<descriptions>
-				<description type="plain" language="sv">Grunduppgifter över användare i RS</description>
-			</descriptions>
-			<businessKey>
-				<value>RSID</value>
-			</businessKey>
-			<columns>
-				<column id="RSID">
-					<names>
-						<name language="sv">RSID</name>
-					</names>
-					<dimlDataType id="integer" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">RSID 6 siffror</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/RSID</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Personnr">
-					<names>
-						<name language="sv">Personnr</name>
-					</names>
-					<dimlDataType id="ssn" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Personnummer 10 siffror</description>
-					</descriptions>
-					<traits>
-						<trait class="pii"/>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/Personnr</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Fornamn">
-					<names>
-						<name language="sv">Fornamn</name>
-					</names>
-					<dimlDataType id="string" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Förnamn</description>
-					</descriptions>
-					<traits>
-						<trait class="pii"/>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/Fornamn</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Efternamn">
-					<names>
-						<name language="sv">Efternamn</name>
-					</names>
-					<dimlDataType id="string" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Efternamn</description>
-					</descriptions>
-					<traits>
-						<trait class="pii"/>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/Efternamn</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="AnstNr">
-					<names>
-						<name language="sv">AnstNr</name>
-					</names>
-					<dimlDataType id="integer" isNullable="true"/>
-					<descriptions>
-						<description type="plain" language="sv">Anställningsnummer för anställda. I annat fall tomt</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/AnstNr</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Huvudplacering">
-					<names>
-						<name language="sv">Huvudplacering</name>
-					</names>
-					<dimlDataType id="integer" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Huvudplacering RSID 6 siffror</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/Huvudplacering</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Chef">
-					<names>
-						<name language="sv">Chef</name>
-					</names>
-					<dimlDataType id="integer" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Närmsta chef RSID 6 siffror</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/Chef</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-				<column id="Kategori">
-					<names>
-						<name language="sv">Kategori</name>
-					</names>
-					<dimlDataType id="string" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Om det avser Anställd, Konsult, Student, Övrigt</description>
-					</descriptions>
-					<traits>
-						<trait class="columnSources">
-							<traitParameter>
-								<value>profisee/MD_Anvandare/Kategori</value>
-							</traitParameter>
-						</trait>
-					</traits>
-				</column>
-			</columns>
-			<sampleData>
-				<sampleDataRow>
-					<value>123456</value>
-					<value>1212121212</value>
-					<value>Tolvan</value>
-					<value>Tolvansson</value>
-					<value>33333</value>
-					<value>656565</value>
-					<value>656566</value>
-					<value>Anställd</value>
-				</sampleDataRow>
-				<sampleDataRow>
-					<value>1234</value>
-					<value>14141212</value>
-					<value>Fortu</value>
-					<value>Fjortonss</value>
-					<value></value>
-					<value>6543</value>
-					<value>6565</value>
-					<value>Konsu</value>
-				</sampleDataRow>
-			</sampleData>
-		</table>
-
-	</tables>
-
-	<dataOutputs>
-		<sqlOutputs>
-			<sqlOutput channelId="sql" sqlOutputType="tsql" />
-		</sqlOutputs>
-	</dataOutputs>
-
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/anvandare.dataproduct" targetPlatform="msfabric">
+    <names>
+        <name language="sv">Användare</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Grunduppgifter om användare som behöver access till våra IT-system.</description>
+    </descriptions>
+    <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="monthly" dcatAvailability="available" dcatStatus="completed" />
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter value="hr" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter value="standard" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+        <trait class="isVirtual">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="icon">
+            <traitParameter value="bi-people" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter value="dbo" />
+        </trait>
+    </traits>
+    <dataInputs>
+        <dataInput id="profisee" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="MD_Anvandare">
+            <names>
+                <name language="sv">MD_Anvandare</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Grunduppgifter över användare i RS</description>
+            </descriptions>
+            <businessKey>
+                <value>RSID</value>
+            </businessKey>
+            <columns>
+                <column id="RSID">
+                    <names>
+                        <name language="sv">RSID</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">RSID 6 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/RSID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Personnr">
+                    <names>
+                        <name language="sv">Personnr</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnummer 10 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/Personnr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Fornamn">
+                    <names>
+                        <name language="sv">Fornamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Förnamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/Fornamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Efternamn">
+                    <names>
+                        <name language="sv">Efternamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Efternamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/Efternamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="AnstNr">
+                    <names>
+                        <name language="sv">AnstNr</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anställningsnummer för anställda. I annat fall tomt</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/AnstNr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Huvudplacering">
+                    <names>
+                        <name language="sv">Huvudplacering</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Huvudplacering RSID 6 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/Huvudplacering</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Chef">
+                    <names>
+                        <name language="sv">Chef</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Närmsta chef RSID 6 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/Chef</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Kategori">
+                    <names>
+                        <name language="sv">Kategori</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Om det avser Anställd, Konsult, Student, Övrigt</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>profisee/MD_Anvandare/Kategori</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>123456</value>
+                    <value>1212121212</value>
+                    <value>Tolvan</value>
+                    <value>Tolvansson</value>
+                    <value>33333</value>
+                    <value>656565</value>
+                    <value>656566</value>
+                    <value>Anställd</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>1234</value>
+                    <value>14141212</value>
+                    <value>Fortu</value>
+                    <value>Fjortonss</value>
+                    <value></value>
+                    <value>6543</value>
+                    <value>6565</value>
+                    <value>Konsu</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataProduct>

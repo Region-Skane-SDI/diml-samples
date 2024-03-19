@@ -1,175 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datasource_sql.datasource">
-	<names>
-		<name language="sv">Exempel på datakälla</name>
-	</names>
-	<descriptions>
-		<description type="plain" language="sv">Kort sammanfattande beskrivning...</description>
-	</descriptions>
-
-	<traits>
-		<trait class="category" subclass="informationOwner">
-			<traitParameter key="value">
-				<value>Finance</value>
-				<value>HSS</value>
-			</traitParameter>
-		</trait>
-		<trait class="infoClass">
-			<traitParameter key="value" value="K1R1T1"/>
-		</trait>
-		<trait class="pii"/>
-		<trait class="tableSchema">
-			<traitParameter key="value" value="dbo"/>
-		</trait>
-	</traits>
-
-	<tables>
-
-		<table id="Person">
-			<names>
-				<name language="sv">Person</name>
-			</names>
-			<descriptions>
-				<description type="plain" language="sv">Beskrivning i vanlig text...</description>
-				<description type="md" language="sv">##Beskrivning i markdown...&#xD;&#xA;Test</description>
-				<description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
-			</descriptions>
-			<businessKey>
-				<value>Personnr</value>
-			</businessKey>
-			<columns>
-				<column id="Personnr">
-					<names>
-						<name language="sv">Personnr</name>
-					</names>
-					<dimlDataType id="ssn" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="pii"/>
-					</traits>
-				</column>
-				<column id="Namn">
-					<names>
-						<name language="sv">Namn</name>
-					</names>
-					<dimlDataType id="fullName" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="pii"/>
-					</traits>
-				</column>
-				<column id="Alder">
-					<names>
-						<name language="sv">Alder</name>
-					</names>
-					<dimlDataType id="age" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-				</column>
-			</columns>
-		</table>
-
-		<table id="Anstallning">
-			<names>
-				<name language="sv">Anstallning</name>
-			</names>
-			<descriptions>
-				<description type="plain" language="sv">Beskrivning...</description>
-				<description type="md" language="sv">Beskrivning...</description>
-			</descriptions>
-			<businessKey>
-				<value>Personnr</value>
-				<value>Anstallningsnr</value>
-			</businessKey>
-			<columns>
-				<column id="Personnr">
-					<names>
-						<name language="sv">Personnr</name>
-					</names>
-					<dimlDataType id="ssn" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-					<traits>
-						<trait class="pii"/>
-					</traits>
-				</column>
-				<column id="Anstallningsnr">
-					<names>
-						<name language="sv">Anstallningsnr</name>
-					</names>
-					<dimlDataType id="integer" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-				</column>
-				<column id="Startdatum">
-					<names>
-						<name language="sv">Startdatum</name>
-					</names>
-					<dimlDataType id="date" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-				</column>
-				<column id="Slutdatum">
-					<names>
-						<name language="sv">Slutdatum</name>
-					</names>
-					<dimlDataType id="date" isNullable="false"/>
-					<descriptions>
-						<description type="plain" language="sv">Beskrivning...</description>
-						<description type="md" language="sv">Beskrivning...</description>
-					</descriptions>
-				</column>
-			</columns>
-			<tableRelations>
-				<tableRelation id="tableRelation1" targetTable="Person">
-					<relationColumns columnName="Personnr" targetColumnName="Personnr" />
-				</tableRelation>
-			</tableRelations>
-		</table>
-
-	</tables>
-
-	<customFormats>
-		<customFormat customFormatId="jsondata" formatType="json" schemaLocation="https://..."/>
-		<customFormat customFormatId="xmldata" formatType="xml" schemaLocation="https://..."/>
-		<customFormat customFormatId="binarydata" formatType="binary" mimeType="img/tiff"/>
-	</customFormats>
-
-	<dataOutputs>
-		<fileOutputs>
-			<fileOutput channelId="csvfiles" fileFormat="csv" path="csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf">
-				<singleTableFileOutput path="person_{{timestamp}}.csv" table="Person" />
-				<singleTableFileOutput path="anstallning_{{timestamp}}.csv" table="Anstallning" />
-			</fileOutput>
-			<fileOutput channelId="parquetfile" fileFormat="parquet" path="utdata">
-				<multiTableFileOutput>
-					<includeTable id="Person"/>
-					<includeTable id="Anstallning"/>
-				</multiTableFileOutput>
-			</fileOutput>
-			<fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata" path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json"/>
-			<fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml"/>
-			<fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff"/>
-		</fileOutputs>
-
-		<sqlOutputs>
-			<sqlOutput channelId="sql1" sqlOutputType="tsql" />
-			<sqlOutput channelId="sql2" sqlOutputType="sparql" />
-		</sqlOutputs>
-	</dataOutputs>
+<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datasource_sql.datasource">
+    <names>
+        <name language="sv">Exempel på datakälla</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Kort sammanfattande beskrivning...</description>
+    </descriptions>
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter key="value">
+                <value>Finance</value>
+                <value>HSS</value>
+            </traitParameter>
+        </trait>
+        <trait class="infoClass">
+            <traitParameter key="value" value="K1R1T1" />
+        </trait>
+        <trait class="pii" />
+        <trait class="tableSchema">
+            <traitParameter key="value" value="dbo" />
+        </trait>
+    </traits>
+    <tables>
+        <table id="Person">
+            <names>
+                <name language="sv">Person</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Beskrivning i vanlig text...</description>
+                <description type="md" language="sv">##Beskrivning i markdown...
+Test</description>
+                <description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr">
+                    <names>
+                        <name language="sv">Personnr</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                    </traits>
+                </column>
+                <column id="Namn">
+                    <names>
+                        <name language="sv">Namn</name>
+                    </names>
+                    <dimlDataType id="fullName" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                    </traits>
+                </column>
+                <column id="Alder">
+                    <names>
+                        <name language="sv">Alder</name>
+                    </names>
+                    <dimlDataType id="age" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                </column>
+            </columns>
+        </table>
+        <table id="Anstallning">
+            <names>
+                <name language="sv">Anstallning</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Beskrivning...</description>
+                <description type="md" language="sv">Beskrivning...</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr</value>
+                <value>Anstallningsnr</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr">
+                    <names>
+                        <name language="sv">Personnr</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                    </traits>
+                </column>
+                <column id="Anstallningsnr">
+                    <names>
+                        <name language="sv">Anstallningsnr</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                </column>
+                <column id="Startdatum">
+                    <names>
+                        <name language="sv">Startdatum</name>
+                    </names>
+                    <dimlDataType id="date" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                </column>
+                <column id="Slutdatum">
+                    <names>
+                        <name language="sv">Slutdatum</name>
+                    </names>
+                    <dimlDataType id="date" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                        <description type="md" language="sv">Beskrivning...</description>
+                    </descriptions>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="tableRelation1" targetTable="Person">
+                    <relationColumns columnName="Personnr" targetColumnName="Personnr" />
+                </tableRelation>
+            </tableRelations>
+        </table>
+    </tables>
+    <customFormats>
+        <customFormat customFormatId="jsondata" formatType="json" schemaLocation="https://..." />
+        <customFormat customFormatId="xmldata" formatType="xml" schemaLocation="https://..." />
+        <customFormat customFormatId="binarydata" formatType="binary" mimeType="img/tiff" />
+    </customFormats>
+    <dataOutputs>
+        <fileOutputs>
+            <fileOutput channelId="csvfile1" fileFormat="csv" table="Person" path="csv/person_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
+            <fileOutput channelId="csvfile2" fileFormat="csv" table="Anstallning" path="csv/anstallning_{{timestamp}}.csv" encoding="utf8" columnSeparator="tab" rowSeparator="crlf" />
+            <fileOutput channelId="parquetfile1" fileFormat="parquet" table="Person" path="utdata" />
+            <fileOutput channelId="parquetfile2" fileFormat="parquet" table="Anstallning" path="utdata" />
+            <fileOutput channelId="jsonfiles" fileFormat="custom" customFormatId="jsondata" path="json/{{year}}/{{month}}/{{day}}/jsondata_{{timestamp}}.json" />
+            <fileOutput channelId="xmlfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/xmldata_{{timestamp}}.xml" />
+            <fileOutput channelId="binaryfiles" fileFormat="custom" customFormatId="xmldata" path="json/{{year}}/{{month}}/{{day}}/binarydata_{{timestamp}}.tiff" />
+        </fileOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql1" sqlOutputType="tsql" />
+            <sqlOutput channelId="sql2" sqlOutputType="sparql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataSource>

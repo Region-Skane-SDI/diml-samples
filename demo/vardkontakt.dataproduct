@@ -1,445 +1,428 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
-  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/vardkontakt.dataproduct"
-  targetPlatform="msfabric">
-
-  <names>
-    <name language="sv">Vårdkontakt</name>
-  </names>
-
-  <descriptions>
-    <description type="plain" language="sv">Innehåller uppgifter om vårdkontakter</description>
-  </descriptions>
-
-  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily"
-    dcatAvailability="available" dcatStatus="completed" />
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter>
-        <value>dirhs</value>
-      </traitParameter>
-    </trait>
-    <trait class="category" subclass="searchStructure">
-      <traitParameter value="1.1" />
-    </trait>
-    <trait class="category" subclass="productOwner">
-      <traitParameter value="SDI Plattform" />
-    </trait>
-    <trait class="category" subclass="contentClass">
-      <traitParameter value="standard" />
-    </trait>
-    <trait class="isUnlisted">
-      <traitParameter value="false" />
-    </trait>
-    <trait class="isVirtual">
-      <traitParameter value="false" />
-    </trait>
-    <trait class="icon">
-      <traitParameter value="bi-activity" />
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K3R3T2" />
-    </trait>
-    <trait class="tableSchema">
-      <traitParameter value="dbo" />
-    </trait>
-    <trait class="pii" />
-  </traits>
-
-  <dataInputs>
-    <dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
-  </dataInputs>
-
-  <tables>
-
-    <table id="Patient">
-      <names>
-        <name language="sv">Patient</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över patienter</description>
-      </descriptions>
-      <businessKey>
-        <value>PatientId</value>
-      </businessKey>
-      <columns>
-        <column id="PatientId">
-          <names>
-            <name language="sv">PatientId</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Personnr 12 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/PatientId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Personnr12">
-          <names>
-            <name language="sv">Personnr12</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Personnr 12 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/Personnr12</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>100567823</value>
-          <value>191212121212</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>201414141414</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Vardkontakt">
-      <names>
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/vardkontakt.dataproduct" targetPlatform="msfabric">
+    <names>
         <name language="sv">Vårdkontakt</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över vårdkontakter"</description>
-      </descriptions>
-      <businessKey>
-        <value>PatientId</value>
-        <value>VardkontaktID</value>
-      </businessKey>
-      <columns>
-        <column id="PatientId">
-          <names>
-            <name language="sv">PatientId</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Unik id för patient.Koppling till patient tabell</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/PatientId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="VardkontaktID">
-          <names>
-            <name language="sv">VårdkontaktID</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Unikt id för vårdkontakt för patient</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/VardkontaktID</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="VardkontaktStatusCode">
-          <names>
-            <name language="sv">VårdkontaktStatusKod</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Status för vårdkontakten. Koppling till VardkontaktStatus dimensionstabell. http://hl7.org/fhir/ValueSet/encounter-status</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/VardkontaktStatusCode</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="VardkontaktTypCode">
-          <names>
-            <name language="sv">VårdkontaktTypKod</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Typ av vårdkontakt. Koppling till vårdkontakt dimentsions tabell. https://terminology.hl7.org/5.3.0/ValueSet-encounter-class.html</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/VardkontaktTypCode</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="DelAVVardkontaktID">
-          <names>
-            <name language="sv">DelAvVårdkontaktID</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">ID på vårdkontakt som denna vårdkontakt är del av.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/DelAvVardkontaktID</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Besok_VardkontaktID">
-          <names>
-            <name language="sv">Besök_VårdkontaktId</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Besök som har registrerats på vårdkontakten. Koppling till besöksregistreringstabell. </description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/Besok_VardkontaktID</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="OrganisationId">
-          <names>
-            <name language="sv">OrganisationId</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger vilken organisation som "ansvarar" för vårdkontakten. Koppling till organisations dimentsions tabell.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/OrganisationId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="VardkontaktTidpunkt_from">
-          <names>
-            <name language="sv">VårdkontaktTidpunkt from</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Tidpunkt för när vårdkontakten inleddes.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/VardkontaktTidpunkt_from</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="VardkontaktTidpunkt_tom">
-          <names>
-            <name language="sv">VårdkontaktTidpunkt tom</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Tidpunkt för när vårdkontakten avslutades.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Vardkontakt/VardkontaktTidpunkt_tom</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="PatientId" targetTable="Patient">
-          <relationColumns columnName="PatientId" targetColumnName="PatientId" />
-        </tableRelation>
-      </tableRelations>
-      <sampleData>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>vk1</value>
-          <value>completed</value>
-          <value>Vårdkontakt i öppenvård</value>
-          <value></value>
-          <value>Besok124</value>
-          <value>O12678</value>
-          <value>2023-11-23 08:00:00</value>
-          <value>2023-11-23 08:00:00</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>vk2</value>
-          <value>in-progress</value>
-          <value>Vårdtillfälle</value>
-          <value></value>
-          <value>Besok125</value>
-          <value>O12345</value>
-          <value>2023-11-22 16:35:00</value>
-          <value></value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>vk3</value>
-          <value>completed</value>
-          <value>Vårdkontakt i öppenvård</value>
-          <value>vk2</value>
-          <value>Besok123</value>
-          <value>O12345</value>
-          <value>2023-11-22 18:35:00</value>
-          <value>2023-11-22 18:35:00</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="DeltagareVardkontakt">
-      <names>
-        <name language="sv">DeltagareVårdkontakt</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över de delagare som deltog vid vårdkontakten</description>
-        <description type="md" language="sv">##Tabell över deltagare beskrivning i markdown...&#xD;&#xA;Test</description>
-        <description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
-      </descriptions>
-      <businessKey>
-        <value>PatientId</value>
-        <value>VardkontaktID</value>
-      </businessKey>
-      <columns>
-        <column id="PatientId">
-          <names>
-            <name language="sv">PatientId</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Koppling till Patient-tabell</description>
-            <description type="md" language="sv">Koppling till Patient-tabell</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/DeltagareVardkontakt/PatientId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="VardkontaktId">
-          <names>
-            <name language="sv">VårdkontaktId</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Koppling till vårdkontakt</description>
-            <description type="md" language="sv">Koppling till vårdkontakt</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/DeltagareVardkontakt/VardkontaktID</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="TypDeltagareKod">
-          <names>
-            <name language="sv">TypDeltagareKod</name>
-          </names>
-          <dimlDataType id="string" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger typ av deltagare. Koppling till typ av deltagare dimentsions tabell. https://build.fhir.org/valueset-encounter-participant-type.html</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/DeltagareVardkontakt/TypDeltagareKod</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="DeltagareTidpunkt">
-          <names>
-            <name language="sv">DeltagareTidpunkt</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Tidpunkt när deltagande skedde. Anges bara om det avviker från vårdkontaktens tidpunkter</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/DeltagareVardkontakt/DeltagareTidpunkt</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Deltagare_Vardkontakt">
-          <names>
-            <name language="sv">DeltagareVårdkontakt</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false" />
-          <descriptions>
-            <description type="plain" language="sv">Anger vem som deltagaren är.Koppling till aktörs tabellen.</description>
-            <description type="md" language="sv">Anger vem som deltagaren är.Koppling till aktörs tabellen.</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/DeltagareVardkontakt/Deltagare_Vardkontakt</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="PatientId" targetTable="Patient">
-          <relationColumns columnName="PatientId" targetColumnName="PatientId" />
-        </tableRelation>
-        <tableRelation id="VardkontaktId" targetTable="Vardkontakt">
-          <relationColumns columnName="PatientId" targetColumnName="PatientId" />
-        </tableRelation>
-      </tableRelations>
-      <sampleData>
-        <sampleDataRow>
-          <value>100567823</value>
-          <value>vk2</value>
-          <value>admitter</value>
-          <value>2023-10-28 10:00:00</value>
-          <value>SE162321000255-983456</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100567823</value>
-          <value>vk1</value>
-          <value>Translator</value>
-          <value></value>
-          <value>19121212-1212</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-  </tables>
-
-  <dataOutputs>
-    <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="tsql" />
-    </sqlOutputs>
-  </dataOutputs>
-
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Innehåller uppgifter om vårdkontakter</description>
+    </descriptions>
+    <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter>
+                <value>dirhs</value>
+            </traitParameter>
+        </trait>
+        <trait class="category" subclass="searchStructure">
+            <traitParameter value="1.1" />
+        </trait>
+        <trait class="category" subclass="productOwner">
+            <traitParameter value="SDI Plattform" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter value="standard" />
+        </trait>
+        <trait class="isUnlisted">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="isVirtual">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="icon">
+            <traitParameter value="bi-activity" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K3R3T2" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter value="dbo" />
+        </trait>
+        <trait class="pii" />
+    </traits>
+    <dataInputs>
+        <dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="Patient">
+            <names>
+                <name language="sv">Patient</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över patienter</description>
+            </descriptions>
+            <businessKey>
+                <value>PatientId</value>
+            </businessKey>
+            <columns>
+                <column id="PatientId">
+                    <names>
+                        <name language="sv">PatientId</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 12 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/PatientId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Personnr12">
+                    <names>
+                        <name language="sv">Personnr12</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 12 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/Personnr12</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>100567823</value>
+                    <value>191212121212</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>201414141414</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Vardkontakt">
+            <names>
+                <name language="sv">Vårdkontakt</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över vårdkontakter"</description>
+            </descriptions>
+            <businessKey>
+                <value>PatientId</value>
+                <value>VardkontaktID</value>
+            </businessKey>
+            <columns>
+                <column id="PatientId">
+                    <names>
+                        <name language="sv">PatientId</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Unik id för patient.Koppling till patient tabell</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/PatientId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="VardkontaktID">
+                    <names>
+                        <name language="sv">VårdkontaktID</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Unikt id för vårdkontakt för patient</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/VardkontaktID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="VardkontaktStatusCode">
+                    <names>
+                        <name language="sv">VårdkontaktStatusKod</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Status för vårdkontakten. Koppling till VardkontaktStatus dimensionstabell. http://hl7.org/fhir/ValueSet/encounter-status</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/VardkontaktStatusCode</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="VardkontaktTypCode">
+                    <names>
+                        <name language="sv">VårdkontaktTypKod</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Typ av vårdkontakt. Koppling till vårdkontakt dimentsions tabell. https://terminology.hl7.org/5.3.0/ValueSet-encounter-class.html</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/VardkontaktTypCode</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="DelAVVardkontaktID">
+                    <names>
+                        <name language="sv">DelAvVårdkontaktID</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">ID på vårdkontakt som denna vårdkontakt är del av.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/DelAvVardkontaktID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Besok_VardkontaktID">
+                    <names>
+                        <name language="sv">Besök_VårdkontaktId</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Besök som har registrerats på vårdkontakten. Koppling till besöksregistreringstabell. </description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/Besok_VardkontaktID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="OrganisationId">
+                    <names>
+                        <name language="sv">OrganisationId</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger vilken organisation som "ansvarar" för vårdkontakten. Koppling till organisations dimentsions tabell.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/OrganisationId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="VardkontaktTidpunkt_from">
+                    <names>
+                        <name language="sv">VårdkontaktTidpunkt from</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Tidpunkt för när vårdkontakten inleddes.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/VardkontaktTidpunkt_from</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="VardkontaktTidpunkt_tom">
+                    <names>
+                        <name language="sv">VårdkontaktTidpunkt tom</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Tidpunkt för när vårdkontakten avslutades.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Vardkontakt/VardkontaktTidpunkt_tom</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="PatientId" targetTable="Patient">
+                    <relationColumns columnName="PatientId" targetColumnName="PatientId" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>vk1</value>
+                    <value>completed</value>
+                    <value>Vårdkontakt i öppenvård</value>
+                    <value></value>
+                    <value>Besok124</value>
+                    <value>O12678</value>
+                    <value>2023-11-23 08:00:00</value>
+                    <value>2023-11-23 08:00:00</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>vk2</value>
+                    <value>in-progress</value>
+                    <value>Vårdtillfälle</value>
+                    <value></value>
+                    <value>Besok125</value>
+                    <value>O12345</value>
+                    <value>2023-11-22 16:35:00</value>
+                    <value></value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>vk3</value>
+                    <value>completed</value>
+                    <value>Vårdkontakt i öppenvård</value>
+                    <value>vk2</value>
+                    <value>Besok123</value>
+                    <value>O12345</value>
+                    <value>2023-11-22 18:35:00</value>
+                    <value>2023-11-22 18:35:00</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="DeltagareVardkontakt">
+            <names>
+                <name language="sv">DeltagareVårdkontakt</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över de delagare som deltog vid vårdkontakten</description>
+                <description type="md" language="sv">##Tabell över deltagare beskrivning i markdown...
+Test</description>
+                <description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
+            </descriptions>
+            <businessKey>
+                <value>PatientId</value>
+                <value>VardkontaktID</value>
+            </businessKey>
+            <columns>
+                <column id="PatientId">
+                    <names>
+                        <name language="sv">PatientId</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Koppling till Patient-tabell</description>
+                        <description type="md" language="sv">Koppling till Patient-tabell</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/DeltagareVardkontakt/PatientId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="VardkontaktId">
+                    <names>
+                        <name language="sv">VårdkontaktId</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Koppling till vårdkontakt</description>
+                        <description type="md" language="sv">Koppling till vårdkontakt</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/DeltagareVardkontakt/VardkontaktID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="TypDeltagareKod">
+                    <names>
+                        <name language="sv">TypDeltagareKod</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger typ av deltagare. Koppling till typ av deltagare dimentsions tabell. https://build.fhir.org/valueset-encounter-participant-type.html</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/DeltagareVardkontakt/TypDeltagareKod</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="DeltagareTidpunkt">
+                    <names>
+                        <name language="sv">DeltagareTidpunkt</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Tidpunkt när deltagande skedde. Anges bara om det avviker från vårdkontaktens tidpunkter</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/DeltagareVardkontakt/DeltagareTidpunkt</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Deltagare_Vardkontakt">
+                    <names>
+                        <name language="sv">DeltagareVårdkontakt</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anger vem som deltagaren är.Koppling till aktörs tabellen.</description>
+                        <description type="md" language="sv">Anger vem som deltagaren är.Koppling till aktörs tabellen.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/DeltagareVardkontakt/Deltagare_Vardkontakt</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="PatientId" targetTable="Patient">
+                    <relationColumns columnName="PatientId" targetColumnName="PatientId" />
+                </tableRelation>
+                <tableRelation id="VardkontaktId" targetTable="Vardkontakt">
+                    <relationColumns columnName="PatientId" targetColumnName="PatientId" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>100567823</value>
+                    <value>vk2</value>
+                    <value>admitter</value>
+                    <value>2023-10-28 10:00:00</value>
+                    <value>SE162321000255-983456</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100567823</value>
+                    <value>vk1</value>
+                    <value>Translator</value>
+                    <value></value>
+                    <value>19121212-1212</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataProduct>

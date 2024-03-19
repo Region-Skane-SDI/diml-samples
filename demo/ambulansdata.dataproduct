@@ -1,532 +1,517 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ambulansdata.dataproduct" targetPlatform="msfabric">
-
-  <names>
-    <name language="sv">Ambulansdata</name>
-  </names>
-
-  <descriptions>
-    <description type="plain" language="sv">Innehåller uppgifter om stationer, fordon, uppdrag och patienter</description>
-  </descriptions>
-
-  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter value="dirhs" />
-    </trait>
-    <trait class="category" subclass="searchStructure">
-      <traitParameter value="1.1"/>
-    </trait>
-    <trait class="category" subclass="productOwner">
-      <traitParameter value="SDI Plattform"/>
-    </trait>
-    <trait class="category" subclass="contentClass">
-      <traitParameter value="Raw"/>
-    </trait>
-    <trait class="isUnlisted">
-      <traitParameter value="false"/>
-    </trait>
-    <trait class="isVirtual">
-      <traitParameter value="false"/>
-    </trait>
-    <trait class="icon">
-      <traitParameter value="bi-activity"/>
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K1R1T1"/>
-    </trait>
-    <trait class="tableSchema">
-      <traitParameter value="dbo"/>
-    </trait>
-    <trait class="pii"/>
-  </traits>
-
-  <dataInputs>
-    <dataInput id ="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
-  </dataInputs>
-
-  <tables>
-
-    <table id="Station">
-      <names>
-        <name language="sv">Station</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över ambulansstationer</description>
-      </descriptions>
-      <businessKey>
-        <value>StationId</value>
-      </businessKey>
-      <columns>
-        <column id="StationId">
-          <names>
-            <name language="sv">StationId</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Löpnummer som identifierar station</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Station/StationId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Stationsnamn">
-          <names>
-            <name language="sv">Stationsnamn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Stationsnamn</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Station/Stationsnamn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Omrade">
-          <names>
-            <name language="sv">Omrade</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Område</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Station/Omrade</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="" targetTable="">
-          <relationColumns columnName="" targetColumnName="" />
-        </tableRelation>
-      </tableRelations>
-      <sampleData>
-        <sampleDataRow>
-          <value>1</value>
-          <value>Ambulansstation Höllviken</value>
-          <value>Distrikt 1</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>2</value>
-          <value>Ambulansstation Eslöv</value>
-          <value>Distrikt 2</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>3</value>
-          <value>Ambulansstation Höganäs</value>
-          <value>Distrikt 3</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Fordon">
-      <names>
-        <name language="sv">Fordon</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över fordon</description>
-      </descriptions>
-      <businessKey>
-        <value>RegNr</value>
-      </businessKey>
-      <columns>
-        <column id="RegNr">
-          <names>
-            <name language="sv">RegNr</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Registreringsnummer fordon</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Fordon/RegNr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Tillverkare">
-          <names>
-            <name language="sv">Tillverkare</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Beskrivning...</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Fordon/Tillverkare</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="StationId">
-          <names>
-            <name language="sv">StationId</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Beskrivning...</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Fordon/StationId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="FordonStationId" targetTable="Station">
-          <relationColumns columnName="StationId" targetColumnName="StationId" />
-        </tableRelation>
-      </tableRelations>
-      <sampleData>
-        <sampleDataRow>
-          <value>DEMO1</value>
-          <value>Mercedes</value>
-          <value>1</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>DEMO2</value>
-          <value>Mercedes</value>
-          <value>1</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>DEMO2</value>
-          <value>Volvo</value>
-          <value>1</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Uppdrag">
-      <names>
-        <name language="sv">Uppdrag</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över ambulansuppdrag</description>
-      </descriptions>
-      <businessKey>
-        <value>UtryckningNr</value>
-      </businessKey>
-      <columns>
-        <column id="UtryckningNr">
-          <names>
-            <name language="sv">UtryckningNr</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Löpnummer på utryckning</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Uppdrag/UtryckningNr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="RegNr">
-          <names>
-            <name language="sv">RegNr</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Registreringsnummer fordon</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Uppdrag/RegNr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="StationId">
-          <names>
-            <name language="sv">StationId</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Station som fick larmetr</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Uppdrag/StationId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Patient">
-          <names>
-            <name language="sv">PatientPersonnr</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Personnummer på patient</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Uppdrag/Patient</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Prio">
-          <names>
-            <name language="sv">Prio</name>
-          </names>
-          <dimlDataType id="smallInteger" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Prioritet på uppdraget</description>
-            <description type="md" language="sv">Prioritet på uppdraget</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Uppdrag/Prio</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Tid">
-          <names>
-            <name language="sv">Tid</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Larm inkommit tid</description>
-            <description type="md" language="sv">Larm inkommit tid</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Uppdrag/Tid</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="UppdragRegNr" targetTable="Fordon">
-          <relationColumns columnName="RegNr" targetColumnName="RegNr" />
-        </tableRelation>
-        <tableRelation id="UppdragStationId" targetTable="">
-          <relationColumns columnName="StationId" targetColumnName="StationId" />
-        </tableRelation>
-        <tableRelation id="UppdragPatientPersonnr" targetTable="Patient">
-          <relationColumns columnName="Patient" targetColumnName="Personnr10" />
-        </tableRelation>
-      </tableRelations>
-      <sampleData>
-        <sampleDataRow>
-          <value>1</value>
-          <value>DEMO1</value>
-          <value>1</value>
-          <value>1212121212</value>
-          <value>1</value>
-          <value>2023-03-16 00:01:25</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>2</value>
-          <value>DEMO2</value>
-          <value>1</value>
-          <value>1414141414</value>
-          <value>1</value>
-          <value>2023-03-16 00:02:40</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Patient">
-      <names>
-        <name language="sv">Patient</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell med patientuppgifter</description>
-      </descriptions>
-      <businessKey>
-        <value>Personnr10</value>
-      </businessKey>
-      <columns>
-        <column id="Personnr10">
-          <names>
-            <name language="sv">Personnr10</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Personnr 10 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/Personnr10</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Kon">
-          <names>
-            <name language="sv">Kon</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Kön</description>
-            <description type="md" language="sv">Kön</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/Kon</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Fornamn">
-          <names>
-            <name language="sv">Fornamn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Förnamn</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/Fornamn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Efternamn">
-          <names>
-            <name language="sv">Efternamn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Efternamn</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/Efternamn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Namn">
-          <names>
-            <name language="sv">Namn</name>
-          </names>
-          <dimlDataType id="fullName" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Förnamn och efternamn</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/Namn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PostAdress">
-          <names>
-            <name language="sv">PostAdress</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Postadress</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/PostAdress</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PostNr">
-          <names>
-            <name language="sv">PostNr</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">PostNr</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/PostNr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Postort">
-          <names>
-            <name language="sv">Postort</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Postort</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter key="value">
-                <value>src1/Patient/Postort</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>1212121212</value>
-          <value>M</value>
-          <value>Tolvan</value>
-          <value>Tolvansson</value>
-          <value>Storgatan 1</value>
-          <value>123 45</value>
-          <value>Storstaden</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>1414141414</value>
-          <value>K</value>
-          <value>Fortuna</value>
-          <value>Fjortonsson</value>
-          <value>Kungsgatan 24</value>
-          <value>234 56</value>
-          <value>Storstaden</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-  </tables>
-
-  <dataOutputs>
-    <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="tsql" />
-    </sqlOutputs>
-  </dataOutputs>
-
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ambulansdata.dataproduct" targetPlatform="msfabric">
+    <names>
+        <name language="sv">Ambulansdata</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Innehåller uppgifter om stationer, fordon, uppdrag och patienter</description>
+    </descriptions>
+    <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter value="dirhs" />
+        </trait>
+        <trait class="category" subclass="searchStructure">
+            <traitParameter value="1.1" />
+        </trait>
+        <trait class="category" subclass="productOwner">
+            <traitParameter value="SDI Plattform" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter value="Raw" />
+        </trait>
+        <trait class="isUnlisted">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="isVirtual">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="icon">
+            <traitParameter value="bi-activity" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter value="dbo" />
+        </trait>
+        <trait class="pii" />
+    </traits>
+    <dataInputs>
+        <dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="Station">
+            <names>
+                <name language="sv">Station</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över ambulansstationer</description>
+            </descriptions>
+            <businessKey>
+                <value>StationId</value>
+            </businessKey>
+            <columns>
+                <column id="StationId">
+                    <names>
+                        <name language="sv">StationId</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Löpnummer som identifierar station</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Station/StationId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Stationsnamn">
+                    <names>
+                        <name language="sv">Stationsnamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Stationsnamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Station/Stationsnamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Omrade">
+                    <names>
+                        <name language="sv">Omrade</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Område</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Station/Omrade</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="" targetTable="">
+                    <relationColumns columnName="" targetColumnName="" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1</value>
+                    <value>Ambulansstation Höllviken</value>
+                    <value>Distrikt 1</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>2</value>
+                    <value>Ambulansstation Eslöv</value>
+                    <value>Distrikt 2</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>3</value>
+                    <value>Ambulansstation Höganäs</value>
+                    <value>Distrikt 3</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Fordon">
+            <names>
+                <name language="sv">Fordon</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över fordon</description>
+            </descriptions>
+            <businessKey>
+                <value>RegNr</value>
+            </businessKey>
+            <columns>
+                <column id="RegNr">
+                    <names>
+                        <name language="sv">RegNr</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Registreringsnummer fordon</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Fordon/RegNr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Tillverkare">
+                    <names>
+                        <name language="sv">Tillverkare</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Fordon/Tillverkare</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="StationId">
+                    <names>
+                        <name language="sv">StationId</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Beskrivning...</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Fordon/StationId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="FordonStationId" targetTable="Station">
+                    <relationColumns columnName="StationId" targetColumnName="StationId" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>DEMO1</value>
+                    <value>Mercedes</value>
+                    <value>1</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>DEMO2</value>
+                    <value>Mercedes</value>
+                    <value>1</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>DEMO2</value>
+                    <value>Volvo</value>
+                    <value>1</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Uppdrag">
+            <names>
+                <name language="sv">Uppdrag</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över ambulansuppdrag</description>
+            </descriptions>
+            <businessKey>
+                <value>UtryckningNr</value>
+            </businessKey>
+            <columns>
+                <column id="UtryckningNr">
+                    <names>
+                        <name language="sv">UtryckningNr</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Löpnummer på utryckning</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Uppdrag/UtryckningNr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="RegNr">
+                    <names>
+                        <name language="sv">RegNr</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Registreringsnummer fordon</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Uppdrag/RegNr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="StationId">
+                    <names>
+                        <name language="sv">StationId</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Station som fick larmetr</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Uppdrag/StationId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Patient">
+                    <names>
+                        <name language="sv">PatientPersonnr</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnummer på patient</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Uppdrag/Patient</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Prio">
+                    <names>
+                        <name language="sv">Prio</name>
+                    </names>
+                    <dimlDataType id="smallInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Prioritet på uppdraget</description>
+                        <description type="md" language="sv">Prioritet på uppdraget</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Uppdrag/Prio</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Tid">
+                    <names>
+                        <name language="sv">Tid</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Larm inkommit tid</description>
+                        <description type="md" language="sv">Larm inkommit tid</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Uppdrag/Tid</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="UppdragRegNr" targetTable="Fordon">
+                    <relationColumns columnName="RegNr" targetColumnName="RegNr" />
+                </tableRelation>
+                <tableRelation id="UppdragStationId" targetTable="">
+                    <relationColumns columnName="StationId" targetColumnName="StationId" />
+                </tableRelation>
+                <tableRelation id="UppdragPatientPersonnr" targetTable="Patient">
+                    <relationColumns columnName="Patient" targetColumnName="Personnr10" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1</value>
+                    <value>DEMO1</value>
+                    <value>1</value>
+                    <value>1212121212</value>
+                    <value>1</value>
+                    <value>2023-03-16 00:01:25</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>2</value>
+                    <value>DEMO2</value>
+                    <value>1</value>
+                    <value>1414141414</value>
+                    <value>1</value>
+                    <value>2023-03-16 00:02:40</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Patient">
+            <names>
+                <name language="sv">Patient</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell med patientuppgifter</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr10</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr10">
+                    <names>
+                        <name language="sv">Personnr10</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 10 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/Personnr10</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Kon">
+                    <names>
+                        <name language="sv">Kon</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Kön</description>
+                        <description type="md" language="sv">Kön</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/Kon</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Fornamn">
+                    <names>
+                        <name language="sv">Fornamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Förnamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/Fornamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Efternamn">
+                    <names>
+                        <name language="sv">Efternamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Efternamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/Efternamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Namn">
+                    <names>
+                        <name language="sv">Namn</name>
+                    </names>
+                    <dimlDataType id="fullName" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Förnamn och efternamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/Namn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PostAdress">
+                    <names>
+                        <name language="sv">PostAdress</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Postadress</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/PostAdress</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PostNr">
+                    <names>
+                        <name language="sv">PostNr</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">PostNr</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/PostNr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Postort">
+                    <names>
+                        <name language="sv">Postort</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Postort</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter key="value">
+                                <value>src1/Patient/Postort</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1212121212</value>
+                    <value>M</value>
+                    <value>Tolvan</value>
+                    <value>Tolvansson</value>
+                    <value>Storgatan 1</value>
+                    <value>123 45</value>
+                    <value>Storstaden</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>1414141414</value>
+                    <value>K</value>
+                    <value>Fortuna</value>
+                    <value>Fjortonsson</value>
+                    <value>Kungsgatan 24</value>
+                    <value>234 56</value>
+                    <value>Storstaden</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataProduct>

@@ -1,536 +1,523 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/besoksregistreringar.dataproduct" targetPlatform="msfabric">
-
-  <names>
-    <name language="sv">Besöksregistreringar</name>
-  </names>
-
-  <descriptions>
-    <description type="plain" language="sv">Innehåller uppgifter om patienter, besök och patientdiagnoser</description>
-  </descriptions>
-
-  <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter>
-        <value>dirhs</value>
-      </traitParameter>
-    </trait>
-    <trait class="category" subclass="searchStructure">
-      <traitParameter value="1.1"/>
-    </trait>
-    <trait class="category" subclass="productOwner">
-      <traitParameter value="SDI Plattform"/>
-    </trait>
-    <trait class="category" subclass="contentClass">
-      <traitParameter value="Raw"/>
-    </trait>
-    <trait class="isUnlisted">
-      <traitParameter value="false"/>
-    </trait>
-    <trait class="isVirtual">
-      <traitParameter value="false"/>
-    </trait>
-    <trait class="icon">
-      <traitParameter value="bi-activity"/>
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K1R1T1"/>
-    </trait>
-    <trait class="tableSchema">
-      <traitParameter value="dbo"/>
-    </trait>
-    <trait class="pii"/>
-  </traits>
-
-  <dataInputs>
-    <dataInput id ="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
-  </dataInputs>
-
-  <tables>
-
-    <table id="Patient">
-      <names>
-        <name language="sv">Patient</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över patienter</description>
-      </descriptions>
-      <businessKey>
-        <value>PatientId</value>
-      </businessKey>
-      <columns>
-        <column id="PatientId">
-          <names>
-            <name language="sv">PatientId</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Personnr 12 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/PatientId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Personnr12">
-          <names>
-            <name language="sv">Personnr12</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Personnr 12 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/Personnr12</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Kon">
-          <names>
-            <name language="sv">Kon</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Kön</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/Kon</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Fornamn">
-          <names>
-            <name language="sv">Fornamn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Förnamn</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/Fornamn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Efternamn">
-          <names>
-            <name language="sv">Efternamn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Efternamn</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/Efternamn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PostAdress">
-          <names>
-            <name language="sv">PostAdress</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">PostAdress</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/PostAdress</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Postnr">
-          <names>
-            <name language="sv">Postnr</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Postnr</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/Postnr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Postort">
-          <names>
-            <name language="sv">Postort</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Postort</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Patient/Postort</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>100567823</value>
-          <value>191212121212</value>
-          <value>M</value>
-          <value>Tolvan</value>
-          <value>Tolvansson</value>
-          <value>Storgatan 1</value>
-          <value>123 45</value>
-          <value>Storstaden</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>201414141414</value>
-          <value>K</value>
-          <value>Fortuna</value>
-          <value>Fjortonsson</value>
-          <value>Kungsgatan 24</value>
-          <value>234 56</value>
-          <value>Storstaden</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Besok">
-      <names>
-        <name language="sv">Besok</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över besök i öppenvården"</description>
-      </descriptions>
-      <businessKey>
-        <value>PatientId</value>
-        <value>BesokID</value>
-      </businessKey>
-      <columns>
-        <column id="PatientId">
-          <names>
-            <name language="sv">PatientId</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Koppling till Patient tabell</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Besok/PatientId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="BesokID">
-          <names>
-            <name language="sv">BesokID</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Unikt id för besök/patient</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Besok/BesokID</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="BesokStatusId">
-          <names>
-            <name language="sv">BesokStatusId</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Koppling till besökstatus dimensionstabell</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Besok/BesokStatusId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="AvdelningMottagningId">
-          <names>
-            <name language="sv">AvdelningMottagningId</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Koppling till avdelning/mottagnings dimentsions tabell. Anger var besöket ägde rum</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Besok/AvdelningMottagningId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Besok_BesokDatum">
-          <names>
-            <name language="sv">Besok_BesokDatum</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">När besöket gjordes</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Besok/Besok_BesokDatum</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Besok_ArAkut">
-          <names>
-            <name language="sv">Besok_ArAkut</name>
-          </names>
-          <dimlDataType id="boolean" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Akut J/N</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Besok/Besok_ArAkut</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Besok_Patientavgift">
-          <names>
-            <name language="sv">Besok_Patientavgift</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Patientavvgift</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/Besok/Besok_Patientavgift</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="BesokPatientId" targetTable="Patient">
-          <relationColumns columnName="PatientId" targetColumnName="PatientId" />
-        </tableRelation>
-      </tableRelations>
-      <sampleData>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>10</value>
-          <value>4</value>
-          <value>10243</value>
-          <value>2021-10-14 10:00:00</value>
-          <value>N</value>
-          <value>400</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>11</value>
-          <value>4</value>
-          <value>10243</value>
-          <value>2021-11-06 14:00:00</value>
-          <value>N</value>
-          <value>0</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100047875</value>
-          <value>24</value>
-          <value>7</value>
-          <value>8704</value>
-          <value>2022-04-02 08:00:00</value>
-          <value>N</value>
-          <value>0</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="PatientDiagnos">
-      <names>
-        <name language="sv">PatientDiagnos</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över patienters diagnoser</description>
-        <description type="md" language="sv">##Tabell över patienters diagnoser beskrivning i markdown...&#xD;&#xA;Test</description>
-        <description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
-      </descriptions>
-      <businessKey>
-        <value>PatientId</value>
-        <value>BesokID</value>
-        <value>PatientDiagnosId</value>
-      </businessKey>
-      <columns>
-        <column id="PatientId">
-          <names>
-            <name language="sv">PatientId</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Koppling till Patient-tabell</description>
-            <description type="md" language="sv">Koppling till Patient-tabell</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/PatientDiagnos/PatientId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="BesokId">
-          <names>
-            <name language="sv">BesokId</name>
-          </names>
-          <dimlDataType id="bigInteger" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Koppling till Besök</description>
-            <description type="md" language="sv">Koppling till Besök</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/PatientDiagnos/BesokId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PatientDiagnosId">
-          <names>
-            <name language="sv">PatientDiagnosId</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Löpnr för diagnos kopplade till patient/besök 1-15</description>
-            <description type="md" language="sv">Löpnr för diagnos kopplade till patient/besök 1-15</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/PatientDiagnos/PatientDiagnosId</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PatientDiagnos_Diagnoskod">
-          <names>
-            <name language="sv">PatientDiagnos_Diagnoskod</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Diagnoskod</description>
-            <description type="md" language="sv">Diagnoskod</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/PatientDiagnos/Diagnoskod</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PatientDiagnos_DiagnosDatum">
-          <names>
-            <name language="sv">PatientDiagnos_DiagnosDatum</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Datum när diagnos sattes</description>
-            <description type="md" language="sv">Datum när diagnos sattes</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/PatientDiagnos/DiagnosDatum</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PatientDiagnos_HuvudEllerBidiagnos">
-          <names>
-            <name language="sv">PatientDiagnos_HuvudEllerBidiagnos</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">"Är diagnos (H)uvuddiagnos eller (B)idiagnos</description>
-            <description type="md" language="sv">"Är diagnos (H)uvuddiagnos eller (B)idiagnos</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>src1/PatientDiagnos/HuvudEllerBidiagnos</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <tableRelations>
-        <tableRelation id="PatientDiagnosPatientId" targetTable="Patient">
-          <relationColumns columnName="PatientId" targetColumnName="PatientId" />
-        </tableRelation>
-        <tableRelation id="PatientDiagnosBesokPatientId" targetTable="Besok">
-          <relationColumns columnName="PatientId" targetColumnName="PatientId" />
-        </tableRelation>
-        <tableRelation id="PatientDiagnosBesokBesokId" targetTable="Besok">
-          <relationColumns columnName="BesokId" targetColumnName="BesokId" />
-        </tableRelation>
-      </tableRelations>
-      <sampleData>
-        <sampleDataRow>
-          <value>100567823</value>
-          <value>10</value>
-          <value>1</value>
-          <value>U07.1</value>
-          <value>2021-10-14 10:00:00</value>
-          <value>H</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>100567823</value>
-          <value>10</value>
-          <value>2</value>
-          <value>U09</value>
-          <value>2021-10-14 10:00:00</value>
-          <value>H</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-  </tables>
-
-  <dataOutputs>
-    <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="tsql" />
-    </sqlOutputs>
-  </dataOutputs>
-
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/besoksregistreringar.dataproduct" targetPlatform="msfabric">
+    <names>
+        <name language="sv">Besöksregistreringar</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Innehåller uppgifter om patienter, besök och patientdiagnoser</description>
+    </descriptions>
+    <dcat dcatDataTheme="heal" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter>
+                <value>dirhs</value>
+            </traitParameter>
+        </trait>
+        <trait class="category" subclass="searchStructure">
+            <traitParameter value="1.1" />
+        </trait>
+        <trait class="category" subclass="productOwner">
+            <traitParameter value="SDI Plattform" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter value="Raw" />
+        </trait>
+        <trait class="isUnlisted">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="isVirtual">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="icon">
+            <traitParameter value="bi-activity" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter value="dbo" />
+        </trait>
+        <trait class="pii" />
+    </traits>
+    <dataInputs>
+        <dataInput id="src1" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="Patient">
+            <names>
+                <name language="sv">Patient</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över patienter</description>
+            </descriptions>
+            <businessKey>
+                <value>PatientId</value>
+            </businessKey>
+            <columns>
+                <column id="PatientId">
+                    <names>
+                        <name language="sv">PatientId</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 12 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/PatientId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Personnr12">
+                    <names>
+                        <name language="sv">Personnr12</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 12 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/Personnr12</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Kon">
+                    <names>
+                        <name language="sv">Kon</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Kön</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/Kon</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Fornamn">
+                    <names>
+                        <name language="sv">Fornamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Förnamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/Fornamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Efternamn">
+                    <names>
+                        <name language="sv">Efternamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Efternamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/Efternamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PostAdress">
+                    <names>
+                        <name language="sv">PostAdress</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">PostAdress</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/PostAdress</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Postnr">
+                    <names>
+                        <name language="sv">Postnr</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Postnr</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/Postnr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Postort">
+                    <names>
+                        <name language="sv">Postort</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Postort</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Patient/Postort</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>100567823</value>
+                    <value>191212121212</value>
+                    <value>M</value>
+                    <value>Tolvan</value>
+                    <value>Tolvansson</value>
+                    <value>Storgatan 1</value>
+                    <value>123 45</value>
+                    <value>Storstaden</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>201414141414</value>
+                    <value>K</value>
+                    <value>Fortuna</value>
+                    <value>Fjortonsson</value>
+                    <value>Kungsgatan 24</value>
+                    <value>234 56</value>
+                    <value>Storstaden</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Besok">
+            <names>
+                <name language="sv">Besok</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över besök i öppenvården"</description>
+            </descriptions>
+            <businessKey>
+                <value>PatientId</value>
+                <value>BesokID</value>
+            </businessKey>
+            <columns>
+                <column id="PatientId">
+                    <names>
+                        <name language="sv">PatientId</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Koppling till Patient tabell</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Besok/PatientId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="BesokID">
+                    <names>
+                        <name language="sv">BesokID</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Unikt id för besök/patient</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Besok/BesokID</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="BesokStatusId">
+                    <names>
+                        <name language="sv">BesokStatusId</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Koppling till besökstatus dimensionstabell</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Besok/BesokStatusId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="AvdelningMottagningId">
+                    <names>
+                        <name language="sv">AvdelningMottagningId</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Koppling till avdelning/mottagnings dimentsions tabell. Anger var besöket ägde rum</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Besok/AvdelningMottagningId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Besok_BesokDatum">
+                    <names>
+                        <name language="sv">Besok_BesokDatum</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">När besöket gjordes</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Besok/Besok_BesokDatum</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Besok_ArAkut">
+                    <names>
+                        <name language="sv">Besok_ArAkut</name>
+                    </names>
+                    <dimlDataType id="boolean" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Akut J/N</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Besok/Besok_ArAkut</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Besok_Patientavgift">
+                    <names>
+                        <name language="sv">Besok_Patientavgift</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Patientavvgift</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/Besok/Besok_Patientavgift</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="BesokPatientId" targetTable="Patient">
+                    <relationColumns columnName="PatientId" targetColumnName="PatientId" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>10</value>
+                    <value>4</value>
+                    <value>10243</value>
+                    <value>2021-10-14 10:00:00</value>
+                    <value>N</value>
+                    <value>400</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>11</value>
+                    <value>4</value>
+                    <value>10243</value>
+                    <value>2021-11-06 14:00:00</value>
+                    <value>N</value>
+                    <value>0</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100047875</value>
+                    <value>24</value>
+                    <value>7</value>
+                    <value>8704</value>
+                    <value>2022-04-02 08:00:00</value>
+                    <value>N</value>
+                    <value>0</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="PatientDiagnos">
+            <names>
+                <name language="sv">PatientDiagnos</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över patienters diagnoser</description>
+                <description type="md" language="sv">##Tabell över patienters diagnoser beskrivning i markdown...
+Test</description>
+                <description type="logicMd" language="sv">Beskrivning av logik i markdown...</description>
+            </descriptions>
+            <businessKey>
+                <value>PatientId</value>
+                <value>BesokID</value>
+                <value>PatientDiagnosId</value>
+            </businessKey>
+            <columns>
+                <column id="PatientId">
+                    <names>
+                        <name language="sv">PatientId</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Koppling till Patient-tabell</description>
+                        <description type="md" language="sv">Koppling till Patient-tabell</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/PatientDiagnos/PatientId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="BesokId">
+                    <names>
+                        <name language="sv">BesokId</name>
+                    </names>
+                    <dimlDataType id="bigInteger" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Koppling till Besök</description>
+                        <description type="md" language="sv">Koppling till Besök</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/PatientDiagnos/BesokId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PatientDiagnosId">
+                    <names>
+                        <name language="sv">PatientDiagnosId</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Löpnr för diagnos kopplade till patient/besök 1-15</description>
+                        <description type="md" language="sv">Löpnr för diagnos kopplade till patient/besök 1-15</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/PatientDiagnos/PatientDiagnosId</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PatientDiagnos_Diagnoskod">
+                    <names>
+                        <name language="sv">PatientDiagnos_Diagnoskod</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Diagnoskod</description>
+                        <description type="md" language="sv">Diagnoskod</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/PatientDiagnos/Diagnoskod</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PatientDiagnos_DiagnosDatum">
+                    <names>
+                        <name language="sv">PatientDiagnos_DiagnosDatum</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum när diagnos sattes</description>
+                        <description type="md" language="sv">Datum när diagnos sattes</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/PatientDiagnos/DiagnosDatum</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PatientDiagnos_HuvudEllerBidiagnos">
+                    <names>
+                        <name language="sv">PatientDiagnos_HuvudEllerBidiagnos</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">"Är diagnos (H)uvuddiagnos eller (B)idiagnos</description>
+                        <description type="md" language="sv">"Är diagnos (H)uvuddiagnos eller (B)idiagnos</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>src1/PatientDiagnos/HuvudEllerBidiagnos</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <tableRelations>
+                <tableRelation id="PatientDiagnosPatientId" targetTable="Patient">
+                    <relationColumns columnName="PatientId" targetColumnName="PatientId" />
+                </tableRelation>
+                <tableRelation id="PatientDiagnosBesokPatientId" targetTable="Besok">
+                    <relationColumns columnName="PatientId" targetColumnName="PatientId" />
+                </tableRelation>
+                <tableRelation id="PatientDiagnosBesokBesokId" targetTable="Besok">
+                    <relationColumns columnName="BesokId" targetColumnName="BesokId" />
+                </tableRelation>
+            </tableRelations>
+            <sampleData>
+                <sampleDataRow>
+                    <value>100567823</value>
+                    <value>10</value>
+                    <value>1</value>
+                    <value>U07.1</value>
+                    <value>2021-10-14 10:00:00</value>
+                    <value>H</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>100567823</value>
+                    <value>10</value>
+                    <value>2</value>
+                    <value>U09</value>
+                    <value>2021-10-14 10:00:00</value>
+                    <value>H</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataProduct>

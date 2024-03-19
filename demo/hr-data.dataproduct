@@ -1,456 +1,441 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/hr-data.dataproduct" targetPlatform="msfabric">
-
-  <names>
-    <name language="sv">HR-data</name>
-  </names>
-
-  <descriptions>
-    <description type="plain" language="sv">Uppgifter om personer, anställningar och semestrar.</description>
-  </descriptions>
-
-  <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter value="hr" />
-    </trait>
-    <trait class="category" subclass="contentClass">
-      <traitParameter value="application" />
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K1R1T1" />
-    </trait>
-    <trait class="isVirtual">
-      <traitParameter value="false"/>
-    </trait>
-    <trait class="icon">
-      <traitParameter value="bi-people"/>
-    </trait>
-    <trait class="tableSchema">
-      <traitParameter value="dbo"/>
-    </trait>
-  </traits>
-
-  <dataInputs>
-    <dataInput id="personec" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
-  </dataInputs>
-
-  <tables>
-
-    <table id="Person">
-      <names>
-        <name language="sv">Person</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över personer som är eller har varit anställda.</description>
-      </descriptions>
-      <businessKey>
-        <value>Personnr10</value>
-      </businessKey>
-      <columns>
-        <column id="Personnr10">
-          <names>
-            <name language="sv">Personnr10</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Personnr 10 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Person/Personnr10</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Kon">
-          <names>
-            <name language="sv">Kon</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Kön</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Person/Kon</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Fornamn">
-          <names>
-            <name language="sv">Fornamn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Förnamn</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Person/Fornamn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Efternamn">
-          <names>
-            <name language="sv">Efternamn</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Efternamn</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Person/Efternamn</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="PostAdress">
-          <names>
-            <name language="sv">PostAdress</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">PostAdress</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Person/PostAdress</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Postnr">
-          <names>
-            <name language="sv">Postnr</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Postnr</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Person/Postnr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Postort">
-          <names>
-            <name language="sv">Postort</name>
-          </names>
-          <dimlDataType id="string" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Postort</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Person/Postort</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>1212121212</value>
-          <value>M</value>
-          <value>Tolvan</value>
-          <value>Tolvansson</value>
-          <value>Storgatan 1</value>
-          <value>12345</value>
-          <value>Storstaden</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>1414141414</value>
-          <value>K</value>
-          <value>Fortuna</value>
-          <value>Fjortonsson</value>
-          <value>Kungsgatan 24</value>
-          <value>234 56</value>
-          <value>Storstaden</value>
-        </sampleDataRow>
-
-      </sampleData>
-    </table>
-
-    <table id="Anstallning">
-      <names>
-        <name language="sv">Anstallning</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över anställningar</description>
-      </descriptions>
-      <businessKey>
-        <value>Personnr10</value>
-        <value>AnstNr</value>
-      </businessKey>
-      <columns>
-        <column id="Personnr10">
-          <names>
-            <name language="sv">Personnr10</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Personnr 10 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Anstallning/Personnr10</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="AnstNr">
-          <names>
-            <name language="sv">AnstNr</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Anställningsnr</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Anstallning/AnstNr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="Anstallningsdatum">
-          <names>
-            <name language="sv">Anstallningsdatum</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Anställningens start</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Anstallning/Anstallningsdatum</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="AnstallningTom">
-          <names>
-            <name language="sv">AnstallningTom</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Anställning upphör om tidsbegräsning finns</description>
-          </descriptions>
-          <traits>
-            <trait class="isGreaterThan">
-              <traitParameter key="column" value="Anstallningsdatum"/>
-            </trait>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Anstallning/AnstallningTom</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="GiltigFrom">
-          <names>
-            <name language="sv">GiltigFrom</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Giltighet från och med</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Anstallning/GiltigFrom</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="GiltigTom">
-          <names>
-            <name language="sv">GiltigTom</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Giltighet till och med</description>
-          </descriptions>
-          <traits>
-            <trait class="isGreaterThan">
-              <traitParameter key="column" value="GiltigFrom"/>
-            </trait>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Anstallning/GiltigTom</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="ManadsBelopp">
-          <names>
-            <name language="sv">ManadsBelopp</name>
-          </names>
-          <dimlDataType id="decimal" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Lön</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Anstallning/ManadsBelopp</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>1212121212</value>
-          <value>1</value>
-          <value>2019-01-01</value>
-          <value>2021-01-01</value>
-          <value>2019-01-31</value>
-          <value>2021-01-01</value>
-          <value>31000</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>1414141414</value>
-          <value>1</value>
-          <value>2020-01-01</value>
-          <value>2021-01-01</value>
-          <value>2020-01-01</value>
-          <value>2021-01-01</value>
-          <value>34000</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>1414141414</value>
-          <value>2</value>
-          <value>2022-01-0</value>
-          <value></value>
-          <value>2099-01-01</value>
-          <value>35000</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-    <table id="Semester">
-      <names>
-        <name language="sv">Semester</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">Tabell över semesterperioder.</description>
-      </descriptions>
-      <businessKey>
-        <value>Personnr10</value>
-        <value>AnstNr</value>
-      </businessKey>
-      <columns>
-        <column id="Personnr10">
-          <names>
-            <name language="sv">Personnr10</name>
-          </names>
-          <dimlDataType id="ssn" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Personnr 10 siffror</description>
-          </descriptions>
-          <traits>
-            <trait class="pii"/>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Semester/Personnr10</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="AnstNr">
-          <names>
-            <name language="sv">AnstNr</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Anställningsnr</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Semester/AnstNr</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="SemFrom">
-          <names>
-            <name language="sv">SemFrom</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Semester start</description>
-          </descriptions>
-          <traits>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Semester/SemFrom</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-        <column id="SemTom">
-          <names>
-            <name language="sv">SemTom</name>
-          </names>
-          <dimlDataType id="dateTime" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Semester slut</description>
-          </descriptions>
-          <traits>
-            <trait class="isGreaterThan">
-              <traitParameter key="column" value="SemFrom"/>
-            </trait>
-            <trait class="columnSources">
-              <traitParameter>
-                <value>personec/Semester/SemTom</value>
-              </traitParameter>
-            </trait>
-          </traits>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>1414141414</value>
-          <value>2</value>
-          <value>2023-02-06</value>
-          <value>2023-02-10</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-  </tables>
-
-  <dataOutputs>
-    <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="tsql" />
-    </sqlOutputs>
-  </dataOutputs>
-
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/hr-data.dataproduct" targetPlatform="msfabric">
+    <names>
+        <name language="sv">HR-data</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Uppgifter om personer, anställningar och semestrar.</description>
+    </descriptions>
+    <dcat dcatDataTheme="gove" dcatAccessRights="restricted" dcatUpdateFrequency="daily" dcatAvailability="available" dcatStatus="completed" />
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter value="hr" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter value="application" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+        <trait class="isVirtual">
+            <traitParameter value="false" />
+        </trait>
+        <trait class="icon">
+            <traitParameter value="bi-people" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter value="dbo" />
+        </trait>
+    </traits>
+    <dataInputs>
+        <dataInput id="personec" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml/main/samples/demo/dummy_file_name.datasource" channelId="sql" />
+    </dataInputs>
+    <tables>
+        <table id="Person">
+            <names>
+                <name language="sv">Person</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över personer som är eller har varit anställda.</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr10</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr10">
+                    <names>
+                        <name language="sv">Personnr10</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 10 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Person/Personnr10</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Kon">
+                    <names>
+                        <name language="sv">Kon</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Kön</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Person/Kon</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Fornamn">
+                    <names>
+                        <name language="sv">Fornamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Förnamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Person/Fornamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Efternamn">
+                    <names>
+                        <name language="sv">Efternamn</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Efternamn</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Person/Efternamn</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="PostAdress">
+                    <names>
+                        <name language="sv">PostAdress</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">PostAdress</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Person/PostAdress</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Postnr">
+                    <names>
+                        <name language="sv">Postnr</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Postnr</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Person/Postnr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Postort">
+                    <names>
+                        <name language="sv">Postort</name>
+                    </names>
+                    <dimlDataType id="string" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Postort</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Person/Postort</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1212121212</value>
+                    <value>M</value>
+                    <value>Tolvan</value>
+                    <value>Tolvansson</value>
+                    <value>Storgatan 1</value>
+                    <value>12345</value>
+                    <value>Storstaden</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>1414141414</value>
+                    <value>K</value>
+                    <value>Fortuna</value>
+                    <value>Fjortonsson</value>
+                    <value>Kungsgatan 24</value>
+                    <value>234 56</value>
+                    <value>Storstaden</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Anstallning">
+            <names>
+                <name language="sv">Anstallning</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över anställningar</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr10</value>
+                <value>AnstNr</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr10">
+                    <names>
+                        <name language="sv">Personnr10</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 10 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Anstallning/Personnr10</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="AnstNr">
+                    <names>
+                        <name language="sv">AnstNr</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anställningsnr</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Anstallning/AnstNr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="Anstallningsdatum">
+                    <names>
+                        <name language="sv">Anstallningsdatum</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anställningens start</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Anstallning/Anstallningsdatum</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="AnstallningTom">
+                    <names>
+                        <name language="sv">AnstallningTom</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anställning upphör om tidsbegräsning finns</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="isGreaterThan">
+                            <traitParameter key="column" value="Anstallningsdatum" />
+                        </trait>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Anstallning/AnstallningTom</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="GiltigFrom">
+                    <names>
+                        <name language="sv">GiltigFrom</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Giltighet från och med</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Anstallning/GiltigFrom</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="GiltigTom">
+                    <names>
+                        <name language="sv">GiltigTom</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Giltighet till och med</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="isGreaterThan">
+                            <traitParameter key="column" value="GiltigFrom" />
+                        </trait>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Anstallning/GiltigTom</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="ManadsBelopp">
+                    <names>
+                        <name language="sv">ManadsBelopp</name>
+                    </names>
+                    <dimlDataType id="decimal" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Lön</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Anstallning/ManadsBelopp</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1212121212</value>
+                    <value>1</value>
+                    <value>2019-01-01</value>
+                    <value>2021-01-01</value>
+                    <value>2019-01-31</value>
+                    <value>2021-01-01</value>
+                    <value>31000</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>1414141414</value>
+                    <value>1</value>
+                    <value>2020-01-01</value>
+                    <value>2021-01-01</value>
+                    <value>2020-01-01</value>
+                    <value>2021-01-01</value>
+                    <value>34000</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>1414141414</value>
+                    <value>2</value>
+                    <value>2022-01-0</value>
+                    <value></value>
+                    <value>2099-01-01</value>
+                    <value>35000</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+        <table id="Semester">
+            <names>
+                <name language="sv">Semester</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Tabell över semesterperioder.</description>
+            </descriptions>
+            <businessKey>
+                <value>Personnr10</value>
+                <value>AnstNr</value>
+            </businessKey>
+            <columns>
+                <column id="Personnr10">
+                    <names>
+                        <name language="sv">Personnr10</name>
+                    </names>
+                    <dimlDataType id="ssn" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Personnr 10 siffror</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="pii" />
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Semester/Personnr10</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="AnstNr">
+                    <names>
+                        <name language="sv">AnstNr</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Anställningsnr</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Semester/AnstNr</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="SemFrom">
+                    <names>
+                        <name language="sv">SemFrom</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Semester start</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Semester/SemFrom</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+                <column id="SemTom">
+                    <names>
+                        <name language="sv">SemTom</name>
+                    </names>
+                    <dimlDataType id="dateTime" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Semester slut</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="isGreaterThan">
+                            <traitParameter key="column" value="SemFrom" />
+                        </trait>
+                        <trait class="columnSources">
+                            <traitParameter>
+                                <value>personec/Semester/SemTom</value>
+                            </traitParameter>
+                        </trait>
+                    </traits>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1414141414</value>
+                    <value>2</value>
+                    <value>2023-02-06</value>
+                    <value>2023-02-10</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
 </dataProduct>

@@ -1,226 +1,213 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/information_object.hierarchy">
-
-  <traits>
-    <trait class="extension" subclass="bki-namespace">
-      <traitParameter key="value" value="http://bki.skane.se/infstyr/id/infobj"/>
-    </trait>
-  </traits>
-
-  <category id="samhovIO">
-    <names>
-      <name language="sv">Samordning av hälsa och vård</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-    </descriptions>
+<hierarchy xmlns="https://github.com/Region-Skane-SDI/diml/hierarchy" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/hierarchy https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/hierarchy.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/information_object.hierarchy">
     <traits>
-      <trait class="category" subclass="informationArea">
-        <traitParameter key="value">
-          <value>samhov</value>
-        </traitParameter>
-      </trait>
-
+        <trait class="extension" subclass="bki-namespace">
+            <traitParameter key="value" value="http://bki.skane.se/infstyr/id/infobj" />
+        </trait>
     </traits>
-
-    <subcategories>
-      <category id="vardkontakt">
-        <names>
-          <name language="sv">Vårdkontakt</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Kontakt mellan patient och hälso- och sjukvårdspersonal då hälso- och sjukvåd utförs.</description>
-        </descriptions>
-        <traits>
-          <trait class="infomr">
-            <traitParameter key="value" value="samhov"/>
-          </trait>
-          <trait class="infdom">
-            <traitParameter key="value" value="hs"/>
-          </trait>
-          <trait class="guid">
-            <traitParameter key="value" value="{66544D2B-FD49-4cac-81E8-BA90C1007EAA}"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-
-      <category id="bokningkontakt">
-        <names>
-          <name language="sv">Bokning vårdkontakt</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Avtal om tid och sammanhang för en vårdkontakt.</description>
-        </descriptions>
-        <traits>
-          <trait class="infomr">
-            <traitParameter key="value" value="samhov"/>
-          </trait>
-          <trait class="infdom">
-            <traitParameter key="value" value="hs"/>
-          </trait>
-          <trait class="guid">
-            <traitParameter key="value" value="{048C696F-5397-4bea-8A65-8D25BBE123AE}"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
-
-  <category id="infhantIO">
-    <names>
-      <name language="sv">Samordning av hälsa och vård</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationArea">
-        <traitParameter key="value">
-          <value>samhov</value>
-        </traitParameter>
-      </trait>
-
-    </traits>
-
-    <subcategories>
-
-      <category id="patient">
-        <names>
-          <name language="sv">Patient</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Demografisk information om person som erhåller eller är registrerad för att erhålla hälso- och sjukvård.</description>
-        </descriptions>
-        <traits>
-          <trait class="infomr">
-            <traitParameter key="value" value="inthant"/>
-          </trait>
-          <trait class="infdom">
-            <traitParameter key="value" value="hs"/>
-          </trait>
-          <trait class="guid">
-            <traitParameter key="value" value="{2294E9F9-E48A-4453-9432-01FDB401EEA3}"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-
-    </subcategories>
-  </category>
-
-  <category id="undobedIO">
-    <names>
-      <name language="sv">Undersökning och bedömning</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationArea">
-        <traitParameter key="value">
-          <value>undobed</value>
-        </traitParameter>
-      </trait>
-    </traits>
-
-    <subcategories>
-      <category id="bedhalstills">
-        <names>
-          <name language="sv">Bedömt hälsotillstånd</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">En patients bedömda hälsotillstånd.</description>
-        </descriptions>
-        <traits>
-          <trait class="infomr">
-            <traitParameter key="value" value="undobed"/>
-          </trait>
-          <trait class="infdom">
-            <traitParameter key="value" value="hs"/>
-          </trait>
-          <trait class="guid">
-            <traitParameter key="value" value="{C022C323-320A-4ad5-A5E8-84E02F8C9E88}"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
-
-  <category id="debiteringhsIO">
-    <names>
-      <name language="sv">Debitering hälsa och vård</name>
-    </names>
-    <descriptions>
-      <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
-    </descriptions>
-    <traits>
-      <trait class="category" subclass="informationArea">
-        <traitParameter key="value">
-          <value>debiteringhs</value>
-        </traitParameter>
-      </trait>
-    </traits>
-    <subcategories>
-
-      <category id="diagnospatienters">
-        <names>
-          <name language="sv">Diagnoskod patient</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Diagnoskod relaterad till en patient i syfte debitera för utförd vård.</description>
-        </descriptions>
-        <traits>
-          <trait class="infomr">
-            <traitParameter key="value" value="debiteringhs"/>
-          </trait>
-          <trait class="infdom">
-            <traitParameter key="value" value="hs"/>
-          </trait>
-          <trait class="guid">
-            <traitParameter key="value" value="{1382FAA1-0F89-4dd8-B6BE-89F40397687A}"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-
-
-      <category id="undutfordvard">
-        <names>
-          <name language="sv">Underlag debitering vård och hälsa</name>
-        </names>
-        <descriptions>
-          <description type="plain" language="sv">Underlag för att beräkna kostnad för utförd vård.</description>
-        </descriptions>
-        <traits>
-          <trait class="infomr">
-            <traitParameter key="value" value="debiteringhs"/>
-          </trait>
-          <trait class="infdom">
-            <traitParameter key="value" value="ekonomi"/>
-          </trait>
-          <trait class="guid">
-            <traitParameter key="value" value="{C09644AB-014D-44b6-BFC1-762ADB7D915F}"/>
-          </trait>
-          <trait class="icon">
-            <traitParameter key="value" value="bi-wallet"/>
-          </trait>
-        </traits>
-      </category>
-    </subcategories>
-  </category>
-
+    <categories>
+        <category id="samhovIO">
+            <names>
+                <name language="sv">Samordning av hälsa och vård</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+            </descriptions>
+            <traits>
+                <trait class="category" subclass="informationArea">
+                    <traitParameter key="value">
+                        <value>samhov</value>
+                    </traitParameter>
+                </trait>
+            </traits>
+            <subcategories>
+                <category id="vardkontakt">
+                    <names>
+                        <name language="sv">Vårdkontakt</name>
+                    </names>
+                    <descriptions>
+                        <description type="plain" language="sv">Kontakt mellan patient och hälso- och
+              sjukvårdspersonal då hälso- och sjukvåd utförs.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="infomr">
+                            <traitParameter key="value" value="samhov" />
+                        </trait>
+                        <trait class="infdom">
+                            <traitParameter key="value" value="hs" />
+                        </trait>
+                        <trait class="guid">
+                            <traitParameter key="value" value="{66544D2B-FD49-4cac-81E8-BA90C1007EAA}" />
+                        </trait>
+                        <trait class="icon">
+                            <traitParameter key="value" value="bi-wallet" />
+                        </trait>
+                    </traits>
+                </category>
+                <category id="bokningkontakt">
+                    <names>
+                        <name language="sv">Bokning vårdkontakt</name>
+                    </names>
+                    <descriptions>
+                        <description type="plain" language="sv">Avtal om tid och sammanhang för en vårdkontakt.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="infomr">
+                            <traitParameter key="value" value="samhov" />
+                        </trait>
+                        <trait class="infdom">
+                            <traitParameter key="value" value="hs" />
+                        </trait>
+                        <trait class="guid">
+                            <traitParameter key="value" value="{048C696F-5397-4bea-8A65-8D25BBE123AE}" />
+                        </trait>
+                        <trait class="icon">
+                            <traitParameter key="value" value="bi-wallet" />
+                        </trait>
+                    </traits>
+                </category>
+            </subcategories>
+        </category>
+        <category id="infhantIO">
+            <names>
+                <name language="sv">Samordning av hälsa och vård</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+            </descriptions>
+            <traits>
+                <trait class="category" subclass="informationArea">
+                    <traitParameter key="value">
+                        <value>samhov</value>
+                    </traitParameter>
+                </trait>
+            </traits>
+            <subcategories>
+                <category id="patient">
+                    <names>
+                        <name language="sv">Patient</name>
+                    </names>
+                    <descriptions>
+                        <description type="plain" language="sv">Demografisk information om person som erhåller
+              eller är registrerad för att erhålla hälso- och sjukvård.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="infomr">
+                            <traitParameter key="value" value="inthant" />
+                        </trait>
+                        <trait class="infdom">
+                            <traitParameter key="value" value="hs" />
+                        </trait>
+                        <trait class="guid">
+                            <traitParameter key="value" value="{2294E9F9-E48A-4453-9432-01FDB401EEA3}" />
+                        </trait>
+                        <trait class="icon">
+                            <traitParameter key="value" value="bi-wallet" />
+                        </trait>
+                    </traits>
+                </category>
+            </subcategories>
+        </category>
+        <category id="undobedIO">
+            <names>
+                <name language="sv">Undersökning och bedömning</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+            </descriptions>
+            <traits>
+                <trait class="category" subclass="informationArea">
+                    <traitParameter key="value">
+                        <value>undobed</value>
+                    </traitParameter>
+                </trait>
+            </traits>
+            <subcategories>
+                <category id="bedhalstills">
+                    <names>
+                        <name language="sv">Bedömt hälsotillstånd</name>
+                    </names>
+                    <descriptions>
+                        <description type="plain" language="sv">En patients bedömda hälsotillstånd.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="infomr">
+                            <traitParameter key="value" value="undobed" />
+                        </trait>
+                        <trait class="infdom">
+                            <traitParameter key="value" value="hs" />
+                        </trait>
+                        <trait class="guid">
+                            <traitParameter key="value" value="{C022C323-320A-4ad5-A5E8-84E02F8C9E88}" />
+                        </trait>
+                        <trait class="icon">
+                            <traitParameter key="value" value="bi-wallet" />
+                        </trait>
+                    </traits>
+                </category>
+            </subcategories>
+        </category>
+        <category id="debiteringhsIO">
+            <names>
+                <name language="sv">Debitering hälsa och vård</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta är en tillfällig beskrivning.</description>
+            </descriptions>
+            <traits>
+                <trait class="category" subclass="informationArea">
+                    <traitParameter key="value">
+                        <value>debiteringhs</value>
+                    </traitParameter>
+                </trait>
+            </traits>
+            <subcategories>
+                <category id="diagnospatienters">
+                    <names>
+                        <name language="sv">Diagnoskod patient</name>
+                    </names>
+                    <descriptions>
+                        <description type="plain" language="sv">Diagnoskod relaterad till en patient i syfte
+              debitera för utförd vård.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="infomr">
+                            <traitParameter key="value" value="debiteringhs" />
+                        </trait>
+                        <trait class="infdom">
+                            <traitParameter key="value" value="hs" />
+                        </trait>
+                        <trait class="guid">
+                            <traitParameter key="value" value="{1382FAA1-0F89-4dd8-B6BE-89F40397687A}" />
+                        </trait>
+                        <trait class="icon">
+                            <traitParameter key="value" value="bi-wallet" />
+                        </trait>
+                    </traits>
+                </category>
+                <category id="undutfordvard">
+                    <names>
+                        <name language="sv">Underlag debitering vård och hälsa</name>
+                    </names>
+                    <descriptions>
+                        <description type="plain" language="sv">Underlag för att beräkna kostnad för utförd
+              vård.</description>
+                    </descriptions>
+                    <traits>
+                        <trait class="infomr">
+                            <traitParameter key="value" value="debiteringhs" />
+                        </trait>
+                        <trait class="infdom">
+                            <traitParameter key="value" value="ekonomi" />
+                        </trait>
+                        <trait class="guid">
+                            <traitParameter key="value" value="{C09644AB-014D-44b6-BFC1-762ADB7D915F}" />
+                        </trait>
+                        <trait class="icon">
+                            <traitParameter key="value" value="bi-wallet" />
+                        </trait>
+                    </traits>
+                </category>
+            </subcategories>
+        </category>
+    </categories>
 </hierarchy>

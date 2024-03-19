@@ -1,128 +1,186 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<list xmlns="https://github.com/Region-Skane-SDI/diml/list"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_data_theme.list">
-
-	<listItem id="econ">
-		<names>
-			<name language="sv">Ekonomi och finans</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Data är tillgänglig på försök för en kort period, kortsiktig planering.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="educ">
-		<names>
-			<name language="sv">Utbildning, kultur och sport</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domäner som utbildning, kultur och sport. Utbildning är processen att underlätta lärande, eller förvärvande av kunskap, färdigheter, värderingar, övertygelser och vanor. Kultur omfattar det sociala beteendet och de normer som finns i mänskliga samhällen, såväl som kunskap, övertygelser, konster, lagar, seder, förmågor och vanor hos individerna i dessa grupper. Idrott omfattar alla former av tävlingsmässig fysisk aktivitet eller spel som upprätthåller eller förbättrar fysisk förmåga och färdigheter samtidigt som deltagarna njuter, och i vissa fall underhållning för åskådarna. Exempel på dataset: Europeiska färdigheter, kompetenser, kvalifikationer och yrken (ESCO); EU:s medlemsstater och internationella åtaganden om mänskliga rättigheter; Deltagande i kultur- eller sportaktiviteter under de senaste 12 månaderna efter kön, ålder och utbildningsnivå.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="ener">
-		<names>
-			<name language="sv">Energi</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domänen energi. Energi är den kvantitativa egenskap som måste överföras till ett objekt för att kunna utföra arbete på, eller värma, objektet. Levande organismer kräver energi för att hålla sig vid liv; mänsklig civilisation kräver energi för att fungera. Exempel på dataset: rapporter om den europeiska gasmarknaden; Elpriser efter typ av användare.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="envi">
-		<names>
-			<name language="sv">Miljö</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domänen miljö. Den naturliga miljön omfattar samspelet mellan alla levande arter, klimat, väder och naturresurser som påverkar människans överlevnad och ekonomisk aktivitet. Exempel på dataset: EU-medborgarnas attityder till miljön; Föroreningsutsläpp från transporter.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="gove">
-		<names>
-			<name language="sv">Regeringen och den offentliga sektorn</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domäner som regering eller offentlig sektor. En regering är systemet eller gruppen av människor som styr ett organiserat samhälle, ofta en stat. Den offentliga sektorn är den del av ekonomin som består av både offentliga tjänster och offentliga företag. Offentliga tjänster och företag kan kontrolleras av statliga, regionala eller lokala myndigheter. Organisationer som inte ingår i den offentliga sektorn är antingen en del av den privata eller frivilliga sektorn. Exempel på dataset: Kandidatländer och potentiella kandidater: Statistisk statistik; Transparensregister.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="heal">
-		<names>
-			<name language="sv">Hälsa</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domänen hälsa. Hälsa är ett tillstånd av fysiskt, psykiskt och socialt välbefinnande där sjukdom och handikapp saknas. Exempel på dataset: COVID-19 Coronavirus-data; Europeiska cancerinformationssystemet.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="intr">
-		<names>
-			<name language="sv">Internationella frågor</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domänen för internationella frågor. En fråga – viktigt ämne eller problem för debatt eller diskussion – är internationell när deltagarna representerar minst två länder. Exempel på dataset: Konsoliderad lista över personer, grupper och enheter som omfattas av EU:s ekonomiska sanktioner; Europeiska kommissionen – GD DEVCO – utveckling och humanitärt bistånd till Afghanistan.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="just">
-		<names>
-			<name language="sv">Rättvisa, rättsliga system och allmän säkerhet</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domäner som rättvisa, rättssystem eller allmän säkerhet. Rättvisa inkluderar både uppnåendet av det som är rättvist och den filosofiska diskussionen om det som är rättvist; här avses huvudsakligen den processuella rättvisa som den finns i studien och tillämpningen av lagen. Världens samtida rättssystem är i allmänhet baserade på ett av fyra grundläggande system: civilrätt, sedvanerätt, lagstadgad lag, religiös lag eller kombinationer av dessa. Allmän säkerhet är en funktion av regeringar som säkerställer skyddet av medborgare, personer på deras territorium, organisationer och institutioner mot hot mot deras välbefinnande – och välståndet i deras samhällen. Exempel på dataset: EU:s rättspraxis; Information om medlemsstaternas lagstiftning; Europeiska datatillsynsmannens register över behandlingar.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="op_datpro">
-		<names>
-			<name language="sv">Tillfälliga uppgifter</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Saknar beskrivning.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="regi">
-		<names>
-			<name language="sv">Regioner och städer</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domäner som regioner eller städer. När det gäller politisk geografi tenderar regioner att vara baserade på politiska enheter som suveräna stater; subnationella enheter såsom administrativa regioner, provinser, stater, grevskap, townships, territorier, etc.; och multinationella grupperingar. En stad är en stor mänsklig bosättning. Exempel på dataset: NUTS - Nomenklatur för territoriella enheter för statistikklassificering; UDP - BNP per capita efter storstadsregioner, 2000 - 2060.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="soci">
-		<names>
-			<name language="sv">Befolkning och samhälle</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domäner som befolkning eller samhälle. Befolkning är en samling av människor och hela deras ras; det är antalet personer i en stad, region, ett land eller en värld. Ett samhälle är en grupp individer som är involverade i ihållande social interaktion, eller en stor social grupp som delar samma rumsliga eller sociala territorium, vanligtvis föremål för samma politiska auktoritet och dominerande kulturella förväntningar. Exempel på dataset: Befolkningstäthet efter NUTS 2-region; Violence against Women: En EU-omfattande undersökning.</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="tech">
-		<names>
-			<name language="sv">Vetenskap och teknik</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker domäner som vetenskap eller teknik. Vetenskap är ett systematiskt företag som bygger och organiserar kunskap i form av testbara förklaringar och förutsägelser. Modern vetenskap är typiskt indelad i tre huvudgrenar som består av naturvetenskaperna, som studerar naturen i vid mening; samhällsvetenskaperna, som studerar individer och samhällen; och de formella vetenskaperna, som studerar abstrakta begrepp. Teknik är summan av tekniker, färdigheter, metoder och processer som används vid produktion av varor eller tjänster eller för att uppnå mål, såsom vetenskaplig undersökning. Exempel på dataset: CORDIS - EU-forskningsprojekt under Horisont 2020 (2014–2020); Uttag av mobilt bredband (abonnemang/100 personer).</description>
-		</descriptions>
-	</listItem>
-
-	<listItem id="tran">
-		<names>
-			<name language="sv">Transport</name>
-		</names>
-		<descriptions>
-			<description type="plain" language="sv">Detta koncept identifierar dataset som täcker transportdomänen. Transport är förflyttning av människor, djur och varor från en plats till en annan. Transportsätt inkluderar luft, land (järnväg och väg), vatten, kabel, rörledning och rymd. Exempel på dataset: Total längd på motorvägar; Flygplatstrafikdata genom att rapportera flygplats och flygbolag.</description>
-		</descriptions>
-	</listItem>
-
+<list xmlns="https://github.com/Region-Skane-SDI/diml/list" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_data_theme.list">
+    <listItems>
+        <listItem id="econ">
+            <names>
+                <name language="sv">Ekonomi och finans</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Data är tillgänglig på försök för en kort
+					period, kortsiktig planering.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="educ">
+            <names>
+                <name language="sv">Utbildning, kultur och sport</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domäner som utbildning, kultur och sport. Utbildning är processen att
+					underlätta lärande, eller förvärvande av kunskap, färdigheter, värderingar,
+					övertygelser och vanor. Kultur omfattar det sociala beteendet och de normer som
+					finns i mänskliga samhällen, såväl som kunskap, övertygelser, konster, lagar,
+					seder, förmågor och vanor hos individerna i dessa grupper. Idrott omfattar alla
+					former av tävlingsmässig fysisk aktivitet eller spel som upprätthåller eller
+					förbättrar fysisk förmåga och färdigheter samtidigt som deltagarna njuter, och i
+					vissa fall underhållning för åskådarna. Exempel på dataset: Europeiska
+					färdigheter, kompetenser, kvalifikationer och yrken (ESCO); EU:s medlemsstater
+					och internationella åtaganden om mänskliga rättigheter; Deltagande i kultur-
+					eller sportaktiviteter under de senaste 12 månaderna efter kön, ålder och
+					utbildningsnivå.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="ener">
+            <names>
+                <name language="sv">Energi</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domänen energi. Energi är den kvantitativa egenskap som måste överföras
+					till ett objekt för att kunna utföra arbete på, eller värma, objektet. Levande
+					organismer kräver energi för att hålla sig vid liv; mänsklig civilisation kräver
+					energi för att fungera. Exempel på dataset: rapporter om den europeiska
+					gasmarknaden; Elpriser efter typ av användare.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="envi">
+            <names>
+                <name language="sv">Miljö</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domänen miljö. Den naturliga miljön omfattar samspelet mellan alla
+					levande arter, klimat, väder och naturresurser som påverkar människans
+					överlevnad och ekonomisk aktivitet. Exempel på dataset: EU-medborgarnas
+					attityder till miljön; Föroreningsutsläpp från transporter.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="gove">
+            <names>
+                <name language="sv">Regeringen och den offentliga sektorn</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domäner som regering eller offentlig sektor. En regering är systemet
+					eller gruppen av människor som styr ett organiserat samhälle, ofta en stat. Den
+					offentliga sektorn är den del av ekonomin som består av både offentliga tjänster
+					och offentliga företag. Offentliga tjänster och företag kan kontrolleras av
+					statliga, regionala eller lokala myndigheter. Organisationer som inte ingår i
+					den offentliga sektorn är antingen en del av den privata eller frivilliga
+					sektorn. Exempel på dataset: Kandidatländer och potentiella kandidater:
+					Statistisk statistik; Transparensregister.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="heal">
+            <names>
+                <name language="sv">Hälsa</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domänen hälsa. Hälsa är ett tillstånd av fysiskt, psykiskt och socialt
+					välbefinnande där sjukdom och handikapp saknas. Exempel på dataset: COVID-19
+					Coronavirus-data; Europeiska cancerinformationssystemet.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="intr">
+            <names>
+                <name language="sv">Internationella frågor</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domänen för internationella frågor. En fråga – viktigt ämne eller problem
+					för debatt eller diskussion – är internationell när deltagarna representerar
+					minst två länder. Exempel på dataset: Konsoliderad lista över personer, grupper
+					och enheter som omfattas av EU:s ekonomiska sanktioner; Europeiska kommissionen
+					– GD DEVCO – utveckling och humanitärt bistånd till Afghanistan.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="just">
+            <names>
+                <name language="sv">Rättvisa, rättsliga system och allmän säkerhet</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domäner som rättvisa, rättssystem eller allmän säkerhet. Rättvisa
+					inkluderar både uppnåendet av det som är rättvist och den filosofiska
+					diskussionen om det som är rättvist; här avses huvudsakligen den processuella
+					rättvisa som den finns i studien och tillämpningen av lagen. Världens samtida
+					rättssystem är i allmänhet baserade på ett av fyra grundläggande system:
+					civilrätt, sedvanerätt, lagstadgad lag, religiös lag eller kombinationer av
+					dessa. Allmän säkerhet är en funktion av regeringar som säkerställer skyddet av
+					medborgare, personer på deras territorium, organisationer och institutioner mot
+					hot mot deras välbefinnande – och välståndet i deras samhällen. Exempel på
+					dataset: EU:s rättspraxis; Information om medlemsstaternas lagstiftning;
+					Europeiska datatillsynsmannens register över behandlingar.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="op_datpro">
+            <names>
+                <name language="sv">Tillfälliga uppgifter</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Saknar beskrivning.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="regi">
+            <names>
+                <name language="sv">Regioner och städer</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domäner som regioner eller städer. När det gäller politisk geografi
+					tenderar regioner att vara baserade på politiska enheter som suveräna stater;
+					subnationella enheter såsom administrativa regioner, provinser, stater,
+					grevskap, townships, territorier, etc.; och multinationella grupperingar. En
+					stad är en stor mänsklig bosättning. Exempel på dataset: NUTS - Nomenklatur för
+					territoriella enheter för statistikklassificering; UDP - BNP per capita efter
+					storstadsregioner, 2000 - 2060.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="soci">
+            <names>
+                <name language="sv">Befolkning och samhälle</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domäner som befolkning eller samhälle. Befolkning är en samling av
+					människor och hela deras ras; det är antalet personer i en stad, region, ett
+					land eller en värld. Ett samhälle är en grupp individer som är involverade i
+					ihållande social interaktion, eller en stor social grupp som delar samma
+					rumsliga eller sociala territorium, vanligtvis föremål för samma politiska
+					auktoritet och dominerande kulturella förväntningar. Exempel på dataset:
+					Befolkningstäthet efter NUTS 2-region; Violence against Women: En EU-omfattande
+					undersökning.</description>
+            </descriptions>
+        </listItem>
+        <listItem id="tech">
+            <names>
+                <name language="sv">Vetenskap och teknik</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker domäner som vetenskap eller teknik. Vetenskap är ett systematiskt företag
+					som bygger och organiserar kunskap i form av testbara förklaringar och
+					förutsägelser. Modern vetenskap är typiskt indelad i tre huvudgrenar som består
+					av naturvetenskaperna, som studerar naturen i vid mening; samhällsvetenskaperna,
+					som studerar individer och samhällen; och de formella vetenskaperna, som
+					studerar abstrakta begrepp. Teknik är summan av tekniker, färdigheter, metoder
+					och processer som används vid produktion av varor eller tjänster eller för att
+					uppnå mål, såsom vetenskaplig undersökning. Exempel på dataset: CORDIS -
+					EU-forskningsprojekt under Horisont 2020 (2014–2020); Uttag av mobilt bredband
+					(abonnemang/100 personer).</description>
+            </descriptions>
+        </listItem>
+        <listItem id="tran">
+            <names>
+                <name language="sv">Transport</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">Detta koncept identifierar dataset som
+					täcker transportdomänen. Transport är förflyttning av människor, djur och varor
+					från en plats till en annan. Transportsätt inkluderar luft, land (järnväg och
+					väg), vatten, kabel, rörledning och rymd. Exempel på dataset: Total längd på
+					motorvägar; Flygplatstrafikdata genom att rapportera flygplats och flygbolag.</description>
+            </descriptions>
+        </listItem>
+    </listItems>
 </list>
-
-
-   
-   
-
-    
