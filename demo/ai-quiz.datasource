@@ -1,127 +1,115 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.datasource">
-
-  <names>
-    <name language="sv">AI-enkät</name>
-  </names>
-
-  <descriptions>
-    <description type="plain" language="sv">Innehåller uppgifter som har skickats in via AI-enkäten.</description>
-  </descriptions>
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter value="IT/MT" />
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K1R1T1"/>
-    </trait>
-  </traits>
-
-  <tables>
-
-    <table id="AI_Quiz_Answers">
-      <names>
-        <name language="sv">AI_Quiz_Answers</name>
-      </names>
-      <descriptions>
-        <description type="plain" language="sv">En tabell som beskriver svaren från AI-enkäten.</description>
-      </descriptions>
-      <columns>
-        <column id="erfarenhet">
-          <names>
-            <name language="sv">Erfarenhet</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Hur mycket erfarenhet har du av AI?</description>
-          </descriptions>
-        </column>
-        <column id="medgivande">
-          <names>
-            <name language="sv">Medgivande</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Skall det krävas medgivande av patienter för sekundäranvändning av deras patientdata (för exempelvis forskning)?</description>
-          </descriptions>
-        </column>
-        <column id="Beslut">
-          <names>
-            <name language="sv">Beslut</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Bör AI kunna fatta beslut som rör människors liv och hälsa?</description>
-          </descriptions>
-        </column>
-        <column id="Arbetsmarknad">
-          <names>
-            <name language="sv">Arbetsmarknad</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Hur tror du AI kommer att påverka arbetsmarknaden i Sverige närmaste åren?</description>
-          </descriptions>
-        </column>
-        <column id="Manskligheten">
-          <names>
-            <name language="sv">Manskligheten</name>
-          </names>
-          <dimlDataType id="integer" isNullable="false"/>
-          <descriptions>
-            <description type="plain" language="sv">Hur tror du AI kommer att påverka mänskligheten?</description>
-          </descriptions>
-        </column>
-      </columns>
-      <sampleData>
-        <sampleDataRow>
-          <value>1</value>
-          <value>1</value>
-          <value>1</value>
-          <value>2</value>
-          <value>3</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>5</value>
-          <value>2</value>
-          <value>2</value>
-          <value>2</value>
-          <value>3</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>5</value>
-          <value>3</value>
-          <value>3</value>
-          <value>5</value>
-          <value>5</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>2</value>
-          <value>3</value>
-          <value>3</value>
-          <value>1</value>
-          <value>3</value>
-        </sampleDataRow>
-        <sampleDataRow>
-          <value>3</value>
-          <value>2</value>
-          <value>3</value>
-          <value>4</value>
-          <value>4</value>
-        </sampleDataRow>
-      </sampleData>
-    </table>
-
-  </tables>
-
-  <dataOutputs>
-    <fileOutputs>
-      <fileOutput channelId="csv" fileFormat="csv" path="csv" encoding="utf8" columnSeparator=";" rowSeparator="crlf">
-        <singleTableFileOutput path="ai-quiz_{{timestamp}}.csv" table="AI_Quiz_Answers" />
-      </fileOutput>
-    </fileOutputs>
-  </dataOutputs>
-
+<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/ai-quiz.datasource">
+    <names>
+        <name language="sv">AI-enkät</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Innehåller uppgifter som har skickats in via AI-enkäten.</description>
+    </descriptions>
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter value="IT/MT" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+    </traits>
+    <tables>
+        <table id="AI_Quiz_Answers">
+            <names>
+                <name language="sv">AI_Quiz_Answers</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">En tabell som beskriver svaren från AI-enkäten.</description>
+            </descriptions>
+            <columns>
+                <column id="erfarenhet">
+                    <names>
+                        <name language="sv">Erfarenhet</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Hur mycket erfarenhet har du av AI?</description>
+                    </descriptions>
+                </column>
+                <column id="medgivande">
+                    <names>
+                        <name language="sv">Medgivande</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Skall det krävas medgivande av patienter för sekundäranvändning av deras patientdata (för exempelvis forskning)?</description>
+                    </descriptions>
+                </column>
+                <column id="Beslut">
+                    <names>
+                        <name language="sv">Beslut</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Bör AI kunna fatta beslut som rör människors liv och hälsa?</description>
+                    </descriptions>
+                </column>
+                <column id="Arbetsmarknad">
+                    <names>
+                        <name language="sv">Arbetsmarknad</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Hur tror du AI kommer att påverka arbetsmarknaden i Sverige närmaste åren?</description>
+                    </descriptions>
+                </column>
+                <column id="Manskligheten">
+                    <names>
+                        <name language="sv">Manskligheten</name>
+                    </names>
+                    <dimlDataType id="integer" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Hur tror du AI kommer att påverka mänskligheten?</description>
+                    </descriptions>
+                </column>
+            </columns>
+            <sampleData>
+                <sampleDataRow>
+                    <value>1</value>
+                    <value>1</value>
+                    <value>1</value>
+                    <value>2</value>
+                    <value>3</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>5</value>
+                    <value>2</value>
+                    <value>2</value>
+                    <value>2</value>
+                    <value>3</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>5</value>
+                    <value>3</value>
+                    <value>3</value>
+                    <value>5</value>
+                    <value>5</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>3</value>
+                    <value>1</value>
+                    <value>3</value>
+                </sampleDataRow>
+                <sampleDataRow>
+                    <value>3</value>
+                    <value>2</value>
+                    <value>3</value>
+                    <value>4</value>
+                    <value>4</value>
+                </sampleDataRow>
+            </sampleData>
+        </table>
+    </tables>
+    <dataOutputs>
+        <fileOutputs>
+            <fileOutput channelId="csv" fileFormat="csv" table="AI_Quiz_Answers" path="csv/ai-quiz_{{timestamp}}.csv" encoding="utf8" columnSeparator=";" rowSeparator="crlf" />
+        </fileOutputs>
+    </dataOutputs>
 </dataSource>

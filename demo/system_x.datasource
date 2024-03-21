@@ -1,0 +1,293 @@
+<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/system_x.datasource">
+    <names>
+        <name language="sv">System X</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Ett system som används för att diagnostisera patienter.</description>
+    </descriptions>
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter key="value" value="dirhs" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter key="value" value="K3R3T3" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter key="value" value="dbo" />
+        </trait>
+    </traits>
+    <tables>
+        <table id="diagnosis">
+            <names>
+                <name language="sv">diagnoser</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">En tabell över diagnoser.</description>
+            </descriptions>
+            <columns>
+                <column id="diagnosis_id">
+                    <names>
+                        <name language="sv">diagnos_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik identifierare för diagnosen.</description>
+                    </descriptions>
+                </column>
+                <column id="diagnosis_category_code">
+                    <names>
+                        <name language="sv">diagnos_kategorikod</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik kategorikod för diagnosen.</description>
+                    </descriptions>
+                </column>
+                <column id="diagnosis_code">
+                    <names>
+                        <name language="sv">diagnoskod</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik kod för diagnosen i förkortat format.</description>
+                    </descriptions>
+                </column>
+                <column id="diagnosis_full_code">
+                    <names>
+                        <name language="sv">diagnos_fullstandig_kod</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik kod för diagnosen i fullständigt format.</description>
+                    </descriptions>
+                </column>
+                <column id="abbreviated_description">
+                    <names>
+                        <name language="sv">kort_beskrivning</name>
+                    </names>
+                    <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En kort beskrivning av diagnosen.</description>
+                    </descriptions>
+                </column>
+                <column id="full_description">
+                    <names>
+                        <name language="sv">fullstandig_beskrivning</name>
+                    </names>
+                    <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En fullständig beskrivning av diagnosen.</description>
+                    </descriptions>
+                </column>
+                <column id="category_title">
+                    <names>
+                        <name language="sv">kategori_titel</name>
+                    </names>
+                    <dimlDataType id="string" length="2000" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En titel för diagnosens kategori.</description>
+                    </descriptions>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">skapad_datum</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum och tid som beskriver när diagnosen skapades.</description>
+                    </descriptions>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">uppdaterad_datum</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum och tid som beskriver när diagnosen uppdaterades.</description>
+                    </descriptions>
+                </column>
+            </columns>
+        </table>
+        <table id="patient_diagnosis">
+            <names>
+                <name language="sv">patient_diagnos</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">En mappningstabell för patienter och diagnoser.</description>
+            </descriptions>
+            <columns>
+                <column id="patient_diagnosis_id">
+                    <names>
+                        <name language="sv">patient_diagnos_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik identifierare för mappningen mellan patient och diagnos.</description>
+                    </descriptions>
+                </column>
+                <column id="patient_id">
+                    <names>
+                        <name language="sv">patient_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik identifierare för patienten.</description>
+                    </descriptions>
+                </column>
+                <column id="diagnosis_id">
+                    <names>
+                        <name language="sv">diagnos_id</name>
+                    </names>
+                    <dimlDataType id="bigInteger" unsigned="true" originalDataType="bigint" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik identifierare för diagnosen.</description>
+                    </descriptions>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">skapad_datum</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum och tid som beskriver när mappningen mellan patienten och diagnosen skapades.</description>
+                    </descriptions>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">uppdaterad_datum</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum och tid som beskriver när mappningen mellan patienten och diagnosen uppdaterades.</description>
+                    </descriptions>
+                </column>
+            </columns>
+        </table>
+        <table id="patients">
+            <names>
+                <name language="sv">patienter</name>
+            </names>
+            <descriptions>
+                <description type="plain" language="sv">En tabell över patienter.</description>
+            </descriptions>
+            <businessKey>
+                <value>patient_id</value>
+            </businessKey>
+            <columns>
+                <column id="patient_id">
+                    <names>
+                        <name language="sv">patient_id</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">En unik identifierare för patienten.</description>
+                    </descriptions>
+                </column>
+                <column id="first_name">
+                    <names>
+                        <name language="sv">fornamn</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Patientens förnamn.</description>
+                    </descriptions>
+                </column>
+                <column id="last_name">
+                    <names>
+                        <name language="sv">efternamn</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Patientens efternamn.</description>
+                    </descriptions>
+                </column>
+                <column id="phone">
+                    <names>
+                        <name language="sv">telefon</name>
+                    </names>
+                    <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">Patientens telefonnummer.</description>
+                    </descriptions>
+                </column>
+                <column id="email">
+                    <names>
+                        <name language="sv">epost</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Patientens e-postadress.</description>
+                    </descriptions>
+                </column>
+                <column id="street">
+                    <names>
+                        <name language="sv">gata</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">Gatunamnet i patientens adress.</description>
+                    </descriptions>
+                </column>
+                <column id="city">
+                    <names>
+                        <name language="sv">stad</name>
+                    </names>
+                    <dimlDataType id="string" length="50" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">Staden som patienten bor i.</description>
+                    </descriptions>
+                </column>
+                <column id="state">
+                    <names>
+                        <name language="sv">region</name>
+                    </names>
+                    <dimlDataType id="string" length="25" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">Regionen som patienten bor i.</description>
+                    </descriptions>
+                </column>
+                <column id="zip_code">
+                    <names>
+                        <name language="sv">postnummer</name>
+                    </names>
+                    <dimlDataType id="string" length="5" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">Patientens postnummer.</description>
+                    </descriptions>
+                </column>
+                <column id="social_security_number">
+                    <names>
+                        <name language="sv">personnummer</name>
+                    </names>
+                    <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+                    <descriptions>
+                        <description type="plain" language="sv">Patientens personnummer i ett 12-siffrigt format utan bindestreck. </description>
+                    </descriptions>
+                </column>
+                <column id="create_date">
+                    <names>
+                        <name language="sv">skapad_datum</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum och tid som beskriver när patienten registrerades i systemet.</description>
+                    </descriptions>
+                </column>
+                <column id="update_date">
+                    <names>
+                        <name language="sv">uppdaterad_datum</name>
+                    </names>
+                    <dimlDataType id="dateTime" precision="7" originalDataType="datetime2" originalPlatform="tsql" isNullable="true" isUtcTime="false" />
+                    <descriptions>
+                        <description type="plain" language="sv">Datum och tid som beskriver när patienten uppdaterades i systemet.</description>
+                    </descriptions>
+                </column>
+            </columns>
+        </table>
+    </tables>
+    <dataOutputs>
+        <sqlOutputs>
+            <sqlOutput channelId="sql" sqlOutputType="tsql" />
+        </sqlOutputs>
+    </dataOutputs>
+</dataSource>

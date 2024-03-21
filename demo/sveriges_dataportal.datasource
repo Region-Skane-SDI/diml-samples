@@ -1,297 +1,287 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" 
-  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/sveriges_dataportal.datasource">
-
-  <names>
-    <name language="sv">Sveriges Dataportal</name>
-  </names>
-
-  <descriptions>
-    <description type="Plain" language="sv">Sveriges dataportal samordnar och tillgängliggör datamängder som tillhandahålls av offentliga och privata organisationer.</description>
-  </descriptions>
-
-  <traits>
-    <trait class="category" subclass="informationOwner">
-      <traitParameter value="dirhs" />
-    </trait>
-    <trait class="infoClass">
-      <traitParameter value="K1R1T1"/>
-    </trait>
-  </traits>
-
- <tables>
-    <table id="Covid19_Statistik">
-      <names>
-        <name language="sv">Covid19_Statistik</name>
-      </names>
-      <descriptions>
-        <description type="Plain" language="sv">En tabell över antal fall av covid-19 i Sverige per dag och region.</description>
-      </descriptions>
-      <columns>
-        <column id="Totalt_antal_fall">
-          <names>
-            <name language="sv">Totalt_antal_fall</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger totalt antal fall av covid-19 för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Kumulativa_fall">
-          <names>
-            <name language="sv">Kumulativa_fall</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger det kumulativa antalet fall av covid-19.</description>
-          </descriptions>
-        </column>
-        <column id="Blekinge">
-          <names>
-            <name language="sv">Blekinge</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Blekinge för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Dalarna">
-          <names>
-            <name language="sv">Dalarna</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Dalarna för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Gotland">
-          <names>
-            <name language="sv">Gotland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Gotland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Gavleborg">
-          <names>
-            <name language="sv">Gavleborg</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Gävleborg för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Halland">
-          <names>
-            <name language="sv">Halland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Halland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Jamtland">
-          <names>
-            <name language="sv">Jamtland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Jamtland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Jonkoping">
-          <names>
-            <name language="sv">Jonkoping</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Jönköping för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Kalmar">
-          <names>
-            <name language="sv">Kalmar</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Kalmar för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Kronoberg">
-          <names>
-            <name language="sv">Kronoberg</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Kronoberg för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Norrbotten">
-          <names>
-            <name language="sv">Norrbotten</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Norrbotten för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Skane">
-          <names>
-            <name language="sv">Skane</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Skåne för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Stockholm">
-          <names>
-            <name language="sv">Stockholm</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Stockholm för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Sodermanland">
-          <names>
-            <name language="sv">Sodermanland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Sodermanland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Uppsala">
-          <names>
-            <name language="sv">Uppsala</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Uppsala för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Varmland">
-          <names>
-            <name language="sv">Varmland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Värmland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Vasterbotten">
-          <names>
-            <name language="sv">Vasterbotten</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västerbotten för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Vasternorrland">
-          <names>
-            <name language="sv">Vasternorrland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västernorrland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Vastmanland">
-          <names>
-            <name language="sv">Vastmanland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västmanland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Vastra_Gotaland">
-          <names>
-            <name language="sv">Vastra_Gotaland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västra Götaland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Orebro">
-          <names>
-            <name language="sv">Orebro</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Örebro för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Ostergotland">
-          <names>
-            <name language="sv">Ostergotland</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger antalet fall av covid-19 i Östergötland för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Antal_avlidna">
-          <names>
-            <name language="sv">Antal_avlidna</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger totalt antal avlidna i alla regioner, för det angivna daumet.</description>
-          </descriptions>
-        </column>
-        <column id="Kumulativa_avlidna">
-          <names>
-            <name language="sv">Kumulativa_avlidna</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger kumulativt antal avlidna i alla regioner.</description>
-          </descriptions>
-        </column>
-        <column id="Antal_intensivvardade">
-          <names>
-            <name language="sv">Antal_intensivvardade</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger totalt antal intensivvårdade i alla regioner, för det angivna datumet.</description>
-          </descriptions>
-        </column>
-        <column id="Kumulativa_intensivvardade">
-          <names>
-            <name language="sv">Kumulativa_intensivvardade</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger kumulativt antal intensivvårdade i alla regioner.</description>
-          </descriptions>
-        </column>
-        <column id="Statistikdatum">
-          <names>
-            <name language="sv">Statistikdatum</name>
-          </names>
-          <dimlDataType id="string" length="4000" format="" isFixedLength="false" isWideChar="false" isNullable="true" />
-          <descriptions>
-            <description type="Plain" language="sv">Anger det aktuella datumet.</description>
-          </descriptions>
-        </column>
-      </columns>
-    </table>
-  </tables>
-
-  <dataOutputs>
-    <fileOutputs>
-      <fileOutput channelId="csvfiles" fileFormat="Csv" path="csv" encoding="utf8" columnSeparator="," rowSeparator="crlf">
-        <singleTableFileOutput path="covid19_statistik_20231115T133448.csv" table="Covid19_Statistik" />
-      </fileOutput>
-    </fileOutputs>
-  </dataOutputs>
-
+<dataSource xmlns="https://github.com/Region-Skane-SDI/diml/datasource" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/datasource https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/datasource.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/demo/sveriges_dataportal.datasource">
+    <names>
+        <name language="sv">Sveriges Dataportal</name>
+    </names>
+    <descriptions>
+        <description type="Plain" language="sv">Sveriges dataportal samordnar och tillgängliggör datamängder som tillhandahålls av offentliga och privata organisationer.</description>
+    </descriptions>
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter value="dirhs" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter value="K1R1T1" />
+        </trait>
+    </traits>
+    <tables>
+        <table id="Covid19_Statistik">
+            <names>
+                <name language="sv">Covid19_Statistik</name>
+            </names>
+            <descriptions>
+                <description type="Plain" language="sv">En tabell över antal fall av covid-19 i Sverige per dag och region.</description>
+            </descriptions>
+            <columns>
+                <column id="Totalt_antal_fall">
+                    <names>
+                        <name language="sv">Totalt_antal_fall</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger totalt antal fall av covid-19 för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Kumulativa_fall">
+                    <names>
+                        <name language="sv">Kumulativa_fall</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger det kumulativa antalet fall av covid-19.</description>
+                    </descriptions>
+                </column>
+                <column id="Blekinge">
+                    <names>
+                        <name language="sv">Blekinge</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Blekinge för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Dalarna">
+                    <names>
+                        <name language="sv">Dalarna</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Dalarna för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Gotland">
+                    <names>
+                        <name language="sv">Gotland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Gotland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Gavleborg">
+                    <names>
+                        <name language="sv">Gavleborg</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Gävleborg för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Halland">
+                    <names>
+                        <name language="sv">Halland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Halland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Jamtland">
+                    <names>
+                        <name language="sv">Jamtland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Jamtland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Jonkoping">
+                    <names>
+                        <name language="sv">Jonkoping</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Jönköping för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Kalmar">
+                    <names>
+                        <name language="sv">Kalmar</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Kalmar för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Kronoberg">
+                    <names>
+                        <name language="sv">Kronoberg</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Kronoberg för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Norrbotten">
+                    <names>
+                        <name language="sv">Norrbotten</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Norrbotten för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Skane">
+                    <names>
+                        <name language="sv">Skane</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Skåne för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Stockholm">
+                    <names>
+                        <name language="sv">Stockholm</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Stockholm för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Sodermanland">
+                    <names>
+                        <name language="sv">Sodermanland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Sodermanland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Uppsala">
+                    <names>
+                        <name language="sv">Uppsala</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Uppsala för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Varmland">
+                    <names>
+                        <name language="sv">Varmland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Värmland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Vasterbotten">
+                    <names>
+                        <name language="sv">Vasterbotten</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västerbotten för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Vasternorrland">
+                    <names>
+                        <name language="sv">Vasternorrland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västernorrland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Vastmanland">
+                    <names>
+                        <name language="sv">Vastmanland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västmanland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Vastra_Gotaland">
+                    <names>
+                        <name language="sv">Vastra_Gotaland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Västra Götaland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Orebro">
+                    <names>
+                        <name language="sv">Orebro</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Örebro för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Ostergotland">
+                    <names>
+                        <name language="sv">Ostergotland</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger antalet fall av covid-19 i Östergötland för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Antal_avlidna">
+                    <names>
+                        <name language="sv">Antal_avlidna</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger totalt antal avlidna i alla regioner, för det angivna daumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Kumulativa_avlidna">
+                    <names>
+                        <name language="sv">Kumulativa_avlidna</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger kumulativt antal avlidna i alla regioner.</description>
+                    </descriptions>
+                </column>
+                <column id="Antal_intensivvardade">
+                    <names>
+                        <name language="sv">Antal_intensivvardade</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger totalt antal intensivvårdade i alla regioner, för det angivna datumet.</description>
+                    </descriptions>
+                </column>
+                <column id="Kumulativa_intensivvardade">
+                    <names>
+                        <name language="sv">Kumulativa_intensivvardade</name>
+                    </names>
+                    <dimlDataType id="integer" unsigned="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger kumulativt antal intensivvårdade i alla regioner.</description>
+                    </descriptions>
+                </column>
+                <column id="Statistikdatum">
+                    <names>
+                        <name language="sv">Statistikdatum</name>
+                    </names>
+                    <dimlDataType id="string" length="4000" format="" isFixedLength="false" isWideChar="false" isNullable="true" />
+                    <descriptions>
+                        <description type="Plain" language="sv">Anger det aktuella datumet.</description>
+                    </descriptions>
+                </column>
+            </columns>
+        </table>
+    </tables>
+    <dataOutputs>
+        <fileOutputs>
+            <fileOutput channelId="csvfiles" fileFormat="Csv" path="csv" encoding="utf8" columnSeparator="," rowSeparator="crlf">
+                <singleTableFileOutput path="covid19_statistik_20231115T133448.csv" table="Covid19_Statistik" />
+            </fileOutput>
+        </fileOutputs>
+    </dataOutputs>
 </dataSource>
