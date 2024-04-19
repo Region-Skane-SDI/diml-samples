@@ -262,8 +262,8 @@ Test</description>
     </dataOutputs>
     <dataFlow>
         <dataStages>
-            <dataStage id="Raw" order="1" role="input" materialization="table" />
-            <dataStage id="Control" order="2" materialization="view">
+            <dataStage id="Raw" type="tempStore" order="1" role="input" materialization="table" />
+            <dataStage id="Control" type="tempStore" order="2" materialization="view">
                 <traits>
                     <trait class="generateKeyHash">
                         <traitParameter key="value" value="true" />
@@ -273,8 +273,8 @@ Test</description>
                     </trait>
                 </traits>
             </dataStage>
-            <dataStage id="PreStorage" order="3" materialization="table" />
-            <dataStage id="Storage" order="4" role="output" materialization="table">
+            <dataStage id="PreStorage" type="tempStore" order="3" materialization="table" />
+            <dataStage id="Storage" type="tempStore" order="4" role="output" materialization="table">
                 <traits>
                     <trait class="tableUpdateType">
                         <traitParameter key="type" value="cdc" />
