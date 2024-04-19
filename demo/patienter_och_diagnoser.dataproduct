@@ -438,10 +438,10 @@
     </dataOutputs>
     <dataFlow>
         <dataStages>
-            <dataStage id="Raw" order="1" role="input" materialization="table" />
-            <dataStage id="Control" order="2" materialization="view" />
-            <dataStage id="PreStorage" order="3" materialization="table" />
-            <dataStage id="Storage" order="4" role="output" materialization="table" />
+            <dataStage id="Raw" type="tempStore" order="1" role="input" materialization="table" />
+            <dataStage id="Control" type="tempStore" order="2" materialization="view" />
+            <dataStage id="PreStorage" type="tempStore" order="3" materialization="table" />
+            <dataStage id="Storage" type="tempStore" order="4" role="output" materialization="table" />
         </dataStages>
         <dataIngests>
             <dataIngest dataInputId="system_x" id="ingest-pipeline">
