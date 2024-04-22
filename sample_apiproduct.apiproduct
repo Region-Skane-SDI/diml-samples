@@ -1,0 +1,45 @@
+<apiProduct xmlns="https://github.com/Region-Skane-SDI/diml/apiproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/apiproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/apiproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_apiproduct.apiproduct">
+    <names>
+        <name language="sv">Anställningar</name>
+    </names>
+    <descriptions>
+        <description type="plain" language="sv">Kort sammanfattande beskrivning av api produkt</description>
+    </descriptions>
+    
+    <traits>
+        <trait class="category" subclass="informationOwner">
+            <traitParameter key="value">
+                <value>Finance</value>
+                <value>HSS</value>
+            </traitParameter>
+        </trait>
+        <trait class="category" subclass="searchStructure">
+            <traitParameter key="value" value="1.1" />
+        </trait>
+        <trait class="category" subclass="productOwner">
+            <traitParameter key="value" value="SDI Plattform" />
+        </trait>
+        <trait class="category" subclass="contentClass">
+            <traitParameter key="value" value="Raw" />
+        </trait>
+        <trait class="icon">
+            <traitParameter key="value" value="bi-wallet" />
+        </trait>
+        <trait class="infoClass">
+            <traitParameter key="value" value="K1R1T1" />
+        </trait>
+        <trait class="targetUptimePercent">
+            <traitParameter key="value" value="99.9" />
+        </trait>
+        <trait class="tableNamePrefix">
+            <traitParameter key="value" value="sampleprefix" />
+        </trait>
+        <trait class="tableNameSuffix">
+            <traitParameter key="value" value="samplesuffix" />
+        </trait>
+        <trait class="tableSchema">
+            <traitParameter key="value" value="dbo" />
+        </trait>
+        <trait class="pii" />
+    </traits>
+</apiProduct>
