@@ -73,7 +73,7 @@ Test</description>
             <businessKey>
                 <value>Personnr</value>
             </businessKey>
-            <tableInstances>
+            <tableInstances existsFromStageId="" existsToStageId="">
                 <tableInstance stageId="PreStorage" alias="PersonPreStorage" />
             </tableInstances>
             <columns>
@@ -332,6 +332,7 @@ Test</description>
             <dataStage id="Storage" type="tempStore" order="4" role="output" materialization="table" tableUpdateType="upsert">
                 <dataStageTables>
                     <dataStageTable tableId="Person" sourceTableId="Person" />
+		    <dataStageTable tableId="Person" sourceTableId="Person" sqlFilter="personnummer NOT IN ('..', '..')" />
                     <dataStageTable tableId="Anstallning" sourceTableId="Anstallning" />
                 </dataStageTables>
             </dataStage>
