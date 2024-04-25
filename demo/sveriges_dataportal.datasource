@@ -14,7 +14,7 @@
         </trait>
     </traits>
     <tables>
-        <table id="Covid19_Statistik">
+        <table id="Covid19_Statistik" name="Covid19_Statistik" schema="dbo">
             <names>
                 <name language="sv">Covid19_Statistik</name>
             </names>

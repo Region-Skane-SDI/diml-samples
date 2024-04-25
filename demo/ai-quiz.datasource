@@ -14,7 +14,7 @@
         </trait>
     </traits>
     <tables>
-        <table id="AI_Quiz_Answers">
+        <table id="AI_Quiz_Answers" name="AI_Quiz_Answers" schema="dbo">
             <names>
                 <name language="sv">AI_Quiz_Answers</name>
             </names>
