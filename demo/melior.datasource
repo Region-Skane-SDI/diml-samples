@@ -23,7 +23,7 @@
         <trait class="pii" />
     </traits>
     <tables>
-        <table id="dbo/d_dose_patient">
+        <table id="d_dose_patient" name="d_dose_patient" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">d_dose_patient</name>
             </names>
@@ -78,7 +78,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/d_organization">
+        <table id="d_organization" name="d_organization" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">d_organization</name>
             </names>
@@ -151,7 +151,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/duplikat_nycklar_datum">
+        <table id="duplikat_nycklar_datum" name="duplikat_nycklar_datum" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">duplikat_nycklar_datum</name>
             </names>
@@ -197,7 +197,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/duplikat_nycklar_enval">
+        <table id="duplikat_nycklar_enval" name="duplikat_nycklar_enval" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">duplikat_nycklar_enval</name>
             </names>
@@ -243,7 +243,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/duplikat_nycklar_flerval">
+        <table id="duplikat_nycklar_flerval" name="duplikat_nycklar_flerval" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">duplikat_nycklar_flerval</name>
             </names>
@@ -289,7 +289,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/duplikat_nycklar_fritext">
+        <table id="duplikat_nycklar_fritext" name="duplikat_nycklar_fritext" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">duplikat_nycklar_fritext</name>
             </names>
@@ -335,7 +335,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/duplikat_nycklar_icd10">
+        <table id="duplikat_nycklar_icd10" name="duplikat_nycklar_icd10" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">duplikat_nycklar_icd10</name>
             </names>
@@ -381,7 +381,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_aktivitet">
+        <table id="j_aktivitet" name="j_aktivitet" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_aktivitet</name>
             </names>
@@ -544,7 +544,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact">
+        <table id="j_fact" name="j_fact" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact</name>
             </names>
@@ -671,7 +671,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_datum">
+        <table id="j_fact_rensad_datum" name="j_fact_rensad_datum" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_datum</name>
             </names>
@@ -789,7 +789,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_enval">
+        <table id="j_fact_rensad_enval" name="j_fact_rensad_enval" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_enval</name>
             </names>
@@ -916,7 +916,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_flerval">
+        <table id="j_fact_rensad_flerval" name="j_fact_rensad_flerval" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_flerval</name>
             </names>
@@ -1313,7 +1313,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_fritext">
+        <table id="j_fact_rensad_fritext" name="j_fact_rensad_fritext" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_fritext</name>
             </names>
@@ -1440,7 +1440,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_icd10">
+        <table id="j_fact_rensad_icd10" name="j_fact_rensad_icd10" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_icd10</name>
             </names>
@@ -1567,7 +1567,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_kva">
+        <table id="j_fact_rensad_kva" name="j_fact_rensad_kva" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_kva</name>
             </names>
@@ -1694,7 +1694,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_opkod97">
+        <table id="j_fact_rensad_opkod97" name="j_fact_rensad_opkod97" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_opkod97</name>
             </names>
@@ -1821,7 +1821,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_tal">
+        <table id="j_fact_rensad_tal" name="j_fact_rensad_tal" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_tal</name>
             </names>
@@ -1939,7 +1939,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_text">
+        <table id="j_fact_rensad_text" name="j_fact_rensad_text" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_text</name>
             </names>
@@ -2057,7 +2057,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_fact_rensad_tid">
+        <table id="j_fact_rensad_tid" name="j_fact_rensad_tid" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_fact_rensad_tid</name>
             </names>
@@ -2175,7 +2175,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_folder">
+        <table id="j_folder" name="j_folder" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_folder</name>
             </names>
@@ -2248,7 +2248,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_icd10">
+        <table id="j_icd10" name="j_icd10" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_icd10</name>
             </names>
@@ -2330,7 +2330,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_kva">
+        <table id="j_kva" name="j_kva" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_kva</name>
             </names>
@@ -2412,7 +2412,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_nl_svdt">
+        <table id="j_nl_svdt" name="j_nl_svdt" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_nl_svdt</name>
             </names>
@@ -2503,7 +2503,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_opkod97">
+        <table id="j_opkod97" name="j_opkod97" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_opkod97</name>
             </names>
@@ -2585,7 +2585,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_personal">
+        <table id="j_personal" name="j_personal" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_personal</name>
             </names>
@@ -2802,7 +2802,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_term">
+        <table id="j_term" name="j_term" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_term</name>
             </names>
@@ -2902,7 +2902,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_term_link">
+        <table id="j_term_link" name="j_term_link" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_term_link</name>
             </names>
@@ -2934,7 +2934,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_term_mask">
+        <table id="j_term_mask" name="j_term_mask" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_term_mask</name>
             </names>
@@ -2962,7 +2962,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_to_sign">
+        <table id="j_to_sign" name="j_to_sign" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_to_sign</name>
             </names>
@@ -3170,7 +3170,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_vdt">
+        <table id="j_vdt" name="j_vdt" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_vdt</name>
             </names>
@@ -3315,7 +3315,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/j_vm">
+        <table id="j_vm" name="j_vm" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">j_vm</name>
             </names>
@@ -3388,7 +3388,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/k_pat">
+        <table id="k_pat" name="k_pat" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">k_pat</name>
             </names>
@@ -3659,7 +3659,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/Log">
+        <table id="Log" name="Log" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">Log</name>
             </names>
@@ -3735,7 +3735,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/m_pat">
+        <table id="m_pat" name="m_pat" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">m_pat</name>
             </names>
@@ -4006,7 +4006,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/Properties">
+        <table id="Properties" name="Properties" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">Properties</name>
             </names>
@@ -4043,7 +4043,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/Querylog">
+        <table id="Querylog" name="Querylog" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">Querylog</name>
             </names>
@@ -4107,7 +4107,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/QueryScripts">
+        <table id="QueryScripts" name="QueryScripts" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">QueryScripts</name>
             </names>
@@ -4147,7 +4147,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_aktivitet">
+        <table id="s_aktivitet" name="s_aktivitet" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_aktivitet</name>
             </names>
@@ -4314,7 +4314,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_analys_fact">
+        <table id="s_analys_fact" name="s_analys_fact" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_analys_fact</name>
             </names>
@@ -4519,7 +4519,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_atgard">
+        <table id="s_atgard" name="s_atgard" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_atgard</name>
             </names>
@@ -4670,7 +4670,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_bevakn_folder">
+        <table id="s_bevakn_folder" name="s_bevakn_folder" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_bevakn_folder</name>
             </names>
@@ -4739,7 +4739,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_datum">
+        <table id="s_datum" name="s_datum" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_datum</name>
             </names>
@@ -4881,7 +4881,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_dosering">
+        <table id="s_dosering" name="s_dosering" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_dosering</name>
             </names>
@@ -5102,7 +5102,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_dosform">
+        <table id="s_dosform" name="s_dosform" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_dosform</name>
             </names>
@@ -5169,7 +5169,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_enval">
+        <table id="s_enval" name="s_enval" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_enval</name>
             </names>
@@ -5320,7 +5320,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_flerval">
+        <table id="s_flerval" name="s_flerval" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_flerval</name>
             </names>
@@ -5472,7 +5472,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_fritext">
+        <table id="s_fritext" name="s_fritext" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_fritext</name>
             </names>
@@ -5613,7 +5613,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_icd10">
+        <table id="s_icd10" name="s_icd10" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_icd10</name>
             </names>
@@ -5764,7 +5764,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_labanalys">
+        <table id="s_labanalys" name="s_labanalys" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_labanalys</name>
             </names>
@@ -5867,7 +5867,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_ordination">
+        <table id="s_ordination" name="s_ordination" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_ordination</name>
             </names>
@@ -6187,7 +6187,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_organization">
+        <table id="s_organization" name="s_organization" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_organization</name>
             </names>
@@ -6287,7 +6287,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_pat">
+        <table id="s_pat" name="s_pat" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_pat</name>
             </names>
@@ -6561,7 +6561,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_perskat">
+        <table id="s_perskat" name="s_perskat" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_perskat</name>
             </names>
@@ -6589,7 +6589,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_personal">
+        <table id="s_personal" name="s_personal" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_personal</name>
             </names>
@@ -6809,7 +6809,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_recept">
+        <table id="s_recept" name="s_recept" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_recept</name>
             </names>
@@ -7246,7 +7246,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_tal">
+        <table id="s_tal" name="s_tal" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_tal</name>
             </names>
@@ -7388,7 +7388,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_term">
+        <table id="s_term" name="s_term" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_term</name>
             </names>
@@ -7491,7 +7491,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_text">
+        <table id="s_text" name="s_text" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_text</name>
             </names>
@@ -7633,7 +7633,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_tid">
+        <table id="s_tid" name="s_tid" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_tid</name>
             </names>
@@ -7775,7 +7775,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_to_sign">
+        <table id="s_to_sign" name="s_to_sign" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_to_sign</name>
             </names>
@@ -7974,7 +7974,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_utd_v_dos">
+        <table id="s_utd_v_dos" name="s_utd_v_dos" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_utd_v_dos</name>
             </names>
@@ -8015,7 +8015,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_utdelning">
+        <table id="s_utdelning" name="s_utdelning" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_utdelning</name>
             </names>
@@ -8236,7 +8236,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_vardenhet">
+        <table id="s_vardenhet" name="s_vardenhet" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_vardenhet</name>
             </names>
@@ -8303,7 +8303,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_vardgrupp">
+        <table id="s_vardgrupp" name="s_vardgrupp" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_vardgrupp</name>
             </names>
@@ -8353,7 +8353,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_vdp_logg">
+        <table id="s_vdp_logg" name="s_vdp_logg" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_vdp_logg</name>
             </names>
@@ -8435,7 +8435,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_vdt">
+        <table id="s_vdt" name="s_vdt" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_vdt</name>
             </names>
@@ -8583,7 +8583,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/s_vm">
+        <table id="s_vm" name="s_vm" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">s_vm</name>
             </names>
@@ -8660,7 +8660,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/sk_aktivitet">
+        <table id="sk_aktivitet" name="sk_aktivitet" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">sk_aktivitet</name>
             </names>
@@ -8818,7 +8818,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/sql_server_memory_clerks">
+        <table id="sql_server_memory_clerks" name="sql_server_memory_clerks" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">sql_server_memory_clerks</name>
             </names>
@@ -8922,7 +8922,7 @@
                 </column>
             </columns>
         </table>
-        <table id="dbo/sql_server_memory_usage">
+        <table id="sql_server_memory_usage" name="sql_server_memory_usage" schema="dbo" schema="dbo">
             <names>
                 <name language="sv">sql_server_memory_usage</name>
             </names>

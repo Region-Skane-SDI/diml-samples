@@ -17,7 +17,7 @@
         </trait>
     </traits>
     <tables>
-        <table id="diagnosis">
+        <table id="diagnosis" name="diagnosis" schema="dbo">
             <names>
                 <name language="sv">diagnoser</name>
             </names>
@@ -108,7 +108,7 @@
                 </column>
             </columns>
         </table>
-        <table id="patient_diagnosis">
+        <table id="patient_diagnosis" name="patient_diagnosis" schema="dbo">
             <names>
                 <name language="sv">patient_diagnos</name>
             </names>
@@ -163,7 +163,7 @@
                 </column>
             </columns>
         </table>
-        <table id="patients">
+        <table id="patients" name="patients" schema="dbo">
             <names>
                 <name language="sv">patienter</name>
             </names>
