@@ -21,7 +21,7 @@
         </trait>
     </traits>
     <tables>
-        <table id="Person">
+        <table id="Person" name="Person" schema="dbo">
             <names>
                 <name language="sv">Person</name>
             </names>
@@ -73,7 +73,7 @@ Test</description>
                 </column>
             </columns>
         </table>
-        <table id="Anstallning">
+        <table id="Anstallning" name="Anstallning" schema="dbo">
             <names>
                 <name language="sv">Anstallning</name>
             </names>
@@ -154,7 +154,7 @@ Test</description>
         </fileOutputs>
         <sqlOutputs>
             <sqlOutput channelId="sql1" sqlOutputType="tsql" />
-            <sqlOutput channelId="sql2" sqlOutputType="sparql" />
+            <sqlOutput channelId="sql2" sqlOutputType="sparksql" />
         </sqlOutputs>
     </dataOutputs>
 </dataSource>

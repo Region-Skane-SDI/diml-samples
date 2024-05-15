@@ -394,6 +394,7 @@
                         </conditionalDataType>
                         <conditionalDataType dataType="binary">
                             <targetParameters>
+                                <targetParameter id="length" value="length" />
                                 <targetParameter id="isFixedLength" value="false" />
                             </targetParameters>
                         </conditionalDataType>
@@ -627,8 +628,12 @@
                         <targetParameter id="precision" value="precision" />
                     </targetParameters>
                 </platformDataTypeConfig>
-                <platformDataTypeConfig id="binary" dimlDataType="binary" inputFormat="binary" outputFormat="&quot;binary&quot;">
+                <platformDataTypeConfig id="binary" dimlDataType="binary" inputFormat="(?i)binary\s*\((?'length'.*?)\)" outputFormat="&quot;binary(&quot; + length.ToString() + &quot;)&quot;">
+                    <platformDataTypeParameters>
+                        <platformDataTypeParameter id="length" type="int" inputExpression="int.Parse(length)" />
+                    </platformDataTypeParameters>
                     <targetParameters>
+                        <targetParameter id="length" value="length" />
                         <targetParameter id="isFixedLength" value="false" />
                     </targetParameters>
                 </platformDataTypeConfig>

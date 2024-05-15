@@ -73,7 +73,7 @@ Test</description>
             <businessKey>
                 <value>Personnr</value>
             </businessKey>
-            <tableInstances>
+            <tableInstances existsFromStageId="" existsToStageId="">
                 <tableInstance stageId="PreStorage" alias="PersonPreStorage" />
             </tableInstances>
             <columns>
@@ -265,7 +265,7 @@ Test</description>
         </fileOutputs>
         <sqlOutputs>
             <sqlOutput channelId="sql1" sqlOutputType="tsql" />
-            <sqlOutput channelId="sql2" sqlOutputType="sparql" />
+            <sqlOutput channelId="sql2" sqlOutputType="sparksql" />
         </sqlOutputs>
         <apiOutputs>
             <apiOutput channelId="api1" apiOutputType="odata" />
@@ -273,13 +273,13 @@ Test</description>
     </dataOutputs>
     <dataFlow>
         <dataStages>
-            <dataStage id="Landing" order="0" role="input" materialization="file">
+            <dataStage id="Landing" type="tempStore" order="0" role="input" materialization="file">
                 <dataStageFiles>
                     <dataStageFile id="parquet_person" path="src2/person{{YYYYMMDD}}" fileFormat="parquet" />
                     <dataStageFile id="parquet_anstallning" path="src2/anstallning{{YYYYMMDD}}" fileFormat="parquet" />
                 </dataStageFiles>
             </dataStage>
-            <dataStage id="Input" order="1" materialization="table">
+            <dataStage id="Input" type="tempStore" order="1" materialization="table">
                 <traits>
                     <trait class="dataStageOperations.generateRowIds">
                         <traitParameter key="seed" value="1" />
@@ -304,7 +304,7 @@ Test</description>
                     <dataStageTable tableId="Anstallning" sourceTableId="Anstallning" dataStageFileId="parquet_anstallning" />
                 </dataStageTables>
             </dataStage>
-            <dataStage id="Control" order="2" materialization="view">
+            <dataStage id="Control" type="tempStore" order="2" materialization="view">
                 <dataStageTable tableId="Person" sourceTableId="Person" transformMethod="sql">
                     <columnMappings>
                         <columnMapping columnId="Personnr" sourceColumnId="Personnr" customSqlExpression="LEFT(Personnr, 12)" />
@@ -315,7 +315,7 @@ Test</description>
                 </dataStageTable>
                 <dataStageTable tableId="Anstallning" sourceTableId="Anstallning" dataStageFileId="parquet_anstallning" transformMethod="python" />
             </dataStage>
-            <dataStage id="PreStorage" order="3" materialization="table">
+            <dataStage id="PreStorage" type="tempStore" order="3" materialization="table">
                 <traits>
                     <trait class="dataStageOperations.generateKeyHash">
                         <traitParameter key="value" value="true" />
@@ -329,9 +329,10 @@ Test</description>
                     <dataStageTable tableId="Anstallning" sourceTableId="Anstallning" />
                 </dataStageTables>
             </dataStage>
-            <dataStage id="Storage" order="4" role="output" materialization="table" tableUpdateType="upsert">
+            <dataStage id="Storage" type="tempStore" order="4" role="output" materialization="table" tableUpdateType="upsert">
                 <dataStageTables>
                     <dataStageTable tableId="Person" sourceTableId="Person" />
+		    <dataStageTable tableId="Person" sourceTableId="Person" sqlFilter="personnummer NOT IN ('..', '..')" />
                     <dataStageTable tableId="Anstallning" sourceTableId="Anstallning" />
                 </dataStageTables>
             </dataStage>

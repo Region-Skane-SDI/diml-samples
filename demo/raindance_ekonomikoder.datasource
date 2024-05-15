@@ -19,7 +19,7 @@
         </trait>
     </traits>
     <tables>
-        <table id="Forvaltningskoder">
+        <table id="Forvaltningskoder" name="Forvaltningskoder" schema="dbo">
             <names>
                 <name language="sv">Forvaltningskoder</name>
             </names>
@@ -142,7 +142,7 @@
                 </sampleDataRow>
             </sampleData>
         </table>
-        <table id="Ansvarskoder">
+        <table id="Ansvarskoder" name="Ansvarskoder" schema="dbo">
             <names>
                 <name language="sv">Ansvarskoder</name>
             </names>
@@ -288,7 +288,7 @@
                 </sampleDataRow>
             </sampleData>
         </table>
-        <table id="Motparter">
+        <table id="Motparter" name="Motparter" schema="dbo">
             <names>
                 <name language="sv">Motparter</name>
             </names>

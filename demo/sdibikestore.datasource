@@ -17,7 +17,7 @@
         </trait>
     </traits>
     <tables>
-        <table id="dbo/__scenario">
+        <table id="__scenario" name="__scenario">
             <names>
                 <name language="sv">__scenario</name>
             </names>
@@ -45,7 +45,7 @@
                 </column>
             </columns>
         </table>
-        <table id="production/brands">
+        <table id="brands" name="brands" schema="production">
             <names>
                 <name language="sv">brands</name>
             </names>
@@ -94,7 +94,7 @@
                 </column>
             </columns>
         </table>
-        <table id="production/categories">
+        <table id="categories" name="categories" schema="production">
             <names>
                 <name language="sv">categories</name>
             </names>
@@ -143,7 +143,7 @@
                 </column>
             </columns>
         </table>
-        <table id="production/products">
+        <table id="products" name="products" schema="production">
             <names>
                 <name language="sv">products</name>
             </names>
@@ -236,7 +236,7 @@
                 </tableRelation>
             </tableRelations>
         </table>
-        <table id="production/stocks">
+        <table id="stocks" name="stocks" schema="production">
             <names>
                 <name language="sv">stocks</name>
             </names>
@@ -303,7 +303,7 @@
                 </tableRelation>
             </tableRelations>
         </table>
-        <table id="sales/customer_diagnosis">
+        <table id="customer_diagnosis" name="customer_diagnosis" schema="sales">
             <names>
                 <name language="sv">customer_diagnosis</name>
             </names>
@@ -358,7 +358,7 @@
                 </column>
             </columns>
         </table>
-        <table id="sales/customers">
+        <table id="customers" name="customers" schema="sales">
             <names>
                 <name language="sv">customers</name>
             </names>
@@ -479,7 +479,7 @@
                 </column>
             </columns>
         </table>
-        <table id="sales/diagnosis">
+        <table id="diagnosis" name="diagnosis" schema="sales">
             <names>
                 <name language="sv">diagnosis</name>
             </names>
@@ -570,7 +570,7 @@
                 </column>
             </columns>
         </table>
-        <table id="sales/order_items">
+        <table id="order_items" name="order_items" schema="sales">
             <names>
                 <name language="sv">order_items</name>
             </names>
@@ -664,7 +664,7 @@
                 </tableRelation>
             </tableRelations>
         </table>
-        <table id="sales/orders">
+        <table id="orders" name="orders" schema="sales">
             <names>
                 <name language="sv">orders</name>
             </names>
@@ -778,7 +778,7 @@
                 </tableRelation>
             </tableRelations>
         </table>
-        <table id="sales/staffs">
+        <table id="staffs" name="staffs" schema="sales">
             <names>
                 <name language="sv">staffs</name>
             </names>
@@ -899,7 +899,7 @@
                 </tableRelation>
             </tableRelations>
         </table>
-        <table id="sales/stores">
+        <table id="stores" name="stores" schema="sales">
             <names>
                 <name language="sv">stores</name>
             </names>
@@ -1002,7 +1002,7 @@
                 </column>
             </columns>
         </table>
-        <table id="sys/database_firewall_rules">
+        <table id="database_firewall_rules" name="database_firewall_rules" schema="sys">
             <names>
                 <name language="sv">database_firewall_rules</name>
             </names>
