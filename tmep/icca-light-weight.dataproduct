@@ -1,0 +1,328 @@
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd"
+  dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/sdi-hospital/main/AzureSql/icca-light-weight.dataproduct"
+   targetPlatform="azsqlserver">
+  <names>
+    <name language="sv">ICCA light-weight</name>
+  </names>
+  <descriptions>
+    <description type="Plain" language="sv"> Testing sql to sql data flow </description>
+  </descriptions>
+  <dcat dcatDataTheme="heal" dcatAccessRights="nonPublic" dcatUpdateFrequency="other"
+    dcatAvailability="experimental" dcatStatus="underDevelopment" />
+  <traits>
+    <trait class="category" subclass="informationOwner">
+      <traitParameter key="value">
+        <value>[placeholder]</value>
+        <value>[placeholder]</value>
+      </traitParameter>
+    </trait>
+    <trait class="category" subclass="searchStructure">
+      <traitParameter key="value" value="1.1" />
+    </trait>
+    <trait class="category" subclass="productOwner">
+      <traitParameter key="value" value="dirhs" />
+    </trait>
+    <trait class="category" subclass="contentClass">
+      <traitParameter key="value" value="vårddata" />
+    </trait>
+    <trait class="icon">
+      <traitParameter key="value" value="bi-image" />
+    </trait>
+    <trait class="infoclass">
+      <traitParameter key="value" value="K1R1T1" />
+    </trait>
+  </traits>
+  <dataInputs>
+    <dataInput id="src" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/sdi-hospital/main/AzureSql/icca-light-weight.datasource" channelId="sql" />
+  </dataInputs>
+  <tables>
+
+    <table id="Import_Dim_ICCA_ClinicalProcedure_Import">
+      <names>
+        <name language="sv">Dim_ICCA_ClinicalProcedure_Import</name>
+      </names>
+      <businessKey>
+        <value>interventionId</value>
+    </businessKey>
+      <columns>
+        <column id="interventionId">
+          <names>
+            <name language="sv">interventionId</name>
+          </names>
+          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
+            isNullable="false" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/interventionId" />
+            </trait>
+          </traits>
+        </column>
+        <column id="shortLabel">
+          <names>
+            <name language="sv">shortLabel</name>
+          </names>
+          <dimlDataType id="string" length="64" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="false" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/shortLabel" />
+            </trait>
+          </traits>
+        </column>
+        <column id="longLabel">
+          <names>
+            <name language="sv">longLabel</name>
+          </names>
+          <dimlDataType id="string" length="256" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/longLabel" />
+            </trait>
+          </traits>
+        </column>
+        <column id="type">
+          <names>
+            <name language="sv">type</name>
+          </names>
+          <dimlDataType id="string" length="32" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value" value="src/Import_Dim_ICCA_ClinicalProcedure_Import/type" />
+            </trait>
+          </traits>
+        </column>
+        <column id="conceptLabel">
+          <names>
+            <name language="sv">conceptLabel</name>
+          </names>
+          <dimlDataType id="string" length="256" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/conceptLabel" />
+            </trait>
+          </traits>
+        </column>
+        <column id="conceptCode">
+          <names>
+            <name language="sv">conceptCode</name>
+          </names>
+          <dimlDataType id="string" length="64" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/conceptCode" />
+            </trait>
+          </traits>
+        </column>
+        <column id="tableTypeId">
+          <names>
+            <name language="sv">tableTypeId</name>
+          </names>
+          <dimlDataType id="tinyInteger" unsigned="true" originalDataType="tinyint"
+            originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/tableTypeId" />
+            </trait>
+          </traits>
+        </column>
+        <column id="activationId">
+          <names>
+            <name language="sv">activationId</name>
+          </names>
+          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
+            isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/activationId" />
+            </trait>
+          </traits>
+        </column>
+        <column id="cisConceptId">
+          <names>
+            <name language="sv">cisConceptId</name>
+          </names>
+          <dimlDataType id="guid" originalDataType="uniqueidentifier" originalPlatform="tsql"
+            isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/cisConceptId" />
+            </trait>
+          </traits>
+        </column>
+        <column id="interventionDictionaryPropName">
+          <names>
+            <name language="sv">interventionDictionaryPropName</name>
+          </names>
+          <dimlDataType id="string" length="128" format="" isFixedLength="false" isWideChar="false"
+            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_ClinicalProcedure_Import/interventionDictionaryPropName" />
+            </trait>
+          </traits>
+        </column>
+      </columns>
+    </table>
+    <table id="Import_Dim_ICCA_DataFocus_Import">
+      <names>
+        <name language="sv">Dim_ICCA_DataFocus_Import</name>
+      </names>
+      <businessKey>
+        <value>dataFocusId</value>
+    </businessKey>
+      <columns>
+        <column id="dataFocusId">
+          <names>
+            <name language="sv">dataFocusId</name>
+          </names>
+          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
+            isNullable="false" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value" value="src/Import_Dim_ICCA_DataFocus_Import/dataFocusId" />
+            </trait>
+          </traits>
+        </column>
+        <column id="shortLabel">
+          <names>
+            <name language="sv">shortLabel</name>
+          </names>
+          <dimlDataType id="string" length="32" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="false" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value" value="src/Import_Dim_ICCA_DataFocus_Import/shortLabel" />
+            </trait>
+          </traits>
+        </column>
+        <column id="longLabel">
+          <names>
+            <name language="sv">longLabel</name>
+          </names>
+          <dimlDataType id="string" length="64" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="false" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value" value="src/Import_Dim_ICCA_DataFocus_Import/longLabel" />
+            </trait>
+          </traits>
+        </column>
+        <column id="conceptLabel">
+          <names>
+            <name language="sv">conceptLabel</name>
+          </names>
+          <dimlDataType id="string" length="256" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value" value="src/Import_Dim_ICCA_DataFocus_Import/conceptLabel" />
+            </trait>
+          </traits>
+        </column>
+        <column id="conceptCode">
+          <names>
+            <name language="sv">conceptCode</name>
+          </names>
+          <dimlDataType id="string" length="64" format="" isFixedLength="false" isWideChar="true"
+            originalDataType="nvarchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value" value="src/Import_Dim_ICCA_DataFocus_Import/conceptCode" />
+            </trait>
+          </traits>
+        </column>
+        <column id="activationId">
+          <names>
+            <name language="sv">activationId</name>
+          </names>
+          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql"
+            isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value" value="src/Import_Dim_ICCA_DataFocus_Import/activationId" />
+            </trait>
+          </traits>
+        </column>
+        <column id="dataFocusDictionaryPropName">
+          <names>
+            <name language="sv">dataFocusDictionaryPropName</name>
+          </names>
+          <dimlDataType id="string" length="128" format="" isFixedLength="false" isWideChar="false"
+            originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+          <traits>
+            <trait class="columnsources">
+              <traitParameter key="value"
+                value="src/Import_Dim_ICCA_DataFocus_Import/dataFocusDictionaryPropName" />
+            </trait>
+          </traits>
+        </column>
+      </columns>
+    </table>
+
+  </tables>
+  <dataOutputs>
+    <sqlOutputs>
+      <sqlOutput channelId="sql" sqlOutputType="Tsql" />
+    </sqlOutputs>
+  </dataOutputs>
+  <dataFlow>
+    <dataStages>
+      <dataStage id="Ingest" type="tempStore" order="1" role="input" materialization="table" />
+      <dataStage id="TypeCast" type="typeCast" order="2" materialization="table" />
+      <dataStage id="TypeCastView" type="typeCast" order="3" materialization="view" />
+      <dataStage id="Validate" type="validate" order="4" materialization="table" />
+      <dataStage id="Hash" type="hash" order="5" materialization="table" />
+    </dataStages>
+
+    <dataIngests>
+      <dataIngest id="ingest" dataInputId="src">
+        <tableToTableMappings>
+          <tableToTableMapping sourceTableId="Import_Dim_ICCA_ClinicalProcedure_Import"
+            tableId="ClinicalProcedure">
+            <columnMappings>
+              <columnMapping sourceColumnId="interventionId" columnId="interventionId" />
+              <columnMapping sourceColumnId="shortLabel" columnId="shortLabel" />
+              <columnMapping sourceColumnId="longLabel" columnId="longLabel" />
+              <columnMapping sourceColumnId="type" columnId="type" />
+              <columnMapping sourceColumnId="conceptLabel" columnId="conceptLabel" />
+              <columnMapping sourceColumnId="conceptCode" columnId="conceptCode" />
+              <columnMapping sourceColumnId="tableTypeId" columnId="tableTypeId" />
+              <columnMapping sourceColumnId="activationId" columnId="activationId" />
+              <columnMapping sourceColumnId="cisConceptId" columnId="cisConceptId" />
+              <columnMapping sourceColumnId="interventionDictionaryPropName" columnId="interventionDictionaryPropName" />
+            </columnMappings>
+          </tableToTableMapping>
+          <tableToTableMapping sourceTableId="Import_Dim_ICCA_DataFocus_Import" tableId="DataFocus">
+            <columnMappings>
+              <columnMapping sourceColumnId="dataFocusId" columnId="dataFocusId" />
+              <columnMapping sourceColumnId="shortLabel" columnId="shortLabel" />
+              <columnMapping sourceColumnId="longLabel" columnId="longLabel" />
+              <columnMapping sourceColumnId="conceptLabel" columnId="conceptLabel" />
+              <columnMapping sourceColumnId="conceptCode" columnId="conceptCode" />
+              <columnMapping sourceColumnId="activationId" columnId="activationId" />
+              <columnMapping sourceColumnId="dataFocusDictionaryPropName" columnId="dataFocusDictionaryPropName" />
+              <columnMapping sourceColumnId="tableTypeId" columnId="tableTypeId" />
+              <columnMapping sourceColumnId="cisConceptId" columnId="cisConceptId" />
+              <columnMapping sourceColumnId="interventionDictionaryPropName"  columnId="interventionDictionaryPropName" />
+            </columnMappings>
+          </tableToTableMapping>
+        </tableToTableMappings>
+      </dataIngest>
+    </dataIngests>
+  </dataFlow>
+</dataProduct>
