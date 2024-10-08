@@ -1,4 +1,4 @@
-<list xmlns="https://github.com/Region-Skane-SDI/diml/list" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_data_theme.list">
+<list xmlns="https://github.com/Region-Skane-SDI/diml/list" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/list https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/list.xsd" configurationUrl="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/dcat_data_theme.list">
     <listItems>
         <listItem id="econ">
             <names>
