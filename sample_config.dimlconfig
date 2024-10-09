@@ -5,24 +5,24 @@
         </trait>
     </traits>
     <graphs>
-        <graph configurationUrl="information_objects.graph" />
+        <graph configUrl="information_objects.graph" />
     </graphs>
     <lists>
-        <list configurationUrl="dcat_access_rights.list" />
-        <list configurationUrl="dcat_availability.list" />
-        <list configurationUrl="dcat_data_theme.list" />
-        <list configurationUrl="dcat_status.list" />
-        <list configurationUrl="dcat_update_frequency.list" />
+        <list configUrl="dcat_access_rights.list" />
+        <list configUrl="dcat_availability.list" />
+        <list configUrl="dcat_data_theme.list" />
+        <list configUrl="dcat_status.list" />
+        <list configUrl="dcat_update_frequency.list" />
     </lists>
     <hierarchies>
-        <hierarchy configurationUrl="search_structure.hierarchy" />
-        <hierarchy configurationUrl="information_owner.hierarchy" />
-        <hierarchy configurationUrl="product_owner.hierarchy" />
-        <hierarchy configurationUrl="information_domain.hierarchy" />
-        <hierarchy configurationUrl="information_area.hierarchy" />
-        <hierarchy configurationUrl="information_object.hierarchy" />
+        <hierarchy configUrl="search_structure.hierarchy" />
+        <hierarchy configUrl="information_owner.hierarchy" />
+        <hierarchy configUrl="product_owner.hierarchy" />
+        <hierarchy configUrl="information_domain.hierarchy" />
+        <hierarchy configUrl="information_area.hierarchy" />
+        <hierarchy configUrl="information_object.hierarchy" />
         <!-- Exempel ska uppdateras efter hand som de förekommer i en dataprodukt -->
-        <hierarchy configurationUrl="content_class.hierarchy" />
+        <hierarchy configUrl="content_class.hierarchy" />
     </hierarchies>
     <dataSystemColumns>
         <dataSystemColumn id="DIML_{{TableName}}_ID" type="recordid">
