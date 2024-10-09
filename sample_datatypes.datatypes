@@ -1,4 +1,4 @@
-<dataTypes xmlns="https://github.com/Region-Skane-SDI/diml/datatypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_datatypes.datatypes">
+<dataTypes xmlns="https://github.com/Region-Skane-SDI/diml/datatypes" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <dataTypeAttributes>
         <dataTypeAttribute id="length" type="int" />
         <dataTypeAttribute id="format" type="string" />

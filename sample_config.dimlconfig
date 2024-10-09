@@ -1,28 +1,28 @@
-<config xmlns="https://github.com/Region-Skane-SDI/diml/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd" defaultLanguage="sv" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_config.dimlconfig">
+<config xmlns="https://github.com/Region-Skane-SDI/diml/config" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/config https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dimlconfig.xsd" defaultLanguage="sv">
     <traits>
         <trait class="defaultConfigNamespace">
             <traitParameter key="value" value="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/config/" />
         </trait>
     </traits>
     <graphs>
-        <graph dimlId="information_objects.graph" />
+        <graph configUrl="information_objects.graph" />
     </graphs>
     <lists>
-        <list dimlId="dcat_access_rights.list" />
-        <list dimlId="dcat_availability.list" />
-        <list dimlId="dcat_data_theme.list" />
-        <list dimlId="dcat_status.list" />
-        <list dimlId="dcat_update_frequency.list" />
+        <list configUrl="dcat_access_rights.list" />
+        <list configUrl="dcat_availability.list" />
+        <list configUrl="dcat_data_theme.list" />
+        <list configUrl="dcat_status.list" />
+        <list configUrl="dcat_update_frequency.list" />
     </lists>
     <hierarchies>
-        <hierarchy dimlId="search_structure.hierarchy" />
-        <hierarchy dimlId="information_owner.hierarchy" />
-        <hierarchy dimlId="product_owner.hierarchy" />
-        <hierarchy dimlId="information_domain.hierarchy" />
-        <hierarchy dimlId="information_area.hierarchy" />
-        <hierarchy dimlId="information_object.hierarchy" />
+        <hierarchy configUrl="search_structure.hierarchy" />
+        <hierarchy configUrl="information_owner.hierarchy" />
+        <hierarchy configUrl="product_owner.hierarchy" />
+        <hierarchy configUrl="information_domain.hierarchy" />
+        <hierarchy configUrl="information_area.hierarchy" />
+        <hierarchy configUrl="information_object.hierarchy" />
         <!-- Exempel ska uppdateras efter hand som de förekommer i en dataprodukt -->
-        <hierarchy dimlId="content_class.hierarchy" />
+        <hierarchy configUrl="content_class.hierarchy" />
     </hierarchies>
     <dataSystemColumns>
         <dataSystemColumn id="DIML_{{TableName}}_ID" type="recordid">
