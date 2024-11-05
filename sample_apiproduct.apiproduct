@@ -1,4 +1,4 @@
-<apiProduct xmlns="https://github.com/Region-Skane-SDI/diml/apiproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/apiproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/apiproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_apiproduct.apiproduct">
+<apiProduct xmlns="https://github.com/Region-Skane-SDI/diml/apiproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/apiproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/apiproduct.xsd" dimlId="https://raw.githubusercontent.com/Region-Skane-SDI/diml-samples/main/sample_apiproduct.apiproduct" uniqueName="Anstallningar">
     <names>
         <name language="sv">Anställningar</name>
     </names>
