@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<apiProduct
+    xmlns="https://github.com/Region-Skane-SDI/diml/apiproduct" xmlns:xsi="" xsi:schemaLocation=""
+    dimlId="">
+
+    <names>
+        <name language="sv">EmployeeData</name>
+    </names>
+
+    <descriptions>
+        <description type="plain" language="sv">Tillhandahåller information om anställda personer.</description>
+    </descriptions>
+
+    <traits>
+        <trait class="apiProductType">
+            <traitParameter value="service" /> <!-- Kan vara service, logic eller registry -->
+        </trait>
+    </traits>
+
+    <!-- Beroenden till andra apiProdukter -->
+    <apiInputs>
+        <!-- Referens till apisource eller apiproduct av apiProductType logic. Referens till apiProductType
+        service ska inte vara möjligt eller generera ett exception. -->
+        <apiInput id="apiInput1" dimlId="https://..." apiId="api1" />
+    </apiInputs>
+    <!-- Skall det också gå att referera till dataprodukter? Kanske skapa ett separat element för
+    detta, <dataProductInput>? -->
+
+    <apis>
+        <api id="restapi" apiType="rest" defaultBackend="backend1"> <!-- Här behöver vi tänka till kring indelning i apiTypes och specificationType -->
+            <traits>
+                <trait class="apiAccessType">
+                    <traitParameter value="readwrite" /> <!-- Kan vara readwrite eller readonly -->
+                </trait>
+            </traits>
+            <!-- type = autogenerate || uri || inline -->
+            <apiSpecification specificationType="openAPI" uri="https://...">
+            </apiSpecification>
+
+            <endpoints>
+                <!-- Benjamin(240314): Med hjälp av "path" och "verb" skapar vi en referens till den medföljande OpenAPI-specifikationen-->
+                <endpoint id="endpoint1" path="/persons">
+                    <operations>
+                        <operation id="op1" verb="GET">
+                            <request>
+                                <header>
+                                    <validates>
+                                        <validate id="validate1" required="true">Authentication</validate>
+                                    </validates>
+                                    <additions>
+                                    <addition id="addition1" overwrite="false" name="x-sdi-tracker">
+                                        ABC123</addition>
+                                    </addition>
+                                </header>
+                            </request>
+                            <forwards>
+                            <!-- Benjamin(240314): Här refereras en endpoint som finns i apiInput1(en annan API-produkt) som den här endpointen(endpoint1) forwardar till. -->
+                                <forwardToInput id="forward1" apiInput="apiInput1" path="/persons" />
+
+                            <!-- Benjamin(240314): Här refereras en endpoint som finns i den backend som är definieras som "defaultBackend" i api-elementet, som den här endpointen(endpoint1) forwardar till. -->
+                                <forwardToBackend id="forward3" path="/persons" />
+
+                            <!-- Benjamin(240314): Ett API ska naturligtvis bara ha ett forward-element men jag har med två här ovanför för illustration. -->
+                            </forwards>
+                            <response>
+                                <header>
+                                    <validates>
+                                        <validate id="validate3" log="debug">x-sdi-tracker</validate>
+                                    </validates>
+                                </header>
+                            </response>
+                        </operation>
+                    </operations>
+                </endpoint>
+                <endpoint id="endpoint2" path="/persons/{id}">
+                    <operations>
+                        <operation id="op2" verb="GET">
+                            <forwards>
+                                <forward id="forward2">
+                                    <apiForward id="apiForward2" apiInput="apiInput1"
+                                        path="/persons/{id}" />
+                                </forward>
+                            </forwards>
+                        </operation>
+                    <operations>
+                </endpoint>
+            </endpoints>
+        </api>
+
+        <!--
+        Benjamin(240314): Jag funderar på om vi ska definiera köer via deras producers/consumers-gränssnitt istället för att detaljstyra kön. Jag tror att det kommer att bli lättare för att dynamiskt skapa upp köer då. Detta behöver nog en längre diskussion.
+        -->
+        <api id="asyncapi" apiType="async" defaultBackend="backend1"> 
+            <traits>
+                <trait class="apiAccessType">
+                    <traitParameter value="readwrite" />
+                </trait>
+            </traits>
+            <apiSpecification specificationType="asyncapi" uri="https://...">
+            </apiSpecification>
+            <!-- Fyll på här...-->            
+            <endpoints>
+                <endpoint id="endpoint6" path="/produce" channel="Person">
+                    <operations>
+                        <operation id="operation6" verb="POST">
+                        </operation>
+                    </operations>
+                </endpoint>
+                <endpoint id="endpoint7" path="/consume" channel="Person">
+                    <operations>
+                        <operation id="operation7" verb="GET">
+                        </operation>
+                    </operations>
+                </endpoint>
+            </endpoints>
+        </api>
+
+
+        <!-- Benjamin(240314): Tror vi att det finns något use case för att skapa upp nya SOAP-tjänster?  -->
+        <api id="soapapi" apiType="soap" defaultBackend="backend1"> 
+            <traits>
+                <trait class="apiAccessType">
+                    <traitParameter value="readwrite" />
+                </trait>
+            </traits>
+            <apiSpecification specificationType="wsdl" uri="https://...">
+            </apiSpecification>
+            <!-- Fyll på här...-->
+            <endpoints>
+                <endpoint id="endpoint9" path="persons">
+
+                    <operation>
+                    </operation>
+                </endpoint>
+                <endpoint>
+                    <operation>
+                    </operation>
+                </endpoint>
+            </endpoints>
+        </api>
+
+        <!-- Benjamin(240314): Det här kommer att bli intressant att få till. Jag ser dock att vi bara har asynkrona, dvs med en kö emellan, flöden för HL7. -->
+        <api id="hl7v2api" apiType="hl7v2" defaultBackend="backend1"> 
+            <traits>
+                <trait class="apiAccessType">
+                    <traitParameter value="readwrite" />
+                </trait>
+            </traits>
+            <apiSpecification specificationType="hl7v2" uri="https://...">
+            </apiSpecification>
+            <endpoints>
+                <endpoint id="endpoint6" connections="5">
+                    <operations>
+                        <operation id="operation6">
+                        </operation>
+                    </operations>
+                </endpoint>
+                <endpoint id="endpoint7" path="/consume">
+                    <operations>
+                        <operation id="operation7">
+                        </operation>
+                    </operations>
+                </endpoint>
+            </endpoints>
+        </api>
+    </apis>
+
+    <!-- Fundera över om denna del skall vara med alls
+    Benjamin(240314): Jag tycker inte det, med hänsyn till min ovan kommentar om Async-typen.
+    <apiMessageChannels>
+        <apiMessageChannel id="" apiMessageChannelProtocol="amqp0.9" apiMessageChannelType="topic" apiMessageChannelDirection="input" apiMessageChannelAddress="asfsdaf/sfasf"/>
+    </apiMessageChannels>
+    -->
+
+    <apiBackends>
+        <apiBackend id="backend1" apiBackendType="k8s-replicaset" apiBackendManifestUri="https://.....">
+            <!-- Benjamin(240314): Vi måste definiera vilka endpoints som backend exponerar, för att sedan skapa referenser i ovan api:ers forwards för att kunna styra flödena. -->
+            <backEndpoints>
+                <backEndpoint id="endpoint4" path="/persons">
+                </backEndpoint>
+                <backEndpoint id="endpoint5" path="/persons/{id}">
+                </backEndpoint>
+            </backEndpoint>
+        </apiBackend>
+    </apiBackends>
+
+    <apiStorages>
+        <apiStorage id="storage1" apiStorageType="sqlserver" />
+    </apiStorage>
+</apiProduct>
