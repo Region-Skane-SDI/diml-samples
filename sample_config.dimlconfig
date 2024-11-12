@@ -43,24 +43,6 @@
         <dataSystemColumn id="DIML_CreateTime_UTC" type="inserttimeutc">
             <dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0" />
         </dataSystemColumn>
-        <dataSystemColumn id="DIML_LastUpdateTime_UTC" type="lastupdateutc">
-            <dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0" />
-        </dataSystemColumn>
-        <dataSystemColumn id="DIML_IsDeleted" type="deletedflag">
-            <dimlDataType id="boolean" isNullable="false" />
-        </dataSystemColumn>
-        <dataSystemColumn id="DIML_CDC_Action" type="cdcaction">
-            <dimlDataType id="string" length="1" isFixedLength="true" isNullable="false" />
-        </dataSystemColumn>
-        <dataSystemColumn id="DIML_SCD2_IsCurrent" type="scd2iscurrent">
-            <dimlDataType id="boolean" isNullable="false" />
-        </dataSystemColumn>
-        <dataSystemColumn id="DIML_SCD2_StartTime" type="scd2starttime">
-            <dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0" />
-        </dataSystemColumn>
-        <dataSystemColumn id="DIML_SCD2_EndTime" type="scd2endtime">
-            <dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0" />
-        </dataSystemColumn>
     </dataSystemColumns>
     <commonColumnDefinitions>
         <commonColumnDefinition id="verksamhetsomrade">
