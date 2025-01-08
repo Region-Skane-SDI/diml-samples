@@ -43,6 +43,9 @@
         <dataSystemColumn id="DIML_CreateTime_UTC" type="inserttimeutc">
             <dimlDataType id="dateTime" isNullable="false" isUtcTime="true" precision="0" />
         </dataSystemColumn>
+        <dataSystemColumn id="DIML_IsDeleted" type="isdeleted">
+            <dimlDataType id="boolean" isNullable="false" />
+        </dataSystemColumn>
     </dataSystemColumns>
     <commonColumnDefinitions>
         <commonColumnDefinition id="verksamhetsomrade">
