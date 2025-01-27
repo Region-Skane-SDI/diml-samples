@@ -1,9 +1,15 @@
-<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v0/dataproduct.xsd" dimlId="https://bki.skane.se/diml/id/dataproduct/32" targetPlatform="azdatabricks" uniqueName="SDI_Hospital_Bronze">
+<dataProduct xmlns="https://github.com/Region-Skane-SDI/diml/dataproduct" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="https://github.com/Region-Skane-SDI/diml/dataproduct 
+https://raw.githubusercontent.com/Region-Skane-SDI/diml-schemas/main/v1/dataproduct.xsd" 
+dimlId="https://bki.skane.se/diml/id/dataproduct/6" 
+targetPlatform="azdatabricks" 
+uniqueName="sdi_hospital_bronze">
   <names>
     <name language="sv">SDI Hospital</name>
   </names>
   <descriptions>
-    <description type="Plain" language="sv">Brons dataprodukt från datakälla SDI Hospital </description>
+    <description type="Plain" language="sv">Brons dataprodukt från datakälla SDIHospital </description>
   </descriptions>
   <dcat dcatDataTheme="heal" dcatAccessRights="nonPublic" dcatUpdateFrequency="other" dcatAvailability="experimental" dcatStatus="underDevelopment" />
   <traits>
@@ -13,7 +19,7 @@
       </traitParameter>
     </trait>
     <trait class="category" subclass="searchStructure">
-      <traitParameter key="value" value="HOS" />
+      <traitParameter key="value" value="HSS" />
     </trait>
     <trait class="category" subclass="productOwner">
       <traitParameter key="value" value="SDI Plattform" />
@@ -27,15 +33,21 @@
     <trait class="infoclass">
       <traitParameter key="value" value="K1R1T1" />
     </trait>
+    <trait class="quality.validate.action">
+            <traitParameter key="action" value="ignoreInvalid" />
+    </trait>
   </traits>
   <dataInputs>
-    <dataInput id="src1" dimlId="https://bki.skane.se/diml/id/datasource/33" channelId="sql" />
+    <dataInput id="src" dimlId="https://bki.skane.se/diml/id/datasource/5" channelId="sql" />
   </dataInputs>
   <tables>
     <table id="healthcare_diagnosis">
       <names>
         <name language="sv">diagnosis</name>
       </names>
+      <businessKey>
+          <value>diagnosis_id</value>
+      </businessKey>  
       <columns>
         <column id="diagnosis_id">
           <names>
@@ -92,7 +104,7 @@
             </trait>
           </traits>
         </column>
-        <column id="full description">
+        <column id="full_description">
           <names>
             <name language="sv">full description</name>
           </names>
@@ -103,7 +115,7 @@
             </trait>
           </traits>
         </column>
-        <column id="category title">
+         <column id="category_title">
           <names>
             <name language="sv">category title</name>
           </names>
@@ -136,6 +148,7 @@
             </trait>
           </traits>
         </column>
+        
       </columns>
     </table>
     <table id="healthcare_encounters">
@@ -500,6 +513,9 @@
       <names>
         <name language="sv">patient_diagnosis</name>
       </names>
+      <businessKey>
+        <value>patient_id</value>
+      </businessKey>
       <columns>
         <column id="patient_diagnosis_id">
           <names>
@@ -577,6 +593,13 @@
             </trait>
           </traits>
         </column>
+        <column id="full_name">
+            <names>
+                <name language="sv">full_name</name>
+            </names>
+            <dimlDataType id="string" length="255" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="true" />
+            <columnInstances existsFromStageId="logic_columns" existsToStageId=""/>
+        </column>
         <column id="first_name">
           <names>
             <name language="sv">first_name</name>
@@ -598,6 +621,13 @@
               <traitParameter key="value" value="src1/healthcare_patients/last_name" />
             </trait>
           </traits>
+        </column>
+        <column id="is_alive">
+            <names>
+                <name language="sv">is_alive</name>
+            </names>
+            <dimlDataType id="boolean" originalPlatform="tsql" isNullable="false" />
+            <columnInstances existsFromStageId="logic_columns" existsToStageId=""/>        
         </column>
         <column id="phone">
           <names>
@@ -674,6 +704,7 @@
             <trait class="columnsources">
               <traitParameter key="value" value="src1/healthcare_patients/social_security_number" />
             </trait>
+            
           </traits>
         </column>
         <column id="create_date">
@@ -806,6 +837,7 @@
             <trait class="columnsources">
               <traitParameter key="value" value="src1/healthcare_staffs/social_security_number" />
             </trait>
+             <trait class="pii" />
           </traits>
         </column>
         <column id="create_date">
@@ -1128,87 +1160,16 @@
         </tableRelation>
       </tableRelations>
     </table>
-    <table id="sys_database_firewall_rules">
-      <names>
-        <name language="sv">database_firewall_rules</name>
-      </names>
-      <columns>
-        <column id="id">
-          <names>
-            <name language="sv">id</name>
-          </names>
-          <dimlDataType id="integer" unsigned="false" originalDataType="int" originalPlatform="tsql" isNullable="false" />
-          <traits>
-            <trait class="columnsources">
-              <traitParameter key="value" value="src1/sys_database_firewall_rules/id" />
-            </trait>
-          </traits>
-        </column>
-        <column id="name">
-          <names>
-            <name language="sv">name</name>
-          </names>
-          <dimlDataType id="string" length="128" format="" isFixedLength="false" isWideChar="true" originalDataType="nvarchar" originalPlatform="tsql" isNullable="false" />
-          <traits>
-            <trait class="columnsources">
-              <traitParameter key="value" value="src1/sys_database_firewall_rules/name" />
-            </trait>
-          </traits>
-        </column>
-        <column id="start_ip_address">
-          <names>
-            <name language="sv">start_ip_address</name>
-          </names>
-          <dimlDataType id="string" length="45" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <traits>
-            <trait class="columnsources">
-              <traitParameter key="value" value="src1/sys_database_firewall_rules/start_ip_address" />
-            </trait>
-          </traits>
-        </column>
-        <column id="end_ip_address">
-          <names>
-            <name language="sv">end_ip_address</name>
-          </names>
-          <dimlDataType id="string" length="45" format="" isFixedLength="false" isWideChar="false" originalDataType="varchar" originalPlatform="tsql" isNullable="false" />
-          <traits>
-            <trait class="columnsources">
-              <traitParameter key="value" value="src1/sys_database_firewall_rules/end_ip_address" />
-            </trait>
-          </traits>
-        </column>
-        <column id="create_date">
-          <names>
-            <name language="sv">create_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="3" originalDataType="datetime" originalPlatform="tsql" isNullable="false" isUtcTime="false" />
-          <traits>
-            <trait class="columnsources">
-              <traitParameter key="value" value="src1/sys_database_firewall_rules/create_date" />
-            </trait>
-          </traits>
-        </column>
-        <column id="modify_date">
-          <names>
-            <name language="sv">modify_date</name>
-          </names>
-          <dimlDataType id="dateTime" precision="3" originalDataType="datetime" originalPlatform="tsql" isNullable="false" isUtcTime="false" />
-          <traits>
-            <trait class="columnsources">
-              <traitParameter key="value" value="src1/sys_database_firewall_rules/modify_date" />
-            </trait>
-          </traits>
-        </column>
-      </columns>
-    </table>
+
   </tables>
   <dataOutputs>
     <sqlOutputs>
-      <sqlOutput channelId="sql" sqlOutputType="Tsql" />
+      <sqlOutput channelId="sql" sqlOutputType="tsql" />
     </sqlOutputs>
-    <dataFlow>
+  </dataOutputs>
+  <dataFlow>
       <dataStages>
-        <dataStage id="raw" type="ingestStore" order="1" role="input" materialization="ingest" />
+         <dataStage id="raw" type="ingestStore" order="1" role="input" materialization="ingest" />
         <dataStage id="logic_trim" type="basicLogic" order="2" materialization="view">
           <logicDataStageTables>
             <logicDataStageTable tableId="healthcare_diagnosis" trim="true" />
@@ -1217,11 +1178,12 @@
                 <logicColumnMapping columnId="first_name" trim="true" />
                 <logicColumnMapping columnId="social_security_number" customSqlExpression="LEFT(social_security_number, 10)" />                 
               </logicColumnMappings>
-          </logicDataStageTable>
+            </logicDataStageTable>
+          </logicDataStageTables> 
         </dataStage> 
-        <dataStage id="logic_columns" type="basicLogic" order="2" materialization="view">
+        <dataStage id="logic_columns" type="basicLogic" order="3" materialization="view">
           <logicDataStageTables>
-            <logicDataStageTable tableId="healthcare_patients" trim="true" filterSqlExpression="first_name AND last_name IS NOT NULL">
+            <logicDataStageTable tableId="healthcare_patients" trim="true">
               <logicColumnMappings>
                 <logicColumnMapping columnId="full_name" customSqlExpression="CONCAT(first_name,' ',last_name)" /> 
                 <logicColumnMapping columnId="is_alive" customSqlExpression="true" />      
@@ -1229,11 +1191,11 @@
             </logicDataStageTable>
           </logicDataStageTables>
         </dataStage>            
-        <dataStage id="hash" type="hash" order="3" materialization="table" />
-        <dataStage ids="permastore" type="permaStore" order="4" role="output" materialization="table" />
+        <dataStage id="hash" type="hash" order="4" materialization="table" />
+        <dataStage id="permastore" type="permaStore" order="5" role="output" materialization="table" />
       </dataStages>
       <dataIngests>
-      <dataIngest id="ingest" dataInputId="src1">
+      <dataIngest id="ingest" dataInputId="src">
           <tableToTableMappings>
                     <tableToTableMapping sourceTableId="healthcare_diagnosis" tableId="healthcare_diagnosis">
                         <columnMappings>
@@ -1244,6 +1206,5 @@
                 </tableToTableMappings>
             </dataIngest>
       </dataIngests>
-    </dataFlow>
-  </dataOutputs>
+  </dataFlow>
 </dataProduct>
