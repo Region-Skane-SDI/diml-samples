@@ -147,8 +147,7 @@ uniqueName="sdi_hospital_bronze">
               <traitParameter key="value" value="src1/healthcare_diagnosis/update_date" />
             </trait>
           </traits>
-        </column>
-        
+        </column>       
       </columns>
     </table>
     <table id="healthcare_encounters">
@@ -703,8 +702,7 @@ uniqueName="sdi_hospital_bronze">
           <traits>
             <trait class="columnsources">
               <traitParameter key="value" value="src1/healthcare_patients/social_security_number" />
-            </trait>
-            
+            </trait>            
           </traits>
         </column>
         <column id="create_date">
@@ -1169,8 +1167,9 @@ uniqueName="sdi_hospital_bronze">
   </dataOutputs>
   <dataFlow>
       <dataStages>
-         <dataStage id="raw" type="ingestStore" order="1" role="input" materialization="ingest" />
-        <dataStage id="logic_trim" type="basicLogic" order="2" materialization="view">
+        <dataStage id="ingest" type="ingestStore" order="1" role="input" materialization="ingest" />
+        <dataStage id="raw" type="tempStore" order="2" materialization="view" />
+        <dataStage id="logic_trim" type="basicLogic" order="3" materialization="view">
           <logicDataStageTables>
             <logicDataStageTable tableId="healthcare_diagnosis" trim="true" />
             <logicDataStageTable tableId="healthcare_patients" trim="true" filterSqlExpression="social_security_number IS NOT NULL">
@@ -1181,7 +1180,7 @@ uniqueName="sdi_hospital_bronze">
             </logicDataStageTable>
           </logicDataStageTables> 
         </dataStage> 
-        <dataStage id="logic_columns" type="basicLogic" order="3" materialization="view">
+        <dataStage id="logic_columns" type="basicLogic" order="4" materialization="view">
           <logicDataStageTables>
             <logicDataStageTable tableId="healthcare_patients" trim="true">
               <logicColumnMappings>
@@ -1190,9 +1189,11 @@ uniqueName="sdi_hospital_bronze">
               </logicColumnMappings>
             </logicDataStageTable>
           </logicDataStageTables>
-        </dataStage>            
-        <dataStage id="hash" type="hash" order="4" materialization="table" />
-        <dataStage id="permastore" type="permaStore" order="5" role="output" materialization="table" />
+        </dataStage>
+         <dataStage id="typecast" type="typeCast" order="5" materialization="view" />
+         <dataStage id="validate" type="validate" order="6" materialization="validate" />            
+        <dataStage id="hash" type="hash" order="7" materialization="table" />                          
+        <dataStage id="storage" type="permaStore" order="8" role="output" materialization="table" />
       </dataStages>
       <dataIngests>
       <dataIngest id="ingest" dataInputId="src">
